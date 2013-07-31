@@ -1,0 +1,58 @@
+robot_joint_groups:
+    - name: arm_left
+      reference_topic: "/amigo/arm_left/controller/references"
+      measurement_topic: "/amigo/arm_left/controller/measurements"
+      joint_names:
+          - shoulder_yaw_joint_left
+          - shoulder_pitch_joint_left
+          - shoulder_roll_joint_left
+          - elbow_pitch_joint_left
+          - elbow_roll_joint_left
+          - wrist_pitch_joint_left
+          - wrist_yaw_joint_left
+      parameter_file_package: "amigo_controller_configuration_gazebo"
+      parameter_file_path: "/parameters/arm_controller_left.yaml"
+    - name: arm_right
+      reference_topic: "/amigo/arm_right/controller/references"
+      measurement_topic: "/amigo/arm_right/controller/measurements"
+      joint_names:
+          - shoulder_yaw_joint_right
+          - shoulder_pitch_joint_right
+          - shoulder_roll_joint_right
+          - elbow_pitch_joint_right
+          - elbow_roll_joint_right
+          - wrist_pitch_joint_right
+          - wrist_yaw_joint_right
+      parameter_file_package: "amigo_controller_configuration_gazebo"
+      parameter_file_path: "/parameters/arm_controller_right.yaml"
+    - name: gripper_left
+      reference_topic: "/amigo/gripper_left/controller/references"
+      measurement_topic: "/amigo/gripper_left/controller/measurements"
+      joint_names:
+          - finger1_joint_left
+          - finger2_joint_left
+      parameter_file_package: "amigo_controller_configuration_gazebo"
+      parameter_file_path: "/parameters/gripper_controller_left.yaml"
+    - name: gripper_right
+      reference_topic: "/amigo/gripper_right/controller/references"
+      measurement_topic: "/amigo/gripper_right/controller/measurements"
+      joint_names:
+          - finger1_joint_right
+          - finger2_joint_right
+      parameter_file_package: "amigo_controller_configuration_gazebo"
+      parameter_file_path: "/parameters/gripper_controller_right.yaml"
+    - name: torso
+      reference_topic: "/amigo/torso/controller/references"
+      measurement_topic: "/amigo/torso/controller/measurements"
+      joint_names:
+          - spindle_joint
+      parameter_file_package: "amigo_controller_configuration_gazebo"
+      parameter_file_path: "/parameters/spindle_controller.yaml"
+    - name: head
+      reference_topic: "/amigo/head/controller/references"
+      measurement_topic: "/amigo/head/controller/measurements"
+      joint_names:
+          - neck_pan_joint
+          - neck_tilt_joint
+      parameter_file_package: "amigo_controller_configuration_gazebo"
+      parameter_file_path: "/parameters/head_controller.yaml"

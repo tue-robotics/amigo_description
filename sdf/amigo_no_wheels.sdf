@@ -3657,9 +3657,9 @@
 	<!-------------------------------------------------------------------------------->
 	<!-------------------------------------------------------------------------------->
 	<!-------------------------------------------------------------------------------->	
-    <plugin name="position_controller" filename="libNewPositionController.so">
-		<package>amigo_robot_model_groovy</package>
-		<group_summary_file>/description/joint_groups.yaml</group_summary_file>
+    <plugin name="position_controller" filename="libPositionController.so">
+		<package>amigo_description</package>
+		<group_summary_file>custom/joint_groups.yaml</group_summary_file>
     </plugin>
     <plugin name="base_controller" filename="libNewModBaseController.so">
 		<package>amigo_controller_configuration_gazebo</package>
