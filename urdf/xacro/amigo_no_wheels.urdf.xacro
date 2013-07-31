@@ -43,7 +43,4 @@
 <xacro:arm_extra whichside="right" sidesign="+1.0" rollsign="+"/>
 <xacro:arm_extra whichside="left"  sidesign="-1.0" rollsign="-"/>
 
-<!--====BUILD STUFF THAT NEEDS TO RUN IN EITHER SIMULATION OR ON THE REAL ROBOT ====-->
-<include filename="$(find amigo_description)/urdf/xacro/sim_or_robot_xacro/robot_real_$(optenv ROBOT_REAL false)_simple.urdf.xacro" />
-
 </robot>
