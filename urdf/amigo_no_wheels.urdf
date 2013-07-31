@@ -538,9 +538,9 @@
     <origin rpy="0 0 0" xyz="0.07 0 0.07"/>
     <!-- THESE VALUES ARE ROUGH ESTIMATES!! -->
     <parent link="head"/>
-    <child link="openni_camera"/>
+    <child link="top_kinect/openni_camera"/>
   </joint>
-  <link name="openni_camera">
+  <link name="top_kinect/openni_camera">
     <inertial>
       <mass value="0.01"/>
       <origin xyz="0 0 0"/>
@@ -561,48 +561,48 @@
       </geometry>
     </collision>-->
   </link>
-  <joint name="kinect_depth_joint" type="fixed">
+  <joint name="top_kinect/kinect_depth_joint" type="fixed">
     <origin rpy="0 0 0" xyz="0 0.018 0"/>
-    <parent link="openni_camera"/>
-    <child link="openni_depth_frame"/>
+    <parent link="top_kinect/openni_camera"/>
+    <child link="top_kinect/openni_depth_frame"/>
   </joint>
-  <link name="openni_depth_frame">
+  <link name="top_kinect/openni_depth_frame">
     <inertial>
       <mass value="0.01"/>
       <origin xyz="0 0 0"/>
       <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
     </inertial>
   </link>
-  <joint name="kinect_depth_optical_joint" type="fixed">
+  <joint name="top_kinect/kinect_depth_optical_joint" type="fixed">
     <origin rpy="-1.570795 0 -1.570795" xyz="0 0 0"/>
-    <parent link="openni_depth_frame"/>
-    <child link="openni_depth_optical_frame"/>
+    <parent link="top_kinect/openni_depth_frame"/>
+    <child link="top_kinect/openni_depth_optical_frame"/>
   </joint>
-  <link name="openni_depth_optical_frame">
+  <link name="top_kinect/openni_depth_optical_frame">
     <inertial>
       <mass value="0.001"/>
       <origin xyz="0 0 0"/>
       <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0001"/>
     </inertial>
   </link>
-  <joint name="kinect_rgb_joint" type="fixed">
+  <joint name="top_kinect/kinect_rgb_joint" type="fixed">
     <origin rpy="0 0 0" xyz="0 -0.005 0"/>
-    <parent link="openni_camera"/>
-    <child link="openni_rgb_frame"/>
+    <parent link="top_kinect/openni_camera"/>
+    <child link="top_kinect/openni_rgb_frame"/>
   </joint>
-  <link name="openni_rgb_frame">
+  <link name="top_kinect/openni_rgb_frame">
     <inertial>
       <mass value="0.001"/>
       <origin xyz="0 0 0"/>
       <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0001"/>
     </inertial>
   </link>
-  <joint name="kinect_rgb_optical_joint" type="fixed">
+  <joint name="top_kinect/kinect_rgb_optical_joint" type="fixed">
     <origin rpy="-1.570795 0 -1.570795" xyz="0 0 0"/>
-    <parent link="openni_rgb_frame"/>
-    <child link="openni_rgb_optical_frame"/>
+    <parent link="top_kinect/openni_rgb_frame"/>
+    <child link="top_kinect/openni_rgb_optical_frame"/>
   </joint>
-  <link name="openni_rgb_optical_frame">
+  <link name="top_kinect/openni_rgb_optical_frame">
     <inertial>
       <mass value="0.001"/>
       <origin xyz="0 0 0"/>
@@ -613,9 +613,9 @@
     <origin rpy="0 -0.07 0" xyz="0.3 0 0.26"/>
     <!-- THESE VALUES STILL HAVE TO BE CALIBRATED!! -->
     <parent link="base"/>
-    <child link="base_kinect_openni_camera"/>
+    <child link="base_kinect/openni_camera"/>
   </joint>
-  <link name="base_kinect_openni_camera">
+  <link name="base_kinect/openni_camera">
     <inertial>
       <mass value="0.01"/>
       <origin xyz="0 0 0"/>
@@ -640,46 +640,46 @@
   </link>
   <joint name="base_kinect_kinect_depth_joint" type="fixed">
     <origin rpy="0 0 0" xyz="0 0.018 0"/>
-    <parent link="base_kinect_openni_camera"/>
-    <child link="base_kinect_openni_depth_frame"/>
+    <parent link="base_kinect/openni_camera"/>
+    <child link="base_kinect/openni_depth_frame"/>
   </joint>
-  <link name="base_kinect_openni_depth_frame">
+  <link name="base_kinect/openni_depth_frame">
     <inertial>
       <mass value="0.01"/>
       <origin xyz="0 0 0"/>
       <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
     </inertial>
   </link>
-  <joint name="base_kinect_kinect_depth_optical_joint" type="fixed">
+  <joint name="base_kinect/kinect_depth_optical_joint" type="fixed">
     <origin rpy="-1.570795 0 -1.570795" xyz="0 0 0"/>
-    <parent link="base_kinect_openni_depth_frame"/>
-    <child link="base_kinect_openni_depth_optical_frame"/>
+    <parent link="base_kinect/openni_depth_frame"/>
+    <child link="base_kinect/openni_depth_optical_frame"/>
   </joint>
-  <link name="base_kinect_openni_depth_optical_frame">
+  <link name="base_kinect/openni_depth_optical_frame">
     <inertial>
       <mass value="0.001"/>
       <origin xyz="0 0 0"/>
       <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0001"/>
     </inertial>
   </link>
-  <joint name="base_kinect_kinect_rgb_joint" type="fixed">
+  <joint name="base_kinect/kinect_rgb_joint" type="fixed">
     <origin rpy="0 0 0" xyz="0 -0.005 0"/>
-    <parent link="base_kinect_openni_camera"/>
-    <child link="base_kinect_openni_rgb_frame"/>
+    <parent link="base_kinect/openni_camera"/>
+    <child link="base_kinect/openni_rgb_frame"/>
   </joint>
-  <link name="base_kinect_openni_rgb_frame">
+  <link name="base_kinect/openni_rgb_frame">
     <inertial>
       <mass value="0.001"/>
       <origin xyz="0 0 0"/>
       <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0001"/>
     </inertial>
   </link>
-  <joint name="base_kinect_kinect_rgb_optical_joint" type="fixed">
+  <joint name="base_kinect/kinect_rgb_optical_joint" type="fixed">
     <origin rpy="-1.570795 0 -1.570795" xyz="0 0 0"/>
-    <parent link="base_kinect_openni_rgb_frame"/>
-    <child link="base_kinect_openni_rgb_optical_frame"/>
+    <parent link="base_kinect/openni_rgb_frame"/>
+    <child link="base_kinect/openni_rgb_optical_frame"/>
   </joint>
-  <link name="base_kinect_openni_rgb_optical_frame">
+  <link name="base_kinect/openni_rgb_optical_frame">
     <inertial>
       <mass value="0.001"/>
       <origin xyz="0 0 0"/>
@@ -2248,8 +2248,8 @@
       </controller:gazebo_ros_laser>
     </sensor:ray>
   </gazebo>
-  <gazebo reference="openni_camera">
-    <sensor:camera name="openni_camera">
+  <gazebo reference="top_kinect/openni_camera">
+    <sensor:camera name="top_kinect/openni_camera">
       <imageFormat>R8G8B8</imageFormat>
       <imageSize>640 480</imageSize>
       <hfov>60</hfov>
@@ -2257,7 +2257,7 @@
       <farClip>3</farClip>
       <updateRate>20</updateRate>
       <baseline>0.1</baseline>
-      <controller:gazebo_ros_openni_kinect name="kinect_camera_controller" plugin="libkinect_controller.so">
+      <controller:gazebo_ros_openni_kinect name="top_kinect/kinect_camera_controller" plugin="libkinect_controller.so">
         <!-- THIS IS THE FORKED VERSION UNTIL NOW (OCT16 2012) THE VERSION IN GAZEBO_PLUGINS WAS NOT SHOWING DEPTH IMAGE PROPERLY!! -->
         <alwaysOn>true</alwaysOn>
         <updateRate>20</updateRate>
@@ -2276,8 +2276,8 @@
       </controller:gazebo_ros_openni_kinect>
     </sensor:camera>
   </gazebo>
-  <gazebo reference="base_kinect_openni_camera">
-    <sensor:camera name="base_kinect_openni_camera">
+  <gazebo reference="base_kinect/openni_camera">
+    <sensor:camera name="base_kinect/openni_camera">
       <imageFormat>R8G8B8</imageFormat>
       <imageSize>640 480</imageSize>
       <hfov>60</hfov>
@@ -2285,7 +2285,7 @@
       <farClip>3</farClip>
       <updateRate>20</updateRate>
       <baseline>0.1</baseline>
-      <controller:gazebo_ros_openni_kinect name="base_kinect_camera_controller" plugin="libkinect_controller.so">
+      <controller:gazebo_ros_openni_kinect name="base_kinect/camera_controller" plugin="libkinect_controller.so">
         <!-- THIS IS THE FORKED VERSION UNTIL NOW (OCT16 2012) THE VERSION IN GAZEBO_PLUGINS WAS NOT SHOWING DEPTH IMAGE PROPERLY!! -->
         <alwaysOn>true</alwaysOn>
         <updateRate>20</updateRate>
@@ -2295,7 +2295,7 @@
         <depthImageTopicName>/base/head/camera/depth/image</depthImageTopicName>
         <depthImageCameraInfoTopicName>/base/head/camera/depth/camera_info</depthImageCameraInfoTopicName>
         <pointCloudTopicName>/base/head/camera/rgb/points</pointCloudTopicName>
-        <frameName>/base_kinect_openni_depth_optical_frame</frameName>
+        <frameName>/base_kinect/openni_depth_optical_frame</frameName>
         <!--<distortion_k1>0.00000001</distortion_k1>
         <distortion_k2>0.00000001</distortion_k2>
         <distortion_k3>0.00000001</distortion_k3>
