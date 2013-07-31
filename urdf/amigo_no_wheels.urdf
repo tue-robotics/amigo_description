@@ -40,19 +40,19 @@
     <color rgba="0.6 0.6 0.6 1.0"/>
   </material>
   <material name="bottomcovers">
-    <texture filename="package://amigo_robot_model_groovy/Media/materials/textures/bottomcovers/finalreduced.jpg"/>
+    <texture filename="package://amigo_description/media/materials/textures/bottomcovers/finalreduced.jpg"/>
   </material>
   <material name="white">
-    <texture filename="package://amigo_robot_model_groovy/Media/materials/textures/white/white.jpg"/>
+    <texture filename="package://amigo_description/media/materials/textures/white/white.jpg"/>
   </material>
   <material name="logo">
-    <texture filename="package://amigo_robot_model_groovy/Media/materials/textures/logo/tue.jpg"/>
+    <texture filename="package://amigo_description/media/materials/textures/logo/tue.jpg"/>
   </material>
   <material name="aluminum">
-    <texture filename="package://amigo_robot_model_groovy/Media/materials/textures/aluminum/aluminium_0001_c.jpg"/>
+    <texture filename="package://amigo_description/media/materials/textures/aluminum/aluminium_0001_c.jpg"/>
   </material>
   <material name="orange">
-    <texture filename="package://amigo_robot_model_groovy/Media/materials/textures/orange/orange.jpg"/>
+    <texture filename="package://amigo_description/media/materials/textures/orange/orange.jpg"/>
   </material>
   <!--========BUILD BODY======-->
   <author>Rob Janssen, Kris van Tienhoven</author>
@@ -67,19 +67,19 @@
     <visual>
       <origin rpy="-1.5708 0 -1.5708" xyz="0.045 0.0 0.06"/>
       <geometry>
-        <mesh filename="package://amigo_robot_model_groovy/Media/meshes/torsocovers.dae" scale="0.0004 0.0004 0.0004"/>
+        <mesh filename="package://amigo_description/media/meshes/torsocovers.dae" scale="0.0004 0.0004 0.0004"/>
       </geometry>
       <material name="white"/>
     </visual>
     <collision>
       <origin rpy="-1.5708 0 -1.5708" xyz="0.045 0.0 0.06"/>
       <geometry>
-        <mesh filename="package://amigo_robot_model_groovy/Media/meshes/torsocovers.dae" scale="0.0004 0.0004 0.0004"/>
+        <mesh filename="package://amigo_description/media/meshes/torsocovers.dae" scale="0.0004 0.0004 0.0004"/>
       </geometry>
     </collision>
   </link>
   <gazebo reference="torso">
-    <material>amigo_robot_model_groovy/white</material>
+    <material>amigo_description/white</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <link name="torso_slider">
@@ -91,19 +91,19 @@
     <visual>
       <origin rpy="0 0 1.5708" xyz="0.05 0 0.0"/>
       <geometry>
-        <mesh filename="package://amigo_robot_model_groovy/Media/meshes/torsoslidertextured.dae" scale="0.004 0.004 0.004"/>
+        <mesh filename="package://amigo_description/media/meshes/torsoslidertextured.dae" scale="0.004 0.004 0.004"/>
       </geometry>
       <material name="aluminum"/>
     </visual>
     <collision>
       <origin rpy="0 0 1.5708" xyz="0.05 0 0.0"/>
       <geometry>
-        <mesh filename="package://amigo_robot_model_groovy/Media/meshes/torsoslidertextured.dae" scale="0.004 0.004 0.004"/>
+        <mesh filename="package://amigo_description/media/meshes/torsoslidertextured.dae" scale="0.004 0.004 0.004"/>
       </geometry>
     </collision>
   </link>
   <gazebo reference="torso_slider">
-    <material>amigo_robot_model_groovy/aluminum</material>
+    <material>amigo_description/aluminum</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <link name="base">
@@ -115,19 +115,19 @@
     <visual>
       <origin rpy="0 0 -1.5708" xyz="0.0 0.0 0.23"/>
       <geometry>
-        <mesh filename="package://amigo_robot_model_groovy/Media/meshes/bottomcovers.dae" scale="0.0004 0.0004 0.0004"/>
+        <mesh filename="package://amigo_description/media/meshes/bottomcovers.dae" scale="0.0004 0.0004 0.0004"/>
       </geometry>
       <material name="bottomcovers"/>
     </visual>
     <collision>
       <origin rpy="0 0 -1.5708" xyz="0.0 0.0 0.23"/>
       <geometry>
-        <mesh filename="package://amigo_robot_model_groovy/Media/meshes/bottomcovers.dae" scale="0.0004 0.0004 0.0004"/>
+        <mesh filename="package://amigo_description/media/meshes/bottomcovers.dae" scale="0.0004 0.0004 0.0004"/>
       </geometry>
     </collision>
   </link>
   <gazebo reference="base">
-    <material>amigo_robot_model_groovy/bottomcovers</material>
+    <material>amigo_description/bottomcovers</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <link name="base_link">
@@ -203,7 +203,7 @@
     </collision>
   </link>
   <gazebo reference="base_plate">
-    <material>amigo_robot_model_groovy/aluminum</material>
+    <material>amigo_description/aluminum</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <joint name="base_plate_joint" type="fixed">
@@ -221,19 +221,19 @@
     <visual>
       <origin rpy="0 1.5708 0" xyz="-0.4  0.0 0.0"/>
       <geometry>
-        <mesh filename="package://amigo_robot_model_groovy/Media/meshes/torsoassistslidertextured.dae" scale="0.004 0.004 0.005"/>
+        <mesh filename="package://amigo_description/media/meshes/torsoassistslidertextured.dae" scale="0.004 0.004 0.005"/>
       </geometry>
       <material name="aluminum"/>
     </visual>
     <collision>
       <origin rpy="0 1.5708 0" xyz="-0.4  0.0 0.0"/>
       <geometry>
-        <mesh filename="package://amigo_robot_model_groovy/Media/meshes/torsoassistslidertextured.dae" scale="0.004 0.004 0.005"/>
+        <mesh filename="package://amigo_description/media/meshes/torsoassistslidertextured.dae" scale="0.004 0.004 0.005"/>
       </geometry>
     </collision>
   </link>
   <gazebo reference="torso_assist_slider_right">
-    <material>amigo_robot_model_groovy/aluminum</material>
+    <material>amigo_description/aluminum</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <link name="torso_assist_slider_left">
@@ -245,19 +245,19 @@
     <visual>
       <origin rpy="0 1.5708 0" xyz="-0.4  0.0 0.0"/>
       <geometry>
-        <mesh filename="package://amigo_robot_model_groovy/Media/meshes/torsoassistslidertextured.dae" scale="0.004 0.004 0.005"/>
+        <mesh filename="package://amigo_description/media/meshes/torsoassistslidertextured.dae" scale="0.004 0.004 0.005"/>
       </geometry>
       <material name="aluminum"/>
     </visual>
     <collision>
       <origin rpy="0 1.5708 0" xyz="-0.4  0.0 0.0"/>
       <geometry>
-        <mesh filename="package://amigo_robot_model_groovy/Media/meshes/torsoassistslidertextured.dae" scale="0.004 0.004 0.005"/>
+        <mesh filename="package://amigo_description/media/meshes/torsoassistslidertextured.dae" scale="0.004 0.004 0.005"/>
       </geometry>
     </collision>
   </link>
   <gazebo reference="torso_assist_slider_left">
-    <material>amigo_robot_model_groovy/aluminum</material>
+    <material>amigo_description/aluminum</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <link name="torso_assist_slider_back">
@@ -269,19 +269,19 @@
     <visual>
       <origin rpy="0 1.5708 0" xyz="-0.4 0.0 0.0"/>
       <geometry>
-        <mesh filename="package://amigo_robot_model_groovy/Media/meshes/torsoassistslidertextured.dae" scale="0.004 0.004 0.005"/>
+        <mesh filename="package://amigo_description/media/meshes/torsoassistslidertextured.dae" scale="0.004 0.004 0.005"/>
       </geometry>
       <material name="aluminum"/>
     </visual>
     <collision>
       <origin rpy="0 1.5708 0" xyz="-0.4 0.0 0.0"/>
       <geometry>
-        <mesh filename="package://amigo_robot_model_groovy/Media/meshes/torsoassistslidertextured.dae" scale="0.004 0.004 0.005"/>
+        <mesh filename="package://amigo_description/media/meshes/torsoassistslidertextured.dae" scale="0.004 0.004 0.005"/>
       </geometry>
     </collision>
   </link>
   <gazebo reference="torso_assist_slider_back">
-    <material>amigo_robot_model_groovy/aluminum</material>
+    <material>amigo_description/aluminum</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <joint name="torso_slider_assist_joint_right" type="fixed">
@@ -388,7 +388,7 @@
     </collision>
   </link>
   <gazebo reference="lasertop">
-    <material>amigo_robot_model_groovy/orange</material>
+    <material>amigo_description/orange</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <joint name="lasertop_joint" type="fixed">
@@ -404,19 +404,19 @@
     <visual>
       <origin rpy="0 0 3.1415" xyz="0.025 0.0 -0.14"/>
       <geometry>
-        <mesh filename="package://amigo_robot_model_groovy/Media/meshes/logo.dae" scale="0.0016 0.0016 0.0016"/>
+        <mesh filename="package://amigo_description/media/meshes/logo.dae" scale="0.0016 0.0016 0.0016"/>
       </geometry>
       <material name="logo"/>
     </visual>
     <collision>
       <origin rpy="0 0 3.1415" xyz="0.025 0.0 -0.14"/>
       <geometry>
-        <mesh filename="package://amigo_robot_model_groovy/Media/meshes/logo.dae" scale="0.0016 0.0016 0.0016"/>
+        <mesh filename="package://amigo_description/media/meshes/logo.dae" scale="0.0016 0.0016 0.0016"/>
       </geometry>
     </collision>
   </link>
   <gazebo reference="logo">
-    <material>amigo_robot_model_groovy/logo</material>
+    <material>amigo_description/logo</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <joint name="logo_joint" type="fixed">
@@ -474,19 +474,19 @@
     <visual>
       <origin rpy="0 0 0" xyz="0.0 -0.0 0.015"/>
       <geometry>
-        <mesh filename="package://amigo_robot_model_groovy/Media/meshes/necktilttextured.dae" scale="0.004 0.004 0.004"/>
+        <mesh filename="package://amigo_description/media/meshes/necktilttextured.dae" scale="0.004 0.004 0.004"/>
       </geometry>
       <material name="aluminum"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0.0 -0.0 0.015"/>
       <geometry>
-        <mesh filename="package://amigo_robot_model_groovy/Media/meshes/necktilttextured.dae" scale="0.004 0.004 0.004"/>
+        <mesh filename="package://amigo_description/media/meshes/necktilttextured.dae" scale="0.004 0.004 0.004"/>
       </geometry>
     </collision>
   </link>
   <gazebo reference="neck_tilt">
-    <material>amigo_robot_model_groovy/aluminum</material>
+    <material>amigo_description/aluminum</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <link name="head">
@@ -498,19 +498,19 @@
     <visual>
       <origin rpy="0 0 -1.5708" xyz="0.0 0.0 0.141"/>
       <geometry>
-        <mesh filename="package://amigo_robot_model_groovy/Media/meshes/headtextured.dae" scale="0.0004 0.0004 0.0004"/>
+        <mesh filename="package://amigo_description/media/meshes/headtextured.dae" scale="0.0004 0.0004 0.0004"/>
       </geometry>
       <material name="white"/>
     </visual>
     <collision>
       <origin rpy="0 0 -1.5708" xyz="0.0 0.0 0.141"/>
       <geometry>
-        <mesh filename="package://amigo_robot_model_groovy/Media/meshes/headtextured.dae" scale="0.0004 0.0004 0.0004"/>
+        <mesh filename="package://amigo_description/media/meshes/headtextured.dae" scale="0.0004 0.0004 0.0004"/>
       </geometry>
     </collision>
   </link>
   <gazebo reference="head">
-    <material>amigo_robot_model_groovy/white</material>
+    <material>amigo_description/white</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <joint name="head_joint" type="fixed">
@@ -550,8 +550,8 @@
       <origin rpy="0 0 0" xyz=" 0 0 0 "/>
       <geometry>
         <box size="0 0 0"/>
-        <!--mesh filename="package://amigo_robot_model_groovy/kinect/meshes/kinect.dae" scale="0.001 0.001 0.001"/-->
-        <!--<mesh filename="package://amigo_robot_model_groovy/kinect/meshes/kinect_without_base.dae"/>-->
+        <!--mesh filename="package://amigo_description/kinect/meshes/kinect.dae" scale="0.001 0.001 0.001"/-->
+        <!--<mesh filename="package://amigo_description/kinect/meshes/kinect_without_base.dae"/>-->
       </geometry>
     </visual>
     <!--<collision>
@@ -625,16 +625,16 @@
       <origin rpy="0 0 0" xyz=" 0 0 0 "/>
       <geometry>
         <!--<box size="0 0 0"/>-->
-        <!--mesh filename="package://amigo_robot_model_groovy/description/kinect/meshes/kinect.dae" scale="0.001 0.001 0.001"/-->
-        <mesh filename="package://amigo_robot_model_groovy/description/kinect/meshes/kinect_without_base.dae"/>
+        <!--mesh filename="package://amigo_description/description/kinect/meshes/kinect.dae" scale="0.001 0.001 0.001"/-->
+        <mesh filename="package://amigo_description/media/meshes/kinect/kinect_without_base.dae"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz=" 0 0 0 "/>
       <geometry>
         <!--<box size="0.01 0.01 0.01"/>-->
-        <!--<mesh filename="package://amigo_robot_model_groovy/description/kinect/meshes/kinect.dae" scale="0.001 0.001 0.001"/>-->
-        <mesh filename="package://amigo_robot_model_groovy/description/kinect/meshes/kinect_without_base.dae"/>
+        <!--<mesh filename="package://amigo_description/description/kinect/meshes/kinect.dae" scale="0.001 0.001 0.001"/>-->
+        <mesh filename="package://amigo_description/media/meshes/kinect/kinect_without_base.dae"/>
       </geometry>
     </collision>
   </link>
@@ -774,19 +774,19 @@
     <visual>
       <origin rpy="0 0 3.1415" xyz="-0.00959 -0.19131 -0.00001"/>
       <geometry>
-        <mesh filename="package://amigo_robot_model_groovy/Media/meshes/upperarmtextured.dae" scale="0.0004 0.0004 0.0004"/>
+        <mesh filename="package://amigo_description/media/meshes/upperarmtextured.dae" scale="0.0004 0.0004 0.0004"/>
       </geometry>
       <material name="white"/>
     </visual>
     <collision>
       <origin rpy="0 0 3.1415" xyz="-0.00959 -0.19131 -0.00001"/>
       <geometry>
-        <mesh filename="package://amigo_robot_model_groovy/Media/meshes/upperarmtextured.dae" scale="0.0004 0.0004 0.0004"/>
+        <mesh filename="package://amigo_description/media/meshes/upperarmtextured.dae" scale="0.0004 0.0004 0.0004"/>
       </geometry>
     </collision>
   </link>
   <gazebo reference="upper_arm_right">
-    <material>amigo_robot_model_groovy/white</material>
+    <material>amigo_description/white</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <link name="elbow_link4_right">
@@ -823,19 +823,19 @@
     <visual>
       <origin rpy="0 -1.5708 0" xyz="0.00425 -0.14868 0.00547"/>
       <geometry>
-        <mesh filename="package://amigo_robot_model_groovy/Media/meshes/forearmtextured.dae" scale="0.0004 0.0004 0.0004"/>
+        <mesh filename="package://amigo_description/media/meshes/forearmtextured.dae" scale="0.0004 0.0004 0.0004"/>
       </geometry>
       <material name="white"/>
     </visual>
     <collision>
       <origin rpy="0 -1.5708 0" xyz="0.00425 -0.14868 0.00547"/>
       <geometry>
-        <mesh filename="package://amigo_robot_model_groovy/Media/meshes/forearmtextured.dae" scale="0.0004 0.0004 0.0004"/>
+        <mesh filename="package://amigo_description/media/meshes/forearmtextured.dae" scale="0.0004 0.0004 0.0004"/>
       </geometry>
     </collision>
   </link>
   <gazebo reference="fore_arm_right">
-    <material>amigo_robot_model_groovy/white</material>
+    <material>amigo_description/white</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <link name="wrist_link6_right">
@@ -1331,19 +1331,19 @@
     <visual>
       <origin rpy="0 0 3.1415" xyz="-0.00959 -0.19131 -0.00001"/>
       <geometry>
-        <mesh filename="package://amigo_robot_model_groovy/Media/meshes/upperarmtextured.dae" scale="0.0004 0.0004 0.0004"/>
+        <mesh filename="package://amigo_description/media/meshes/upperarmtextured.dae" scale="0.0004 0.0004 0.0004"/>
       </geometry>
       <material name="white"/>
     </visual>
     <collision>
       <origin rpy="0 0 3.1415" xyz="-0.00959 -0.19131 -0.00001"/>
       <geometry>
-        <mesh filename="package://amigo_robot_model_groovy/Media/meshes/upperarmtextured.dae" scale="0.0004 0.0004 0.0004"/>
+        <mesh filename="package://amigo_description/media/meshes/upperarmtextured.dae" scale="0.0004 0.0004 0.0004"/>
       </geometry>
     </collision>
   </link>
   <gazebo reference="upper_arm_left">
-    <material>amigo_robot_model_groovy/white</material>
+    <material>amigo_description/white</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <link name="elbow_link4_left">
@@ -1380,19 +1380,19 @@
     <visual>
       <origin rpy="0 -1.5708 0" xyz="0.00425 -0.14868 0.00547"/>
       <geometry>
-        <mesh filename="package://amigo_robot_model_groovy/Media/meshes/forearmtextured.dae" scale="0.0004 0.0004 0.0004"/>
+        <mesh filename="package://amigo_description/media/meshes/forearmtextured.dae" scale="0.0004 0.0004 0.0004"/>
       </geometry>
       <material name="white"/>
     </visual>
     <collision>
       <origin rpy="0 -1.5708 0" xyz="0.00425 -0.14868 0.00547"/>
       <geometry>
-        <mesh filename="package://amigo_robot_model_groovy/Media/meshes/forearmtextured.dae" scale="0.0004 0.0004 0.0004"/>
+        <mesh filename="package://amigo_description/media/meshes/forearmtextured.dae" scale="0.0004 0.0004 0.0004"/>
       </geometry>
     </collision>
   </link>
   <gazebo reference="fore_arm_left">
-    <material>amigo_robot_model_groovy/white</material>
+    <material>amigo_description/white</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <link name="wrist_link6_left">
