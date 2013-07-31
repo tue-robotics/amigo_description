@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+<xacro:macro name="wheels_trans" params="side_LR side_FR">
+        <transmission name="wheel_inner_trans_${side_LR}_${side_FR}" type="pr2_mechanism_model/SimpleTransmission">
+                <actuator name="wheel_inner_motor_${side_LR}_${side_FR}" />
+                <joint name="wheel_inner_joint_${side_LR}_${side_FR}" />
+                <mechanicalReduction>1</mechanicalReduction>
+                <motorTorqueConstant>1</motorTorqueConstant>
+        </transmission>
+        
+
+</xacro:macro>
+
+<xacro:wheels_trans side_LR="left" side_FR="front"/>
+<xacro:wheels_trans side_LR="right" side_FR="front"/>
+<xacro:wheels_trans side_LR="left" side_FR="rear"/>
+<xacro:wheels_trans side_LR="right" side_FR="rear"/>
+
+
+
+
+
+<xacro:macro name="omniwheel_trans" params="side_LR side_FR number">
+        <transmission name="omniwheel_trans_${side_LR}_${side_FR}" type="pr2_mechanism_model/SimpleTransmission">
+                <actuator name="omniwheel_motor_${side_LR}_${side_FR}" />
+                <joint name="omni_sphere${number}_joint_${side_LR}_${side_FR}" />
+                <mechanicalReduction>1</mechanicalReduction>
+                <motorTorqueConstant>1</motorTorqueConstant>
+        </transmission>
+</xacro:macro>
+
+<xacro:macro name="omni" params="nr">
+  <xacro:omniwheel_trans side_LR="left" side_FR="front" number="${nr}"/>
+  <xacro:omniwheel_trans side_LR="right" side_FR="front"  number="${nr}"/>
+  <xacro:omniwheel_trans side_LR="left" side_FR="rear" number="${nr}"/>
+  <xacro:omniwheel_trans side_LR="right" side_FR="rear" number="${nr}"/>
+</xacro:macro>
+
+<xacro:omni nr="1" />
+<xacro:omni nr="2" />
+<xacro:omni nr="3" />
+<xacro:omni nr="4" />
+<xacro:omni nr="5" />
+<xacro:omni nr="6" />
+
+<xacro:omni nr="7" />
+<xacro:omni nr="8" />
+<xacro:omni nr="9" />
+<xacro:omni nr="10" />
+<xacro:omni nr="11" />
+<xacro:omni nr="12" />
+
+
+</robot>

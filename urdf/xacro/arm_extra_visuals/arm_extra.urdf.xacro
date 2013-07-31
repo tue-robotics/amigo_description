@@ -1,0 +1,106 @@
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+   <author>Kris van Tienhoven</author>
+   <license>BSD</license>
+   <review status="unreviewed" notes=""/>
+   
+<!--Start of the macro
+@param whichside is "left"  or "right"
+@param sidesign is -1 or +1
+@param rollsign is - or +
+
+The reason sidesign is -1 or +1 and not just - or + aswell is because 
+it has to be reversable and xml cannot multiply - or + but can multiply
+ -1 and +1-->
+<xacro:macro name="arm_extra" params="whichside sidesign rollsign">
+
+<!--the black cylinder sealing the upper arm-->
+<xacro:my_link name="upper_arm_top_${whichside}" mass="0.01" color="Black">
+   <cylinder radius="0.0561" length="0.02"/>
+   <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+   <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
+   <inertia ixx="0.027"  ixy="0"  ixz="0" iyy="0.027" iyz="0" izz="0.004" />
+</xacro:my_link>
+
+<!-- the black box under the upper arm, elbow visual 1 -->
+<xacro:my_link name="elbow_extra_block_${whichside}" mass="0.01" color="Black">
+   <box size="0.015 0.08 0.06"/>
+   <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+   <origin xyz="-0.036 0.0 0.02" rpy="0 0 0" />
+   <inertia ixx="0.001"  ixy="0"  ixz="0" iyy="0.001" iyz="0" izz="0.001" />
+</xacro:my_link>
+
+<!--the grey cylinder that connects the black box to the forearm, elbow visual 2-->
+<xacro:my_link name="elbow_extra_block2_${whichside}" mass="0.01" color="Grey">
+   <cylinder radius="0.03" length="0.08"/>
+   <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+   <origin xyz="0.0 0.0 0.0" rpy="1.5708 0 0" />
+   <inertia ixx="0.001"  ixy="0"  ixz="0" iyy="0.001" iyz="0" izz="0.001" />
+</xacro:my_link>
+
+<!--the black cylinder sealing the forearm -->
+<xacro:my_link name="fore_arm_top_${whichside}" mass="0.01" color="Black">
+   <cylinder radius="0.037" length="0.01"/>
+   <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+   <origin xyz="0.0 0.0 0.01" rpy="0 0 0" />
+   <inertia ixx="0.0054"  ixy="0"  ixz="0" iyy="0.0054" iyz="0" izz="0.0004" />
+</xacro:my_link>
+
+<!--the grey cylinder at the end of the forearm-->
+<xacro:my_link name="wrist_visual_${whichside}" mass="0.01" color="Grey">
+   <cylinder radius="0.018" length="0.06"/>
+   <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+   <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
+   <inertia ixx="0.001"  ixy="0"  ixz="0" iyy="0.001" iyz="0" izz="0.001" />
+</xacro:my_link>
+
+<!--the little grey box that connects the above cylinder with the hand -->
+<xacro:my_link name="wrist_to_hand_block_${whichside}" mass="0.01" color="Grey">
+   <box size="0.03 0.02 0.038"/>
+   <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+   <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
+   <inertia ixx="0.001"  ixy="0"  ixz="0" iyy="0.001" iyz="0" izz="0.001" />
+</xacro:my_link>
+
+
+<!--the joints start here-->
+
+<joint name="upper_arm_top_joint_${whichside}" type="fixed">
+  <parent link="upper_arm_${whichside}" />
+  <child link="upper_arm_top_${whichside}"/>
+  <origin xyz="-0.01 -0.1 0.0" rpy="1.5708 0 0.0"/>
+</joint>
+
+<joint name="elbow_extra_block_joint_${whichside}" type="fixed">
+  <parent link="upper_arm_${whichside}"/> 
+  <child link="elbow_extra_block_${whichside}"/>
+  <origin xyz="0.0 -0.31 0.0" rpy="-1.5708 0 0"/>
+</joint>
+
+<joint name="elbow_extra_block2_joint_${whichside}" type="fixed">
+  <parent link="upper_arm_${whichside}"/> 
+  <child link="elbow_extra_block2_${whichside}"/>
+  <origin xyz="0.0 -0.31 0.0" rpy="-1.5708 0 0"/>
+</joint>
+
+<joint name="fore_arm_top_joint_${whichside}" type="fixed" >
+  <parent link="fore_arm_${whichside}"/> 
+  <child link="fore_arm_top_${whichside}"/>
+   <origin xyz="0.002 -0.011 0.0" rpy="1.5708 0 0"/>
+</joint>
+
+<joint name="wrist_visual_joint_${whichside}" type="fixed">
+  <parent link="wrist_link6_${whichside}"/>
+  <child link="wrist_visual_${whichside}"/>
+  <origin xyz="-0.02 0.0 0.0" rpy="1.5708 0 0"/>
+</joint>
+
+<joint name="wrist_to_hand_block_joint_${whichside}" type="fixed">
+  <parent link="wrist_link6_${whichside}"/>
+  <child link="wrist_to_hand_block_${whichside}"/>
+  <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+</joint>
+
+</xacro:macro>
+
+</robot>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+<xacro:macro name="base_trans" params="dof">
+        <transmission name="base_${dof}_trans" type="pr2_mechanism_model/SimpleTransmission">
+            <actuator name="base_${dof}" />
+            <joint name="base_${dof}_joint" />
+            <mechanicalReduction>1</mechanicalReduction>
+            <motorTorqueConstant>1</motorTorqueConstant>
+        </transmission>
+</xacro:macro>
+
+<xacro:base_trans dof="phi" />
+<xacro:base_trans dof="x" />
+<xacro:base_trans dof="y" />
+
+</robot>

@@ -1,0 +1,189 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+<!-- *************** LINK Definitions *****************-->
+
+   <author>Kris van Tienhoven</author>
+   <license>BSD</license>
+   <review status="unreviewed" notes=""/>
+
+<!--use this type of link for standard shapes (bos, cylinder, sphere) with standard color -->
+<xacro:macro name="my_link" params="name mass color *type *origin *visualorigin *inertia">
+  <link name="${name}">
+   <inertial>
+     <xacro:insert_block name="origin" />
+     <mass value="${mass}"/>
+     <xacro:insert_block name="inertia" />
+   </inertial>
+   <visual>
+     <xacro:insert_block name="visualorigin" />
+     <geometry>
+     <xacro:insert_block name="type" />
+     </geometry>
+     <material name="${color}">
+     </material>
+    </visual>
+    <collision>
+     <xacro:insert_block name="visualorigin" />
+     <geometry>
+     <xacro:insert_block name="type" />
+     </geometry>
+    </collision>
+  </link>
+<gazebo reference="${name}">
+      <material>Gazebo/${color}</material>
+      <turnGravityOff>false</turnGravityOff>
+    </gazebo>
+</xacro:macro>
+
+<!-- use this type of link if you want the standard shapes with a texture -->
+<xacro:macro name="my_link_textured" params="name mass texture *type *origin *visualorigin *inertia">
+  <link name="${name}">
+   <inertial>
+     <xacro:insert_block name="origin" />
+     <mass value="${mass}"/>
+     <xacro:insert_block name="inertia" />
+   </inertial>
+   <visual>
+     <xacro:insert_block name="visualorigin" />
+     <geometry>
+     <xacro:insert_block name="type" />
+     </geometry>
+     <material name="${texture}">
+     </material>
+    </visual>
+    <collision>
+     <xacro:insert_block name="visualorigin" />
+     <geometry>
+     <xacro:insert_block name="type" />
+     </geometry>
+    </collision>
+  </link>
+<gazebo reference="${name}">
+      <material>amigo_robot_model_groovy/${texture}</material>
+      <turnGravityOff>false</turnGravityOff>
+    </gazebo>
+</xacro:macro>
+
+
+<!--use this type of link for shapes that need to be collision free and thereby also invisible -->
+<xacro:macro name="my_link_coll_free" params="name mass color *type *origin *visualorigin *inertia">
+  <link name="${name}">
+   <inertial>
+     <xacro:insert_block name="origin" />
+     <mass value="${mass}"/>
+     <xacro:insert_block name="inertia" />
+   </inertial>
+   <visual>
+     <xacro:insert_block name="visualorigin" />
+     <geometry>
+     <xacro:insert_block name="type" />
+     </geometry>
+     <material name="${color}">
+     </material>
+    </visual>
+  </link>
+
+<gazebo reference="${name}">
+      <material>Gazebo/${color}</material>
+      <turnGravityOff>false</turnGravityOff>
+    </gazebo>
+</xacro:macro>
+
+
+<!--use this type of link if you want to load a mesh with a standard color -->
+<xacro:macro name="my_link_mesh" params="name mass color *origin *visualorigin *inertia *mesh">
+  <link name="${name}">
+   <inertial>
+     <xacro:insert_block name="origin" />
+     <mass value="${mass}"/>
+     <xacro:insert_block name="inertia" />
+   </inertial>
+   <visual>
+     <xacro:insert_block name="visualorigin" />
+     <geometry>
+     <xacro:insert_block name="mesh" />
+     </geometry>
+     <material name="${color}">
+     </material>
+    </visual>
+    <collision>
+     <xacro:insert_block name="visualorigin" />
+     <geometry>
+     <xacro:insert_block name="mesh" />
+     </geometry>
+    </collision>
+  </link>
+<gazebo reference="${name}">
+      <material>Gazebo/${color}</material>
+      <turnGravityOff>false</turnGravityOff>
+    </gazebo>
+</xacro:macro>
+
+<!-- use this type of link if you want to load a mesh with a texture -->
+<xacro:macro name="my_link_texturedmesh" params="name mass texture *origin *visualorigin *inertia *mesh">
+  <link name="${name}">
+   <inertial>
+     <xacro:insert_block name="origin" />
+     <mass value="${mass}"/>
+     <xacro:insert_block name="inertia" />
+   </inertial>
+   <visual>
+     <xacro:insert_block name="visualorigin" />
+     <geometry>
+     <xacro:insert_block name="mesh" />
+     </geometry>
+     <material name="${texture}"/>
+    </visual>
+    <collision>
+     <xacro:insert_block name="visualorigin" />
+     <geometry>
+     <xacro:insert_block name="mesh" />
+     </geometry>
+    </collision>
+  </link>
+<gazebo reference="${name}">
+	  <material>amigo_robot_model_groovy/${texture}</material>
+      <turnGravityOff>false</turnGravityOff>
+    </gazebo>
+</xacro:macro>
+
+<!-- use this type of link if you want a mesh with texture and a different bouding box (then the box around the mesh itself) -->
+<xacro:macro name="my_link_texturedmesh_diff_coll" params="name mass texture *origin *visualorigin *collorigin *inertia *mesh *type">
+  <link name="${name}">
+   <inertial>
+     <xacro:insert_block name="origin" />
+     <mass value="${mass}"/>
+     <xacro:insert_block name="inertia" />
+   </inertial>
+   <visual>
+     <xacro:insert_block name="visualorigin" />
+     <geometry>
+     <xacro:insert_block name="mesh" />
+     </geometry>
+     <material name="${texture}"/>
+    </visual>
+    <collision>
+     <xacro:insert_block name="collorigin" />
+     <geometry>
+     <xacro:insert_block name="type" />
+     </geometry>
+    </collision>
+  </link>
+<gazebo reference="${name}">
+	  <material>amigo_robot_model_groovy/${texture}</material>
+      <turnGravityOff>false</turnGravityOff>
+    </gazebo>
+</xacro:macro>
+
+<!-- *************** JOINT Definition *****************-->
+<xacro:macro name="my_joint" params="name type parent child *origin *dynamics *axis *limit">  
+ <joint name="${name}" type="${type}">
+    <parent link="${parent}"/>
+    <child link="${child}"/>
+    <xacro:insert_block name="origin" />
+    <xacro:insert_block name="axis" />
+    <xacro:insert_block name="dynamics" />
+    <xacro:insert_block name="limit" />
+  </joint>
+</xacro:macro>
+</robot>

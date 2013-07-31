@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+<!--TRANSMISSION: necessary for linking the joints to the controllers -->
+        <transmission name="neck_trans" type="pr2_mechanism_model/SimpleTransmission">
+                <actuator name="neck_motor" />
+                <joint name="neck_pan_joint" />
+                <mechanicalReduction>1</mechanicalReduction>
+                <motorTorqueConstant>1</motorTorqueConstant>
+        </transmission>
+
+        <transmission name="head_trans" type="pr2_mechanism_model/SimpleTransmission">
+                <actuator name="head_motor" />
+                <joint name="neck_tilt_joint" />
+                <mechanicalReduction>1</mechanicalReduction>
+                <motorTorqueConstant>1</motorTorqueConstant>
+        </transmission>
+
+</robot>

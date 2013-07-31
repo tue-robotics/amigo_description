@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+   <author>Kris van Tienhoven</author>
+   <license>BSD</license>
+   <review status="unreviewed" notes=""/>
+
+
+<!--head-->
+
+<!-- !!!!!!!!!something without a visual not sure what this is!!!!!!!!!!!! -->
+<link name="head_mount">
+  <inertial>
+    <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+    <mass value="0.001"/>
+    <inertia ixx="0.0001"  ixy="0"  ixz="0" iyy="0.0001" iyz="0" izz="0.0001" />
+  </inertial>
+</link>
+
+<joint name="head_mount_joint" type="fixed">
+  <parent link="torso"/>
+  <child link="head_mount"/>
+  <axis xyz="0 0 1"/>
+  <origin xyz="0.097 0.0 0.0" rpy="  0.0 0.0 0.0"/>
+</joint>
+
+<!-- the link that represents the panning part of the neck, is below neck_tilt -->
+<xacro:my_link name="neck_pan" mass="0.05" color="Black">
+   <cylinder radius="0.015" length="0.0525" /> 
+   <origin xyz="0.0 0.0 0.0335" rpy="0 0 0"/>
+   <origin xyz="0.0 0.0 0.0335" rpy="0 0 0" />
+   <inertia ixx="0.0001"  ixy="0"  ixz="0" iyy="0.0001" iyz="0" izz="0.0001" /> 
+   <color rgba="0.25 0.25 0.25 1.0"/>
+</xacro:my_link>
+
+<!-- the link that represents the tilting part of the neck, is above neck_pan -->
+<xacro:my_link_texturedmesh name="neck_tilt" mass="0.05" texture="aluminum">
+   <origin xyz="0.0 -0.0 0.0285" rpy="0 0 0"/>
+   <origin xyz="0.0 -0.0 0.015" rpy="0 0 0" />
+   <inertia ixx="0.001"  ixy="0"  ixz="0" iyy="0.001" iyz="0" izz="0.001" /> 
+   <mesh filename="package://amigo_robot_model_groovy/Media/meshes/necktilttextured.dae" scale="0.004 0.004 0.004"/>
+</xacro:my_link_texturedmesh>
+
+<!--the head itself-->
+ <my_link_texturedmesh name="head" mass="0" texture="white">
+   <origin xyz="0 0 0.041" rpy="0 0 0"/>
+   <origin xyz="0.0 0.0 0.141" rpy="0 0 -1.5708"/>
+   <inertia ixx="0"  ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" /> 
+   <mesh filename="package://amigo_robot_model_groovy/Media/meshes/headtextured.dae" scale="0.0004 0.0004 0.0004"/>
+  </my_link_texturedmesh>
+
+  <joint name="head_joint" type="fixed">
+    <parent link="neck_tilt"/>
+    <child link="head"/>
+  </joint>
+  
+  
+<!-- the tilt and pan joints-->
+<xacro:my_joint name="neck_pan_joint" type="revolute" parent="head_mount" child="neck_pan">
+   <origin xyz="0.0 0.0 0.0" rpy="3.14 -1.5708 0.0"/> 
+   <dynamics damping="0.1" friction="0"/>
+   <axis xyz="0 0 1"/>
+   <limit effort="13.4" velocity="1.0" lower="-1.5708" upper="1.5708" /> 
+</xacro:my_joint>
+
+<xacro:my_joint name="neck_tilt_joint" type="revolute" parent="neck_pan" child="neck_tilt">
+   <origin xyz="0.0 0.0 0.0445" rpy="0.0 0.0 0.0"/> 
+   <dynamics damping="0.1" friction="0.0"/>
+   <axis xyz="0 1 0"/>
+   <limit effort="13.4" velocity="1.0" lower="-2.0" upper="2.0" /> 
+</xacro:my_joint>
+
+</robot>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+<xacro:macro name="ar_marker" params="whichside">
+
+<joint name="marker_joint_${whichside}" type="fixed">
+  <parent link="grippoint_${whichside}"/>
+  <child link="hand_marker_${whichside}"/>
+  <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+</joint>
+
+<xacro:my_link name="hand_marker_${whichside}" mass="0.00001" color="Grey">
+   <cylinder radius="0.0" length="0.0"/>
+   <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+   <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
+   <inertia ixx="0.001"  ixy="0"  ixz="0" iyy="0.001" iyz="0" izz="0.001" />
+</xacro:my_link>
+
+</xacro:macro>
+
+</robot>
