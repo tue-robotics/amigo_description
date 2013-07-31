@@ -381,7 +381,7 @@
       
       <sensor name='base_kinect_openni_camera' type='depth'>
         <update_rate>20.000000</update_rate>
-        <camera name='__default__'>
+        <camera name='base_kinect'>
           <horizontal_fov>1.047198</horizontal_fov>
           <image>
             <width>640</width>
@@ -393,16 +393,16 @@
             <far>3.000000</far>
           </clip>
         </camera>
-        <plugin name='base_kinect_camera_controller' filename='libNewCameraPlugin.so'>
+        <plugin name='base_kinect_camera_controller' filename='libKinectPlugin.so'>
           <alwaysOn>1</alwaysOn>
           <updateRate>20</updateRate>
-          <cameraName>amigo/base/kinect</cameraName>
+          <cameraName>base_kinect</cameraName>
           <imageTopicName>rgb/image_color</imageTopicName>
           <cameraInfoTopicName>rgb/camera_info</cameraInfoTopicName>
           <depthImageTopicName>depth/image</depthImageTopicName>
           <depthImageCameraInfoTopicName>depth/camera_info</depthImageCameraInfoTopicName>
           <pointCloudTopicName>rgb/points</pointCloudTopicName>
-          <frameName>/amigo_base_kinect_openni_depth_optical_frame</frameName>
+          <frameName>base_kinect/openni_depth_optical_frame</frameName>
         </plugin>
         <pose>0.300000 0.000000 0.315000 0.000000 -0.070000 0.000000</pose>
       </sensor>
@@ -438,7 +438,7 @@
             <resolution>0.010000</resolution>
           </range>
         </ray>
-        <plugin name='base_ros_ray_sensor_controller' filename='libNewLaserPlugin.so'>
+        <plugin name='base_ros_ray_sensor_controller' filename='libLaserPlugin.so'>
           <gaussianNoise>0.005</gaussianNoise>
           <alwaysOn>1</alwaysOn>
           <updateRate>15.0</updateRate>
@@ -1013,7 +1013,7 @@
       
       <sensor name='openni_camera' type='depth'>
         <update_rate>20.000000</update_rate>
-        <camera name='__default__'>
+        <camera name='top_kinect'>
           <horizontal_fov>1.047198</horizontal_fov>
           <image>
             <width>640</width>
@@ -1025,16 +1025,16 @@
             <far>3.000000</far>
           </clip>
         </camera>
-		<plugin name='kinect_camera_controller' filename='libNewCameraPlugin.so'>
+		<plugin name='kinect_camera_controller' filename='libKinectPlugin.so'>
           <alwaysOn>1</alwaysOn>
           <updateRate>20</updateRate>
-          <cameraName>amigo/head/kinect</cameraName>
+          <cameraName>top_kinect</cameraName>
           <imageTopicName>rgb/image_color</imageTopicName>
           <cameraInfoTopicName>rgb/camera_info</cameraInfoTopicName>
           <depthImageTopicName>depth/image</depthImageTopicName>
           <depthImageCameraInfoTopicName>depth/camera_info</depthImageCameraInfoTopicName>
           <pointCloudTopicName>rgb/points</pointCloudTopicName>
-          <frameName>/amigo_head_kinect_openni_depth_optical_frame</frameName>
+          <frameName>top_kinect/openni_depth_optical_frame</frameName>
         </plugin>
         <pose>0.070000 0.000000 0.070000 0.000000 0.000000 0.000000</pose>
       </sensor>
