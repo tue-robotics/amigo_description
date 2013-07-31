@@ -442,9 +442,9 @@
           <gaussianNoise>0.005</gaussianNoise>
           <alwaysOn>1</alwaysOn>
           <updateRate>15.0</updateRate>
-          <topicName>laser</topicName>
+          <topicName>base_scan</topicName>
           <node_namespace>base</node_namespace>
-          <frameName>/base_laser</frameName>
+          <frameName>base_laser</frameName>
         </plugin>
         <pose>0.310000 0.000000 0.240000 0.000000 0.000000 0.000000</pose>
       </sensor>
