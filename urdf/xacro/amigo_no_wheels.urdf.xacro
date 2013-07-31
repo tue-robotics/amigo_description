@@ -28,7 +28,7 @@
 <include filename="$(find amigo_description)/urdf/xacro/head/head.urdf.xacro" />
 
 <!--========BUILD KINECT======-->
-<include filename="$(find amigo_description)/urdf/xacro/kinect/kinect.urdf.xacro" />
+<include filename="$(find amigo_description)/urdf/xacro/kinect/top_kinect.urdf.xacro" />
 <include filename="$(find amigo_description)/urdf/xacro/kinect/base_kinect.urdf.xacro" />
 
 <!--========BUILD ARMS======-->

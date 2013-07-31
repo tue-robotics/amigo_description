@@ -38,7 +38,7 @@
    <origin xyz="0.0 -0.0 0.0285" rpy="0 0 0"/>
    <origin xyz="0.0 -0.0 0.015" rpy="0 0 0" />
    <inertia ixx="0.001"  ixy="0"  ixz="0" iyy="0.001" iyz="0" izz="0.001" /> 
-   <mesh filename="package://amigo_robot_model_groovy/Media/meshes/necktilttextured.dae" scale="0.004 0.004 0.004"/>
+   <mesh filename="package://amigo_description/media/meshes/necktilttextured.dae" scale="0.004 0.004 0.004"/>
 </xacro:my_link_texturedmesh>
 
 <!--the head itself-->
@@ -46,7 +46,7 @@
    <origin xyz="0 0 0.041" rpy="0 0 0"/>
    <origin xyz="0.0 0.0 0.141" rpy="0 0 -1.5708"/>
    <inertia ixx="0"  ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" /> 
-   <mesh filename="package://amigo_robot_model_groovy/Media/meshes/headtextured.dae" scale="0.0004 0.0004 0.0004"/>
+   <mesh filename="package://amigo_description/media/meshes/headtextured.dae" scale="0.0004 0.0004 0.0004"/>
   </my_link_texturedmesh>
 
   <joint name="head_joint" type="fixed">

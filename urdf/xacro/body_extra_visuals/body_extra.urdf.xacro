@@ -28,7 +28,7 @@
    <origin xyz="0 0 0" rpy="0 0 0"/>
    <origin xyz="-0.4  0.0 0.0" rpy="0 1.5708 0"/>
    <inertia ixx="0.01"  ixy="0"  ixz="0" iyy="0.01" iyz="0" izz="0.01" />
-   <mesh filename="package://amigo_robot_model_groovy/Media/meshes/torsoassistslidertextured.dae" scale="0.004 0.004 0.005"/>
+   <mesh filename="package://amigo_description/media/meshes/torsoassistslidertextured.dae" scale="0.004 0.004 0.005"/>
 </xacro:my_link_texturedmesh>
 
 <!--left link-->
@@ -36,7 +36,7 @@
    <origin xyz="0 0 0" rpy="0 0 0"/>
    <origin xyz="-0.4  0.0 0.0" rpy="0 1.5708 0"/>
    <inertia ixx="0.01"  ixy="0"  ixz="0" iyy="0.01" iyz="0" izz="0.01" />
-   <mesh filename="package://amigo_robot_model_groovy/Media/meshes/torsoassistslidertextured.dae" scale="0.004 0.004 0.005"/>
+   <mesh filename="package://amigo_description/media/meshes/torsoassistslidertextured.dae" scale="0.004 0.004 0.005"/>
 </xacro:my_link_texturedmesh>
 
 <!--back link-->
@@ -44,7 +44,7 @@
    <origin xyz="0 0 0" rpy="0 0 0"/>
    <origin xyz="-0.4 0.0 0.0" rpy="0 1.5708 0"/>
    <inertia ixx="0.01"  ixy="0"  ixz="0" iyy="0.01" iyz="0" izz="0.01" />
-   <mesh filename="package://amigo_robot_model_groovy/Media/meshes/torsoassistslidertextured.dae" scale="0.004 0.004 0.005"/>
+   <mesh filename="package://amigo_description/media/meshes/torsoassistslidertextured.dae" scale="0.004 0.004 0.005"/>
 </xacro:my_link_texturedmesh>
   
 <!--left joint-->

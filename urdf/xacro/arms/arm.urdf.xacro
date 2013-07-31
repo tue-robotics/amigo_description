@@ -47,7 +47,7 @@ it has to be reversable and xml cannot multiply - or + but can multiply
    <origin xyz="0.0 -0.2 0.0" rpy="0 0 0"/>
    <origin xyz="-0.00959 -0.19131 -0.00001" rpy="0 0 3.1415" />
    <inertia ixx="0.027"  ixy="0"  ixz="0" iyy="0.027" iyz="0" izz="0.004" />
-   <mesh filename="package://amigo_robot_model_groovy/Media/meshes/upperarmtextured.dae" scale="0.0004 0.0004 0.0004"/> 
+   <mesh filename="package://amigo_description/media/meshes/upperarmtextured.dae" scale="0.0004 0.0004 0.0004"/> 
 </xacro:my_link_texturedmesh>
 
 <!--the elbow
@@ -64,7 +64,7 @@ note: not visible, see arm_extra_visuals for the elbow visuals -->
    <origin xyz="0.0 -0.14 0.0" rpy="0.0 0 0"/>
    <origin xyz="0.00425 -0.14868 0.00547" rpy="0 -1.5708 0" />
    <inertia ixx="0.0054"  ixy="0"  ixz="0" iyy="0.0054" iyz="0" izz="0.0004" />
-   <mesh filename="package://amigo_robot_model_groovy/Media/meshes/forearmtextured.dae" scale="0.0004 0.0004 0.0004"/> 
+   <mesh filename="package://amigo_description/media/meshes/forearmtextured.dae" scale="0.0004 0.0004 0.0004"/> 
 </xacro:my_link_texturedmesh>
 
 <!--the wrist

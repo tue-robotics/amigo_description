@@ -6,13 +6,13 @@
 
   <property name="M_PI" value="3.14159"/>
     
-  <joint name="base_kinect_joint" type="fixed">
+  <joint name="top_kinect/base_kinect_joint" type="fixed">
     <origin xyz="0.07 0 0.07" rpy="0 0 0" /> <!-- THESE VALUES ARE ROUGH ESTIMATES!! -->
     <parent link="head" />
-    <child link="openni_camera" />
+    <child link="top_kinect/openni_camera" />
   </joint>
   
-  <link name="openni_camera">
+  <link name="top_kinect/openni_camera">
     <inertial>
       <mass value="0.01" />
       <origin xyz="0 0 0" />
@@ -36,13 +36,13 @@
     </collision>-->
   </link>
 
-  <joint name="kinect_depth_joint" type="fixed">
+  <joint name="top_kinect/kinect_depth_joint" type="fixed">
     <origin xyz="0 0.018 0" rpy="0 0 0" />
-    <parent link="openni_camera" />
-    <child link="openni_depth_frame" />
+    <parent link="top_kinect/openni_camera" />
+    <child link="top_kinect/openni_depth_frame" />
   </joint>
 
-  <link name="openni_depth_frame">
+  <link name="top_kinect/openni_depth_frame">
     <inertial>
       <mass value="0.01" />
       <origin xyz="0 0 0" />
@@ -52,13 +52,13 @@
     </inertial>
   </link>
 
-  <joint name="kinect_depth_optical_joint" type="fixed">
+  <joint name="top_kinect/kinect_depth_optical_joint" type="fixed">
     <origin xyz="0 0 0" rpy="${-M_PI/2} 0 ${-M_PI/2}" />
-    <parent link="openni_depth_frame" />
-    <child link="openni_depth_optical_frame" />
+    <parent link="top_kinect/openni_depth_frame" />
+    <child link="top_kinect/openni_depth_optical_frame" />
   </joint>
 
-  <link name="openni_depth_optical_frame">
+  <link name="top_kinect/openni_depth_optical_frame">
     <inertial>
       <mass value="0.001" />
       <origin xyz="0 0 0" />
@@ -69,13 +69,13 @@
   </link>
 
 
-  <joint name="kinect_rgb_joint" type="fixed">
+  <joint name="top_kinect/kinect_rgb_joint" type="fixed">
     <origin xyz="0 -0.005 0" rpy="0 0 0" />
-    <parent link="openni_camera" />
-    <child link="openni_rgb_frame" />
+    <parent link="top_kinect/openni_camera" />
+    <child link="top_kinect/openni_rgb_frame" />
   </joint>
 
-  <link name="openni_rgb_frame">
+  <link name="top_kinect/openni_rgb_frame">
     <inertial>
       <mass value="0.001" />
       <origin xyz="0 0 0" />
@@ -86,13 +86,13 @@
   </link>
 
 
-  <joint name="kinect_rgb_optical_joint" type="fixed">
+  <joint name="top_kinect/kinect_rgb_optical_joint" type="fixed">
     <origin xyz="0 0 0" rpy="${-M_PI/2} 0 ${-M_PI/2}" />
-    <parent link="openni_rgb_frame" />
-    <child link="openni_rgb_optical_frame" />
+    <parent link="top_kinect/openni_rgb_frame" />
+    <child link="top_kinect/openni_rgb_optical_frame" />
   </joint>
 
-  <link name="openni_rgb_optical_frame">
+  <link name="top_kinect/openni_rgb_optical_frame">
     <inertial>
       <mass value="0.001" />
       <origin xyz="0 0 0" />

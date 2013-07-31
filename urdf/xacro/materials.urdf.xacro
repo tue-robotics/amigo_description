@@ -39,23 +39,23 @@
   </material>
   
   <material name="bottomcovers">
-    <texture filename="package://amigo_robot_model_groovy/Media/materials/textures/bottomcovers/finalreduced.jpg" />
+    <texture filename="package://amigo_description/media/materials/textures/bottomcovers/finalreduced.jpg" />
   </material>
   
     <material name="white">
-    <texture filename="package://amigo_robot_model_groovy/Media/materials/textures/white/white.jpg" />
+    <texture filename="package://amigo_description/media/materials/textures/white/white.jpg" />
   </material>
   
   <material name="logo">
-    <texture filename="package://amigo_robot_model_groovy/Media/materials/textures/logo/tue.jpg" />
+    <texture filename="package://amigo_description/media/materials/textures/logo/tue.jpg" />
   </material>
   
   <material name="aluminum">
-    <texture filename="package://amigo_robot_model_groovy/Media/materials/textures/aluminum/aluminium_0001_c.jpg" />
+    <texture filename="package://amigo_description/media/materials/textures/aluminum/aluminium_0001_c.jpg" />
   </material>
   
   <material name="orange">
-    <texture filename="package://amigo_robot_model_groovy/Media/materials/textures/orange/orange.jpg" />
+    <texture filename="package://amigo_description/media/materials/textures/orange/orange.jpg" />
   </material>
 
 </robot>
