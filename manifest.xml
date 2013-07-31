@@ -1,0 +1,14 @@
+<package>
+  <description brief="amigo_description">
+
+     amigo_description
+
+  </description>
+  <author>Sjoerd van den Dries</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/amigo_description</url>
+
+</package>
+
+
