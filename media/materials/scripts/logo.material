@@ -1,0 +1,14 @@
+material amigo_robot_model_groovy/logo
+{
+	receive_shadows on
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture logo/tue.jpg
+			}
+		}
+	}
+}

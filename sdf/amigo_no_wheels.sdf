@@ -156,7 +156,7 @@
         <geometry>
           <mesh>
             <scale>0.0400 0.0400 0.0400</scale>
-            <uri>model://description/meshes/bottomcovers.dae</uri>
+            <uri>model://media/meshes/bottomcovers.dae</uri>
           </mesh>
         </geometry>
         <surface>
@@ -174,7 +174,7 @@
         <geometry>
           <mesh>
             <scale>1.000000 1.000000 1.000000</scale>
-            <uri>model://description/meshes/kinect_without_base.dae</uri>
+            <uri>model://media/meshes/kinect_without_base.dae</uri>
           </mesh>
         </geometry>
         <surface>
@@ -252,7 +252,7 @@
         <geometry>
           <mesh>
             <scale>0.1600 0.1600 0.1600</scale>
-            <uri>model://description/meshes/logo.dae</uri>
+            <uri>model://media/meshes/logo.dae</uri>
           </mesh>
         </geometry>
         <surface>
@@ -285,12 +285,12 @@
         <geometry>
           <mesh>
             <scale>0.0400 0.0400 0.0400</scale>
-            <uri>model://description/meshes/bottomcovers.dae</uri>
+            <uri>model://media/meshes/bottomcovers.dae</uri>
           </mesh>
         </geometry>
         <material>
           <script>
-            <uri>model://description/materials/scripts/bottomcovers.material</uri>
+            <uri>model://media/materials/scripts/bottomcovers.material</uri>
 			<name>amigo_robot_model_groovy/bottomcovers</name>
           </script>
         </material>
@@ -300,7 +300,7 @@
         <geometry>
           <mesh>
             <scale>1.000000 1.000000 1.000000</scale>
-            <uri>model://description/meshes/kinect_without_base.dae</uri>
+            <uri>model://media/meshes/kinect_without_base.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -329,7 +329,7 @@
         </geometry>
         <material>
           <script>
-            <uri>model://description/materials/scripts/aluminum.material</uri>
+            <uri>model://media/materials/scripts/aluminum.material</uri>
 			<name>amigo_robot_model_groovy/aluminum</name>
           </script>
         </material>
@@ -344,7 +344,7 @@
         </geometry>
         <material>
           <script>
-            <uri>model://description/materials/scripts/orange.material</uri>
+            <uri>model://media/materials/scripts/orange.material</uri>
 			<name>amigo_robot_model_groovy/orange</name>
           </script>
         </material>
@@ -355,12 +355,12 @@
         <geometry>
           <mesh>
             <scale>0.1600 0.1600 0.1600</scale>
-            <uri>model://description/meshes/logo.dae</uri>
+            <uri>model://media/meshes/logo.dae</uri>
           </mesh>
         </geometry>
         <material>
           <script>
-            <uri>model://description/materials/scripts/logo.material</uri>
+            <uri>model://media/materials/scripts/logo.material</uri>
 			<name>amigo_robot_model_groovy/logo</name>
           </script>
         </material>
@@ -509,7 +509,7 @@
         <geometry>
           <mesh>
             <scale>0.04000 0.04000 0.04000</scale>
-            <uri>model://description/meshes/torsoslidertextured.dae</uri>
+            <uri>model://media/meshes/torsoslidertextured.dae</uri>
           </mesh>
         </geometry>
         <surface>
@@ -580,7 +580,7 @@
         <geometry>
           <mesh>
             <scale>0.0400 0.0400 0.0400</scale>
-            <uri>model://description/meshes/torsocovers.dae</uri>
+            <uri>model://media/meshes/torsocovers.dae</uri>
           </mesh>
         </geometry>
         <surface>
@@ -598,7 +598,7 @@
         <geometry>
           <mesh>
             <scale>0.04000 0.04000 0.05000</scale>
-            <uri>model://description/meshes/torsoassistslidertextured.dae</uri>
+            <uri>model://media/meshes/torsoassistslidertextured.dae</uri>
           </mesh>
         </geometry>
         <surface>
@@ -616,7 +616,7 @@
         <geometry>
           <mesh>
             <scale>0.04000 0.04000 0.05000</scale>
-            <uri>model://description/meshes/torsoassistslidertextured.dae</uri>
+            <uri>model://media/meshes/torsoassistslidertextured.dae</uri>
           </mesh>
         </geometry>
         <surface>
@@ -634,7 +634,7 @@
         <geometry>
           <mesh>
             <scale>0.04000 0.04000 0.05000</scale>
-            <uri>model://description/meshes/torsoassistslidertextured.dae</uri>
+            <uri>model://media/meshes/torsoassistslidertextured.dae</uri>
           </mesh>
         </geometry>
         <surface>
@@ -652,12 +652,12 @@
         <geometry>
           <mesh>
             <scale>0.04000 0.04000 0.04000</scale>
-            <uri>model://description/meshes/torsoslidertextured.dae</uri>
+            <uri>model://media/meshes/torsoslidertextured.dae</uri>
           </mesh>
         </geometry>
         <material>
           <script>
-            <uri>model://description/materials/scripts/aluminum.material</uri>
+            <uri>model://media/materials/scripts/aluminum.material</uri>
 			<name>amigo_robot_model_groovy/aluminum</name>
           </script>
         </material>
@@ -712,12 +712,12 @@
         <geometry>
           <mesh>
             <scale>0.0400 0.0400 0.0400</scale>
-            <uri>model://description/meshes/torsocovers.dae</uri>
+            <uri>model://media/meshes/torsocovers.dae</uri>
           </mesh>
         </geometry>
         <material>
           <script>
-            <uri>model://description/materials/scripts/white.material</uri>
+            <uri>model://media/materials/scripts/white.material</uri>
 			<name>amigo_robot_model_groovy/white</name>
           </script>
         </material>
@@ -728,12 +728,12 @@
         <geometry>
           <mesh>
             <scale>0.04000 0.04000 0.05000</scale>
-            <uri>model://description/meshes/torsoassistslidertextured.dae</uri>
+            <uri>model://media/meshes/torsoassistslidertextured.dae</uri>
           </mesh>
         </geometry>
         <material>
           <script>
-            <uri>model://description/materials/scripts/aluminum.material</uri>
+            <uri>model://media/materials/scripts/aluminum.material</uri>
 			<name>amigo_robot_model_groovy/aluminum</name>
           </script>
         </material>
@@ -744,12 +744,12 @@
         <geometry>
           <mesh>
             <scale>0.04000 0.04000 0.05000</scale>
-            <uri>model://description/meshes/torsoassistslidertextured.dae</uri>
+            <uri>model://media/meshes/torsoassistslidertextured.dae</uri>
           </mesh>
         </geometry>
         <material>
           <script>
-            <uri>model://description/materials/scripts/aluminum.material</uri>
+            <uri>model://media/materials/scripts/aluminum.material</uri>
 			<name>amigo_robot_model_groovy/aluminum</name>
           </script>
         </material>
@@ -760,12 +760,12 @@
         <geometry>
           <mesh>
             <scale>0.04000 0.04000 0.05000</scale>
-            <uri>model://description/meshes/torsoassistslidertextured.dae</uri>
+            <uri>model://media/meshes/torsoassistslidertextured.dae</uri>
           </mesh>
         </geometry>
         <material>
           <script>
-            <uri>model://description/materials/scripts/aluminum.material</uri>
+            <uri>model://media/materials/scripts/aluminum.material</uri>
 			<name>amigo_robot_model_groovy/aluminum</name>
           </script>
         </material>
@@ -924,7 +924,7 @@
         <geometry>
           <mesh>
             <scale>0.04000 0.04000 0.04000</scale>
-            <uri>model://description/meshes/necktilttextured.dae</uri>
+            <uri>model://media/meshes/necktilttextured.dae</uri>
           </mesh>
         </geometry>
         <surface>
@@ -942,7 +942,7 @@
         <geometry>
           <mesh>
             <scale>0.0400 0.0400 0.0400</scale>
-            <uri>model://description/meshes/headtextured.dae</uri>
+            <uri>model://media/meshes/headtextured.dae</uri>
           </mesh>
         </geometry>
         <surface>
@@ -960,12 +960,12 @@
         <geometry>
           <mesh>
             <scale>0.04000 0.04000 0.04000</scale>
-            <uri>model://description/meshes/necktilttextured.dae</uri>
+            <uri>model://media/meshes/necktilttextured.dae</uri>
           </mesh>
         </geometry>
         <material>
           <script>
-            <uri>model://description/materials/scripts/aluminum.material</uri>
+            <uri>model://media/materials/scripts/aluminum.material</uri>
 			<name>amigo_robot_model_groovy/aluminum</name>
           </script>
         </material>
@@ -976,12 +976,12 @@
         <geometry>
           <mesh>
             <scale>0.0400 0.0400 0.0400</scale>
-            <uri>model://description/meshes/headtextured.dae</uri>
+            <uri>model://media/meshes/headtextured.dae</uri>
           </mesh>
         </geometry>
         <material>
           <script>
-            <uri>model://description/materials/scripts/white.material</uri>
+            <uri>model://media/materials/scripts/white.material</uri>
 			<name>amigo_robot_model_groovy/white</name>
           </script>
         </material>
@@ -1228,7 +1228,7 @@
         <geometry>
           <mesh>
             <scale>0.0400 0.0400 0.0400</scale>
-            <uri>model://description/meshes/upperarmtextured.dae</uri>
+            <uri>model://media/meshes/upperarmtextured.dae</uri>
           </mesh>
         </geometry>
         <surface>
@@ -1299,12 +1299,12 @@
         <geometry>
           <mesh>
             <scale>0.0400 0.0400 0.0400</scale>
-            <uri>model://description/meshes/upperarmtextured.dae</uri>
+            <uri>model://media/meshes/upperarmtextured.dae</uri>
           </mesh>
         </geometry>
         <material>
           <script>
-            <uri>model://description/materials/scripts/white.material</uri>
+            <uri>model://media/materials/scripts/white.material</uri>
 			<name>amigo_robot_model_groovy/white</name>
           </script>
         </material>
@@ -1484,7 +1484,7 @@
         <geometry>
           <mesh>
             <scale>0.0400 0.0400 0.0400</scale>
-            <uri>model://description/meshes/forearmtextured.dae</uri>
+            <uri>model://media/meshes/forearmtextured.dae</uri>
           </mesh>
         </geometry>
         <surface>
@@ -1520,12 +1520,12 @@
         <geometry>
           <mesh>
             <scale>0.0400 0.0400 0.0400</scale>
-            <uri>model://description/meshes/forearmtextured.dae</uri>
+            <uri>model://media/meshes/forearmtextured.dae</uri>
           </mesh>
         </geometry>
         <material>
           <script>
-            <uri>model://description/materials/scripts/white.material</uri>
+            <uri>model://media/materials/scripts/white.material</uri>
 			<name>amigo_robot_model_groovy/white</name>
           </script>
         </material>
@@ -2521,7 +2521,7 @@
         <geometry>
           <mesh>
             <scale>0.0400 0.0400 0.0400</scale>
-            <uri>model://description/meshes/upperarmtextured.dae</uri>
+            <uri>model://media/meshes/upperarmtextured.dae</uri>
           </mesh>
         </geometry>
         <surface>
@@ -2592,12 +2592,12 @@
         <geometry>
           <mesh>
             <scale>0.0400 0.0400 0.0400</scale>
-            <uri>model://description/meshes/upperarmtextured.dae</uri>
+            <uri>model://media/meshes/upperarmtextured.dae</uri>
           </mesh>
         </geometry>
         <material>
           <script>
-            <uri>model://description/materials/scripts/white.material</uri>
+            <uri>model://media/materials/scripts/white.material</uri>
 			<name>amigo_robot_model_groovy/white</name>
           </script>
         </material>
@@ -2777,7 +2777,7 @@
         <geometry>
           <mesh>
             <scale>0.0400 0.0400 0.0400</scale>
-            <uri>model://description/meshes/forearmtextured.dae</uri>
+            <uri>model://media/meshes/forearmtextured.dae</uri>
           </mesh>
         </geometry>
         <surface>
@@ -2813,12 +2813,12 @@
         <geometry>
           <mesh>
             <scale>0.0400 0.0400 0.0400</scale>
-            <uri>model://description/meshes/forearmtextured.dae</uri>
+            <uri>model://media/meshes/forearmtextured.dae</uri>
           </mesh>
         </geometry>
         <material>
           <script>
-            <uri>model://description/materials/scripts/white.material</uri>
+            <uri>model://media/materials/scripts/white.material</uri>
 			<name>amigo_robot_model_groovy/white</name>
           </script>
         </material>

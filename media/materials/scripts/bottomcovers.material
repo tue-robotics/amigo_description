@@ -1,0 +1,14 @@
+material amigo_robot_model_groovy/bottomcovers
+{
+	receive_shadows on
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture bottomcovers/finalreduced.jpg
+			}
+		}
+	}
+}
