@@ -508,7 +508,7 @@
         <pose>0.050000 0.000000 0.000000 0.000000 0.000000 1.570800</pose>
         <geometry>
           <mesh>
-            <scale>0.0004000 0.0004000 0.0004000</scale>
+            <scale>0.004000 0.004000 0.004000</scale>
             <uri>model://media/meshes/torsoslidertextured.dae</uri>
           </mesh>
         </geometry>
@@ -597,7 +597,7 @@
         <pose>-0.565000 0.000000 -0.100000 1.570800 -0.000004 1.570800</pose>
         <geometry>
           <mesh>
-            <scale>0.0004000 0.0004000 0.0005000</scale>
+            <scale>0.004000 0.004000 0.005000</scale>
             <uri>model://media/meshes/torsoassistslidertextured.dae</uri>
           </mesh>
         </geometry>
@@ -615,7 +615,7 @@
         <pose>-0.565000 -0.100000 0.000000 3.141590 1.570790 3.141590</pose>
         <geometry>
           <mesh>
-            <scale>0.0004000 0.0004000 0.0005000</scale>
+            <scale>0.004000 0.004000 0.005000</scale>
             <uri>model://media/meshes/torsoassistslidertextured.dae</uri>
           </mesh>
         </geometry>
@@ -633,7 +633,7 @@
         <pose>-0.565000 0.100000 0.000000 3.141590 1.570790 3.141590</pose>
         <geometry>
           <mesh>
-            <scale>0.0004000 0.0004000 0.0005000</scale>
+            <scale>0.004000 0.004000 0.005000</scale>
             <uri>model://media/meshes/torsoassistslidertextured.dae</uri>
           </mesh>
         </geometry>
@@ -651,7 +651,7 @@
         <pose>0.050000 0.000000 0.000000 0.000000 0.000000 1.570800</pose>
         <geometry>
           <mesh>
-            <scale>0.0004000 0.0004000 0.0004000</scale>
+            <scale>0.004000 0.004000 0.004000</scale>
             <uri>model://media/meshes/torsoslidertextured.dae</uri>
           </mesh>
         </geometry>
@@ -727,7 +727,7 @@
         <pose>-0.565000 0.000000 -0.100000 1.570800 -0.000004 1.570800</pose>
         <geometry>
           <mesh>
-            <scale>0.0004000 0.0004000 0.0005000</scale>
+            <scale>0.004000 0.004000 0.005000</scale>
             <uri>model://media/meshes/torsoassistslidertextured.dae</uri>
           </mesh>
         </geometry>
@@ -743,7 +743,7 @@
         <pose>-0.565000 -0.100000 0.000000 3.141590 1.570790 3.141590</pose>
         <geometry>
           <mesh>
-            <scale>0.0004000 0.0004000 0.0005000</scale>
+            <scale>0.004000 0.004000 0.005000</scale>
             <uri>model://media/meshes/torsoassistslidertextured.dae</uri>
           </mesh>
         </geometry>
@@ -759,7 +759,7 @@
         <pose>-0.565000 0.100000 0.000000 3.141590 1.570790 3.141590</pose>
         <geometry>
           <mesh>
-            <scale>0.0004000 0.0004000 0.0005000</scale>
+            <scale>0.004000 0.004000 0.005000</scale>
             <uri>model://media/meshes/torsoassistslidertextured.dae</uri>
           </mesh>
         </geometry>
@@ -923,7 +923,7 @@
         <pose>0.000000 0.000000 0.015000 0.000000 0.000000 0.000000</pose>
         <geometry>
           <mesh>
-            <scale>0.0004000 0.0004000 0.0004000</scale>
+            <scale>0.004000 0.004000 0.004000</scale>
             <uri>model://media/meshes/necktilttextured.dae</uri>
           </mesh>
         </geometry>
@@ -959,7 +959,7 @@
         <pose>0.000000 0.000000 0.015000 0.000000 0.000000 0.000000</pose>
         <geometry>
           <mesh>
-            <scale>0.0004000 0.0004000 0.0004000</scale>
+            <scale>0.004000 0.004000 0.004000</scale>
             <uri>model://media/meshes/necktilttextured.dae</uri>
           </mesh>
         </geometry>
