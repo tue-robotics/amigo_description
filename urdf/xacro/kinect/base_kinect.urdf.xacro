@@ -24,7 +24,7 @@
       <origin xyz=" 0 0 0 " rpy="0 0 0" />
       <geometry>
 	<!--<box size="0 0 0"/>-->
-        <!--mesh filename="package://amigo_robot_model_groovy/description/kinect/meshes/kinect.dae" scale="0.001 0.001 0.001"/-->
+        <!--mesh filename="package://amigo_description/description/kinect/meshes/kinect.dae" scale="0.001 0.001 0.001"/-->
         <mesh filename="package://amigo_description/media/meshes/kinect/kinect_without_base.dae"/>
       </geometry>
     </visual>
@@ -32,7 +32,7 @@
      <origin xyz=" 0 0 0 " rpy="0 0 0" />
       <geometry>
 	<!--<box size="0.01 0.01 0.01"/>-->
-        <!--<mesh filename="package://amigo_robot_model_groovy/description/kinect/meshes/kinect.dae" scale="0.001 0.001 0.001"/>-->
+        <!--<mesh filename="package://amigo_description/description/kinect/meshes/kinect.dae" scale="0.001 0.001 0.001"/>-->
         <mesh filename="package://amigo_description/media/meshes/kinect/kinect_without_base.dae"/>
       </geometry>
     </collision>
