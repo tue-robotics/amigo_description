@@ -54,7 +54,7 @@
     <child link="head"/>
   </joint>
   
-  
+ 
 <!-- the tilt and pan joints-->
 <xacro:my_joint name="neck_pan_joint" type="revolute" parent="head_mount" child="neck_pan">
    <origin xyz="0.0 0.0 0.0" rpy="3.14 -1.5708 0.0"/> 

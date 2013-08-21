@@ -1,144 +1,25 @@
-<sdf version="1.4">
-  <model name="amigo">
-	<!-------------------------------------------------------------------------------->
-	<!-------------------------------------------------------------------------------->
-	<!------------------------------BASE STARTS HERE---------------------------------->
-	<!----------------------------CONTAINS LASER SENSOR------------------------------->
-	<!-----------------------------AND A KINECT SENSOR-------------------------------->
-	<!-------------------------------------------------------------------------------->
-	<!-------------------------------------------------------------------------------->	
-    <link name="base_fixed_link">
-      <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
-      <inertial>
-        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
-        <mass>10.000000</mass>
-        <inertia>
-          <ixx>0.100000</ixx>
-          <ixy>0.100000</ixy>
-          <ixz>0.100000</ixz>
-          <iyy>0.100000</iyy>
-          <iyz>0.100000</iyz>
-          <izz>0.100000</izz>
-        </inertia>
-      </inertial>
-      <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
-      </velocity_decay>
-    </link>
-    
-    
-    <joint name="base_fixed_joint" type="revolute">
-      <child>base_fixed_link</child>
-      <parent>world</parent>
-      <axis>
-        <limit>
-          <lower>0.000000</lower>
-          <upper>0.000000</upper>
-        </limit>
-        <dynamics>
-          <damping>0.000000</damping>
-        </dynamics>
-        <xyz>0.000000 0.000000 1.000000</xyz>
-      </axis>
-    </joint>
-    
-    
-    <link name='base_x_link'>
-      <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
-      <inertial>
-        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
-        <mass>10.000000</mass>
-        <inertia>
-          <ixx>0.100000</ixx>
-          <ixy>0.100000</ixy>
-          <ixz>0.100000</ixz>
-          <iyy>0.100000</iyy>
-          <iyz>0.100000</iyz>
-          <izz>0.100000</izz>
-        </inertia>
-      </inertial>
-      <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
-      </velocity_decay>
-    </link>
-    
-    
-    <joint name='base_x_joint' type='prismatic'>
-      <child>base_x_link</child>
-      <parent>base_fixed_link</parent>
-      <axis>
-        <xyz>1.000000 0.000000 0.000000</xyz>
-        <limit>
-          <lower>-1000.000000</lower>
-          <upper>1000.000000</upper>
-        </limit>
-        <dynamics>
-          <damping>100.000000</damping>
-        </dynamics>
-      </axis>
-    </joint>
-    
-    
-    <link name='base_y_link'>
-      <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
-      <inertial>
-        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
-        <mass>10.000000</mass>
-        <inertia>
-          <ixx>0.100000</ixx>
-          <ixy>0.100000</ixy>
-          <ixz>0.100000</ixz>
-          <iyy>0.100000</iyy>
-          <iyz>0.100000</iyz>
-          <izz>0.100000</izz>
-        </inertia>
-      </inertial>
-      <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
-      </velocity_decay>
-    </link>
-    
-    
-    <joint name='base_y_joint' type='prismatic'>
-      <child>base_y_link</child>
-      <parent>base_x_link</parent>
-      <axis>
-        <xyz>0.000000 1.000000 0.000000</xyz>
-        <limit>
-          <lower>-1000.000000</lower>
-          <upper>1000.000000</upper>
-        </limit>
-        <dynamics>
-          <damping>100.000000</damping>
-        </dynamics>
-      </axis>
-    </joint>
-    
-    
+<sdf version='1.4'>
+  <model name='amigo'>
     <link name='base_link'>
-      <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+      <pose>0 0 0 0 -0 0</pose>
       <inertial>
-        <pose>0.008143 0.000009 0.377224 0.000000 0.000000 0.000000</pose>
-        <mass>20.643000</mass>
+        <pose>0.0081432 9.1072e-06 0.377224 0 -0 0</pose>
+        <mass>20.643</mass>
         <inertia>
-          <ixx>3.456090</ixx>
-          <ixy>-0.000056</ixy>
-          <ixz>-0.040862</ixz>
-          <iyy>3.508130</iyy>
-          <iyz>-0.000059</iyz>
-          <izz>2.464650</izz>
+          <ixx>2.66375</ixx>
+          <ixy>-5.48691e-05</ixy>
+          <ixz>0.0225499</ixz>
+          <iyy>2.71442</iyy>
+          <iyz>1.16982e-05</iyz>
+          <izz>2.46328</izz>
         </inertia>
       </inertial>
-      
-      <collision name='base_link_geom'>
-        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+      <collision name='base_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.000000</length>
-            <radius>0.000000</radius>
+            <length>0</length>
+            <radius>0</radius>
           </cylinder>
         </geometry>
         <surface>
@@ -149,13 +30,20 @@
             <ode/>
           </friction>
         </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
       </collision>
-      
-      <collision name='base_link_geom_base'>
-        <pose>0.000000 0.000000 0.285000 0.000000 0.000000 -1.570800</pose>
+      <collision name='base_link_collision_base'>
+        <pose>0 0 0.285 0 0 -1.5708</pose>
         <geometry>
           <mesh>
-            <scale>0.000400 0.000400 0.000400</scale>
+            <scale>0.0004 0.0004 0.0004</scale>
             <uri>model://media/meshes/bottomcovers.dae</uri>
           </mesh>
         </geometry>
@@ -167,14 +55,29 @@
             <ode/>
           </friction>
         </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
       </collision>
-      
-      <collision name='base_link_geom_base_kinect_openni_camera'>
-        <pose>0.300000 0.000000 0.315000 0.000000 -0.070000 0.000000</pose>
+      <collision name='base_link_collision_base_kinect/openni_camera'>
+        <pose>0.3 0 0.315 0 -0.07 0</pose>
         <geometry>
           <mesh>
-            <scale>1.000000 1.000000 1.000000</scale>
-            <uri>model://media/meshes/kinect_without_base.dae</uri>
+            <scale>1 1 1</scale>
+            <uri>model://media/meshes/kinect/kinect_without_base.dae</uri>
           </mesh>
         </geometry>
         <surface>
@@ -185,13 +88,20 @@
             <ode/>
           </friction>
         </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
       </collision>
-      
-      <collision name='base_link_geom_base_laser'>
-        <pose>0.305000 0.000000 0.175000 0.000000 0.000000 0.000000</pose>
+      <collision name='base_link_collision_base_laser'>
+        <pose>0.305 0 0.175 0 -0 0</pose>
         <geometry>
           <box>
-            <size>0.050000 0.065000 0.120000</size>
+            <size>0.05 0.065 0.12</size>
           </box>
         </geometry>
         <surface>
@@ -210,14 +120,21 @@
             <ode/>
           </friction>
         </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
       </collision>
-      
-      <collision name='base_link_geom_base_plate'>
-        <pose>0.000000 0.000000 0.050000 0.000000 0.000000 0.000000</pose>
+      <collision name='base_link_collision_base_plate'>
+        <pose>0 0 0.05 0 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.020000</length>
-            <radius>0.333000</radius>
+            <length>0.02</length>
+            <radius>0.333</radius>
           </cylinder>
         </geometry>
         <surface>
@@ -228,13 +145,28 @@
             <ode/>
           </friction>
         </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
       </collision>
-      
-      <collision name='base_link_geom_lasertop'>
-        <pose>0.305000 0.000000 0.240000 0.000000 0.000000 0.000000</pose>
+      <collision name='base_link_collision_lasertop'>
+        <pose>0.305 0 0.24 0 -0 0</pose>
         <geometry>
           <box>
-            <size>0.050000 0.065000 0.010000</size>
+            <size>0.05 0.065 0.01</size>
           </box>
         </geometry>
         <surface>
@@ -245,13 +177,28 @@
             <ode/>
           </friction>
         </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
       </collision>
-      
-      <collision name='base_link_geom_logo'>
-        <pose>0.335000 0.000000 0.100000 0.000000 0.000000 3.141500</pose>
+      <collision name='base_link_collision_logo'>
+        <pose>0.335 0 0.1 0 -0 3.1415</pose>
         <geometry>
           <mesh>
-            <scale>0.001600 0.001600 0.001600</scale>
+            <scale>0.0016 0.0016 0.0016</scale>
             <uri>model://media/meshes/logo.dae</uri>
           </mesh>
         </geometry>
@@ -263,134 +210,164 @@
             <ode/>
           </friction>
         </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
       </collision>
-      
       <visual name='base_link_visual'>
-        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.000000</length>
-            <radius>0.000000</radius>
+            <length>0</length>
+            <radius>0</radius>
           </cylinder>
         </geometry>
         <material>
           <script>
             <name>Gazebo/Red</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+        <material>
+          <script>
+            <name>amigo_description/bottomcovers</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
-      
-      <visual name='base_link_visualbase'>
-        <pose>0.000000 0.000000 0.285000 0.000000 0.000000 -1.570800</pose>
+      <visual name='base_link_visual_base'>
+        <pose>0 0 0.285 0 0 -1.5708</pose>
         <geometry>
           <mesh>
-            <scale>0.000400 0.000400 0.000400</scale>
+            <scale>0.0004 0.0004 0.0004</scale>
             <uri>model://media/meshes/bottomcovers.dae</uri>
           </mesh>
         </geometry>
         <material>
           <script>
-            <uri>model://media/materials/scripts/bottomcovers.material</uri>
-			<name>amigo_robot_model_groovy/bottomcovers</name>
+            <name>amigo_description/bottomcovers</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
-      <visual name='base_link_visualbase_kinect_openni_camera'>
-        <pose>0.300000 0.000000 0.315000 0.000000 -0.070000 0.000000</pose>
+      <visual name='base_link_visual_base_kinect/openni_camera'>
+        <pose>0.3 0 0.315 0 -0.07 0</pose>
         <geometry>
           <mesh>
-            <scale>1.000000 1.000000 1.000000</scale>
-            <uri>model://media/meshes/kinect_without_base.dae</uri>
+            <scale>1 1 1</scale>
+            <uri>model://media/meshes/kinect/kinect_without_base.dae</uri>
           </mesh>
         </geometry>
+        <material>
+          <script>
+            <name>amigo_description/bottomcovers</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
       </visual>
-      
-      <visual name='base_link_visualbase_laser'>
-        <pose>0.305000 0.000000 0.175000 0.000000 0.000000 0.000000</pose>
+      <visual name='base_link_visual_base_laser'>
+        <pose>0.305 0 0.175 0 -0 0</pose>
         <geometry>
           <box>
-            <size>0.050000 0.065000 0.120000</size>
+            <size>0.05 0.065 0.12</size>
           </box>
         </geometry>
         <material>
           <script>
+            <name>amigo_description/bottomcovers</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+        <material>
+          <script>
             <name>Gazebo/Black</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
-      
-      <visual name='base_link_visualbase_plate'>
-        <pose>0.000000 0.000000 0.050000 0.000000 0.000000 0.000000</pose>
+      <visual name='base_link_visual_base_plate'>
+        <pose>0 0 0.05 0 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.020000</length>
-            <radius>0.333000</radius>
+            <length>0.02</length>
+            <radius>0.333</radius>
           </cylinder>
         </geometry>
         <material>
           <script>
-            <uri>model://media/materials/scripts/aluminum.material</uri>
-			<name>amigo_robot_model_groovy/aluminum</name>
+            <name>amigo_description/bottomcovers</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+        <material>
+          <script>
+            <name>aluminum</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
-      
-      <visual name='base_link_visuallasertop'>
-        <pose>0.305000 0.000000 0.240000 0.000000 0.000000 0.000000</pose>
+      <visual name='base_link_visual_lasertop'>
+        <pose>0.305 0 0.24 0 -0 0</pose>
         <geometry>
           <box>
-            <size>0.050000 0.065000 0.010000</size>
+            <size>0.05 0.065 0.01</size>
           </box>
         </geometry>
         <material>
           <script>
-            <uri>model://media/materials/scripts/orange.material</uri>
-			<name>amigo_robot_model_groovy/orange</name>
+            <name>orange</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
-      
-      <visual name='base_link_visuallogo'>
-        <pose>0.335000 0.000000 0.100000 0.000000 0.000000 3.141500</pose>
+      <visual name='base_link_visual_logo'>
+        <pose>0.335 0 0.1 0 -0 3.1415</pose>
         <geometry>
           <mesh>
-            <scale>0.001600 0.001600 0.001600</scale>
+            <scale>0.0016 0.0016 0.0016</scale>
             <uri>model://media/meshes/logo.dae</uri>
           </mesh>
         </geometry>
         <material>
           <script>
-            <uri>model://media/materials/scripts/logo.material</uri>
-			<name>amigo_robot_model_groovy/logo</name>
+            <name>amigo_description/logo</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
-      
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
-      <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
-      </velocity_decay>
-      
       <sensor name='base_kinect_openni_camera' type='depth'>
-        <update_rate>20.000000</update_rate>
+        <update_rate>20</update_rate>
         <camera name='base_kinect'>
-          <horizontal_fov>1.047198</horizontal_fov>
+          <horizontal_fov>1.0472</horizontal_fov>
           <image>
             <width>640</width>
             <height>480</height>
             <format>R8G8B8</format>
           </image>
           <clip>
-            <near>0.050000</near>
-            <far>3.000000</far>
+            <near>0.05</near>
+            <far>3</far>
           </clip>
         </camera>
         <plugin name='base_kinect_camera_controller' filename='libKinectPlugin.so'>
@@ -404,38 +381,28 @@
           <pointCloudTopicName>rgb/points</pointCloudTopicName>
           <frameName>base_kinect/openni_depth_optical_frame</frameName>
         </plugin>
-        <pose>0.300000 0.000000 0.315000 0.000000 -0.070000 0.000000</pose>
+        <pose>0.3 0 0.315 0 -0.07 0</pose>
       </sensor>
-      
-      <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
-      </velocity_decay>
-      <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
-      </velocity_decay>
-      
       <sensor name='base_ray_sensor' type='ray'>
-        <update_rate>100.000000</update_rate>
+        <update_rate>100</update_rate>
         <ray>
           <scan>
             <horizontal>
               <samples>918</samples>
-              <resolution>1.000000</resolution>
-              <min_angle>-2.0027654171</min_angle>
-              <max_angle>1.99840199947</max_angle>
+              <resolution>1</resolution>
+              <min_angle>-2.00277</min_angle>
+              <max_angle>1.9984</max_angle>
             </horizontal>
             <vertical>
               <samples>1</samples>
-              <min_angle>0.000000</min_angle>
-              <max_angle>0.000000</max_angle>
+              <min_angle>0</min_angle>
+              <max_angle>0</max_angle>
             </vertical>
           </scan>
           <range>
             <min>0.05</min>
-            <max>60.0</max>
-            <resolution>0.010000</resolution>
+            <max>60</max>
+            <resolution>0.01</resolution>
           </range>
         </ray>
         <plugin name='base_ros_ray_sensor_controller' filename='libLaserPlugin.so'>
@@ -446,69 +413,50 @@
           <node_namespace>base</node_namespace>
           <frameName>base_laser</frameName>
         </plugin>
-        <pose>0.310000 0.000000 0.240000 0.000000 0.000000 0.000000</pose>
+        <pose>0.31 0 0.24 0 -0 0</pose>
       </sensor>
-      
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <gravity>1</gravity>
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <self_collide>0</self_collide>
     </link>
-    
-    
-    <joint name='base_phi_joint' type='revolute'>
-      <child>base_link</child>
-      <parent>base_y_link</parent>
-      <axis>
-        <xyz>0.000000 0.000000 1.000000</xyz>
-        <limit>
-          <lower>-10000000000000000.000000</lower>
-          <upper>10000000000000000.000000</upper>
-        </limit>
-        <dynamics>
-          <damping>100.000000</damping>
-        </dynamics>
-      </axis>
-    </joint>
-    
-    
-	<!-------------------------------------------------------------------------------->
-	<!-------------------------------------------------------------------------------->
-	<!------------------------------TORSO STARTS HERE--------------------------------->
-	<!-------------------------------------------------------------------------------->
-	<!-------------------------------------------------------------------------------->	   
-	<!-------------------------------------------------------------------------------->
-	<!-------------------------------------------------------------------------------->	    
     <link name='torso_slider'>
-      <pose>0.000000 0.000000 0.635000 -0.000000 -1.570790 3.141590</pose>
+      <pose>0 0 0.635 -3.58979e-09 -1.57079 3.14159</pose>
       <inertial>
-        <pose>0.134272 0.000000 -0.000061 0.000000 0.000000 0.000000</pose>
-        <mass>16.341000</mass>
+        <pose>0.13458 0 -6.08236e-05 0 -0 0</pose>
+        <mass>16.441</mass>
         <inertia>
-          <ixx>0.090080</ixx>
-          <ixy>0.000000</ixy>
-          <ixz>-0.000165</ixz>
-          <iyy>0.379858</iyy>
-          <iyz>0.000000</iyz>
-          <izz>0.389638</izz>
+          <ixx>0.0949199</ixx>
+          <ixy>0</ixy>
+          <ixz>-0.00029958</ixz>
+          <iyy>0.0855039</iyy>
+          <iyz>0</iyz>
+          <izz>0.100124</izz>
         </inertia>
       </inertial>
-      
-      <collision name='torso_slider_geom'>
-        <pose>0.050000 0.000000 0.000000 0.000000 0.000000 1.570800</pose>
+      <collision name='torso_slider_collision'>
+        <pose>0.05 0 0 0 -0 1.5708</pose>
         <geometry>
           <mesh>
-            <scale>0.004000 0.004000 0.004000</scale>
+            <scale>0.004 0.004 0.004</scale>
             <uri>model://media/meshes/torsoslidertextured.dae</uri>
           </mesh>
         </geometry>
@@ -521,12 +469,11 @@
           </friction>
         </surface>
       </collision>
-      
-      <collision name='torso_slider_geom_clavicles'>
-        <pose>0.185000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+      <collision name='torso_slider_collision_clavicles'>
+        <pose>0.185 0 0 0 -0 0</pose>
         <geometry>
           <box>
-            <size>0.100000 0.436000 0.110000</size>
+            <size>0.1 0.436 0.11</size>
           </box>
         </geometry>
         <surface>
@@ -537,14 +484,21 @@
             <ode/>
           </friction>
         </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
       </collision>
-      
-      <collision name='torso_slider_geom_shoulder_mount_left'>
-        <pose>0.185000 -0.220000 0.000000 0.000000 0.000000 0.000000</pose>
+      <collision name='torso_slider_collision_shoulder_mount_left'>
+        <pose>0.185 -0.22 0 0 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.110000</length>
-            <radius>0.050000</radius>
+            <length>0.11</length>
+            <radius>0.05</radius>
           </cylinder>
         </geometry>
         <surface>
@@ -555,14 +509,21 @@
             <ode/>
           </friction>
         </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
       </collision>
-      
-      <collision name='torso_slider_geom_shoulder_mount_right'>
-        <pose>0.185000 0.220000 0.000000 0.000000 0.000000 0.000000</pose>
+      <collision name='torso_slider_collision_shoulder_mount_right'>
+        <pose>0.185 0.22 0 0 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.110000</length>
-            <radius>0.050000</radius>
+            <length>0.11</length>
+            <radius>0.05</radius>
           </cylinder>
         </geometry>
         <surface>
@@ -573,13 +534,20 @@
             <ode/>
           </friction>
         </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
       </collision>
-      
-      <collision name='torso_slider_geom_torso'>
-        <pose>0.180000 0.000000 0.060000 -1.570800 -0.000000 -1.570800</pose>
+      <collision name='torso_slider_collision_torso'>
+        <pose>0.18 0 0.06 -1.5708 -5.55112e-17 -1.5708</pose>
         <geometry>
           <mesh>
-            <scale>0.000400 0.000400 0.000400</scale>
+            <scale>0.0004 0.0004 0.0004</scale>
             <uri>model://media/meshes/torsocovers.dae</uri>
           </mesh>
         </geometry>
@@ -591,13 +559,20 @@
             <ode/>
           </friction>
         </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
       </collision>
-      
-      <collision name='torso_slider_geom_torso_assist_slider_back'>
-        <pose>-0.565000 0.000000 -0.100000 1.570800 -0.000004 1.570800</pose>
+      <collision name='torso_slider_collision_torso_assist_slider_back'>
+        <pose>-0.565 0 -0.1 1.5708 -3.67321e-06 1.5708</pose>
         <geometry>
           <mesh>
-            <scale>0.004000 0.004000 0.005000</scale>
+            <scale>0.004 0.004 0.005</scale>
             <uri>model://media/meshes/torsoassistslidertextured.dae</uri>
           </mesh>
         </geometry>
@@ -609,13 +584,20 @@
             <ode/>
           </friction>
         </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
       </collision>
-      
-      <collision name='torso_slider_geom_torso_assist_slider_left'>
-        <pose>-0.565000 -0.100000 0.000000 3.141590 1.570790 3.141590</pose>
+      <collision name='torso_slider_collision_torso_assist_slider_left'>
+        <pose>-0.565 -0.1 0 3.14159 1.57079 3.14159</pose>
         <geometry>
           <mesh>
-            <scale>0.004000 0.004000 0.005000</scale>
+            <scale>0.004 0.004 0.005</scale>
             <uri>model://media/meshes/torsoassistslidertextured.dae</uri>
           </mesh>
         </geometry>
@@ -627,13 +609,20 @@
             <ode/>
           </friction>
         </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
       </collision>
-      
-      <collision name='torso_slider_geom_torso_assist_slider_right'>
-        <pose>-0.565000 0.100000 0.000000 3.141590 1.570790 3.141590</pose>
+      <collision name='torso_slider_collision_torso_assist_slider_right'>
+        <pose>-0.565 0.1 0 3.14159 1.57079 3.14159</pose>
         <geometry>
           <mesh>
-            <scale>0.004000 0.004000 0.005000</scale>
+            <scale>0.004 0.004 0.005</scale>
             <uri>model://media/meshes/torsoassistslidertextured.dae</uri>
           </mesh>
         </geometry>
@@ -645,213 +634,229 @@
             <ode/>
           </friction>
         </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
       </collision>
-      
       <visual name='torso_slider_visual'>
-        <pose>0.050000 0.000000 0.000000 0.000000 0.000000 1.570800</pose>
+        <pose>0.05 0 0 0 -0 1.5708</pose>
         <geometry>
           <mesh>
-            <scale>0.004000 0.004000 0.004000</scale>
+            <scale>0.004 0.004 0.004</scale>
             <uri>model://media/meshes/torsoslidertextured.dae</uri>
           </mesh>
         </geometry>
         <material>
           <script>
-            <uri>model://media/materials/scripts/aluminum.material</uri>
-			<name>amigo_robot_model_groovy/aluminum</name>
+            <name>aluminum</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+        <material>
+          <script>
+            <name>amigo_description/white</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
-      
-      <visual name='torso_slider_visualclavicles'>
-        <pose>0.185000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+      <visual name='torso_slider_visual_clavicles'>
+        <pose>0.185 0 0 0 -0 0</pose>
         <geometry>
           <box>
-            <size>0.100000 0.436000 0.110000</size>
+            <size>0.1 0.436 0.11</size>
           </box>
         </geometry>
         <material>
           <script>
             <name>Gazebo/Black</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
-      
-      <visual name='torso_slider_visualshoulder_mount_left'>
-        <pose>0.185000 -0.220000 0.000000 0.000000 0.000000 0.000000</pose>
+      <visual name='torso_slider_visual_shoulder_mount_left'>
+        <pose>0.185 -0.22 0 0 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.110000</length>
-            <radius>0.050000</radius>
+            <length>0.11</length>
+            <radius>0.05</radius>
           </cylinder>
         </geometry>
         <material>
           <script>
             <name>Gazebo/Black</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
-      
-      <visual name='torso_slider_visualshoulder_mount_right'>
-        <pose>0.185000 0.220000 0.000000 0.000000 0.000000 0.000000</pose>
+      <visual name='torso_slider_visual_shoulder_mount_right'>
+        <pose>0.185 0.22 0 0 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.110000</length>
-            <radius>0.050000</radius>
+            <length>0.11</length>
+            <radius>0.05</radius>
           </cylinder>
         </geometry>
         <material>
           <script>
             <name>Gazebo/Black</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
-      
-      <visual name='torso_slider_visualtorso'>
-        <pose>0.180000 0.000000 0.060000 -1.570800 -0.000000 -1.570800</pose>
+      <visual name='torso_slider_visual_torso'>
+        <pose>0.18 0 0.06 -1.5708 -5.55112e-17 -1.5708</pose>
         <geometry>
           <mesh>
-            <scale>0.000400 0.000400 0.000400</scale>
+            <scale>0.0004 0.0004 0.0004</scale>
             <uri>model://media/meshes/torsocovers.dae</uri>
           </mesh>
         </geometry>
         <material>
           <script>
-            <uri>model://media/materials/scripts/white.material</uri>
-			<name>amigo_robot_model_groovy/white</name>
+            <name>amigo_description/white</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
-      
-      <visual name='torso_slider_visualtorso_assist_slider_back'>
-        <pose>-0.565000 0.000000 -0.100000 1.570800 -0.000004 1.570800</pose>
+      <visual name='torso_slider_visual_torso_assist_slider_back'>
+        <pose>-0.565 0 -0.1 1.5708 -3.67321e-06 1.5708</pose>
         <geometry>
           <mesh>
-            <scale>0.004000 0.004000 0.005000</scale>
+            <scale>0.004 0.004 0.005</scale>
             <uri>model://media/meshes/torsoassistslidertextured.dae</uri>
           </mesh>
         </geometry>
         <material>
           <script>
-            <uri>model://media/materials/scripts/aluminum.material</uri>
-			<name>amigo_robot_model_groovy/aluminum</name>
+            <name>amigo_description/white</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+        <material>
+          <script>
+            <name>aluminum</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
-      
-      <visual name='torso_slider_visualtorso_assist_slider_left'>
-        <pose>-0.565000 -0.100000 0.000000 3.141590 1.570790 3.141590</pose>
+      <visual name='torso_slider_visual_torso_assist_slider_left'>
+        <pose>-0.565 -0.1 0 3.14159 1.57079 3.14159</pose>
         <geometry>
           <mesh>
-            <scale>0.004000 0.004000 0.005000</scale>
+            <scale>0.004 0.004 0.005</scale>
             <uri>model://media/meshes/torsoassistslidertextured.dae</uri>
           </mesh>
         </geometry>
         <material>
           <script>
-            <uri>model://media/materials/scripts/aluminum.material</uri>
-			<name>amigo_robot_model_groovy/aluminum</name>
+            <name>amigo_description/white</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+        <material>
+          <script>
+            <name>aluminum</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
-      
-      <visual name='torso_slider_visualtorso_assist_slider_right'>
-        <pose>-0.565000 0.100000 0.000000 3.141590 1.570790 3.141590</pose>
+      <visual name='torso_slider_visual_torso_assist_slider_right'>
+        <pose>-0.565 0.1 0 3.14159 1.57079 3.14159</pose>
         <geometry>
           <mesh>
-            <scale>0.004000 0.004000 0.005000</scale>
+            <scale>0.004 0.004 0.005</scale>
             <uri>model://media/meshes/torsoassistslidertextured.dae</uri>
           </mesh>
         </geometry>
         <material>
           <script>
-            <uri>model://media/materials/scripts/aluminum.material</uri>
-			<name>amigo_robot_model_groovy/aluminum</name>
+            <name>amigo_description/white</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+        <material>
+          <script>
+            <name>aluminum</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
-      
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <gravity>1</gravity>
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <self_collide>0</self_collide>
     </link>
-    
-    
     <joint name='spindle_joint' type='prismatic'>
       <child>torso_slider</child>
       <parent>base_link</parent>
       <axis>
-        <xyz>-0.000004 0.000000 1.000000</xyz>
+        <xyz>-3.67321e-06 2.06795e-25 1</xyz>
         <limit>
-          <lower>0.000000</lower>
-          <upper>0.410000</upper>
+          <lower>0</lower>
+          <upper>0.41</upper>
+          <effort>30</effort>
+          <velocity>1</velocity>
         </limit>
         <dynamics>
-          <damping>3.000000</damping>
+          <damping>3</damping>
         </dynamics>
       </axis>
     </joint>
-    
-    
-	<!-------------------------------------------------------------------------------->
-	<!-------------------------------------------------------------------------------->
-	<!------------------------------HEAD STARTS HERE---------------------------------->
-	<!---------------------------CONTAINS KINECT SENSOR------------------------------->
-	<!-------------------------------------------------------------------------------->
-	<!-------------------------------------------------------------------------------->	
-	<!-------------------------------------------------------------------------------->	
     <link name='neck_pan'>
-      <pose>-0.000001 0.000000 0.867000 -0.001593 -0.000000 -0.000000</pose>
+      <pose>-8.52184e-07 0 0.867 -0.00159265 -4.58319e-17 -3.58979e-09</pose>
       <inertial>
-        <pose>0.000000 0.000000 0.033500 0.000000 0.000000 0.000000</pose>
-        <mass>0.050000</mass>
+        <pose>0 0 0.0335 0 -0 0</pose>
+        <mass>0.05</mass>
         <inertia>
-          <ixx>0.000100</ixx>
-          <ixy>0.000000</ixy>
-          <ixz>0.000000</ixz>
-          <iyy>0.000100</iyy>
-          <iyz>0.000000</iyz>
-          <izz>0.000100</izz>
+          <ixx>0.0001</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0001</iyy>
+          <iyz>0</iyz>
+          <izz>0.0001</izz>
         </inertia>
       </inertial>
-      
-      <collision name='neck_pan_geom'>
-        <pose>0.000000 0.000000 0.033500 0.000000 0.000000 0.000000</pose>
+      <collision name='neck_pan_collision'>
+        <pose>0 0 0.0335 0 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.052500</length>
-            <radius>0.015000</radius>
+            <length>0.0525</length>
+            <radius>0.015</radius>
           </cylinder>
         </geometry>
         <surface>
@@ -863,67 +868,63 @@
           </friction>
         </surface>
       </collision>
-      
       <visual name='neck_pan_visual'>
-        <pose>0.000000 0.000000 0.033500 0.000000 0.000000 0.000000</pose>
+        <pose>0 0 0.0335 0 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.052500</length>
-            <radius>0.015000</radius>
+            <length>0.0525</length>
+            <radius>0.015</radius>
           </cylinder>
         </geometry>
         <material>
           <script>
             <name>Gazebo/Black</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
-      
       <gravity>1</gravity>
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <self_collide>0</self_collide>
     </link>
-    
-    
     <joint name='neck_pan_joint' type='revolute'>
       <child>neck_pan</child>
       <parent>torso_slider</parent>
       <axis>
-        <xyz>0.000000 0.001593 0.999999</xyz>
+        <xyz>5.71725e-12 0.00159265 0.999999</xyz>
         <limit>
-          <lower>-1.570800</lower>
-          <upper>1.570800</upper>
+          <lower>-1.5708</lower>
+          <upper>1.5708</upper>
+          <effort>13.4</effort>
+          <velocity>1</velocity>
         </limit>
         <dynamics>
-          <damping>0.100000</damping>
+          <damping>0.1</damping>
         </dynamics>
       </axis>
     </joint>
-    
-    
     <link name='neck_tilt'>
-      <pose>-0.000001 0.000071 0.911500 -0.001593 -0.000000 -0.000000</pose>
+      <pose>-8.52183e-07 7.08731e-05 0.9115 -0.00159265 -4.58319e-17 -3.58979e-09</pose>
       <inertial>
-        <pose>0.022055 0.002575 0.041575 0.000000 0.000000 0.000000</pose>
-        <mass>0.073000</mass>
+        <pose>0.0220548 0.00257534 0.0415753 0 -0 0</pose>
+        <mass>0.073</mass>
         <inertia>
-          <ixx>0.003416</ixx>
-          <ixy>-0.000013</ixy>
-          <ixz>-0.000113</ixz>
-          <iyy>0.003525</iyy>
-          <iyz>-0.000013</iyz>
-          <izz>0.003416</izz>
+          <ixx>0.00333026</ixx>
+          <ixy>-9.0137e-06</ixy>
+          <ixz>-4.57637e-05</ixz>
+          <iyy>0.00340432</iyy>
+          <iyz>-5.34384e-06</iyz>
+          <izz>0.00338032</izz>
         </inertia>
       </inertial>
-      
-      <collision name='neck_tilt_geom'>
-        <pose>0.000000 0.000000 0.015000 0.000000 0.000000 0.000000</pose>
+      <collision name='neck_tilt_collision'>
+        <pose>0 -0 0.015 0 -0 0</pose>
         <geometry>
           <mesh>
-            <scale>0.004000 0.004000 0.004000</scale>
+            <scale>0.004 0.004 0.004</scale>
             <uri>model://media/meshes/necktilttextured.dae</uri>
           </mesh>
         </geometry>
@@ -935,13 +936,20 @@
             <ode/>
           </friction>
         </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
       </collision>
-      
-      <collision name='neck_tilt_geom_head'>
-        <pose>0.000000 0.000000 0.141000 0.000000 0.000000 -1.570800</pose>
+      <collision name='neck_tilt_collision_head'>
+        <pose>0 0 0.141 0 0 -1.5708</pose>
         <geometry>
           <mesh>
-            <scale>0.000400 0.000400 0.000400</scale>
+            <scale>0.0004 0.0004 0.0004</scale>
             <uri>model://media/meshes/headtextured.dae</uri>
           </mesh>
         </geometry>
@@ -953,79 +961,84 @@
             <ode/>
           </friction>
         </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
       </collision>
-      
       <visual name='neck_tilt_visual'>
-        <pose>0.000000 0.000000 0.015000 0.000000 0.000000 0.000000</pose>
+        <pose>0 -0 0.015 0 -0 0</pose>
         <geometry>
           <mesh>
-            <scale>0.004000 0.004000 0.004000</scale>
+            <scale>0.004 0.004 0.004</scale>
             <uri>model://media/meshes/necktilttextured.dae</uri>
           </mesh>
         </geometry>
         <material>
           <script>
-            <uri>model://media/materials/scripts/aluminum.material</uri>
-			<name>amigo_robot_model_groovy/aluminum</name>
+            <name>aluminum</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
-      
-      <visual name='neck_tilt_visualhead'>
-        <pose>0.000000 0.000000 0.141000 0.000000 0.000000 -1.570800</pose>
+      <visual name='neck_tilt_visual_head'>
+        <pose>0 0 0.141 0 0 -1.5708</pose>
         <geometry>
           <mesh>
-            <scale>0.000400 0.000400 0.000400</scale>
+            <scale>0.0004 0.0004 0.0004</scale>
             <uri>model://media/meshes/headtextured.dae</uri>
           </mesh>
         </geometry>
         <material>
           <script>
-            <uri>model://media/materials/scripts/white.material</uri>
-			<name>amigo_robot_model_groovy/white</name>
+            <name>white</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
-      
-      <visual name='neck_tilt_visualopenni_camera'>
-        <pose>0.070000 0.000000 0.070000 0.000000 0.000000 0.000000</pose>
+      <visual name='neck_tilt_visual_top_kinect/openni_camera'>
+        <pose>0.07 0 0.07 0 -0 0</pose>
         <geometry>
           <box>
-            <size>0.000000 0.000000 0.000000</size>
+            <size>0 0 0</size>
           </box>
         </geometry>
       </visual>
-      
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
-      <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
-      </velocity_decay>
-      <self_collide>0</self_collide>
-      
       <sensor name='openni_camera' type='depth'>
-        <update_rate>20.000000</update_rate>
+        <update_rate>20</update_rate>
         <camera name='top_kinect'>
-          <horizontal_fov>1.047198</horizontal_fov>
+          <horizontal_fov>1.0472</horizontal_fov>
           <image>
             <width>640</width>
             <height>480</height>
             <format>R8G8B8</format>
           </image>
           <clip>
-            <near>0.050000</near>
-            <far>3.000000</far>
+            <near>0.05</near>
+            <far>3</far>
           </clip>
         </camera>
-		<plugin name='kinect_camera_controller' filename='libKinectPlugin.so'>
+        <plugin name='kinect_camera_controller' filename='libKinectPlugin.so'>
           <alwaysOn>1</alwaysOn>
           <updateRate>20</updateRate>
           <cameraName>top_kinect</cameraName>
@@ -1036,55 +1049,51 @@
           <pointCloudTopicName>rgb/points</pointCloudTopicName>
           <frameName>top_kinect/openni_depth_optical_frame</frameName>
         </plugin>
-        <pose>0.070000 0.000000 0.070000 0.000000 0.000000 0.000000</pose>
+        <pose>0.07 0 0.07 0 -0 0</pose>
       </sensor>
+      <gravity>1</gravity>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <self_collide>0</self_collide>
     </link>
-    
-    
     <joint name='neck_tilt_joint' type='revolute'>
       <child>neck_tilt</child>
       <parent>neck_pan</parent>
       <axis>
-        <xyz>0.000000 0.999999 -0.001593</xyz>
+        <xyz>3.58979e-09 0.999999 -0.00159265</xyz>
         <limit>
-          <lower>-2.000000</lower>
-          <upper>2.000000</upper>
+          <lower>-2</lower>
+          <upper>2</upper>
+          <effort>13.4</effort>
+          <velocity>1</velocity>
         </limit>
         <dynamics>
-          <damping>0.100000</damping>
+          <damping>0.1</damping>
         </dynamics>
       </axis>
     </joint>
-    
-    
-	<!-------------------------------------------------------------------------------->
-	<!-------------------------------------------------------------------------------->
-	<!-------------------------------ARMS START HERE---------------------------------->
-	<!-------------------------------------------------------------------------------->
-	<!-------------------------------------------------------------------------------->	
-	<!----------------------------------LEFT ARM-------------------------------------->
-	<!-------------------------------------------------------------------------------->	    
     <link name='shoulder_link1_left'>
-      <pose>-0.000001 0.220000 0.820000 1.570790 -0.000000 -0.000000</pose>
+      <pose>-6.78753e-07 0.22 0.82 1.57079 1.36511e-18 -3.58979e-09</pose>
       <inertial>
-        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
-        <mass>0.100000</mass>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.25</mass>
         <inertia>
-          <ixx>0.010000</ixx>
-          <ixy>0.000000</ixy>
-          <ixz>0.000000</ixz>
-          <iyy>0.010000</iyy>
-          <iyz>0.000000</iyz>
-          <izz>0.010000</izz>
+          <ixx>6</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.01</iyy>
+          <iyz>0</iyz>
+          <izz>0.01</izz>
         </inertia>
       </inertial>
-      
-      <collision name='shoulder_link1_left_geom'>
-        <pose>0.000000 0.000000 -0.052500 0.000000 0.000000 0.000000</pose>
+      <collision name='shoulder_link1_left_collision'>
+        <pose>0 0 -0.0525 0 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.015000</length>
-            <radius>0.045000</radius>
+            <length>0.015</length>
+            <radius>0.045</radius>
           </cylinder>
         </geometry>
         <surface>
@@ -1096,67 +1105,63 @@
           </friction>
         </surface>
       </collision>
-      
       <visual name='shoulder_link1_left_visual'>
-        <pose>0.000000 0.000000 -0.052500 0.000000 0.000000 0.000000</pose>
+        <pose>0 0 -0.0525 0 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.015000</length>
-            <radius>0.045000</radius>
+            <length>0.015</length>
+            <radius>0.045</radius>
           </cylinder>
         </geometry>
         <material>
           <script>
             <name>Gazebo/Black</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
-      
       <gravity>1</gravity>
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <self_collide>0</self_collide>
     </link>
-    
-    
     <joint name='shoulder_yaw_joint_left' type='revolute'>
       <child>shoulder_link1_left</child>
       <parent>torso_slider</parent>
       <axis>
-        <xyz>-1.000000 0.000000 -0.000000</xyz>
+        <xyz>-1 3.58979e-09 1.36511e-18</xyz>
         <limit>
-          <lower>-1.570000</lower>
-          <upper>0.000000</upper>
+          <lower>-1.57</lower>
+          <upper>0</upper>
+          <effort>13.4</effort>
+          <velocity>1</velocity>
         </limit>
         <dynamics>
-          <damping>6.000000</damping>
+          <damping>4</damping>
         </dynamics>
       </axis>
     </joint>
-    
-    
     <link name='shoulder_link2_left'>
-      <pose>-0.000001 0.220000 0.820000 -0.000007 -0.000000 -0.000000</pose>
+      <pose>-6.78753e-07 0.22 0.82 -7.34641e-06 1.36511e-18 -3.58979e-09</pose>
       <inertial>
-        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
-        <mass>0.100000</mass>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.15</mass>
         <inertia>
-          <ixx>0.001000</ixx>
-          <ixy>0.000000</ixy>
-          <ixz>0.000000</ixz>
-          <iyy>0.001000</iyy>
-          <iyz>0.000000</iyz>
-          <izz>0.001000</izz>
+          <ixx>0.01</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>4.04</iyy>
+          <iyz>0</iyz>
+          <izz>0.001</izz>
         </inertia>
       </inertial>
-      
-      <collision name='shoulder_link2_left_geom'>
-        <pose>0.000000 0.060000 -0.050000 0.000000 0.000000 0.000000</pose>
+      <collision name='shoulder_link2_left_collision'>
+        <pose>0 0.06 -0.05 0 -0 0</pose>
         <geometry>
           <box>
-            <size>0.035000 0.010000 0.100000</size>
+            <size>0.035 0.01 0.1</size>
           </box>
         </geometry>
         <surface>
@@ -1168,66 +1173,62 @@
           </friction>
         </surface>
       </collision>
-      
       <visual name='shoulder_link2_left_visual'>
-        <pose>0.000000 0.060000 -0.050000 0.000000 0.000000 0.000000</pose>
+        <pose>0 0.06 -0.05 0 -0 0</pose>
         <geometry>
           <box>
-            <size>0.035000 0.010000 0.100000</size>
+            <size>0.035 0.01 0.1</size>
           </box>
         </geometry>
         <material>
           <script>
             <name>Gazebo/Black</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
-      
       <gravity>1</gravity>
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <self_collide>0</self_collide>
     </link>
-    
-    
     <joint name='shoulder_pitch_joint_left' type='revolute'>
       <child>shoulder_link2_left</child>
       <parent>shoulder_link1_left</parent>
       <axis>
-        <xyz>-0.000000 -1.000000 0.000007</xyz>
+        <xyz>-3.58979e-09 -1 7.34641e-06</xyz>
         <limit>
-          <lower>-1.570000</lower>
-          <upper>1.570000</upper>
+          <lower>-1.57</lower>
+          <upper>1.57</upper>
+          <effort>13.4</effort>
+          <velocity>1</velocity>
         </limit>
         <dynamics>
-          <damping>6.000000</damping>
+          <damping>4</damping>
         </dynamics>
       </axis>
     </joint>
-    
-    
     <link name='upper_arm_left'>
-      <pose>-0.000001 0.220000 0.820000 1.570790 -0.000000 -0.000000</pose>
+      <pose>-6.78753e-07 0.22 0.82 1.57079 1.36511e-18 -3.58979e-09</pose>
       <inertial>
-        <pose>-0.000034 -0.200410 0.000000 0.000000 0.000000 0.000000</pose>
-        <mass>2.930000</mass>
+        <pose>-3.3557e-05 -0.200403 0 0 -0 0</pose>
+        <mass>2.98</mass>
         <inertia>
-          <ixx>0.058022</ixx>
-          <ixy>-0.000010</ixy>
-          <ixz>0.000000</ixz>
-          <iyy>0.033001</iyy>
-          <iyz>0.000000</iyz>
-          <izz>0.035023</izz>
+          <ixx>0.0563415</ixx>
+          <ixy>1.00403e-05</ixy>
+          <ixz>0</ixz>
+          <iyy>0.465931</iyy>
+          <iyz>8.44837e-08</iyz>
+          <izz>0.0333425</izz>
         </inertia>
       </inertial>
-      
-      <collision name='upper_arm_left_geom'>
-        <pose>-0.009590 -0.191310 -0.000010 0.000000 0.000000 3.141500</pose>
+      <collision name='upper_arm_left_collision'>
+        <pose>-0.00959 -0.19131 -1e-05 0 -0 3.1415</pose>
         <geometry>
           <mesh>
-            <scale>0.000400 0.000400 0.000400</scale>
+            <scale>0.0004 0.0004 0.0004</scale>
             <uri>model://media/meshes/upperarmtextured.dae</uri>
           </mesh>
         </geometry>
@@ -1240,13 +1241,12 @@
           </friction>
         </surface>
       </collision>
-      
-      <collision name='upper_arm_left_geom_elbow_extra_block2_left'>
-        <pose>0.000000 -0.310000 0.000000 0.000000 0.000000 0.000000</pose>
+      <collision name='upper_arm_left_collision_elbow_extra_block2_left'>
+        <pose>0 -0.31 0 0 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.080000</length>
-            <radius>0.030000</radius>
+            <length>0.08</length>
+            <radius>0.03</radius>
           </cylinder>
         </geometry>
         <surface>
@@ -1257,13 +1257,20 @@
             <ode/>
           </friction>
         </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
       </collision>
-      
-      <collision name='upper_arm_left_geom_elbow_extra_block_left'>
-        <pose>-0.036000 -0.290000 -0.000000 -1.570800 0.000000 0.000000</pose>
+      <collision name='upper_arm_left_collision_elbow_extra_block_left'>
+        <pose>-0.036 -0.29 -7.34641e-08 -1.5708 0 0</pose>
         <geometry>
           <box>
-            <size>0.015000 0.080000 0.060000</size>
+            <size>0.015 0.08 0.06</size>
           </box>
         </geometry>
         <surface>
@@ -1274,14 +1281,21 @@
             <ode/>
           </friction>
         </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
       </collision>
-      
-      <collision name='upper_arm_left_geom_upper_arm_top_left'>
-        <pose>-0.010000 -0.100000 0.000000 1.570800 0.000000 0.000000</pose>
+      <collision name='upper_arm_left_collision_upper_arm_top_left'>
+        <pose>-0.01 -0.1 0 1.5708 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.020000</length>
-            <radius>0.056100</radius>
+            <length>0.02</length>
+            <radius>0.0561</radius>
           </cylinder>
         </geometry>
         <surface>
@@ -1292,126 +1306,129 @@
             <ode/>
           </friction>
         </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
       </collision>
-      
       <visual name='upper_arm_left_visual'>
-        <pose>-0.009590 -0.191310 -0.000010 0.000000 0.000000 3.141500</pose>
+        <pose>-0.00959 -0.19131 -1e-05 0 -0 3.1415</pose>
         <geometry>
           <mesh>
-            <scale>0.000400 0.000400 0.000400</scale>
+            <scale>0.0004 0.0004 0.0004</scale>
             <uri>model://media/meshes/upperarmtextured.dae</uri>
           </mesh>
         </geometry>
         <material>
           <script>
-            <uri>model://media/materials/scripts/white.material</uri>
-			<name>amigo_robot_model_groovy/white</name>
+            <name>amigo_description/white</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
-      
-      <visual name='upper_arm_left_visualelbow_extra_block2_left'>
-        <pose>0.000000 -0.310000 0.000000 0.000000 0.000000 0.000000</pose>
+      <visual name='upper_arm_left_visual_elbow_extra_block2_left'>
+        <pose>0 -0.31 0 0 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.080000</length>
-            <radius>0.030000</radius>
+            <length>0.08</length>
+            <radius>0.03</radius>
           </cylinder>
         </geometry>
         <material>
           <script>
             <name>Gazebo/Grey</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
-      
-      <visual name='upper_arm_left_visualelbow_extra_block_left'>
-        <pose>-0.036000 -0.290000 -0.000000 -1.570800 0.000000 0.000000</pose>
+      <visual name='upper_arm_left_visual_elbow_extra_block_left'>
+        <pose>-0.036 -0.29 -7.34641e-08 -1.5708 0 0</pose>
         <geometry>
           <box>
-            <size>0.015000 0.080000 0.060000</size>
+            <size>0.015 0.08 0.06</size>
           </box>
         </geometry>
         <material>
           <script>
             <name>Gazebo/Black</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
-      
-      <visual name='upper_arm_left_visualupper_arm_top_left'>
-        <pose>-0.010000 -0.100000 0.000000 1.570800 0.000000 0.000000</pose>
+      <visual name='upper_arm_left_visual_upper_arm_top_left'>
+        <pose>-0.01 -0.1 0 1.5708 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.020000</length>
-            <radius>0.056100</radius>
+            <length>0.02</length>
+            <radius>0.0561</radius>
           </cylinder>
         </geometry>
         <material>
           <script>
             <name>Gazebo/Black</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
-      
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <gravity>1</gravity>
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <self_collide>0</self_collide>
     </link>
-    
-    
     <joint name='shoulder_roll_joint_left' type='revolute'>
       <child>upper_arm_left</child>
       <parent>shoulder_link2_left</parent>
       <axis>
-        <xyz>-0.000000 -0.000004 -1.000000</xyz>
+        <xyz>-1.31874e-14 -3.67321e-06 -1</xyz>
         <limit>
-          <lower>-1.570000</lower>
-          <upper>1.570000</upper>
+          <lower>-1.57</lower>
+          <upper>1.57</upper>
+          <effort>9.8</effort>
+          <velocity>1</velocity>
         </limit>
         <dynamics>
-          <damping>6.000000</damping>
+          <damping>3.8</damping>
         </dynamics>
       </axis>
     </joint>
-    
-    
     <link name='elbow_link4_left'>
-      <pose>0.009999 0.219999 0.500000 -0.000007 -0.000000 -0.000000</pose>
+      <pose>0.00999932 0.219999 0.5 -7.34641e-06 1.36511e-18 -3.58979e-09</pose>
       <inertial>
-        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
-        <mass>0.100000</mass>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.1</mass>
         <inertia>
-          <ixx>0.001000</ixx>
-          <ixy>0.000000</ixy>
-          <ixz>0.000000</ixz>
-          <iyy>0.001000</iyy>
-          <iyz>0.000000</iyz>
-          <izz>0.001000</izz>
+          <ixx>0.001</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.6</iyy>
+          <iyz>0</iyz>
+          <izz>0.001</izz>
         </inertia>
       </inertial>
-      
-      <collision name='elbow_link4_left_geom'>
-        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+      <collision name='elbow_link4_left_collision'>
+        <pose>0 0 0 0 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.000000</length>
-            <radius>0.000000</radius>
+            <length>0</length>
+            <radius>0</radius>
           </cylinder>
         </geometry>
         <surface>
@@ -1423,67 +1440,63 @@
           </friction>
         </surface>
       </collision>
-      
       <visual name='elbow_link4_left_visual'>
-        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.000000</length>
-            <radius>0.000000</radius>
+            <length>0</length>
+            <radius>0</radius>
           </cylinder>
         </geometry>
         <material>
           <script>
             <name>Gazebo/Grey</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
-      
       <gravity>1</gravity>
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <self_collide>0</self_collide>
     </link>
-    
-    
     <joint name='elbow_pitch_joint_left' type='revolute'>
       <child>elbow_link4_left</child>
       <parent>upper_arm_left</parent>
       <axis>
-        <xyz>-0.000000 -1.000000 0.000007</xyz>
+        <xyz>-3.58979e-09 -1 7.34641e-06</xyz>
         <limit>
-          <lower>0.000000</lower>
-          <upper>2.230000</upper>
+          <lower>0</lower>
+          <upper>2.23</upper>
+          <effort>4.5</effort>
+          <velocity>1</velocity>
         </limit>
         <dynamics>
-          <damping>2.500000</damping>
+          <damping>3</damping>
         </dynamics>
       </axis>
     </joint>
-    
-    
     <link name='fore_arm_left'>
-      <pose>0.009999 0.219999 0.500000 1.570790 -0.000000 -0.000000</pose>
+      <pose>0.00999932 0.219999 0.5 1.57079 1.36511e-18 -3.58979e-09</pose>
       <inertial>
-        <pose>0.000182 -0.128273 0.000000 0.000000 0.000000 0.000000</pose>
-        <mass>0.110000</mass>
+        <pose>2.32558e-05 -0.1385 0 0 -0 0</pose>
+        <mass>0.86</mass>
         <inertia>
-          <ixx>0.010801</ixx>
-          <ixy>0.000000</ixy>
-          <ixz>0.000000</ixz>
-          <iyy>0.005800</iyy>
-          <iyz>0.000000</iyz>
-          <izz>0.005801</izz>
+          <ixx>0.00656447</ixx>
+          <ixy>-2.55e-06</ixy>
+          <ixz>0</ixz>
+          <iyy>0.5004</iyy>
+          <iyz>1.8366e-08</iyz>
+          <izz>0.00656451</izz>
         </inertia>
       </inertial>
-      
-      <collision name='fore_arm_left_geom'>
-        <pose>0.004250 -0.148680 0.005470 3.141590 -1.570790 3.141590</pose>
+      <collision name='fore_arm_left_collision'>
+        <pose>0.00425 -0.14868 0.00547 3.14159 -1.57079 3.14159</pose>
         <geometry>
           <mesh>
-            <scale>0.000400 0.000400 0.000400</scale>
+            <scale>0.0004 0.0004 0.0004</scale>
             <uri>model://media/meshes/forearmtextured.dae</uri>
           </mesh>
         </geometry>
@@ -1496,13 +1509,12 @@
           </friction>
         </surface>
       </collision>
-      
-      <collision name='fore_arm_left_geom_fore_arm_top_left'>
-        <pose>0.002000 -0.021000 -0.000000 1.570800 0.000000 0.000000</pose>
+      <collision name='fore_arm_left_collision_fore_arm_top_left'>
+        <pose>0.002 -0.021 -3.67321e-08 1.5708 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.010000</length>
-            <radius>0.037000</radius>
+            <length>0.01</length>
+            <radius>0.037</radius>
           </cylinder>
         </geometry>
         <surface>
@@ -1513,89 +1525,92 @@
             <ode/>
           </friction>
         </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
       </collision>
-      
       <visual name='fore_arm_left_visual'>
-        <pose>0.004250 -0.148680 0.005470 3.141590 -1.570790 3.141590</pose>
+        <pose>0.00425 -0.14868 0.00547 3.14159 -1.57079 3.14159</pose>
         <geometry>
           <mesh>
-            <scale>0.000400 0.000400 0.000400</scale>
+            <scale>0.0004 0.0004 0.0004</scale>
             <uri>model://media/meshes/forearmtextured.dae</uri>
           </mesh>
         </geometry>
         <material>
           <script>
-            <uri>model://media/materials/scripts/white.material</uri>
-			<name>amigo_robot_model_groovy/white</name>
+            <name>amigo_description/white</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
-      
-      <visual name='fore_arm_left_visualfore_arm_top_left'>
-        <pose>0.002000 -0.021000 -0.000000 1.570800 0.000000 0.000000</pose>
+      <visual name='fore_arm_left_visual_fore_arm_top_left'>
+        <pose>0.002 -0.021 -3.67321e-08 1.5708 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.010000</length>
-            <radius>0.037000</radius>
+            <length>0.01</length>
+            <radius>0.037</radius>
           </cylinder>
         </geometry>
         <material>
           <script>
             <name>Gazebo/Black</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
-      
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <gravity>1</gravity>
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <self_collide>0</self_collide>
     </link>
-    
-    
     <joint name='elbow_roll_joint_left' type='revolute'>
       <child>fore_arm_left</child>
       <parent>elbow_link4_left</parent>
       <axis>
-        <xyz>-0.000000 -0.000004 -1.000000</xyz>
+        <xyz>-1.31874e-14 -3.67321e-06 -1</xyz>
         <limit>
-          <lower>-1.830000</lower>
-          <upper>1.830000</upper>
+          <lower>-1.83</lower>
+          <upper>1.83</upper>
+          <effort>4.5</effort>
+          <velocity>1</velocity>
         </limit>
         <dynamics>
-          <damping>2.500000</damping>
+          <damping>3.5</damping>
         </dynamics>
       </axis>
     </joint>
-    
-    
     <link name='wrist_link6_left'>
-      <pose>0.019999 0.219998 0.220000 -2.356200 1.570790 -2.356190</pose>
+      <pose>0.0199993 0.219998 0.22 -2.3562 1.57079 -2.35619</pose>
       <inertial>
-        <pose>-0.006667 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
-        <mass>0.030000</mass>
+        <pose>-0.00666667 0 0 0 -0 0</pose>
+        <mass>0.03</mass>
         <inertia>
-          <ixx>0.003000</ixx>
-          <ixy>0.000000</ixy>
-          <ixz>0.000000</ixz>
-          <iyy>0.003004</iyy>
-          <iyz>-0.000000</iyz>
-          <izz>0.003004</izz>
+          <ixx>0.003</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0352227</iyy>
+          <iyz>-4.1359e-25</iyz>
+          <izz>0.00300267</izz>
         </inertia>
       </inertial>
-      
-      <collision name='wrist_link6_left_geom'>
-        <pose>0.000000 0.000000 0.000000 1.570800 0.000000 0.000000</pose>
+      <collision name='wrist_link6_left_collision'>
+        <pose>0 0 0 1.5708 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.000000</length>
-            <radius>0.000000</radius>
+            <length>0</length>
+            <radius>0</radius>
           </cylinder>
         </geometry>
         <surface>
@@ -1607,12 +1622,11 @@
           </friction>
         </surface>
       </collision>
-      
-      <collision name='wrist_link6_left_geom_wrist_to_hand_block_left'>
-        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+      <collision name='wrist_link6_left_collision_wrist_to_hand_block_left'>
+        <pose>0 0 0 0 -0 0</pose>
         <geometry>
           <box>
-            <size>0.030000 0.020000 0.038000</size>
+            <size>0.03 0.02 0.038</size>
           </box>
         </geometry>
         <surface>
@@ -1623,14 +1637,21 @@
             <ode/>
           </friction>
         </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
       </collision>
-      
-      <collision name='wrist_link6_left_geom_wrist_visual_left'>
-        <pose>-0.020000 0.000000 0.000000 1.570800 0.000000 0.000000</pose>
+      <collision name='wrist_link6_left_collision_wrist_visual_left'>
+        <pose>-0.02 0 0 1.5708 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.060000</length>
-            <radius>0.018000</radius>
+            <length>0.06</length>
+            <radius>0.018</radius>
           </cylinder>
         </geometry>
         <surface>
@@ -1641,105 +1662,109 @@
             <ode/>
           </friction>
         </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
       </collision>
-      
       <visual name='wrist_link6_left_visual'>
-        <pose>0.000000 0.000000 0.000000 1.570800 0.000000 0.000000</pose>
+        <pose>0 0 0 1.5708 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.000000</length>
-            <radius>0.000000</radius>
+            <length>0</length>
+            <radius>0</radius>
           </cylinder>
         </geometry>
         <material>
           <script>
             <name>Gazebo/Black</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
-      
-      <visual name='wrist_link6_left_visualwrist_to_hand_block_left'>
-        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+      <visual name='wrist_link6_left_visual_wrist_to_hand_block_left'>
+        <pose>0 0 0 0 -0 0</pose>
         <geometry>
           <box>
-            <size>0.030000 0.020000 0.038000</size>
+            <size>0.03 0.02 0.038</size>
           </box>
         </geometry>
         <material>
           <script>
             <name>Gazebo/Grey</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
-      
-      <visual name='wrist_link6_left_visualwrist_visual_left'>
-        <pose>-0.020000 0.000000 0.000000 1.570800 0.000000 0.000000</pose>
+      <visual name='wrist_link6_left_visual_wrist_visual_left'>
+        <pose>-0.02 0 0 1.5708 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.060000</length>
-            <radius>0.018000</radius>
+            <length>0.06</length>
+            <radius>0.018</radius>
           </cylinder>
         </geometry>
         <material>
           <script>
             <name>Gazebo/Grey</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
-      
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <gravity>1</gravity>
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <self_collide>0</self_collide>
     </link>
-    
-    
     <joint name='wrist_pitch_joint_left' type='revolute'>
       <child>wrist_link6_left</child>
       <parent>fore_arm_left</parent>
       <axis>
-        <xyz>0.000004 -1.000000 0.000004</xyz>
+        <xyz>3.66962e-06 -1 3.67319e-06</xyz>
         <limit>
-          <lower>-0.950000</lower>
-          <upper>0.950000</upper>
+          <lower>-0.95</lower>
+          <upper>0.95</upper>
+          <effort>1</effort>
+          <velocity>1</velocity>
         </limit>
         <dynamics>
-          <damping>0.500000</damping>
+          <damping>0.35</damping>
         </dynamics>
       </axis>
     </joint>
-    
-    
     <link name='hand_left'>
-      <pose>0.019999 0.219998 0.220000 -2.356200 1.570790 -2.356190</pose>
+      <pose>0.0199993 0.219998 0.22 -2.3562 1.57079 -2.35619</pose>
       <inertial>
-        <pose>0.047623 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
-        <mass>0.210010</mass>
+        <pose>0.047619 0 0 0 -0 0</pose>
+        <mass>0.21</mass>
         <inertia>
-          <ixx>0.011100</ixx>
-          <ixy>0.000000</ixy>
-          <ixz>0.000000</ixz>
-          <iyy>0.011016</iyy>
-          <iyz>0.000000</iyz>
-          <izz>0.011016</izz>
+          <ixx>0.0101</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0101006</iyy>
+          <iyz>0</iyz>
+          <izz>0.0623006</izz>
         </inertia>
       </inertial>
-      
-      <collision name='hand_left_geom'>
-        <pose>0.048000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+      <collision name='hand_left_collision'>
+        <pose>0.048 0 0 0 -0 0</pose>
         <geometry>
           <box>
-            <size>0.080000 0.085000 0.038000</size>
+            <size>0.08 0.085 0.038</size>
           </box>
         </geometry>
         <surface>
@@ -1751,12 +1776,11 @@
           </friction>
         </surface>
       </collision>
-      
-      <collision name='hand_left_geom_grippoint_left'>
-        <pose>0.040000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+      <collision name='hand_left_collision_grippoint_left'>
+        <pose>0.04 0 0 0 -0 0</pose>
         <geometry>
           <box>
-            <size>0.000000 0.000000 0.000000</size>
+            <size>0 0 0</size>
           </box>
         </geometry>
         <surface>
@@ -1767,16 +1791,6 @@
             <ode/>
           </friction>
         </surface>
-      </collision>
-      
-      <collision name='hand_left_geom_hand_marker_left'>
-        <pose>0.140000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
-        <geometry>
-          <cylinder>
-            <length>0.000000</length>
-            <radius>0.000000</radius>
-          </cylinder>
-        </geometry>
         <surface>
           <contact>
             <ode/>
@@ -1786,103 +1800,80 @@
           </friction>
         </surface>
       </collision>
-      
       <visual name='hand_left_visual'>
-        <pose>0.048000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <pose>0.048 0 0 0 -0 0</pose>
         <geometry>
           <box>
-            <size>0.080000 0.085000 0.038000</size>
+            <size>0.08 0.085 0.038</size>
           </box>
         </geometry>
         <material>
           <script>
             <name>Gazebo/Grey</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
-      
-      <visual name='hand_left_visualgrippoint_left'>
-        <pose>0.040000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+      <visual name='hand_left_visual_grippoint_left'>
+        <pose>0.04 0 0 0 -0 0</pose>
         <geometry>
           <box>
-            <size>0.000000 0.000000 0.000000</size>
+            <size>0 0 0</size>
           </box>
         </geometry>
         <material>
           <script>
             <name>Gazebo/Blue</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
-      
-      <visual name='hand_left_visualhand_marker_left'>
-        <pose>0.140000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
-        <geometry>
-          <cylinder>
-            <length>0.000000</length>
-            <radius>0.000000</radius>
-          </cylinder>
-        </geometry>
-        <material>
-          <script>
-            <name>Gazebo/Grey</name>
-          </script>
-        </material>
-      </visual>
-      
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
-      </velocity_decay>
-      <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <gravity>1</gravity>
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <self_collide>0</self_collide>
     </link>
-    
-    
     <joint name='wrist_yaw_joint_left' type='revolute'>
       <child>hand_left</child>
       <parent>wrist_link6_left</parent>
       <axis>
-        <xyz>-1.010000 -0.000004 0.000004</xyz>
+        <xyz>-1.01 -3.7063e-06 3.70995e-06</xyz>
         <limit>
-          <lower>-0.610000</lower>
-          <upper>0.610000</upper>
+          <lower>-0.61</lower>
+          <upper>0.61</upper>
+          <effort>1</effort>
+          <velocity>1</velocity>
         </limit>
         <dynamics>
-          <damping>0.500000</damping>
+          <damping>0.3</damping>
         </dynamics>
       </axis>
     </joint>
-    
-    
     <link name='finger1_left'>
-      <pose>0.019999 0.239998 0.145000 -0.000004 0.000800 0.000004</pose>
+      <pose>0.019999 0.239998 0.145 -3.67319e-06 0.0008 3.66668e-06</pose>
       <inertial>
-        <pose>0.000000 0.000000 -0.035000 0.000000 0.000000 0.000000</pose>
-        <mass>0.060000</mass>
+        <pose>0 0 -0.045 0 -0 0</pose>
+        <mass>0.02</mass>
         <inertia>
-          <ixx>0.011036</ixx>
-          <ixy>0.000000</ixy>
-          <ixz>-0.000000</ixz>
-          <iyy>0.011036</iyy>
-          <iyz>0.000000</iyz>
-          <izz>0.011000</izz>
+          <ixx>0.0110045</ixx>
+          <ixy>0</ixy>
+          <ixz>-1.05879e-22</ixz>
+          <iyy>0.0110045</iyy>
+          <iyz>0</iyz>
+          <izz>0.011</izz>
         </inertia>
       </inertial>
-      
-      <collision name='finger1_left_geom'>
-        <pose>0.000000 0.000000 -0.030000 0.000000 0.000000 0.000000</pose>
+      <collision name='finger1_left_collision'>
+        <pose>0 0 -0.03 0 -0 0</pose>
         <geometry>
           <box>
-            <size>0.018000 0.018000 0.060000</size>
+            <size>0.018 0.018 0.06</size>
           </box>
         </geometry>
         <surface>
@@ -1899,19 +1890,18 @@
           </contact>
           <friction>
             <ode>
-              <mu>100.000000</mu>
-              <mu2>100.000000</mu2>
+              <mu>100</mu>
+              <mu2>100</mu2>
             </ode>
           </friction>
         </surface>
       </collision>
-      
-      <collision name='finger1_left_geom_finger1_phalanx_left'>
-        <pose>0.000000 0.000000 -0.060000 0.000000 1.570000 0.000000</pose>
+      <collision name='finger1_left_collision_finger1_phalanx_left'>
+        <pose>0 0 -0.06 0 1.57 0</pose>
         <geometry>
           <cylinder>
-            <length>0.019000</length>
-            <radius>0.009000</radius>
+            <length>0.019</length>
+            <radius>0.009</radius>
           </cylinder>
         </geometry>
         <surface>
@@ -1922,90 +1912,105 @@
             <ode/>
           </friction>
         </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>100</mu>
+              <mu2>100</mu2>
+            </ode>
+          </friction>
+        </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
       </collision>
-      
       <visual name='finger1_left_visual'>
-        <pose>0.000000 0.000000 -0.030000 0.000000 0.000000 0.000000</pose>
+        <pose>0 0 -0.03 0 -0 0</pose>
         <geometry>
           <box>
-            <size>0.018000 0.018000 0.060000</size>
+            <size>0.018 0.018 0.06</size>
           </box>
         </geometry>
         <material>
           <script>
             <name>Gazebo/Black</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
-      
-      <visual name='finger1_left_visualfinger1_phalanx_left'>
-        <pose>0.000000 0.000000 -0.060000 0.000000 1.570000 0.000000</pose>
+      <visual name='finger1_left_visual_finger1_phalanx_left'>
+        <pose>0 0 -0.06 0 1.57 0</pose>
         <geometry>
           <cylinder>
-            <length>0.019000</length>
-            <radius>0.009000</radius>
+            <length>0.019</length>
+            <radius>0.009</radius>
           </cylinder>
         </geometry>
         <material>
           <script>
             <name>Gazebo/White</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
-      
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <gravity>1</gravity>
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <self_collide>0</self_collide>
     </link>
-    
-    
     <joint name='finger1_joint_left' type='revolute'>
       <child>finger1_left</child>
       <parent>hand_left</parent>
       <axis>
-        <xyz>1.000000 0.000004 -0.000800</xyz>
+        <xyz>1 3.66668e-06 -0.0008</xyz>
         <limit>
-          <lower>-1.570000</lower>
-          <upper>1.570000</upper>
+          <lower>-1.57</lower>
+          <upper>1.57</upper>
+          <effort>3</effort>
+          <velocity>1</velocity>
         </limit>
         <dynamics>
-          <damping>0.500000</damping>
+          <damping>0.5</damping>
         </dynamics>
       </axis>
     </joint>
-    
-    
     <link name='finger1_tip_left'>
-      <pose>0.019951 0.239997 0.085000 -0.000004 0.000800 0.000004</pose>
+      <pose>0.019951 0.239997 0.0849999 -3.67319e-06 0.0008 3.66668e-06</pose>
       <inertial>
-        <pose>0.000000 0.000000 -0.035000 0.000000 0.000000 0.000000</pose>
-        <mass>0.060000</mass>
+        <pose>0 0 -0.045 0 -0 0</pose>
+        <mass>0.02</mass>
         <inertia>
-          <ixx>0.001406</ixx>
-          <ixy>0.000000</ixy>
-          <ixz>-0.000000</ixz>
-          <iyy>0.001556</iyy>
-          <iyz>0.000000</iyz>
-          <izz>0.001520</izz>
+          <ixx>0.0013745</ixx>
+          <ixy>0</ixy>
+          <ixz>-1.05879e-22</ixz>
+          <iyy>0.0015245</iyy>
+          <iyz>0</iyz>
+          <izz>0.00152</izz>
         </inertia>
       </inertial>
-      
-      <collision name='finger1_tip_left_geom'>
-        <pose>0.000000 0.000000 -0.030000 0.000000 0.000000 0.000000</pose>
+      <collision name='finger1_tip_left_collision'>
+        <pose>0 0 -0.03 0 -0 0</pose>
         <geometry>
           <box>
-            <size>0.018000 0.018000 0.060000</size>
+            <size>0.018 0.018 0.06</size>
           </box>
         </geometry>
         <surface>
@@ -2022,19 +2027,18 @@
           </contact>
           <friction>
             <ode>
-              <mu>100.000000</mu>
-              <mu2>100.000000</mu2>
+              <mu>100</mu>
+              <mu2>100</mu2>
             </ode>
           </friction>
         </surface>
       </collision>
-      
-      <collision name='finger1_tip_left_geom_finger1_tip_phalanx_left'>
-        <pose>0.000000 0.000000 -0.060000 0.000000 1.570000 0.000000</pose>
+      <collision name='finger1_tip_left_collision_finger1_tip_phalanx_left'>
+        <pose>0 0 -0.06 0 1.57 0</pose>
         <geometry>
           <cylinder>
-            <length>0.017000</length>
-            <radius>0.009000</radius>
+            <length>0.017</length>
+            <radius>0.009</radius>
           </cylinder>
         </geometry>
         <surface>
@@ -2045,90 +2049,105 @@
             <ode/>
           </friction>
         </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>100</mu>
+              <mu2>100</mu2>
+            </ode>
+          </friction>
+        </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
       </collision>
-      
       <visual name='finger1_tip_left_visual'>
-        <pose>0.000000 0.000000 -0.030000 0.000000 0.000000 0.000000</pose>
+        <pose>0 0 -0.03 0 -0 0</pose>
         <geometry>
           <box>
-            <size>0.018000 0.018000 0.060000</size>
+            <size>0.018 0.018 0.06</size>
           </box>
         </geometry>
         <material>
           <script>
             <name>Gazebo/Black</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
-      
-      <visual name='finger1_tip_left_visualfinger1_tip_phalanx_left'>
-        <pose>0.000000 0.000000 -0.060000 0.000000 1.570000 0.000000</pose>
+      <visual name='finger1_tip_left_visual_finger1_tip_phalanx_left'>
+        <pose>0 0 -0.06 0 1.57 0</pose>
         <geometry>
           <cylinder>
-            <length>0.017000</length>
-            <radius>0.009000</radius>
+            <length>0.017</length>
+            <radius>0.009</radius>
           </cylinder>
         </geometry>
         <material>
           <script>
             <name>Gazebo/White</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
-      
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <gravity>1</gravity>
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <self_collide>0</self_collide>
     </link>
-    
-    
     <joint name='finger1_tip_joint_left' type='revolute'>
       <child>finger1_tip_left</child>
       <parent>finger1_left</parent>
       <axis>
-        <xyz>1.000000 0.000004 -0.000800</xyz>
+        <xyz>1 3.66668e-06 -0.0008</xyz>
         <limit>
-          <lower>-1.570000</lower>
-          <upper>1.570000</upper>
+          <lower>-1.57</lower>
+          <upper>1.57</upper>
+          <effort>3</effort>
+          <velocity>1</velocity>
         </limit>
         <dynamics>
-          <damping>0.500000</damping>
+          <damping>0.5</damping>
         </dynamics>
       </axis>
     </joint>
-    
-    
     <link name='finger2_left'>
-      <pose>0.019999 0.199998 0.145000 -0.000004 0.000800 0.000004</pose>
+      <pose>0.0199991 0.199998 0.145 -3.67319e-06 0.0008 3.66668e-06</pose>
       <inertial>
-        <pose>0.000000 0.000000 -0.035000 0.000000 0.000000 0.000000</pose>
-        <mass>0.060000</mass>
+        <pose>0 0 -0.045 0 -0 0</pose>
+        <mass>0.02</mass>
         <inertia>
-          <ixx>0.011036</ixx>
-          <ixy>0.000000</ixy>
-          <ixz>-0.000000</ixz>
-          <iyy>0.011036</iyy>
-          <iyz>0.000000</iyz>
-          <izz>0.011000</izz>
+          <ixx>0.0110045</ixx>
+          <ixy>0</ixy>
+          <ixz>-1.05879e-22</ixz>
+          <iyy>0.0110045</iyy>
+          <iyz>0</iyz>
+          <izz>0.011</izz>
         </inertia>
       </inertial>
-      
-      <collision name='finger2_left_geom'>
-        <pose>0.000000 0.000000 -0.030000 0.000000 0.000000 0.000000</pose>
+      <collision name='finger2_left_collision'>
+        <pose>0 0 -0.03 0 -0 0</pose>
         <geometry>
           <box>
-            <size>0.018000 0.018000 0.060000</size>
+            <size>0.018 0.018 0.06</size>
           </box>
         </geometry>
         <surface>
@@ -2145,19 +2164,18 @@
           </contact>
           <friction>
             <ode>
-              <mu>100.000000</mu>
-              <mu2>100.000000</mu2>
+              <mu>100</mu>
+              <mu2>100</mu2>
             </ode>
           </friction>
         </surface>
       </collision>
-      
-      <collision name='finger2_left_geom_finger2_phalanx_left'>
-        <pose>0.000000 0.000000 -0.060000 0.000000 1.570000 0.000000</pose>
+      <collision name='finger2_left_collision_finger2_phalanx_left'>
+        <pose>0 0 -0.06 0 1.57 0</pose>
         <geometry>
           <cylinder>
-            <length>0.019000</length>
-            <radius>0.009000</radius>
+            <length>0.019</length>
+            <radius>0.009</radius>
           </cylinder>
         </geometry>
         <surface>
@@ -2168,90 +2186,105 @@
             <ode/>
           </friction>
         </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>100</mu>
+              <mu2>100</mu2>
+            </ode>
+          </friction>
+        </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
       </collision>
-      
       <visual name='finger2_left_visual'>
-        <pose>0.000000 0.000000 -0.030000 0.000000 0.000000 0.000000</pose>
+        <pose>0 0 -0.03 0 -0 0</pose>
         <geometry>
           <box>
-            <size>0.018000 0.018000 0.060000</size>
+            <size>0.018 0.018 0.06</size>
           </box>
         </geometry>
         <material>
           <script>
             <name>Gazebo/Black</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
-      
-      <visual name='finger2_left_visualfinger2_phalanx_left'>
-        <pose>0.000000 0.000000 -0.060000 0.000000 1.570000 0.000000</pose>
+      <visual name='finger2_left_visual_finger2_phalanx_left'>
+        <pose>0 0 -0.06 0 1.57 0</pose>
         <geometry>
           <cylinder>
-            <length>0.019000</length>
-            <radius>0.009000</radius>
+            <length>0.019</length>
+            <radius>0.009</radius>
           </cylinder>
         </geometry>
         <material>
           <script>
             <name>Gazebo/White</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
-      
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <gravity>1</gravity>
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <self_collide>0</self_collide>
     </link>
-    
-    
     <joint name='finger2_joint_left' type='revolute'>
       <child>finger2_left</child>
       <parent>hand_left</parent>
       <axis>
-        <xyz>-1.000000 -0.000004 0.000800</xyz>
+        <xyz>-1 -3.66668e-06 0.0008</xyz>
         <limit>
-          <lower>-1.570000</lower>
-          <upper>1.570000</upper>
+          <lower>-1.57</lower>
+          <upper>1.57</upper>
+          <effort>3</effort>
+          <velocity>1</velocity>
         </limit>
         <dynamics>
-          <damping>0.500000</damping>
+          <damping>0.5</damping>
         </dynamics>
       </axis>
     </joint>
-    
-    
     <link name='finger2_tip_left'>
-      <pose>0.019951 0.199997 0.085000 -0.000004 0.000800 0.000004</pose>
+      <pose>0.0199511 0.199997 0.0850001 -3.67319e-06 0.0008 3.66668e-06</pose>
       <inertial>
-        <pose>0.000000 0.000000 -0.035000 0.000000 0.000000 0.000000</pose>
-        <mass>0.060000</mass>
+        <pose>0 0 -0.045 0 -0 0</pose>
+        <mass>0.02</mass>
         <inertia>
-          <ixx>0.001406</ixx>
-          <ixy>0.000000</ixy>
-          <ixz>-0.000000</ixz>
-          <iyy>0.001556</iyy>
-          <iyz>0.000000</iyz>
-          <izz>0.001520</izz>
+          <ixx>0.0013745</ixx>
+          <ixy>0</ixy>
+          <ixz>-1.05879e-22</ixz>
+          <iyy>0.0015245</iyy>
+          <iyz>0</iyz>
+          <izz>0.00152</izz>
         </inertia>
       </inertial>
-      
-      <collision name='finger2_tip_left_geom'>
-        <pose>0.000000 0.000000 -0.030000 0.000000 0.000000 0.000000</pose>
+      <collision name='finger2_tip_left_collision'>
+        <pose>0 0 -0.03 0 -0 0</pose>
         <geometry>
           <box>
-            <size>0.018000 0.018000 0.060000</size>
+            <size>0.018 0.018 0.06</size>
           </box>
         </geometry>
         <surface>
@@ -2268,19 +2301,18 @@
           </contact>
           <friction>
             <ode>
-              <mu>100.000000</mu>
-              <mu2>100.000000</mu2>
+              <mu>100</mu>
+              <mu2>100</mu2>
             </ode>
           </friction>
         </surface>
       </collision>
-      
-      <collision name='finger2_tip_left_geom_finger2_tip_phalanx_left'>
-        <pose>0.000000 0.000000 -0.060000 0.000000 1.570000 0.000000</pose>
+      <collision name='finger2_tip_left_collision_finger2_tip_phalanx_left'>
+        <pose>0 0 -0.06 0 1.57 0</pose>
         <geometry>
           <cylinder>
-            <length>0.017000</length>
-            <radius>0.009000</radius>
+            <length>0.017</length>
+            <radius>0.009</radius>
           </cylinder>
         </geometry>
         <surface>
@@ -2291,93 +2323,106 @@
             <ode/>
           </friction>
         </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>100</mu>
+              <mu2>100</mu2>
+            </ode>
+          </friction>
+        </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
       </collision>
-      
       <visual name='finger2_tip_left_visual'>
-        <pose>0.000000 0.000000 -0.030000 0.000000 0.000000 0.000000</pose>
+        <pose>0 0 -0.03 0 -0 0</pose>
         <geometry>
           <box>
-            <size>0.018000 0.018000 0.060000</size>
+            <size>0.018 0.018 0.06</size>
           </box>
         </geometry>
         <material>
           <script>
             <name>Gazebo/Black</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
-      
-      <visual name='finger2_tip_left_visualfinger2_tip_phalanx_left'>
-        <pose>0.000000 0.000000 -0.060000 0.000000 1.570000 0.000000</pose>
+      <visual name='finger2_tip_left_visual_finger2_tip_phalanx_left'>
+        <pose>0 0 -0.06 0 1.57 0</pose>
         <geometry>
           <cylinder>
-            <length>0.017000</length>
-            <radius>0.009000</radius>
+            <length>0.017</length>
+            <radius>0.009</radius>
           </cylinder>
         </geometry>
         <material>
           <script>
             <name>Gazebo/White</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
-      
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <gravity>1</gravity>
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <self_collide>0</self_collide>
     </link>
-    
-    
     <joint name='finger2_tip_joint_left' type='revolute'>
       <child>finger2_tip_left</child>
       <parent>finger2_left</parent>
       <axis>
-        <xyz>-1.000000 -0.000004 0.000800</xyz>
+        <xyz>-1 -3.66668e-06 0.0008</xyz>
         <limit>
-          <lower>-1.570000</lower>
-          <upper>1.570000</upper>
+          <lower>-1.57</lower>
+          <upper>1.57</upper>
+          <effort>3</effort>
+          <velocity>1</velocity>
         </limit>
         <dynamics>
-          <damping>0.500000</damping>
+          <damping>0.5</damping>
         </dynamics>
       </axis>
     </joint>
-    
-    	
-	<!----------------------------------RIGHT ARM-------------------------------------->
-	<!-------------------------------------------------------------------------------->
     <link name='shoulder_link1_right'>
-      <pose>-0.000001 -0.220000 0.820000 1.570790 -0.000000 -0.000000</pose>
+      <pose>-6.80333e-07 -0.22 0.82 1.57079 1.36511e-18 -3.58979e-09</pose>
       <inertial>
-        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
-        <mass>0.100000</mass>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.25</mass>
         <inertia>
-          <ixx>0.010000</ixx>
-          <ixy>0.000000</ixy>
-          <ixz>0.000000</ixz>
-          <iyy>0.010000</iyy>
-          <iyz>0.000000</iyz>
-          <izz>0.010000</izz>
+          <ixx>6</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.01</iyy>
+          <iyz>0</iyz>
+          <izz>0.01</izz>
         </inertia>
       </inertial>
-      
-      <collision name='shoulder_link1_right_geom'>
-        <pose>0.000000 0.000000 0.052500 0.000000 0.000000 0.000000</pose>
+      <collision name='shoulder_link1_right_collision'>
+        <pose>0 0 0.0525 0 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.015000</length>
-            <radius>0.045000</radius>
+            <length>0.015</length>
+            <radius>0.045</radius>
           </cylinder>
         </geometry>
         <surface>
@@ -2389,67 +2434,63 @@
           </friction>
         </surface>
       </collision>
-      
       <visual name='shoulder_link1_right_visual'>
-        <pose>0.000000 0.000000 0.052500 0.000000 0.000000 0.000000</pose>
+        <pose>0 0 0.0525 0 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.015000</length>
-            <radius>0.045000</radius>
+            <length>0.015</length>
+            <radius>0.045</radius>
           </cylinder>
         </geometry>
         <material>
           <script>
             <name>Gazebo/Black</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
-      
       <gravity>1</gravity>
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <self_collide>0</self_collide>
     </link>
-    
-    
     <joint name='shoulder_yaw_joint_right' type='revolute'>
       <child>shoulder_link1_right</child>
       <parent>torso_slider</parent>
       <axis>
-        <xyz>1.000000 -0.000000 0.000000</xyz>
+        <xyz>1 -3.58979e-09 -1.36511e-18</xyz>
         <limit>
-          <lower>-1.570000</lower>
-          <upper>0.000000</upper>
+          <lower>-1.57</lower>
+          <upper>0</upper>
+          <effort>13.4</effort>
+          <velocity>1</velocity>
         </limit>
         <dynamics>
-          <damping>6.000000</damping>
+          <damping>4</damping>
         </dynamics>
       </axis>
     </joint>
-    
-    
     <link name='shoulder_link2_right'>
-      <pose>-0.000001 -0.220000 0.820000 -0.000007 -0.000000 -0.000000</pose>
+      <pose>-6.80333e-07 -0.22 0.82 -7.34641e-06 1.36511e-18 -3.58979e-09</pose>
       <inertial>
-        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
-        <mass>0.100000</mass>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.15</mass>
         <inertia>
-          <ixx>0.001000</ixx>
-          <ixy>0.000000</ixy>
-          <ixz>0.000000</ixz>
-          <iyy>0.001000</iyy>
-          <iyz>0.000000</iyz>
-          <izz>0.001000</izz>
+          <ixx>0.01</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>4.04</iyy>
+          <iyz>0</iyz>
+          <izz>0.001</izz>
         </inertia>
       </inertial>
-      
-      <collision name='shoulder_link2_right_geom'>
-        <pose>0.000000 -0.060000 -0.050000 0.000000 0.000000 0.000000</pose>
+      <collision name='shoulder_link2_right_collision'>
+        <pose>0 -0.06 -0.05 0 -0 0</pose>
         <geometry>
           <box>
-            <size>0.035000 0.010000 0.100000</size>
+            <size>0.035 0.01 0.1</size>
           </box>
         </geometry>
         <surface>
@@ -2461,66 +2502,62 @@
           </friction>
         </surface>
       </collision>
-      
       <visual name='shoulder_link2_right_visual'>
-        <pose>0.000000 -0.060000 -0.050000 0.000000 0.000000 0.000000</pose>
+        <pose>0 -0.06 -0.05 0 -0 0</pose>
         <geometry>
           <box>
-            <size>0.035000 0.010000 0.100000</size>
+            <size>0.035 0.01 0.1</size>
           </box>
         </geometry>
         <material>
           <script>
             <name>Gazebo/Black</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
-      
       <gravity>1</gravity>
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <self_collide>0</self_collide>
     </link>
-    
-    
     <joint name='shoulder_pitch_joint_right' type='revolute'>
       <child>shoulder_link2_right</child>
       <parent>shoulder_link1_right</parent>
       <axis>
-        <xyz>-0.000000 -1.000000 0.000007</xyz>
+        <xyz>-3.58979e-09 -1 7.34641e-06</xyz>
         <limit>
-          <lower>-1.570000</lower>
-          <upper>1.570000</upper>
+          <lower>-1.57</lower>
+          <upper>1.57</upper>
+          <effort>13.4</effort>
+          <velocity>1</velocity>
         </limit>
         <dynamics>
-          <damping>6.000000</damping>
+          <damping>4</damping>
         </dynamics>
       </axis>
     </joint>
-    
-    
     <link name='upper_arm_right'>
-      <pose>-0.000001 -0.220000 0.820000 1.570790 -0.000000 -0.000000</pose>
+      <pose>-6.80333e-07 -0.22 0.82 1.57079 1.36511e-18 -3.58979e-09</pose>
       <inertial>
-        <pose>-0.000034 -0.200410 0.000000 0.000000 0.000000 0.000000</pose>
-        <mass>2.930000</mass>
+        <pose>-3.3557e-05 -0.200403 0 0 -0 0</pose>
+        <mass>2.98</mass>
         <inertia>
-          <ixx>0.058022</ixx>
-          <ixy>-0.000010</ixy>
-          <ixz>0.000000</ixz>
-          <iyy>0.033001</iyy>
-          <iyz>0.000000</iyz>
-          <izz>0.035023</izz>
+          <ixx>0.0563415</ixx>
+          <ixy>1.00403e-05</ixy>
+          <ixz>0</ixz>
+          <iyy>0.465931</iyy>
+          <iyz>8.44837e-08</iyz>
+          <izz>0.0333425</izz>
         </inertia>
       </inertial>
-      
-      <collision name='upper_arm_right_geom'>
-        <pose>-0.009590 -0.191310 -0.000010 0.000000 0.000000 3.141500</pose>
+      <collision name='upper_arm_right_collision'>
+        <pose>-0.00959 -0.19131 -1e-05 0 -0 3.1415</pose>
         <geometry>
           <mesh>
-            <scale>0.000400 0.000400 0.000400</scale>
+            <scale>0.0004 0.0004 0.0004</scale>
             <uri>model://media/meshes/upperarmtextured.dae</uri>
           </mesh>
         </geometry>
@@ -2533,13 +2570,12 @@
           </friction>
         </surface>
       </collision>
-      
-      <collision name='upper_arm_right_geom_elbow_extra_block2_right'>
-        <pose>0.000000 -0.310000 0.000000 0.000000 0.000000 0.000000</pose>
+      <collision name='upper_arm_right_collision_elbow_extra_block2_right'>
+        <pose>0 -0.31 0 0 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.080000</length>
-            <radius>0.030000</radius>
+            <length>0.08</length>
+            <radius>0.03</radius>
           </cylinder>
         </geometry>
         <surface>
@@ -2550,13 +2586,20 @@
             <ode/>
           </friction>
         </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
       </collision>
-      
-      <collision name='upper_arm_right_geom_elbow_extra_block_right'>
-        <pose>-0.036000 -0.290000 -0.000000 -1.570800 0.000000 0.000000</pose>
+      <collision name='upper_arm_right_collision_elbow_extra_block_right'>
+        <pose>-0.036 -0.29 -7.34641e-08 -1.5708 0 0</pose>
         <geometry>
           <box>
-            <size>0.015000 0.080000 0.060000</size>
+            <size>0.015 0.08 0.06</size>
           </box>
         </geometry>
         <surface>
@@ -2567,14 +2610,21 @@
             <ode/>
           </friction>
         </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
       </collision>
-      
-      <collision name='upper_arm_right_geom_upper_arm_top_right'>
-        <pose>-0.010000 -0.100000 0.000000 1.570800 0.000000 0.000000</pose>
+      <collision name='upper_arm_right_collision_upper_arm_top_right'>
+        <pose>-0.01 -0.1 0 1.5708 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.020000</length>
-            <radius>0.056100</radius>
+            <length>0.02</length>
+            <radius>0.0561</radius>
           </cylinder>
         </geometry>
         <surface>
@@ -2585,126 +2635,129 @@
             <ode/>
           </friction>
         </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
       </collision>
-      
       <visual name='upper_arm_right_visual'>
-        <pose>-0.009590 -0.191310 -0.000010 0.000000 0.000000 3.141500</pose>
+        <pose>-0.00959 -0.19131 -1e-05 0 -0 3.1415</pose>
         <geometry>
           <mesh>
-            <scale>0.000400 0.000400 0.000400</scale>
+            <scale>0.0004 0.0004 0.0004</scale>
             <uri>model://media/meshes/upperarmtextured.dae</uri>
           </mesh>
         </geometry>
         <material>
           <script>
-            <uri>model://media/materials/scripts/white.material</uri>
-			<name>amigo_robot_model_groovy/white</name>
+            <name>amigo_description/white</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
-      
-      <visual name='upper_arm_right_visualelbow_extra_block2_right'>
-        <pose>0.000000 -0.310000 0.000000 0.000000 0.000000 0.000000</pose>
+      <visual name='upper_arm_right_visual_elbow_extra_block2_right'>
+        <pose>0 -0.31 0 0 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.080000</length>
-            <radius>0.030000</radius>
+            <length>0.08</length>
+            <radius>0.03</radius>
           </cylinder>
         </geometry>
         <material>
           <script>
             <name>Gazebo/Grey</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
-      
-      <visual name='upper_arm_right_visualelbow_extra_block_right'>
-        <pose>-0.036000 -0.290000 -0.000000 -1.570800 0.000000 0.000000</pose>
+      <visual name='upper_arm_right_visual_elbow_extra_block_right'>
+        <pose>-0.036 -0.29 -7.34641e-08 -1.5708 0 0</pose>
         <geometry>
           <box>
-            <size>0.015000 0.080000 0.060000</size>
+            <size>0.015 0.08 0.06</size>
           </box>
         </geometry>
         <material>
           <script>
             <name>Gazebo/Black</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
-      
-      <visual name='upper_arm_right_visualupper_arm_top_right'>
-        <pose>-0.010000 -0.100000 0.000000 1.570800 0.000000 0.000000</pose>
+      <visual name='upper_arm_right_visual_upper_arm_top_right'>
+        <pose>-0.01 -0.1 0 1.5708 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.020000</length>
-            <radius>0.056100</radius>
+            <length>0.02</length>
+            <radius>0.0561</radius>
           </cylinder>
         </geometry>
         <material>
           <script>
             <name>Gazebo/Black</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
-      
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <gravity>1</gravity>
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <self_collide>0</self_collide>
     </link>
-    
-    
     <joint name='shoulder_roll_joint_right' type='revolute'>
       <child>upper_arm_right</child>
       <parent>shoulder_link2_right</parent>
       <axis>
-        <xyz>0.000000 0.000004 1.000000</xyz>
+        <xyz>1.31874e-14 3.67321e-06 1</xyz>
         <limit>
-          <lower>-1.570000</lower>
-          <upper>1.570000</upper>
+          <lower>-1.57</lower>
+          <upper>1.57</upper>
+          <effort>9.8</effort>
+          <velocity>1</velocity>
         </limit>
         <dynamics>
-          <damping>6.000000</damping>
+          <damping>3.8</damping>
         </dynamics>
       </axis>
     </joint>
-    
-    
     <link name='elbow_link4_right'>
-      <pose>0.009999 -0.220001 0.500000 -0.000007 -0.000000 -0.000000</pose>
+      <pose>0.00999932 -0.220001 0.5 -7.34641e-06 1.36511e-18 -3.58979e-09</pose>
       <inertial>
-        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
-        <mass>0.100000</mass>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.1</mass>
         <inertia>
-          <ixx>0.001000</ixx>
-          <ixy>0.000000</ixy>
-          <ixz>0.000000</ixz>
-          <iyy>0.001000</iyy>
-          <iyz>0.000000</iyz>
-          <izz>0.001000</izz>
+          <ixx>0.001</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.6</iyy>
+          <iyz>0</iyz>
+          <izz>0.001</izz>
         </inertia>
       </inertial>
-      
-      <collision name='elbow_link4_right_geom'>
-        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+      <collision name='elbow_link4_right_collision'>
+        <pose>0 0 0 0 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.000000</length>
-            <radius>0.000000</radius>
+            <length>0</length>
+            <radius>0</radius>
           </cylinder>
         </geometry>
         <surface>
@@ -2716,67 +2769,63 @@
           </friction>
         </surface>
       </collision>
-      
       <visual name='elbow_link4_right_visual'>
-        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.000000</length>
-            <radius>0.000000</radius>
+            <length>0</length>
+            <radius>0</radius>
           </cylinder>
         </geometry>
         <material>
           <script>
             <name>Gazebo/Grey</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
-      
       <gravity>1</gravity>
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <self_collide>0</self_collide>
     </link>
-    
-    
     <joint name='elbow_pitch_joint_right' type='revolute'>
       <child>elbow_link4_right</child>
       <parent>upper_arm_right</parent>
       <axis>
-        <xyz>-0.000000 -1.000000 0.000007</xyz>
+        <xyz>-3.58979e-09 -1 7.34641e-06</xyz>
         <limit>
-          <lower>0.000000</lower>
-          <upper>2.230000</upper>
+          <lower>0</lower>
+          <upper>2.23</upper>
+          <effort>4.5</effort>
+          <velocity>1</velocity>
         </limit>
         <dynamics>
-          <damping>2.500000</damping>
+          <damping>3</damping>
         </dynamics>
       </axis>
     </joint>
-    
-    
     <link name='fore_arm_right'>
-      <pose>0.009999 -0.220001 0.500000 1.570790 -0.000000 -0.000000</pose>
+      <pose>0.00999932 -0.220001 0.5 1.57079 1.36511e-18 -3.58979e-09</pose>
       <inertial>
-        <pose>0.000182 -0.128273 0.000000 0.000000 0.000000 0.000000</pose>
-        <mass>0.110000</mass>
+        <pose>2.32558e-05 -0.1385 0 0 -0 0</pose>
+        <mass>0.86</mass>
         <inertia>
-          <ixx>0.010801</ixx>
-          <ixy>0.000000</ixy>
-          <ixz>0.000000</ixz>
-          <iyy>0.005800</iyy>
-          <iyz>0.000000</iyz>
-          <izz>0.005801</izz>
+          <ixx>0.00656447</ixx>
+          <ixy>-2.55e-06</ixy>
+          <ixz>0</ixz>
+          <iyy>0.5004</iyy>
+          <iyz>1.8366e-08</iyz>
+          <izz>0.00656451</izz>
         </inertia>
       </inertial>
-      
-      <collision name='fore_arm_right_geom'>
-        <pose>0.004250 -0.148680 0.005470 3.141590 -1.570790 3.141590</pose>
+      <collision name='fore_arm_right_collision'>
+        <pose>0.00425 -0.14868 0.00547 3.14159 -1.57079 3.14159</pose>
         <geometry>
           <mesh>
-            <scale>0.000400 0.000400 0.000400</scale>
+            <scale>0.0004 0.0004 0.0004</scale>
             <uri>model://media/meshes/forearmtextured.dae</uri>
           </mesh>
         </geometry>
@@ -2789,13 +2838,12 @@
           </friction>
         </surface>
       </collision>
-      
-      <collision name='fore_arm_right_geom_fore_arm_top_right'>
-        <pose>0.002000 -0.021000 -0.000000 1.570800 0.000000 0.000000</pose>
+      <collision name='fore_arm_right_collision_fore_arm_top_right'>
+        <pose>0.002 -0.021 -3.67321e-08 1.5708 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.010000</length>
-            <radius>0.037000</radius>
+            <length>0.01</length>
+            <radius>0.037</radius>
           </cylinder>
         </geometry>
         <surface>
@@ -2806,89 +2854,92 @@
             <ode/>
           </friction>
         </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
       </collision>
-      
       <visual name='fore_arm_right_visual'>
-        <pose>0.004250 -0.148680 0.005470 3.141590 -1.570790 3.141590</pose>
+        <pose>0.00425 -0.14868 0.00547 3.14159 -1.57079 3.14159</pose>
         <geometry>
           <mesh>
-            <scale>0.000400 0.000400 0.000400</scale>
+            <scale>0.0004 0.0004 0.0004</scale>
             <uri>model://media/meshes/forearmtextured.dae</uri>
           </mesh>
         </geometry>
         <material>
           <script>
-            <uri>model://media/materials/scripts/white.material</uri>
-			<name>amigo_robot_model_groovy/white</name>
+            <name>amigo_description/white</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
-      
-      <visual name='fore_arm_right_visualfore_arm_top_right'>
-        <pose>0.002000 -0.021000 -0.000000 1.570800 0.000000 0.000000</pose>
+      <visual name='fore_arm_right_visual_fore_arm_top_right'>
+        <pose>0.002 -0.021 -3.67321e-08 1.5708 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.010000</length>
-            <radius>0.037000</radius>
+            <length>0.01</length>
+            <radius>0.037</radius>
           </cylinder>
         </geometry>
         <material>
           <script>
             <name>Gazebo/Black</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
-      
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <gravity>1</gravity>
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <self_collide>0</self_collide>
     </link>
-    
-    
     <joint name='elbow_roll_joint_right' type='revolute'>
       <child>fore_arm_right</child>
       <parent>elbow_link4_right</parent>
       <axis>
-        <xyz>0.000000 0.000004 1.000000</xyz>
+        <xyz>1.31874e-14 3.67321e-06 1</xyz>
         <limit>
-          <lower>-1.830000</lower>
-          <upper>1.830000</upper>
+          <lower>-1.83</lower>
+          <upper>1.83</upper>
+          <effort>4.5</effort>
+          <velocity>1</velocity>
         </limit>
         <dynamics>
-          <damping>2.500000</damping>
+          <damping>3.5</damping>
         </dynamics>
       </axis>
     </joint>
-    
-    
     <link name='wrist_link6_right'>
-      <pose>0.019999 -0.220002 0.220000 -2.356200 1.570790 -2.356190</pose>
+      <pose>0.0199993 -0.220002 0.22 -2.3562 1.57079 -2.35619</pose>
       <inertial>
-        <pose>-0.006667 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
-        <mass>0.030000</mass>
+        <pose>-0.00666667 0 0 0 -0 0</pose>
+        <mass>0.03</mass>
         <inertia>
-          <ixx>0.003000</ixx>
-          <ixy>0.000000</ixy>
-          <ixz>0.000000</ixz>
-          <iyy>0.003004</iyy>
-          <iyz>-0.000000</iyz>
-          <izz>0.003004</izz>
+          <ixx>0.003</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0352227</iyy>
+          <iyz>-4.1359e-25</iyz>
+          <izz>0.00300267</izz>
         </inertia>
       </inertial>
-      
-      <collision name='wrist_link6_right_geom'>
-        <pose>0.000000 0.000000 0.000000 1.570800 0.000000 0.000000</pose>
+      <collision name='wrist_link6_right_collision'>
+        <pose>0 0 0 1.5708 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.000000</length>
-            <radius>0.000000</radius>
+            <length>0</length>
+            <radius>0</radius>
           </cylinder>
         </geometry>
         <surface>
@@ -2900,12 +2951,11 @@
           </friction>
         </surface>
       </collision>
-      
-      <collision name='wrist_link6_right_geom_wrist_to_hand_block_right'>
-        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+      <collision name='wrist_link6_right_collision_wrist_to_hand_block_right'>
+        <pose>0 0 0 0 -0 0</pose>
         <geometry>
           <box>
-            <size>0.030000 0.020000 0.038000</size>
+            <size>0.03 0.02 0.038</size>
           </box>
         </geometry>
         <surface>
@@ -2916,14 +2966,21 @@
             <ode/>
           </friction>
         </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
       </collision>
-      
-      <collision name='wrist_link6_right_geom_wrist_visual_right'>
-        <pose>-0.020000 0.000000 0.000000 1.570800 0.000000 0.000000</pose>
+      <collision name='wrist_link6_right_collision_wrist_visual_right'>
+        <pose>-0.02 0 0 1.5708 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.060000</length>
-            <radius>0.018000</radius>
+            <length>0.06</length>
+            <radius>0.018</radius>
           </cylinder>
         </geometry>
         <surface>
@@ -2934,105 +2991,109 @@
             <ode/>
           </friction>
         </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
       </collision>
-      
       <visual name='wrist_link6_right_visual'>
-        <pose>0.000000 0.000000 0.000000 1.570800 0.000000 0.000000</pose>
+        <pose>0 0 0 1.5708 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.000000</length>
-            <radius>0.000000</radius>
+            <length>0</length>
+            <radius>0</radius>
           </cylinder>
         </geometry>
         <material>
           <script>
             <name>Gazebo/Black</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
-      
-      <visual name='wrist_link6_right_visualwrist_to_hand_block_right'>
-        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+      <visual name='wrist_link6_right_visual_wrist_to_hand_block_right'>
+        <pose>0 0 0 0 -0 0</pose>
         <geometry>
           <box>
-            <size>0.030000 0.020000 0.038000</size>
+            <size>0.03 0.02 0.038</size>
           </box>
         </geometry>
         <material>
           <script>
             <name>Gazebo/Grey</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
-      
-      <visual name='wrist_link6_right_visualwrist_visual_right'>
-        <pose>-0.020000 0.000000 0.000000 1.570800 0.000000 0.000000</pose>
+      <visual name='wrist_link6_right_visual_wrist_visual_right'>
+        <pose>-0.02 0 0 1.5708 -0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.060000</length>
-            <radius>0.018000</radius>
+            <length>0.06</length>
+            <radius>0.018</radius>
           </cylinder>
         </geometry>
         <material>
           <script>
             <name>Gazebo/Grey</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
-      
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <gravity>1</gravity>
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <self_collide>0</self_collide>
     </link>
-    
-    
     <joint name='wrist_pitch_joint_right' type='revolute'>
       <child>wrist_link6_right</child>
       <parent>fore_arm_right</parent>
       <axis>
-        <xyz>0.000004 -1.000000 0.000004</xyz>
+        <xyz>3.66962e-06 -1 3.67319e-06</xyz>
         <limit>
-          <lower>-0.950000</lower>
-          <upper>0.950000</upper>
+          <lower>-0.95</lower>
+          <upper>0.95</upper>
+          <effort>1</effort>
+          <velocity>1</velocity>
         </limit>
         <dynamics>
-          <damping>0.500000</damping>
+          <damping>0.35</damping>
         </dynamics>
       </axis>
     </joint>
-    
-    
     <link name='hand_right'>
-      <pose>0.019999 -0.220002 0.220000 -2.356200 1.570790 -2.356190</pose>
+      <pose>0.0199993 -0.220002 0.22 -2.3562 1.57079 -2.35619</pose>
       <inertial>
-        <pose>0.047623 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
-        <mass>0.210010</mass>
+        <pose>0.047619 0 0 0 -0 0</pose>
+        <mass>0.21</mass>
         <inertia>
-          <ixx>0.011100</ixx>
-          <ixy>0.000000</ixy>
-          <ixz>0.000000</ixz>
-          <iyy>0.011016</iyy>
-          <iyz>0.000000</iyz>
-          <izz>0.011016</izz>
+          <ixx>0.0101</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0101006</iyy>
+          <iyz>0</iyz>
+          <izz>0.0623006</izz>
         </inertia>
       </inertial>
-      
-      <collision name='hand_right_geom'>
-        <pose>0.048000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+      <collision name='hand_right_collision'>
+        <pose>0.048 0 0 0 -0 0</pose>
         <geometry>
           <box>
-            <size>0.080000 0.085000 0.038000</size>
+            <size>0.08 0.085 0.038</size>
           </box>
         </geometry>
         <surface>
@@ -3044,12 +3105,11 @@
           </friction>
         </surface>
       </collision>
-      
-      <collision name='hand_right_geom_grippoint_right'>
-        <pose>0.040000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+      <collision name='hand_right_collision_grippoint_right'>
+        <pose>0.04 0 0 0 -0 0</pose>
         <geometry>
           <box>
-            <size>0.000000 0.000000 0.000000</size>
+            <size>0 0 0</size>
           </box>
         </geometry>
         <surface>
@@ -3060,16 +3120,6 @@
             <ode/>
           </friction>
         </surface>
-      </collision>
-      
-      <collision name='hand_right_geom_hand_marker_right'>
-        <pose>0.140000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
-        <geometry>
-          <cylinder>
-            <length>0.000000</length>
-            <radius>0.000000</radius>
-          </cylinder>
-        </geometry>
         <surface>
           <contact>
             <ode/>
@@ -3079,103 +3129,80 @@
           </friction>
         </surface>
       </collision>
-      
       <visual name='hand_right_visual'>
-        <pose>0.048000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <pose>0.048 0 0 0 -0 0</pose>
         <geometry>
           <box>
-            <size>0.080000 0.085000 0.038000</size>
+            <size>0.08 0.085 0.038</size>
           </box>
         </geometry>
         <material>
           <script>
             <name>Gazebo/Grey</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
-      
-      <visual name='hand_right_visualgrippoint_right'>
-        <pose>0.040000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+      <visual name='hand_right_visual_grippoint_right'>
+        <pose>0.04 0 0 0 -0 0</pose>
         <geometry>
           <box>
-            <size>0.000000 0.000000 0.000000</size>
+            <size>0 0 0</size>
           </box>
         </geometry>
         <material>
           <script>
             <name>Gazebo/Blue</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
-      
-      <visual name='hand_right_visualhand_marker_right'>
-        <pose>0.140000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
-        <geometry>
-          <cylinder>
-            <length>0.000000</length>
-            <radius>0.000000</radius>
-          </cylinder>
-        </geometry>
-        <material>
-          <script>
-            <name>Gazebo/Grey</name>
-          </script>
-        </material>
-      </visual>
-      
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
-      </velocity_decay>
-      <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <gravity>1</gravity>
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <self_collide>0</self_collide>
     </link>
-    
-    
     <joint name='wrist_yaw_joint_right' type='revolute'>
       <child>hand_right</child>
       <parent>wrist_link6_right</parent>
       <axis>
-        <xyz>1.010000 0.000004 -0.000004</xyz>
+        <xyz>1.01 3.7063e-06 -3.70995e-06</xyz>
         <limit>
-          <lower>-0.610000</lower>
-          <upper>0.610000</upper>
+          <lower>-0.61</lower>
+          <upper>0.61</upper>
+          <effort>1</effort>
+          <velocity>1</velocity>
         </limit>
         <dynamics>
-          <damping>0.500000</damping>
+          <damping>0.3</damping>
         </dynamics>
       </axis>
     </joint>
-    
-    
     <link name='finger1_right'>
-      <pose>0.019999 -0.200002 0.145000 -0.000004 0.000800 0.000004</pose>
+      <pose>0.019999 -0.200002 0.145 -3.67319e-06 0.0008 3.66668e-06</pose>
       <inertial>
-        <pose>0.000000 0.000000 -0.035000 0.000000 0.000000 0.000000</pose>
-        <mass>0.060000</mass>
+        <pose>0 0 -0.045 0 -0 0</pose>
+        <mass>0.02</mass>
         <inertia>
-          <ixx>0.011036</ixx>
-          <ixy>0.000000</ixy>
-          <ixz>-0.000000</ixz>
-          <iyy>0.011036</iyy>
-          <iyz>0.000000</iyz>
-          <izz>0.011000</izz>
+          <ixx>0.0110045</ixx>
+          <ixy>0</ixy>
+          <ixz>-1.05879e-22</ixz>
+          <iyy>0.0110045</iyy>
+          <iyz>0</iyz>
+          <izz>0.011</izz>
         </inertia>
       </inertial>
-      
-      <collision name='finger1_right_geom'>
-        <pose>0.000000 0.000000 -0.030000 0.000000 0.000000 0.000000</pose>
+      <collision name='finger1_right_collision'>
+        <pose>0 0 -0.03 0 -0 0</pose>
         <geometry>
           <box>
-            <size>0.018000 0.018000 0.060000</size>
+            <size>0.018 0.018 0.06</size>
           </box>
         </geometry>
         <surface>
@@ -3192,19 +3219,18 @@
           </contact>
           <friction>
             <ode>
-              <mu>100.000000</mu>
-              <mu2>100.000000</mu2>
+              <mu>100</mu>
+              <mu2>100</mu2>
             </ode>
           </friction>
         </surface>
       </collision>
-      
-      <collision name='finger1_right_geom_finger1_phalanx_right'>
-        <pose>0.000000 0.000000 -0.060000 0.000000 1.570000 0.000000</pose>
+      <collision name='finger1_right_collision_finger1_phalanx_right'>
+        <pose>0 0 -0.06 0 1.57 0</pose>
         <geometry>
           <cylinder>
-            <length>0.019000</length>
-            <radius>0.009000</radius>
+            <length>0.019</length>
+            <radius>0.009</radius>
           </cylinder>
         </geometry>
         <surface>
@@ -3215,90 +3241,105 @@
             <ode/>
           </friction>
         </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>100</mu>
+              <mu2>100</mu2>
+            </ode>
+          </friction>
+        </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
       </collision>
-      
       <visual name='finger1_right_visual'>
-        <pose>0.000000 0.000000 -0.030000 0.000000 0.000000 0.000000</pose>
+        <pose>0 0 -0.03 0 -0 0</pose>
         <geometry>
           <box>
-            <size>0.018000 0.018000 0.060000</size>
+            <size>0.018 0.018 0.06</size>
           </box>
         </geometry>
         <material>
           <script>
             <name>Gazebo/Black</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
-      
-      <visual name='finger1_right_visualfinger1_phalanx_right'>
-        <pose>0.000000 0.000000 -0.060000 0.000000 1.570000 0.000000</pose>
+      <visual name='finger1_right_visual_finger1_phalanx_right'>
+        <pose>0 0 -0.06 0 1.57 0</pose>
         <geometry>
           <cylinder>
-            <length>0.019000</length>
-            <radius>0.009000</radius>
+            <length>0.019</length>
+            <radius>0.009</radius>
           </cylinder>
         </geometry>
         <material>
           <script>
             <name>Gazebo/White</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
-      
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <gravity>1</gravity>
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <self_collide>0</self_collide>
     </link>
-    
-    
     <joint name='finger1_joint_right' type='revolute'>
       <child>finger1_right</child>
       <parent>hand_right</parent>
       <axis>
-        <xyz>1.000000 0.000004 -0.000800</xyz>
+        <xyz>1 3.66668e-06 -0.0008</xyz>
         <limit>
-          <lower>-1.570000</lower>
-          <upper>1.570000</upper>
+          <lower>-1.57</lower>
+          <upper>1.57</upper>
+          <effort>3</effort>
+          <velocity>1</velocity>
         </limit>
         <dynamics>
-          <damping>0.500000</damping>
+          <damping>0.5</damping>
         </dynamics>
       </axis>
     </joint>
-    
-    
     <link name='finger1_tip_right'>
-      <pose>0.019951 -0.200003 0.085000 -0.000004 0.000800 0.000004</pose>
+      <pose>0.019951 -0.200003 0.0849999 -3.67319e-06 0.0008 3.66668e-06</pose>
       <inertial>
-        <pose>0.000000 0.000000 -0.035000 0.000000 0.000000 0.000000</pose>
-        <mass>0.060000</mass>
+        <pose>0 0 -0.045 0 -0 0</pose>
+        <mass>0.02</mass>
         <inertia>
-          <ixx>0.001406</ixx>
-          <ixy>0.000000</ixy>
-          <ixz>-0.000000</ixz>
-          <iyy>0.001556</iyy>
-          <iyz>0.000000</iyz>
-          <izz>0.001520</izz>
+          <ixx>0.0013745</ixx>
+          <ixy>0</ixy>
+          <ixz>-1.05879e-22</ixz>
+          <iyy>0.0015245</iyy>
+          <iyz>0</iyz>
+          <izz>0.00152</izz>
         </inertia>
       </inertial>
-      
-      <collision name='finger1_tip_right_geom'>
-        <pose>0.000000 0.000000 -0.030000 0.000000 0.000000 0.000000</pose>
+      <collision name='finger1_tip_right_collision'>
+        <pose>0 0 -0.03 0 -0 0</pose>
         <geometry>
           <box>
-            <size>0.018000 0.018000 0.060000</size>
+            <size>0.018 0.018 0.06</size>
           </box>
         </geometry>
         <surface>
@@ -3315,19 +3356,18 @@
           </contact>
           <friction>
             <ode>
-              <mu>100.000000</mu>
-              <mu2>100.000000</mu2>
+              <mu>100</mu>
+              <mu2>100</mu2>
             </ode>
           </friction>
         </surface>
       </collision>
-      
-      <collision name='finger1_tip_right_geom_finger1_tip_phalanx_right'>
-        <pose>0.000000 0.000000 -0.060000 0.000000 1.570000 0.000000</pose>
+      <collision name='finger1_tip_right_collision_finger1_tip_phalanx_right'>
+        <pose>0 0 -0.06 0 1.57 0</pose>
         <geometry>
           <cylinder>
-            <length>0.017000</length>
-            <radius>0.009000</radius>
+            <length>0.017</length>
+            <radius>0.009</radius>
           </cylinder>
         </geometry>
         <surface>
@@ -3338,90 +3378,105 @@
             <ode/>
           </friction>
         </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>100</mu>
+              <mu2>100</mu2>
+            </ode>
+          </friction>
+        </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
       </collision>
-      
       <visual name='finger1_tip_right_visual'>
-        <pose>0.000000 0.000000 -0.030000 0.000000 0.000000 0.000000</pose>
+        <pose>0 0 -0.03 0 -0 0</pose>
         <geometry>
           <box>
-            <size>0.018000 0.018000 0.060000</size>
+            <size>0.018 0.018 0.06</size>
           </box>
         </geometry>
         <material>
           <script>
             <name>Gazebo/Black</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
-      
-      <visual name='finger1_tip_right_visualfinger1_tip_phalanx_right'>
-        <pose>0.000000 0.000000 -0.060000 0.000000 1.570000 0.000000</pose>
+      <visual name='finger1_tip_right_visual_finger1_tip_phalanx_right'>
+        <pose>0 0 -0.06 0 1.57 0</pose>
         <geometry>
           <cylinder>
-            <length>0.017000</length>
-            <radius>0.009000</radius>
+            <length>0.017</length>
+            <radius>0.009</radius>
           </cylinder>
         </geometry>
         <material>
           <script>
             <name>Gazebo/White</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
-      
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <gravity>1</gravity>
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <self_collide>0</self_collide>
     </link>
-    
-    
     <joint name='finger1_tip_joint_right' type='revolute'>
       <child>finger1_tip_right</child>
       <parent>finger1_right</parent>
       <axis>
-        <xyz>1.000000 0.000004 -0.000800</xyz>
+        <xyz>1 3.66668e-06 -0.0008</xyz>
         <limit>
-          <lower>-1.570000</lower>
-          <upper>1.570000</upper>
+          <lower>-1.57</lower>
+          <upper>1.57</upper>
+          <effort>3</effort>
+          <velocity>1</velocity>
         </limit>
         <dynamics>
-          <damping>0.500000</damping>
+          <damping>0.5</damping>
         </dynamics>
       </axis>
     </joint>
-    
-    
     <link name='finger2_right'>
-      <pose>0.019999 -0.240002 0.145000 -0.000004 0.000800 0.000004</pose>
+      <pose>0.0199991 -0.240002 0.145 -3.67319e-06 0.0008 3.66668e-06</pose>
       <inertial>
-        <pose>0.000000 0.000000 -0.035000 0.000000 0.000000 0.000000</pose>
-        <mass>0.060000</mass>
+        <pose>0 0 -0.045 0 -0 0</pose>
+        <mass>0.02</mass>
         <inertia>
-          <ixx>0.011036</ixx>
-          <ixy>0.000000</ixy>
-          <ixz>-0.000000</ixz>
-          <iyy>0.011036</iyy>
-          <iyz>0.000000</iyz>
-          <izz>0.011000</izz>
+          <ixx>0.0110045</ixx>
+          <ixy>0</ixy>
+          <ixz>-1.05879e-22</ixz>
+          <iyy>0.0110045</iyy>
+          <iyz>0</iyz>
+          <izz>0.011</izz>
         </inertia>
       </inertial>
-      
-      <collision name='finger2_right_geom'>
-        <pose>0.000000 0.000000 -0.030000 0.000000 0.000000 0.000000</pose>
+      <collision name='finger2_right_collision'>
+        <pose>0 0 -0.03 0 -0 0</pose>
         <geometry>
           <box>
-            <size>0.018000 0.018000 0.060000</size>
+            <size>0.018 0.018 0.06</size>
           </box>
         </geometry>
         <surface>
@@ -3438,19 +3493,18 @@
           </contact>
           <friction>
             <ode>
-              <mu>100.000000</mu>
-              <mu2>100.000000</mu2>
+              <mu>100</mu>
+              <mu2>100</mu2>
             </ode>
           </friction>
         </surface>
       </collision>
-      
-      <collision name='finger2_right_geom_finger2_phalanx_right'>
-        <pose>0.000000 0.000000 -0.060000 0.000000 1.570000 0.000000</pose>
+      <collision name='finger2_right_collision_finger2_phalanx_right'>
+        <pose>0 0 -0.06 0 1.57 0</pose>
         <geometry>
           <cylinder>
-            <length>0.019000</length>
-            <radius>0.009000</radius>
+            <length>0.019</length>
+            <radius>0.009</radius>
           </cylinder>
         </geometry>
         <surface>
@@ -3461,90 +3515,105 @@
             <ode/>
           </friction>
         </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>100</mu>
+              <mu2>100</mu2>
+            </ode>
+          </friction>
+        </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
       </collision>
-      
       <visual name='finger2_right_visual'>
-        <pose>0.000000 0.000000 -0.030000 0.000000 0.000000 0.000000</pose>
+        <pose>0 0 -0.03 0 -0 0</pose>
         <geometry>
           <box>
-            <size>0.018000 0.018000 0.060000</size>
+            <size>0.018 0.018 0.06</size>
           </box>
         </geometry>
         <material>
           <script>
             <name>Gazebo/Black</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
-      
-      <visual name='finger2_right_visualfinger2_phalanx_right'>
-        <pose>0.000000 0.000000 -0.060000 0.000000 1.570000 0.000000</pose>
+      <visual name='finger2_right_visual_finger2_phalanx_right'>
+        <pose>0 0 -0.06 0 1.57 0</pose>
         <geometry>
           <cylinder>
-            <length>0.019000</length>
-            <radius>0.009000</radius>
+            <length>0.019</length>
+            <radius>0.009</radius>
           </cylinder>
         </geometry>
         <material>
           <script>
             <name>Gazebo/White</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
-      
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <gravity>1</gravity>
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <self_collide>0</self_collide>
     </link>
-    
-    
     <joint name='finger2_joint_right' type='revolute'>
       <child>finger2_right</child>
       <parent>hand_right</parent>
       <axis>
-        <xyz>-1.000000 -0.000004 0.000800</xyz>
+        <xyz>-1 -3.66668e-06 0.0008</xyz>
         <limit>
-          <lower>-1.570000</lower>
-          <upper>1.570000</upper>
+          <lower>-1.57</lower>
+          <upper>1.57</upper>
+          <effort>3</effort>
+          <velocity>1</velocity>
         </limit>
         <dynamics>
-          <damping>0.500000</damping>
+          <damping>0.5</damping>
         </dynamics>
       </axis>
     </joint>
-    
-    
     <link name='finger2_tip_right'>
-      <pose>0.019951 -0.240003 0.085000 -0.000004 0.000800 0.000004</pose>
+      <pose>0.0199511 -0.240003 0.0850001 -3.67319e-06 0.0008 3.66668e-06</pose>
       <inertial>
-        <pose>0.000000 0.000000 -0.035000 0.000000 0.000000 0.000000</pose>
-        <mass>0.060000</mass>
+        <pose>0 0 -0.045 0 -0 0</pose>
+        <mass>0.02</mass>
         <inertia>
-          <ixx>0.001406</ixx>
-          <ixy>0.000000</ixy>
-          <ixz>-0.000000</ixz>
-          <iyy>0.001556</iyy>
-          <iyz>0.000000</iyz>
-          <izz>0.001520</izz>
+          <ixx>0.0013745</ixx>
+          <ixy>0</ixy>
+          <ixz>-1.05879e-22</ixz>
+          <iyy>0.0015245</iyy>
+          <iyz>0</iyz>
+          <izz>0.00152</izz>
         </inertia>
       </inertial>
-      
-      <collision name='finger2_tip_right_geom'>
-        <pose>0.000000 0.000000 -0.030000 0.000000 0.000000 0.000000</pose>
+      <collision name='finger2_tip_right_collision'>
+        <pose>0 0 -0.03 0 -0 0</pose>
         <geometry>
           <box>
-            <size>0.018000 0.018000 0.060000</size>
+            <size>0.018 0.018 0.06</size>
           </box>
         </geometry>
         <surface>
@@ -3561,19 +3630,18 @@
           </contact>
           <friction>
             <ode>
-              <mu>100.000000</mu>
-              <mu2>100.000000</mu2>
+              <mu>100</mu>
+              <mu2>100</mu2>
             </ode>
           </friction>
         </surface>
       </collision>
-      
-      <collision name='finger2_tip_right_geom_finger2_tip_phalanx_right'>
-        <pose>0.000000 0.000000 -0.060000 0.000000 1.570000 0.000000</pose>
+      <collision name='finger2_tip_right_collision_finger2_tip_phalanx_right'>
+        <pose>0 0 -0.06 0 1.57 0</pose>
         <geometry>
           <cylinder>
-            <length>0.017000</length>
-            <radius>0.009000</radius>
+            <length>0.017</length>
+            <radius>0.009</radius>
           </cylinder>
         </geometry>
         <surface>
@@ -3584,109 +3652,96 @@
             <ode/>
           </friction>
         </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>100</mu>
+              <mu2>100</mu2>
+            </ode>
+          </friction>
+        </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
       </collision>
-      
       <visual name='finger2_tip_right_visual'>
-        <pose>0.000000 0.000000 -0.030000 0.000000 0.000000 0.000000</pose>
+        <pose>0 0 -0.03 0 -0 0</pose>
         <geometry>
           <box>
-            <size>0.018000 0.018000 0.060000</size>
+            <size>0.018 0.018 0.06</size>
           </box>
         </geometry>
         <material>
           <script>
             <name>Gazebo/Black</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
-      
-      <visual name='finger2_tip_right_visualfinger2_tip_phalanx_right'>
-        <pose>0.000000 0.000000 -0.060000 0.000000 1.570000 0.000000</pose>
+      <visual name='finger2_tip_right_visual_finger2_tip_phalanx_right'>
+        <pose>0 0 -0.06 0 1.57 0</pose>
         <geometry>
           <cylinder>
-            <length>0.017000</length>
-            <radius>0.009000</radius>
+            <length>0.017</length>
+            <radius>0.009</radius>
           </cylinder>
         </geometry>
         <material>
           <script>
             <name>Gazebo/White</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
-      
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <gravity>1</gravity>
       <velocity_decay>
-        <linear>0.000000</linear>
-        <angular>0.000000</angular>
+        <linear>0</linear>
+        <angular>0</angular>
       </velocity_decay>
       <self_collide>0</self_collide>
     </link>
-    
-    
     <joint name='finger2_tip_joint_right' type='revolute'>
       <child>finger2_tip_right</child>
       <parent>finger2_right</parent>
       <axis>
-        <xyz>-1.000000 -0.000004 0.000800</xyz>
+        <xyz>-1 -3.66668e-06 0.0008</xyz>
         <limit>
-          <lower>-1.570000</lower>
-          <upper>1.570000</upper>
+          <lower>-1.57</lower>
+          <upper>1.57</upper>
+          <effort>3</effort>
+          <velocity>1</velocity>
         </limit>
         <dynamics>
-          <damping>0.500000</damping>
+          <damping>0.5</damping>
         </dynamics>
       </axis>
     </joint>
-    
-    
     <static>0</static>
-    
-    <!-------------------------------------------------------------------------------->
-	<!-------------------------------------------------------------------------------->
-	<!---------------------------CONTROLLERS START HERE------------------------------->
-	<!-------------------------------------------------------------------------------->
-	<!-------------------------------------------------------------------------------->
-	<!-------------------------------------------------------------------------------->
-	<!-------------------------------------------------------------------------------->	
-    <plugin name="position_controller" filename="libPositionController.so">
-		<package>amigo_description</package>
-		<group_summary_file>custom/joint_groups.yaml</group_summary_file>
+    <plugin name='position_controller' filename='libPositionController.so'>
+      <package>amigo_description</package>
+      <group_summary_file>custom/joint_groups.yaml</group_summary_file>
     </plugin>
-    <plugin name="base_controller" filename="libAmigoBaseController.so">
-		<package>amigo_controller_configuration_gazebo</package>
-		<parameter_file>/parameters/mod_base_controller.yaml</parameter_file>
-		<node_namespace>base</node_namespace>
-        <odomTopic>odom</odomTopic>
+    <plugin name='base_controller' filename='libAmigoBaseController.so'>
+      <package>amigo_controller_configuration_gazebo</package>
+      <parameter_file>/parameters/mod_base_controller.yaml</parameter_file>
+      <node_namespace>base</node_namespace>
+      <odomTopic>odom</odomTopic>
     </plugin>
-    
-    <!--
-    <plugin name='gazebo_ros_time' filename='libgazebo_ros_time.so'>
-      <alwaysOn>1</alwaysOn>
-      <updateRate>1000.0</updateRate>
-    </plugin>
-    <plugin name='gazebo_ros_controller_manager' filename='libgazebo_ros_controller_manager.so'>
-      <alwaysOn>1</alwaysOn>
-      <updateRate>1000.0</updateRate>
-    </plugin>
-    <plugin name='imu_controller' filename='libgazebo_ros_imu.so'>
-      <alwaysOn>1</alwaysOn>
-      <updateRate>1000.0</updateRate>
-      <bodyName>base_link</bodyName>
-      <topicName>body/pose_ground_truth</topicName>
-      <xyzOffsets>0.0 0.0 0</xyzOffsets>
-      <rpyOffsets>0 0 0</rpyOffsets>
-    </plugin>-->
-    
-    
-    <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
   </model>
 </sdf>

@@ -43,4 +43,7 @@
 <xacro:arm_extra whichside="right" sidesign="+1.0" rollsign="+"/>
 <xacro:arm_extra whichside="left"  sidesign="-1.0" rollsign="-"/>
 
+<!-- GAZEBO -->
+<include filename="$(find amigo_description)/urdf/xacro/gazebo.urdf.xacro"/>
+
 </robot>

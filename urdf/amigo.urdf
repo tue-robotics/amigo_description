@@ -39,19 +39,19 @@
   <material name="LightGrey">
     <color rgba="0.6 0.6 0.6 1.0"/>
   </material>
-  <material name="bottomcovers">
+  <material name="amigo_description/bottomcovers">
     <texture filename="package://amigo_description/media/materials/textures/bottomcovers/finalreduced.jpg"/>
   </material>
-  <material name="white">
+  <material name="amigo_description/white">
     <texture filename="package://amigo_description/media/materials/textures/white/white.jpg"/>
   </material>
-  <material name="logo">
+  <material name="amigo_description/logo">
     <texture filename="package://amigo_description/media/materials/textures/logo/tue.jpg"/>
   </material>
-  <material name="aluminum">
+  <material name="amigo_description/aluminum">
     <texture filename="package://amigo_description/media/materials/textures/aluminum/aluminium_0001_c.jpg"/>
   </material>
-  <material name="orange">
+  <material name="amigo_description/orange">
     <texture filename="package://amigo_description/media/materials/textures/orange/orange.jpg"/>
   </material>
   <!--========BUILD BODY======-->
@@ -69,7 +69,7 @@
       <geometry>
         <mesh filename="package://amigo_description/media/meshes/torsocovers.dae" scale="0.0004 0.0004 0.0004"/>
       </geometry>
-      <material name="white"/>
+      <material name="amigo_description/white"/>
     </visual>
     <collision>
       <origin rpy="-1.5708 0 -1.5708" xyz="0.045 0.0 0.06"/>
@@ -79,7 +79,7 @@
     </collision>
   </link>
   <gazebo reference="torso">
-    <material>amigo_robot_model_groovy/white</material>
+    <material>amigo_description/white</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <link name="torso_slider">
@@ -103,7 +103,7 @@
     </collision>
   </link>
   <gazebo reference="torso_slider">
-    <material>amigo_robot_model_groovy/aluminum</material>
+    <material>aluminum</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <link name="base">
@@ -117,7 +117,7 @@
       <geometry>
         <mesh filename="package://amigo_description/media/meshes/bottomcovers.dae" scale="0.0004 0.0004 0.0004"/>
       </geometry>
-      <material name="bottomcovers"/>
+      <material name="amigo_description/bottomcovers"/>
     </visual>
     <collision>
       <origin rpy="0 0 -1.5708" xyz="0.0 0.0 0.23"/>
@@ -127,7 +127,7 @@
     </collision>
   </link>
   <gazebo reference="base">
-    <material>amigo_robot_model_groovy/bottomcovers</material>
+    <material>amigo_description/bottomcovers</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <link name="base_link">
@@ -203,7 +203,7 @@
     </collision>
   </link>
   <gazebo reference="base_plate">
-    <material>amigo_robot_model_groovy/aluminum</material>
+    <material>aluminum</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <joint name="base_plate_joint" type="fixed">
@@ -233,7 +233,7 @@
     </collision>
   </link>
   <gazebo reference="torso_assist_slider_right">
-    <material>amigo_robot_model_groovy/aluminum</material>
+    <material>aluminum</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <link name="torso_assist_slider_left">
@@ -257,7 +257,7 @@
     </collision>
   </link>
   <gazebo reference="torso_assist_slider_left">
-    <material>amigo_robot_model_groovy/aluminum</material>
+    <material>aluminum</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <link name="torso_assist_slider_back">
@@ -281,7 +281,7 @@
     </collision>
   </link>
   <gazebo reference="torso_assist_slider_back">
-    <material>amigo_robot_model_groovy/aluminum</material>
+    <material>aluminum</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <joint name="torso_slider_assist_joint_right" type="fixed">
@@ -388,7 +388,7 @@
     </collision>
   </link>
   <gazebo reference="lasertop">
-    <material>amigo_robot_model_groovy/orange</material>
+    <material>orange</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <joint name="lasertop_joint" type="fixed">
@@ -406,7 +406,7 @@
       <geometry>
         <mesh filename="package://amigo_description/media/meshes/logo.dae" scale="0.0016 0.0016 0.0016"/>
       </geometry>
-      <material name="logo"/>
+      <material name="amigo_description/logo"/>
     </visual>
     <collision>
       <origin rpy="0 0 3.1415" xyz="0.025 0.0 -0.14"/>
@@ -416,7 +416,7 @@
     </collision>
   </link>
   <gazebo reference="logo">
-    <material>amigo_robot_model_groovy/logo</material>
+    <material>amigo_description/logo</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <joint name="logo_joint" type="fixed">
@@ -486,7 +486,7 @@
     </collision>
   </link>
   <gazebo reference="neck_tilt">
-    <material>amigo_robot_model_groovy/aluminum</material>
+    <material>aluminum</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <link name="head">
@@ -510,7 +510,7 @@
     </collision>
   </link>
   <gazebo reference="head">
-    <material>amigo_robot_model_groovy/white</material>
+    <material>white</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <joint name="head_joint" type="fixed">
@@ -550,8 +550,8 @@
       <origin rpy="0 0 0" xyz=" 0 0 0 "/>
       <geometry>
         <box size="0 0 0"/>
-        <!--mesh filename="package://amigo_robot_model_groovy/kinect/meshes/kinect.dae" scale="0.001 0.001 0.001"/-->
-        <!--<mesh filename="package://amigo_robot_model_groovy/kinect/meshes/kinect_without_base.dae"/>-->
+        <!--mesh filename="package://amigo_description/kinect/meshes/kinect.dae" scale="0.001 0.001 0.001"/-->
+        <!--<mesh filename="package://amigo_description/kinect/meshes/kinect_without_base.dae"/>-->
       </geometry>
     </visual>
     <!--<collision>
@@ -625,7 +625,7 @@
       <origin rpy="0 0 0" xyz=" 0 0 0 "/>
       <geometry>
         <!--<box size="0 0 0"/>-->
-        <!--mesh filename="package://amigo_robot_model_groovy/description/kinect/meshes/kinect.dae" scale="0.001 0.001 0.001"/-->
+        <!--mesh filename="package://amigo_description/description/kinect/meshes/kinect.dae" scale="0.001 0.001 0.001"/-->
         <mesh filename="package://amigo_description/media/meshes/kinect/kinect_without_base.dae"/>
       </geometry>
     </visual>
@@ -633,7 +633,7 @@
       <origin rpy="0 0 0" xyz=" 0 0 0 "/>
       <geometry>
         <!--<box size="0.01 0.01 0.01"/>-->
-        <!--<mesh filename="package://amigo_robot_model_groovy/description/kinect/meshes/kinect.dae" scale="0.001 0.001 0.001"/>-->
+        <!--<mesh filename="package://amigo_description/description/kinect/meshes/kinect.dae" scale="0.001 0.001 0.001"/>-->
         <mesh filename="package://amigo_description/media/meshes/kinect/kinect_without_base.dae"/>
       </geometry>
     </collision>
@@ -776,7 +776,7 @@
       <geometry>
         <mesh filename="package://amigo_description/media/meshes/upperarmtextured.dae" scale="0.0004 0.0004 0.0004"/>
       </geometry>
-      <material name="white"/>
+      <material name="amigo_description/white"/>
     </visual>
     <collision>
       <origin rpy="0 0 3.1415" xyz="-0.00959 -0.19131 -0.00001"/>
@@ -786,7 +786,7 @@
     </collision>
   </link>
   <gazebo reference="upper_arm_right">
-    <material>amigo_robot_model_groovy/white</material>
+    <material>amigo_description/white</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <link name="elbow_link4_right">
@@ -825,7 +825,7 @@
       <geometry>
         <mesh filename="package://amigo_description/media/meshes/forearmtextured.dae" scale="0.0004 0.0004 0.0004"/>
       </geometry>
-      <material name="white"/>
+      <material name="amigo_description/white"/>
     </visual>
     <collision>
       <origin rpy="0 -1.5708 0" xyz="0.00425 -0.14868 0.00547"/>
@@ -835,7 +835,7 @@
     </collision>
   </link>
   <gazebo reference="fore_arm_right">
-    <material>amigo_robot_model_groovy/white</material>
+    <material>amigo_description/white</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <link name="wrist_link6_right">
@@ -1333,7 +1333,7 @@
       <geometry>
         <mesh filename="package://amigo_description/media/meshes/upperarmtextured.dae" scale="0.0004 0.0004 0.0004"/>
       </geometry>
-      <material name="white"/>
+      <material name="amigo_description/white"/>
     </visual>
     <collision>
       <origin rpy="0 0 3.1415" xyz="-0.00959 -0.19131 -0.00001"/>
@@ -1343,7 +1343,7 @@
     </collision>
   </link>
   <gazebo reference="upper_arm_left">
-    <material>amigo_robot_model_groovy/white</material>
+    <material>amigo_description/white</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <link name="elbow_link4_left">
@@ -1382,7 +1382,7 @@
       <geometry>
         <mesh filename="package://amigo_description/media/meshes/forearmtextured.dae" scale="0.0004 0.0004 0.0004"/>
       </geometry>
-      <material name="white"/>
+      <material name="amigo_description/white"/>
     </visual>
     <collision>
       <origin rpy="0 -1.5708 0" xyz="0.00425 -0.14868 0.00547"/>
@@ -1392,7 +1392,7 @@
     </collision>
   </link>
   <gazebo reference="fore_arm_left">
-    <material>amigo_robot_model_groovy/white</material>
+    <material>amigo_description/white</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <link name="wrist_link6_left">
@@ -2168,4 +2168,107 @@
     <child link="wrist_to_hand_block_left"/>
     <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
   </joint>
+  <!-- GAZEBO -->
+  <gazebo reference="base_link">
+    <sensor name="base_kinect_openni_camera" type="depth">
+      <update_rate>20.000000</update_rate>
+      <camera name="base_kinect">
+        <horizontal_fov>1.047198</horizontal_fov>
+        <image>
+          <width>640</width>
+          <height>480</height>
+          <format>R8G8B8</format>
+        </image>
+        <clip>
+          <near>0.050000</near>
+          <far>3.000000</far>
+        </clip>
+      </camera>
+      <plugin filename="libKinectPlugin.so" name="base_kinect_camera_controller">
+        <alwaysOn>1</alwaysOn>
+        <updateRate>20</updateRate>
+        <cameraName>base_kinect</cameraName>
+        <imageTopicName>rgb/image_color</imageTopicName>
+        <cameraInfoTopicName>rgb/camera_info</cameraInfoTopicName>
+        <depthImageTopicName>depth/image</depthImageTopicName>
+        <depthImageCameraInfoTopicName>depth/camera_info</depthImageCameraInfoTopicName>
+        <pointCloudTopicName>rgb/points</pointCloudTopicName>
+        <frameName>base_kinect/openni_depth_optical_frame</frameName>
+      </plugin>
+      <pose>0.300000 0.000000 0.315000 0.000000 -0.070000 0.000000</pose>
+    </sensor>
+    <sensor name="base_ray_sensor" type="ray">
+      <update_rate>100.000000</update_rate>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>918</samples>
+            <resolution>1.000000</resolution>
+            <min_angle>-2.0027654171</min_angle>
+            <max_angle>1.99840199947</max_angle>
+          </horizontal>
+          <vertical>
+            <samples>1</samples>
+            <min_angle>0.000000</min_angle>
+            <max_angle>0.000000</max_angle>
+          </vertical>
+        </scan>
+        <range>
+          <min>0.05</min>
+          <max>60.0</max>
+          <resolution>0.010000</resolution>
+        </range>
+      </ray>
+      <plugin filename="libLaserPlugin.so" name="base_ros_ray_sensor_controller">
+        <gaussianNoise>0.005</gaussianNoise>
+        <alwaysOn>1</alwaysOn>
+        <updateRate>40</updateRate>
+        <topicName>base_front_laser</topicName>
+        <node_namespace>base</node_namespace>
+        <frameName>base_laser</frameName>
+      </plugin>
+      <pose>0.310000 0.000000 0.240000 0.000000 0.000000 0.000000</pose>
+    </sensor>
+  </gazebo>
+  <gazebo reference="neck_tilt">
+    <sensor name="openni_camera" type="depth">
+      <update_rate>20.000000</update_rate>
+      <camera name="top_kinect">
+        <horizontal_fov>1.047198</horizontal_fov>
+        <image>
+          <width>640</width>
+          <height>480</height>
+          <format>R8G8B8</format>
+        </image>
+        <clip>
+          <near>0.050000</near>
+          <far>3.000000</far>
+        </clip>
+      </camera>
+      <plugin filename="libKinectPlugin.so" name="kinect_camera_controller">
+        <alwaysOn>1</alwaysOn>
+        <updateRate>20</updateRate>
+        <cameraName>top_kinect</cameraName>
+        <imageTopicName>rgb/image_color</imageTopicName>
+        <cameraInfoTopicName>rgb/camera_info</cameraInfoTopicName>
+        <depthImageTopicName>depth/image</depthImageTopicName>
+        <depthImageCameraInfoTopicName>depth/camera_info</depthImageCameraInfoTopicName>
+        <pointCloudTopicName>rgb/points</pointCloudTopicName>
+        <frameName>top_kinect/openni_depth_optical_frame</frameName>
+      </plugin>
+      <pose>0.070000 0.000000 0.070000 0.000000 0.000000 0.000000</pose>
+    </sensor>
+  </gazebo>
+  <gazebo>
+    <plugin filename="libPositionController.so" name="position_controller">
+      <package>amigo_description</package>
+      <group_summary_file>custom/joint_groups.yaml</group_summary_file>
+    </plugin>
+    <plugin filename="libAmigoBaseController.so" name="base_controller">
+      <package>amigo_controller_configuration_gazebo</package>
+      <parameter_file>/parameters/mod_base_controller.yaml</parameter_file>
+      <node_namespace>base</node_namespace>
+      <odomTopic>odom</odomTopic>
+    </plugin>
+  </gazebo>
 </robot>

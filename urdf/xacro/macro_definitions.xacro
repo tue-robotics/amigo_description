@@ -59,7 +59,7 @@
     </collision>
   </link>
 <gazebo reference="${name}">
-      <material>amigo_description/${texture}</material>
+      <material>${texture}</material>
       <turnGravityOff>false</turnGravityOff>
     </gazebo>
 </xacro:macro>
@@ -142,7 +142,7 @@
     </collision>
   </link>
 <gazebo reference="${name}">
-	  <material>amigo_description/${texture}</material>
+	  <material>${texture}</material>
       <turnGravityOff>false</turnGravityOff>
     </gazebo>
 </xacro:macro>
@@ -170,7 +170,7 @@
     </collision>
   </link>
 <gazebo reference="${name}">
-	  <material>amigo_description/${texture}</material>
+	  <material>${texture}</material>
       <turnGravityOff>false</turnGravityOff>
     </gazebo>
 </xacro:macro>

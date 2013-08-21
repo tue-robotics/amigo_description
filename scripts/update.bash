@@ -8,6 +8,9 @@ rosrun xacro xacro.py -o $ROBOT_DESCRIPTION_DIR/urdf/amigo.urdf $ROBOT_DESCRIPTI
 # Generate sdf from urdf
 gzsdf print $ROBOT_DESCRIPTION_DIR/urdf/amigo.urdf > $ROBOT_DESCRIPTION_DIR/sdf/amigo.sdf
 
+grep 'Error' $ROBOT_DESCRIPTION_DIR/sdf/amigo.sdf
+grep 'Warning' $ROBOT_DESCRIPTION_DIR/sdf/amigo.sdf
+
 # Remove warning messages from sdf
 sed -i '/Warning/d' $ROBOT_DESCRIPTION_DIR/sdf/amigo.sdf
 

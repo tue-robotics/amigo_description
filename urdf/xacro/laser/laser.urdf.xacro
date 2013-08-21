@@ -34,7 +34,7 @@
 </joint>
 
 <!--the tue logo in front of the laser-->
-<xacro:my_link_texturedmesh name="logo" mass="0.01" texture="logo">
+<xacro:my_link_texturedmesh name="logo" mass="0.01" texture="amigo_description/logo">
    <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
    <origin xyz="0.025 0.0 -0.14" rpy="0 0 3.1415" />
    <inertia ixx="0.0001"  ixy="0"  ixz="0" iyy="0.0001" iyz="0" izz="0.0001" />

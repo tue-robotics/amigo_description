@@ -9,7 +9,7 @@
 <!--links start here-->
 
 <!--the torso-->
-<xacro:my_link_texturedmesh name="torso" mass="16" texture="white">
+<xacro:my_link_texturedmesh name="torso" mass="16" texture="amigo_description/white">
    <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
    <origin xyz="0.045 0.0 0.06" rpy="-1.5708 0 -1.5708" />
    <inertia ixx="0.01"  ixy="0"  ixz="0" iyy="0.01" iyz="0" izz="0.01" />
@@ -25,7 +25,7 @@
 </xacro:my_link_texturedmesh>
 
 <!--the bottomcover -->
-<xacro:my_link_texturedmesh name="base" mass="20" texture="bottomcovers">
+<xacro:my_link_texturedmesh name="base" mass="20" texture="amigo_description/bottomcovers">
    <origin xyz="0.0 0.0 0.3275" rpy="0 0 0"/>
    <origin xyz="0.0 0.0 0.23" rpy="0 0 -1.5708" />
    <inertia ixx="2.63"  ixy="0"  ixz="0" iyy="2.63" iyz="0" izz="2.4" /> 

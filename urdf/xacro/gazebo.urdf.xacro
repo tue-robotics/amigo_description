@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+<gazebo reference="base_link">
+      <sensor name='base_kinect_openni_camera' type='depth'>
+        <update_rate>20.000000</update_rate>
+        <camera name='base_kinect'>
+          <horizontal_fov>1.047198</horizontal_fov>
+          <image>
+            <width>640</width>
+            <height>480</height>
+            <format>R8G8B8</format>
+          </image>
+          <clip>
+            <near>0.050000</near>
+            <far>3.000000</far>
+          </clip>
+        </camera>
+        <plugin name='base_kinect_camera_controller' filename='libKinectPlugin.so'>
+          <alwaysOn>1</alwaysOn>
+          <updateRate>20</updateRate>
+          <cameraName>base_kinect</cameraName>
+          <imageTopicName>rgb/image_color</imageTopicName>
+          <cameraInfoTopicName>rgb/camera_info</cameraInfoTopicName>
+          <depthImageTopicName>depth/image</depthImageTopicName>
+          <depthImageCameraInfoTopicName>depth/camera_info</depthImageCameraInfoTopicName>
+          <pointCloudTopicName>rgb/points</pointCloudTopicName>
+          <frameName>base_kinect/openni_depth_optical_frame</frameName>
+        </plugin>
+        <pose>0.300000 0.000000 0.315000 0.000000 -0.070000 0.000000</pose>
+      </sensor>
+
+      <sensor name='base_ray_sensor' type='ray'>
+        <update_rate>100.000000</update_rate>
+        <ray>
+          <scan>
+            <horizontal>
+              <samples>918</samples>
+              <resolution>1.000000</resolution>
+              <min_angle>-2.0027654171</min_angle>
+              <max_angle>1.99840199947</max_angle>
+            </horizontal>
+            <vertical>
+              <samples>1</samples>
+              <min_angle>0.000000</min_angle>
+              <max_angle>0.000000</max_angle>
+            </vertical>
+          </scan>
+          <range>
+            <min>0.05</min>
+            <max>60.0</max>
+            <resolution>0.010000</resolution>
+          </range>
+        </ray>
+        <plugin name='base_ros_ray_sensor_controller' filename='libLaserPlugin.so'>
+          <gaussianNoise>0.005</gaussianNoise>
+          <alwaysOn>1</alwaysOn>
+          <updateRate>40</updateRate>
+          <topicName>base_front_laser</topicName>
+          <node_namespace>base</node_namespace>
+          <frameName>base_laser</frameName>
+        </plugin>
+        <pose>0.310000 0.000000 0.240000 0.000000 0.000000 0.000000</pose>
+      </sensor>
+
+</gazebo>
+
+<gazebo reference="neck_tilt">
+      <sensor name='openni_camera' type='depth'>
+        <update_rate>20.000000</update_rate>
+        <camera name='top_kinect'>
+          <horizontal_fov>1.047198</horizontal_fov>
+          <image>
+            <width>640</width>
+            <height>480</height>
+            <format>R8G8B8</format>
+          </image>
+          <clip>
+            <near>0.050000</near>
+            <far>3.000000</far>
+          </clip>
+        </camera>
+		<plugin name='kinect_camera_controller' filename='libKinectPlugin.so'>
+          <alwaysOn>1</alwaysOn>
+          <updateRate>20</updateRate>
+          <cameraName>top_kinect</cameraName>
+          <imageTopicName>rgb/image_color</imageTopicName>
+          <cameraInfoTopicName>rgb/camera_info</cameraInfoTopicName>
+          <depthImageTopicName>depth/image</depthImageTopicName>
+          <depthImageCameraInfoTopicName>depth/camera_info</depthImageCameraInfoTopicName>
+          <pointCloudTopicName>rgb/points</pointCloudTopicName>
+          <frameName>top_kinect/openni_depth_optical_frame</frameName>
+        </plugin>
+        <pose>0.070000 0.000000 0.070000 0.000000 0.000000 0.000000</pose>
+      </sensor>
+</gazebo>
+
+<gazebo>
+    <plugin name="position_controller" filename="libPositionController.so">
+		<package>amigo_description</package>
+		<group_summary_file>custom/joint_groups.yaml</group_summary_file>
+    </plugin>
+    <plugin name="base_controller" filename="libAmigoBaseController.so">
+		<package>amigo_controller_configuration_gazebo</package>
+		<parameter_file>/parameters/mod_base_controller.yaml</parameter_file>
+		<node_namespace>base</node_namespace>
+        <odomTopic>odom</odomTopic>
+    </plugin>
+</gazebo>
+
+</robot>

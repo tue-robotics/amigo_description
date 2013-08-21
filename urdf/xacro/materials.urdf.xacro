@@ -38,23 +38,23 @@
     <color rgba="0.6 0.6 0.6 1.0"/>
   </material>
   
-  <material name="bottomcovers">
+  <material name="amigo_description/bottomcovers">
     <texture filename="package://amigo_description/media/materials/textures/bottomcovers/finalreduced.jpg" />
   </material>
   
-    <material name="white">
+    <material name="amigo_description/white">
     <texture filename="package://amigo_description/media/materials/textures/white/white.jpg" />
   </material>
   
-  <material name="logo">
+  <material name="amigo_description/logo">
     <texture filename="package://amigo_description/media/materials/textures/logo/tue.jpg" />
   </material>
   
-  <material name="aluminum">
+  <material name="amigo_description/aluminum">
     <texture filename="package://amigo_description/media/materials/textures/aluminum/aluminium_0001_c.jpg" />
   </material>
   
-  <material name="orange">
+  <material name="amigo_description/orange">
     <texture filename="package://amigo_description/media/materials/textures/orange/orange.jpg" />
   </material>
 
