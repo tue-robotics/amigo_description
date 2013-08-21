@@ -3732,6 +3732,119 @@
         </dynamics>
       </axis>
     </joint>
+    <link name='base_fixed_link'>
+      <pose>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>10</mass>
+        <inertia>
+          <ixx>0.1</ixx>
+          <ixy>0.1</ixy>
+          <ixz>0.1</ixz>
+          <iyy>0.1</iyy>
+          <iyz>0.1</iyz>
+          <izz>0.1</izz>
+        </inertia>
+      </inertial>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='base_fixed_joint' type='revolute'>
+      <child>base_fixed_link</child>
+      <parent>world</parent>
+      <axis>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+        </limit>
+        <dynamics>
+          <damping>0</damping>
+        </dynamics>
+        <xyz>0 0 1</xyz>
+      </axis>
+    </joint>
+    <link name='base_x_link'>
+      <pose>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>10</mass>
+        <inertia>
+          <ixx>0.1</ixx>
+          <ixy>0.1</ixy>
+          <ixz>0.1</ixz>
+          <iyy>0.1</iyy>
+          <iyz>0.1</iyz>
+          <izz>0.1</izz>
+        </inertia>
+      </inertial>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='base_x_joint' type='prismatic'>
+      <child>base_x_link</child>
+      <parent>base_fixed_link</parent>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-1000</lower>
+          <upper>1000</upper>
+        </limit>
+        <dynamics>
+          <damping>100</damping>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='base_y_link'>
+      <pose>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>10</mass>
+        <inertia>
+          <ixx>0.1</ixx>
+          <ixy>0.1</ixy>
+          <ixz>0.1</ixz>
+          <iyy>0.1</iyy>
+          <iyz>0.1</iyz>
+          <izz>0.1</izz>
+        </inertia>
+      </inertial>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='base_y_joint' type='prismatic'>
+      <child>base_y_link</child>
+      <parent>base_x_link</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1000</lower>
+          <upper>1000</upper>
+        </limit>
+        <dynamics>
+          <damping>100</damping>
+        </dynamics>
+      </axis>
+    </joint>
+    <joint name='base_phi_joint' type='revolute'>
+      <child>base_link</child>
+      <parent>base_y_link</parent>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>100</damping>
+        </dynamics>
+      </axis>
+    </joint>
     <static>0</static>
     <plugin name='position_controller' filename='libPositionController.so'>
       <package>amigo_description</package>

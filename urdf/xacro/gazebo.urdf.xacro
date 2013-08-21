@@ -1,6 +1,134 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
+<gazebo>
+    <link name="base_fixed_link">
+      <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <mass>10.000000</mass>
+        <inertia>
+          <ixx>0.100000</ixx>
+          <ixy>0.100000</ixy>
+          <ixz>0.100000</ixz>
+          <iyy>0.100000</iyy>
+          <iyz>0.100000</iyz>
+          <izz>0.100000</izz>
+        </inertia>
+      </inertial>
+      <velocity_decay>
+        <linear>0.000000</linear>
+        <angular>0.000000</angular>
+      </velocity_decay>
+    </link>
+    
+    
+    <joint name="base_fixed_joint" type="revolute">
+      <child>base_fixed_link</child>
+      <parent>world</parent>
+      <axis>
+        <limit>
+          <lower>0.000000</lower>
+          <upper>0.000000</upper>
+        </limit>
+        <dynamics>
+          <damping>0.000000</damping>
+        </dynamics>
+        <xyz>0.000000 0.000000 1.000000</xyz>
+      </axis>
+    </joint>
+    
+    
+    <link name='base_x_link'>
+      <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <mass>10.000000</mass>
+        <inertia>
+          <ixx>0.100000</ixx>
+          <ixy>0.100000</ixy>
+          <ixz>0.100000</ixz>
+          <iyy>0.100000</iyy>
+          <iyz>0.100000</iyz>
+          <izz>0.100000</izz>
+        </inertia>
+      </inertial>
+      <velocity_decay>
+        <linear>0.000000</linear>
+        <angular>0.000000</angular>
+      </velocity_decay>
+    </link>
+    
+    
+    <joint name='base_x_joint' type='prismatic'>
+      <child>base_x_link</child>
+      <parent>base_fixed_link</parent>
+      <axis>
+        <xyz>1.000000 0.000000 0.000000</xyz>
+        <limit>
+          <lower>-1000.000000</lower>
+          <upper>1000.000000</upper>
+        </limit>
+        <dynamics>
+          <damping>100.000000</damping>
+        </dynamics>
+      </axis>
+    </joint>
+    
+    
+    <link name='base_y_link'>
+      <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <mass>10.000000</mass>
+        <inertia>
+          <ixx>0.100000</ixx>
+          <ixy>0.100000</ixy>
+          <ixz>0.100000</ixz>
+          <iyy>0.100000</iyy>
+          <iyz>0.100000</iyz>
+          <izz>0.100000</izz>
+        </inertia>
+      </inertial>
+      <velocity_decay>
+        <linear>0.000000</linear>
+        <angular>0.000000</angular>
+      </velocity_decay>
+    </link>
+    
+    
+    <joint name='base_y_joint' type='prismatic'>
+      <child>base_y_link</child>
+      <parent>base_x_link</parent>
+      <axis>
+        <xyz>0.000000 1.000000 0.000000</xyz>
+        <limit>
+          <lower>-1000.000000</lower>
+          <upper>1000.000000</upper>
+        </limit>
+        <dynamics>
+          <damping>100.000000</damping>
+        </dynamics>
+      </axis>
+    </joint>
+
+    <joint name='base_phi_joint' type='revolute'>
+      <child>base_link</child>
+      <parent>base_y_link</parent>
+      <axis>
+        <xyz>0.000000 0.000000 1.000000</xyz>
+        <limit>
+          <lower>-10000000000000000.000000</lower>
+          <upper>10000000000000000.000000</upper>
+        </limit>
+        <dynamics>
+          <damping>100.000000</damping>
+        </dynamics>
+      </axis>
+    </joint>
+
+</gazebo>
+
 <gazebo reference="base_link">
       <sensor name='base_kinect_openni_camera' type='depth'>
         <update_rate>20.000000</update_rate>
