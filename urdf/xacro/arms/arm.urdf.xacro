@@ -19,34 +19,34 @@ it has to be reversable and xml cannot multiply - or + but can multiply
  <xacro:macro name="arm" params="whichside sidesign rollsign">
 
 <!--the end of the clavicle, yaw rotation-->
-<xacro:my_link name="shoulder_mount_${whichside}" mass="0.1" color="Black">
+<xacro:my_link name="shoulder_mount_${whichside}" mass="0.15" color="Black">
    <cylinder radius="0.05" length="0.11" />
    <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
    <origin xyz="0.0 0.0 0.0" rpy="0 0 0 " />
-   <inertia ixx="0.01"  ixy="0"  ixz="0" iyy="0.01" iyz="0" izz="0.01" />
+   <inertia ixx="0.01"  ixy="0"  ixz="0" iyy="0.01" iyz="0" izz="0.01" /> <!-- 0.45993-->
 </xacro:my_link>
 
 <!--the cylinder on the end of the clavicle, pitch rotation-->
-<xacro:my_link name="shoulder_link1_${whichside}" mass="0.1" color="Black">
+<xacro:my_link name="shoulder_link1_${whichside}" mass="0.25" color="Black">
    <cylinder radius="0.045" length="0.015" />
    <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
    <origin xyz="0.0 0.0 ${sidesign *0.0525}" rpy="0 0 0 " />
-   <inertia ixx="0.01"  ixy="0"  ixz="0" iyy="0.01" iyz="0" izz="0.01" />
+   <inertia ixx="6.0"  ixy="0"  ixz="0" iyy="0.01" iyz="0" izz="0.01" />
 </xacro:my_link>
 
 <!--the box that connects the clavicle to the upper arm, roll rotation-->
-<xacro:my_link name="shoulder_link2_${whichside}" mass="0.1" color="Black">
+<xacro:my_link name="shoulder_link2_${whichside}" mass="0.15" color="Black">
    <box size="0.035 0.01 0.1" />
    <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
    <origin xyz="0.0 ${-sidesign*0.06} -0.05" rpy="0 0 0" />
-   <inertia ixx="0.001"  ixy="0"  ixz="0" iyy="0.001" iyz="0" izz="0.001" />
+   <inertia ixx="0.01"  ixy="0"  ixz="0" iyy="4.04" iyz="0" izz="0.001" />
 </xacro:my_link>
 
 <!--the upper arm-->
-<xacro:my_link_texturedmesh name="upper_arm_${whichside}" mass="2.9" texture="white">
+<xacro:my_link_texturedmesh name="upper_arm_${whichside}" mass="2.95" texture="white">
    <origin xyz="0.0 -0.2 0.0" rpy="0 0 0"/>
    <origin xyz="-0.00959 -0.19131 -0.00001" rpy="0 0 3.1415" />
-   <inertia ixx="0.027"  ixy="0"  ixz="0" iyy="0.027" iyz="0" izz="0.004" />
+   <inertia ixx="0.027"  ixy="0"  ixz="0" iyy="0.45993" iyz="0" izz="0.004" />
    <mesh filename="package://amigo_description/media/meshes/upperarmtextured.dae" scale="0.0004 0.0004 0.0004"/> 
 </xacro:my_link_texturedmesh>
 
@@ -56,14 +56,14 @@ note: not visible, see arm_extra_visuals for the elbow visuals -->
    <cylinder radius="0.0" length="0.0"/>
    <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
    <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
-   <inertia ixx="0.001"  ixy="0"  ixz="0" iyy="0.001" iyz="0" izz="0.001" />
+   <inertia ixx="0.001"  ixy="0"  ixz="0" iyy="0.6" iyz="0" izz="0.001" />
 </xacro:my_link>
 
 <!--the forearm-->
-<xacro:my_link_texturedmesh name="fore_arm_${whichside}" mass="0.1" texture="white">
+<xacro:my_link_texturedmesh name="fore_arm_${whichside}" mass="0.85" texture="white">
    <origin xyz="0.0 -0.14 0.0" rpy="0.0 0 0"/>
    <origin xyz="0.00425 -0.14868 0.00547" rpy="0 -1.5708 0" />
-   <inertia ixx="0.0054"  ixy="0"  ixz="0" iyy="0.0054" iyz="0" izz="0.0004" />
+   <inertia ixx="0.001"  ixy="0"  ixz="0" iyy="0.5" iyz="0" izz="0.001" />
    <mesh filename="package://amigo_description/media/meshes/forearmtextured.dae" scale="0.0004 0.0004 0.0004"/> 
 </xacro:my_link_texturedmesh>
 
@@ -73,19 +73,19 @@ note: not visible, see arm_extra_visuals for the wrist visuals -->
    <cylinder radius="0.0" length="0.0"/>
    <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
    <origin xyz="0.0 0.0 0.0" rpy="1.5708 0 0" />
-   <inertia ixx="0.001"  ixy="0"  ixz="0" iyy="0.001" iyz="0" izz="0.001" />
+   <inertia ixx="0.001"  ixy="0"  ixz="0" iyy="0.03322" iyz="0" izz="0.001" />
 </xacro:my_link>
 
 <!--the hand -->
-<xacro:my_link name="hand_${whichside}" mass="0.2" color="Grey">
+<xacro:my_link name="hand_${whichside}" mass="0.20" color="Grey">
    <box size="0.080 0.085 0.038"/>
    <origin xyz="0.048 0.0 0.0" rpy="0 0 0"/>
    <origin xyz="0.048 0.0 0.0" rpy="0 0 0" />
-   <inertia ixx="0.01"  ixy="0"  ixz="0" iyy="0.01" iyz="0" izz="0.01" />
+   <inertia ixx="0.01"  ixy="0"  ixz="0" iyy="0.01" iyz="0" izz="0.0622" />
 </xacro:my_link>
 
 <!--the right finger-->
-<xacro:my_link name="finger1_${whichside}" mass="0.05" color="Black">
+<xacro:my_link name="finger1_${whichside}" mass="0.01" color="Black">
    <box size="0.018 0.018 0.06"/>
    <origin xyz="0.0 0.0 -0.03" rpy="0 0 0"/>
    <origin xyz="0.0 0.0 -0.03" rpy="0 0 0" />
@@ -105,7 +105,7 @@ note: not visible, see arm_extra_visuals for the wrist visuals -->
 </xacro:my_link>
 
 <!--the right finger tip-->
-<xacro:my_link name="finger1_tip_${whichside}" mass="0.05" color="Black">
+<xacro:my_link name="finger1_tip_${whichside}" mass="0.01" color="Black">
    <box size="0.018 0.018 0.06"/>
    <origin xyz="0.0 0.0 -0.03" rpy="0 0 0"/>
    <origin xyz="0.0 0.0 -0.03" rpy="0 0 0" />
@@ -125,7 +125,7 @@ note: not visible, see arm_extra_visuals for the wrist visuals -->
 </xacro:my_link>
 
 <!--the left finger-->
-<xacro:my_link name="finger2_${whichside}" mass="0.05" color="Black">
+<xacro:my_link name="finger2_${whichside}" mass="0.01" color="Black">
    <box size="0.018 0.018 0.06"/>
    <origin xyz="0.0 0.0 -0.03" rpy="0 0 0"/>
    <origin xyz="0.0 0.0 -0.03" rpy="0 0 0" />
@@ -145,7 +145,7 @@ note: not visible, see arm_extra_visuals for the wrist visuals -->
 </xacro:my_link>
 
 <!--the left finger tip -->
-<xacro:my_link name="finger2_tip_${whichside}" mass="0.05" color="Black">
+<xacro:my_link name="finger2_tip_${whichside}" mass="0.01" color="Black">
    <box size="0.018 0.018 0.06"/>
    <origin xyz="0.0 0.0 -0.03" rpy="0 0 0"/>
    <origin xyz="0.0 0.0 -0.03" rpy="0 0 0" />
@@ -184,49 +184,49 @@ note: not visible, purely kinematic-->
 
 <xacro:my_joint name="shoulder_yaw_joint_${whichside}" type="revolute" parent="shoulder_mount_${whichside}" child="shoulder_link1_${whichside}">
    <origin xyz="0 0 0" rpy="-1.5708 -1.5708 0"/>
-   <dynamics damping="6.0" friction="4.87"/>
+   <dynamics damping="4.0" friction="4.87"/>
    <axis xyz="${rollsign}1 0 0"/>
    <limit effort="13.4" velocity="1.0" lower="-1.57" upper="0.0" /> 
 </xacro:my_joint>
 
 <xacro:my_joint name="shoulder_pitch_joint_${whichside}" type="revolute" parent="shoulder_link1_${whichside}" child="shoulder_link2_${whichside}">
    <origin xyz="0.0 0.0 0.0" rpy="-1.5708  0 0"/>
-   <dynamics damping="6.0" friction="6.06"/>
+   <dynamics damping="4.0" friction="6.06"/>
    <axis xyz="0 -1 0"/>
    <limit effort="13.4" velocity="1.0" lower="-1.57" upper="1.57" />
 </xacro:my_joint>
 
 <xacro:my_joint name="shoulder_roll_joint_${whichside}" type="revolute" parent="shoulder_link2_${whichside}" child="upper_arm_${whichside}">
    <origin xyz="0.0 0.0 0.0" rpy="1.5708 0 0.0"/>
-   <dynamics damping="6.0" friction="2.16"/>
+   <dynamics damping="3.8" friction="2.216"/>
    <axis xyz="0 ${sidesign} 0"/>
    <limit effort="9.8" velocity="1.0" lower="-1.57" upper="1.57"/>
 </xacro:my_joint>
 
 <xacro:my_joint name="elbow_pitch_joint_${whichside}" type="revolute" parent="upper_arm_${whichside}" child="elbow_link4_${whichside}">
    <origin xyz="0.01 -0.32 0.0" rpy="-1.5708 0 0"/> 
-   <dynamics damping="2.5" friction="1.18"/>
+   <dynamics damping="3" friction="1.18"/>
    <axis xyz="0 -1 0"/>
    <limit effort="4.5" velocity="1.0" lower="0.0" upper="2.23" />
 </xacro:my_joint>
 
 <xacro:my_joint name="elbow_roll_joint_${whichside}" type="revolute" parent="elbow_link4_${whichside}" child="fore_arm_${whichside}">
    <origin xyz="0.0 0.0 0.0" rpy="1.5708 0 0"/>
-   <dynamics damping="2.5" friction="1.35"/>
+   <dynamics damping="3.5" friction="1.35"/>
    <axis xyz="0 ${sidesign} 0"/>
    <limit effort="4.5" velocity="1.0" lower="-1.83" upper="1.83"/>
 </xacro:my_joint>
 
 <xacro:my_joint name="wrist_pitch_joint_${whichside}" type="revolute" parent="fore_arm_${whichside}" child="wrist_link6_${whichside}">
    <origin xyz="0.01 -0.28 0.0" rpy="-1.5708 0 -1.5708"/>
-   <dynamics damping="0.5" friction="0.63"/>
+   <dynamics damping="0.35" friction="0.63"/>
    <axis xyz="0 -1 0"/>
    <limit effort="1" velocity="1.0" lower="-0.95" upper="0.95"/>
 </xacro:my_joint>
 
 <xacro:my_joint name="wrist_yaw_joint_${whichside}" type="revolute" parent="wrist_link6_${whichside}" child="hand_${whichside}">
    <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
-   <dynamics damping="0.5" friction="0.68"/>
+   <dynamics damping="0.3" friction="0.68"/>
    <axis xyz="0 0 ${sidesign}1"/>
    <limit effort="1" velocity="1.0" lower="-0.61" upper="0.61"/>
 </xacro:my_joint>
