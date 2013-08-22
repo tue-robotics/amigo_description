@@ -314,7 +314,7 @@
         </material>
         <material>
           <script>
-            <name>aluminum</name>
+            <name>amigo_description/aluminium</name>
             <uri>__default__</uri>
           </script>
         </material>
@@ -328,7 +328,7 @@
         </geometry>
         <material>
           <script>
-            <name>orange</name>
+            <name>amigo_description/orange</name>
             <uri>__default__</uri>
           </script>
         </material>
@@ -653,7 +653,7 @@
         </geometry>
         <material>
           <script>
-            <name>aluminum</name>
+            <name>amigo_description/aluminium</name>
             <uri>__default__</uri>
           </script>
         </material>
@@ -739,7 +739,7 @@
         </material>
         <material>
           <script>
-            <name>aluminum</name>
+            <name>amigo_description/aluminium</name>
             <uri>__default__</uri>
           </script>
         </material>
@@ -760,7 +760,7 @@
         </material>
         <material>
           <script>
-            <name>aluminum</name>
+            <name>amigo_description/aluminium</name>
             <uri>__default__</uri>
           </script>
         </material>
@@ -781,7 +781,7 @@
         </material>
         <material>
           <script>
-            <name>aluminum</name>
+            <name>amigo_description/aluminium</name>
             <uri>__default__</uri>
           </script>
         </material>
@@ -988,7 +988,7 @@
         </geometry>
         <material>
           <script>
-            <name>aluminum</name>
+            <name>amigo_description/aluminium</name>
             <uri>__default__</uri>
           </script>
         </material>
@@ -1003,7 +1003,7 @@
         </geometry>
         <material>
           <script>
-            <name>white</name>
+            <name>amigo_description/white</name>
             <uri>__default__</uri>
           </script>
         </material>

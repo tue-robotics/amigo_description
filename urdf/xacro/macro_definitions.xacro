@@ -48,7 +48,7 @@
      <geometry>
      <xacro:insert_block name="type" />
      </geometry>
-     <material name="${texture}">
+     <material name="amigo_description/${texture}">
      </material>
     </visual>
     <collision>
@@ -59,7 +59,7 @@
     </collision>
   </link>
 <gazebo reference="${name}">
-      <material>${texture}</material>
+      <material>amigo_description/${texture}</material>
       <turnGravityOff>false</turnGravityOff>
     </gazebo>
 </xacro:macro>
@@ -132,7 +132,7 @@
      <geometry>
      <xacro:insert_block name="mesh" />
      </geometry>
-     <material name="${texture}"/>
+     <material name="amigo_description/${texture}"/>
     </visual>
     <collision>
      <xacro:insert_block name="visualorigin" />
@@ -142,7 +142,7 @@
     </collision>
   </link>
 <gazebo reference="${name}">
-	  <material>${texture}</material>
+	  <material>amigo_description/${texture}</material>
       <turnGravityOff>false</turnGravityOff>
     </gazebo>
 </xacro:macro>
@@ -160,7 +160,7 @@
      <geometry>
      <xacro:insert_block name="mesh" />
      </geometry>
-     <material name="${texture}"/>
+     <material name="amigo_description/${texture}"/>
     </visual>
     <collision>
      <xacro:insert_block name="collorigin" />
@@ -170,7 +170,7 @@
     </collision>
   </link>
 <gazebo reference="${name}">
-	  <material>${texture}</material>
+	  <material>amigo_description/${texture}</material>
       <turnGravityOff>false</turnGravityOff>
     </gazebo>
 </xacro:macro>

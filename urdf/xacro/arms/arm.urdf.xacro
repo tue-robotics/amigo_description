@@ -43,7 +43,7 @@ it has to be reversable and xml cannot multiply - or + but can multiply
 </xacro:my_link>
 
 <!--the upper arm-->
-<xacro:my_link_texturedmesh name="upper_arm_${whichside}" mass="2.95" texture="amigo_description/white">
+<xacro:my_link_texturedmesh name="upper_arm_${whichside}" mass="2.95" texture="white">
    <origin xyz="0.0 -0.2 0.0" rpy="0 0 0"/>
    <origin xyz="-0.00959 -0.19131 -0.00001" rpy="0 0 3.1415" />
    <inertia ixx="0.027"  ixy="0"  ixz="0" iyy="0.45993" iyz="0" izz="0.004" />
@@ -60,7 +60,7 @@ note: not visible, see arm_extra_visuals for the elbow visuals -->
 </xacro:my_link>
 
 <!--the forearm-->
-<xacro:my_link_texturedmesh name="fore_arm_${whichside}" mass="0.85" texture="amigo_description/white">
+<xacro:my_link_texturedmesh name="fore_arm_${whichside}" mass="0.85" texture="white">
    <origin xyz="0.0 -0.14 0.0" rpy="0.0 0 0"/>
    <origin xyz="0.00425 -0.14868 0.00547" rpy="0 -1.5708 0" />
    <inertia ixx="0.001"  ixy="0"  ixz="0" iyy="0.5" iyz="0" izz="0.001" />
