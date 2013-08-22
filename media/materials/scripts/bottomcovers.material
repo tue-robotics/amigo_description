@@ -1,4 +1,4 @@
-material amigo_robot_model_groovy/bottomcovers
+material amigo_description/bottomcovers
 {
 	receive_shadows on
 	technique

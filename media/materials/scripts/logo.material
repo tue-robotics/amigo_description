@@ -1,4 +1,4 @@
-material amigo_robot_model_groovy/logo
+material amigo_description/logo
 {
 	receive_shadows on
 	technique
