@@ -34,7 +34,7 @@
 </xacro:my_link>
 
 <!-- the link that represents the tilting part of the neck, is above neck_pan -->
-<xacro:my_link_texturedmesh name="neck_tilt" mass="0.05" texture="aluminum">
+<xacro:my_link_texturedmesh name="neck_tilt" mass="0.05" texture="aluminium">
    <origin xyz="0.0 -0.0 0.0285" rpy="0 0 0"/>
    <origin xyz="0.0 -0.0 0.015" rpy="0 0 0" />
    <inertia ixx="0.001"  ixy="0"  ixz="0" iyy="0.001" iyz="0" izz="0.001" /> 

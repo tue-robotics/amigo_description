@@ -7,7 +7,7 @@
 
 
 <!--base plate at the bottom of the bottomcovers-->
-<xacro:my_link_textured name="base_plate" mass="0.1" texture="aluminum">
+<xacro:my_link_textured name="base_plate" mass="0.1" texture="aluminium">
    <cylinder radius="0.333" length="0.02" />
    <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
    <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
@@ -24,7 +24,7 @@
 
 <!--the extra sliders next to and behind the spindle-->
 <!--right link-->
-<xacro:my_link_texturedmesh name="torso_assist_slider_right" mass="0.01" texture="aluminum">
+<xacro:my_link_texturedmesh name="torso_assist_slider_right" mass="0.01" texture="aluminium">
    <origin xyz="0 0 0" rpy="0 0 0"/>
    <origin xyz="-0.4  0.0 0.0" rpy="0 1.5708 0"/>
    <inertia ixx="0.01"  ixy="0"  ixz="0" iyy="0.01" iyz="0" izz="0.01" />
@@ -32,7 +32,7 @@
 </xacro:my_link_texturedmesh>
 
 <!--left link-->
-<xacro:my_link_texturedmesh name="torso_assist_slider_left" mass="0.01" texture="aluminum">
+<xacro:my_link_texturedmesh name="torso_assist_slider_left" mass="0.01" texture="aluminium">
    <origin xyz="0 0 0" rpy="0 0 0"/>
    <origin xyz="-0.4  0.0 0.0" rpy="0 1.5708 0"/>
    <inertia ixx="0.01"  ixy="0"  ixz="0" iyy="0.01" iyz="0" izz="0.01" />
@@ -40,7 +40,7 @@
 </xacro:my_link_texturedmesh>
 
 <!--back link-->
-<xacro:my_link_texturedmesh name="torso_assist_slider_back" mass="0.01" texture="aluminum">
+<xacro:my_link_texturedmesh name="torso_assist_slider_back" mass="0.01" texture="aluminium">
    <origin xyz="0 0 0" rpy="0 0 0"/>
    <origin xyz="-0.4 0.0 0.0" rpy="0 1.5708 0"/>
    <inertia ixx="0.01"  ixy="0"  ixz="0" iyy="0.01" iyz="0" izz="0.01" />

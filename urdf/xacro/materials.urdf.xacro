@@ -50,8 +50,8 @@
     <texture filename="package://amigo_description/media/materials/textures/logo/tue.jpg" />
   </material>
   
-  <material name="amigo_description/aluminum">
-    <texture filename="package://amigo_description/media/materials/textures/aluminum/aluminium_0001_c.jpg" />
+  <material name="amigo_description/aluminium">
+    <texture filename="package://amigo_description/media/materials/textures/aluminium/aluminium_0001_c.jpg" />
   </material>
   
   <material name="amigo_description/orange">
