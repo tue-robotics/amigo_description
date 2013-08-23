@@ -829,8 +829,8 @@
         <limit>
           <lower>0</lower>
           <upper>0.41</upper>
-          <effort>30</effort>
-          <velocity>1</velocity>
+          <effort>1000</effort>
+          <velocity>10</velocity>
         </limit>
         <dynamics>
           <damping>3</damping>
