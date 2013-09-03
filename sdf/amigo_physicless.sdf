@@ -3834,7 +3834,7 @@
       </axis>
     </joint>
     <static>0</static>
-    <plugin name='position_controller' filename='libPositionController.so'>
+    <plugin name='position_controller' filename='libPositionController_simple.so'>
       <package>amigo_description</package>
       <group_summary_file>custom/joint_groups.yaml</group_summary_file>
     </plugin>
