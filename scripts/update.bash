@@ -17,3 +17,8 @@ sed -i '/Warning/d' $ROBOT_DESCRIPTION_DIR/sdf/amigo.sdf
 # Fix media paths
 sed -i 's/model:\/\/amigo_description\/media/model:\/\/media/g' $ROBOT_DESCRIPTION_DIR/sdf/amigo.sdf
 
+#copy model to physicless file
+cp $ROBOT_DESCRIPTION_DIR/sdf/amigo.sdf $ROBOT_DESCRIPTION_DIR/sdf/amigo_physicless.sdf
+
+#change controllers in physicless file
+sed -i 's/libPositionController/libPositionController_simple/g' $ROBOT_DESCRIPTION_DIR/sdf/amigo_physicless.sdf
