@@ -3,7 +3,7 @@
 <!--TRANSMISSION: necessary for linking the joints to the controllers -->
         <transmission name="spindle_trans" type="pr2_mechanism_model/SimpleTransmission">
                 <actuator name="spindle_motor" />
-                <joint name="spindle_joint" />
+                <joint name="torso_joint" />
                 <mechanicalReduction>1</mechanicalReduction>
                 <motorTorqueConstant>1</motorTorqueConstant>
         </transmission>

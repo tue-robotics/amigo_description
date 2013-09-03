@@ -809,7 +809,7 @@
       </velocity_decay>
       <self_collide>0</self_collide>
     </link>
-    <joint name='spindle_joint' type='prismatic'>
+    <joint name='torso_joint' type='prismatic'>
       <child>torso_slider</child>
       <parent>base_link</parent>
       <axis>

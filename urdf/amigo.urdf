@@ -155,7 +155,7 @@
     <material>Gazebo/Red</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
-  <joint name="spindle_joint" type="prismatic">
+  <joint name="torso_joint" type="prismatic">
     <parent link="base"/>
     <child link="torso_slider"/>
     <axis xyz="1 0 0"/>

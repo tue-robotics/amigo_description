@@ -45,7 +45,7 @@ robot_joint_groups:
       reference_topic: "/amigo/torso/controller/references"
       measurement_topic: "/amigo/torso/controller/measurements"
       joint_names:
-          - spindle_joint
+          - torso_joint
       parameter_file_package: "amigo_controller_configuration_gazebo"
       parameter_file_path: "/parameters/spindle_controller.yaml"
     - name: neck
