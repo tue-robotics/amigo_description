@@ -329,7 +329,7 @@
     <child link="clavicles"/>
     <origin rpy="0 0 0" xyz="0.05 0.0 0.0"/>
   </joint>
-  <!--========BUILD LASER======-->
+  <!--========BUILD LASERS======-->
   <author>Kris van Tienhoven</author>
   <license>BSD</license>
   <review notes="" status="unreviewed"/>
@@ -422,6 +422,104 @@
   <joint name="logo_joint" type="fixed">
     <parent link="base_laser"/>
     <child link="logo"/>
+  </joint>
+  <author>Janno Lunenburg</author>
+  <license>BSD</license>
+  <review notes="" status="unreviewed"/>
+  <link name="torso_dummy">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <mass value="0"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <cylinder length="0.00" radius="0.0"/>
+      </geometry>
+      <material name="Red">
+     </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <cylinder length="0.00" radius="0.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="torso_dummy">
+    <material>Gazebo/Red</material>
+    <turnGravityOff>false</turnGravityOff>
+  </gazebo>
+  <link name="torso_laser">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <mass value="0.5"/>
+      <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="-0.005 0.0 -0.065"/>
+      <geometry>
+        <box size="0.05 0.065 0.12"/>
+      </geometry>
+      <material name="Black">
+     </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="-0.005 0.0 -0.065"/>
+      <geometry>
+        <box size="0.05 0.065 0.12"/>
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="torso_laser">
+    <material>Gazebo/Black</material>
+    <turnGravityOff>false</turnGravityOff>
+  </gazebo>
+  <joint name="torso_dummy_joint" type="fixed">
+    <parent link="torso"/>
+    <child link="torso_dummy"/>
+    <origin rpy="0.0 -1.57 0.0" xyz="-0.0994 0.0 0.075"/>
+    <axis xyz="0 1 0"/>
+    <dynamics damping="0.1" friction="0"/>
+    <limit effort="13.4" lower="-0.7809" upper="1.5708" velocity="1.0"/>
+  </joint>
+  <joint name="torso_laser_joint" type="fixed">
+    <parent link="torso_dummy"/>
+    <child link="torso_laser"/>
+    <origin rpy="0.0 0.0 -0.05" xyz="0.0 0.0 0.0"/>
+    <axis xyz="0 1 0"/>
+    <dynamics damping="0.1" friction="0"/>
+    <limit effort="13.4" lower="-0.7809" upper="1.5708" velocity="1.0"/>
+  </joint>
+  <link name="torso_lasertop">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <mass value="0.01"/>
+      <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="-0.005 0.0 0.0"/>
+      <geometry>
+        <box size="0.05 0.065 0.01"/>
+      </geometry>
+      <material name="amigo_description/orange">
+     </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="-0.005 0.0 0.0"/>
+      <geometry>
+        <box size="0.05 0.065 0.01"/>
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="torso_lasertop">
+    <material>amigo_description/orange</material>
+    <turnGravityOff>false</turnGravityOff>
+  </gazebo>
+  <joint name="torso_lasertop_joint" type="fixed">
+    <parent link="torso_laser"/>
+    <child link="torso_lasertop"/>
   </joint>
   <!--========BUILD HEAD======-->
   <author>Kris van Tienhoven</author>
@@ -2343,6 +2441,40 @@
         <frameName>base_laser</frameName>
       </plugin>
       <pose>0.310000 0.000000 0.240000 0.000000 0.000000 0.000000</pose>
+    </sensor>
+  </gazebo>
+  <gazebo reference="torso_laser">
+    <sensor name="torso_ray_sensor" type="ray">
+      <update_rate>100.000000</update_rate>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>918</samples>
+            <resolution>1.000000</resolution>
+            <min_angle>-2.0027654171</min_angle>
+            <max_angle>1.99840199947</max_angle>
+          </horizontal>
+          <vertical>
+            <samples>1</samples>
+            <min_angle>0.000000</min_angle>
+            <max_angle>0.000000</max_angle>
+          </vertical>
+        </scan>
+        <range>
+          <min>0.05</min>
+          <max>60.0</max>
+          <resolution>0.010000</resolution>
+        </range>
+      </ray>
+      <plugin filename="libLaserPlugin.so" name="torso_ros_ray_sensor_controller">
+        <gaussianNoise>0.005</gaussianNoise>
+        <alwaysOn>1</alwaysOn>
+        <updateRate>40</updateRate>
+        <topicName>base_front_laser</topicName>
+        <node_namespace>base</node_namespace>
+        <frameName>base_laser</frameName>
+      </plugin>
+      <pose>0 0 0 0 0 0</pose>
     </sensor>
   </gazebo>
   <gazebo reference="neck_tilt">

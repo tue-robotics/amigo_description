@@ -244,7 +244,7 @@
         <material>
           <script>
             <name>amigo_description/bottomcovers</name>
-            <uri>model://media/materials/scripts/bottomcovers.material</uri>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
@@ -259,7 +259,7 @@
         <material>
           <script>
             <name>amigo_description/bottomcovers</name>
-            <uri>model://media/materials/scripts/bottomcovers.material</uri>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
@@ -273,7 +273,7 @@
         </geometry>
         <material>
           <script>
-            <name>Gazebo/Black</name>
+            <name>amigo_description/bottomcovers</name>
             <uri>__default__</uri>
           </script>
         </material>
@@ -285,6 +285,12 @@
             <size>0.05 0.065 0.12</size>
           </box>
         </geometry>
+        <material>
+          <script>
+            <name>amigo_description/bottomcovers</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
         <material>
           <script>
             <name>Gazebo/Black</name>
@@ -302,8 +308,14 @@
         </geometry>
         <material>
           <script>
-            <name>amigo_description/aluminum</name>
-            <uri>model://media/materials/scripts/aluminum.material</uri>
+            <name>amigo_description/bottomcovers</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+        <material>
+          <script>
+            <name>amigo_description/aluminium</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
@@ -317,7 +329,7 @@
         <material>
           <script>
             <name>amigo_description/orange</name>
-            <uri>model://media/materials/scripts/orange.material</uri>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
@@ -332,7 +344,7 @@
         <material>
           <script>
             <name>amigo_description/logo</name>
-            <uri>model://media/materials/scripts/logo.material</uri>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
@@ -429,15 +441,15 @@
     <link name='torso_slider'>
       <pose>0 0 0.635 -3.58979e-09 -1.57079 3.14159</pose>
       <inertial>
-        <pose>0.13458 0 -6.08236e-05 0 -0 0</pose>
-        <mass>16.441</mass>
+        <pose>0.131602 0 0.00219751 0 -0 0</pose>
+        <mass>16.951</mass>
         <inertia>
-          <ixx>0.0949199</ixx>
+          <ixx>0.0979069</ixx>
           <ixy>0</ixy>
-          <ixz>-0.00029958</ixz>
-          <iyy>0.0855039</iyy>
-          <iyz>0</iyz>
-          <izz>0.100124</izz>
+          <ixz>0.00337548</ixz>
+          <iyy>0.0933371</iyy>
+          <iyz>1.69407e-21</iyz>
+          <izz>0.10517</izz>
         </inertia>
       </inertial>
       <collision name='torso_slider_collision'>
@@ -631,6 +643,87 @@
           </friction>
         </surface>
       </collision>
+      <collision name='torso_slider_collision_torso_dummy'>
+        <pose>0.0356 0 0.075 0 -1.57 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0</length>
+            <radius>0</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='torso_slider_collision_torso_laser'>
+        <pose>0.100596 0.000249896 0.0699545 1.55486 -1.52079 -1.55488</pose>
+        <geometry>
+          <box>
+            <size>0.05 0.065 0.12</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='torso_slider_collision_torso_lasertop'>
+        <pose>0.035596 0.000249896 0.0700063 1.55486 -1.52079 -1.55488</pose>
+        <geometry>
+          <box>
+            <size>0.05 0.065 0.01</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
       <visual name='torso_slider_visual'>
         <pose>0.05 0 0 0 -0 1.5708</pose>
         <geometry>
@@ -641,14 +734,14 @@
         </geometry>
         <material>
           <script>
-            <name>amigo_description/aluminum</name>
-            <uri>model://media/materials/scripts/aluminum.material</uri>
+            <name>amigo_description/aluminium</name>
+            <uri>__default__</uri>
           </script>
         </material>
         <material>
           <script>
             <name>amigo_description/white</name>
-            <uri>model://media/materials/scripts/white.material</uri>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
@@ -707,7 +800,7 @@
         <material>
           <script>
             <name>amigo_description/white</name>
-            <uri>model://media/materials/scripts/white.material</uri>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
@@ -722,13 +815,13 @@
         <material>
           <script>
             <name>amigo_description/white</name>
-            <uri>model://media/materials/scripts/white.material</uri>
+            <uri>__default__</uri>
           </script>
         </material>
         <material>
           <script>
-            <name>amigo_description/aluminum</name>
-            <uri>model://media/materials/scripts/aluminum.material</uri>
+            <name>amigo_description/aluminium</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
@@ -743,13 +836,13 @@
         <material>
           <script>
             <name>amigo_description/white</name>
-            <uri>model://media/materials/scripts/white.material</uri>
+            <uri>__default__</uri>
           </script>
         </material>
         <material>
           <script>
-            <name>amigo_description/aluminum</name>
-            <uri>model://media/materials/scripts/aluminum.material</uri>
+            <name>amigo_description/aluminium</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
@@ -764,13 +857,86 @@
         <material>
           <script>
             <name>amigo_description/white</name>
-            <uri>model://media/materials/scripts/white.material</uri>
+            <uri>__default__</uri>
           </script>
         </material>
         <material>
           <script>
-            <name>amigo_description/aluminum</name>
-            <uri>model://media/materials/scripts/aluminum.material</uri>
+            <name>amigo_description/aluminium</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='torso_slider_visual_torso_dummy'>
+        <pose>0.0356 0 0.075 0 -1.57 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0</length>
+            <radius>0</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <script>
+            <name>amigo_description/white</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+        <material>
+          <script>
+            <name>Gazebo/Red</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='torso_slider_visual_torso_laser'>
+        <pose>0.100596 0.000249896 0.0699545 1.55486 -1.52079 -1.55488</pose>
+        <geometry>
+          <box>
+            <size>0.05 0.065 0.12</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <name>amigo_description/white</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+        <material>
+          <script>
+            <name>Gazebo/Black</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='torso_slider_visual_torso_lasertop'>
+        <pose>0.035596 0.000249896 0.0700063 1.55486 -1.52079 -1.55488</pose>
+        <geometry>
+          <box>
+            <size>0.05 0.065 0.01</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <name>amigo_description/orange</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+        <material>
+          <script>
+            <name>amigo_description/white</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+        <material>
+          <script>
+            <name>Gazebo/Black</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+        <material>
+          <script>
+            <name>amigo_description/orange</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
@@ -790,6 +956,54 @@
         <linear>0</linear>
         <angular>0</angular>
       </velocity_decay>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <sensor name='torso_ray_sensor' type='ray'>
+        <update_rate>100</update_rate>
+        <ray>
+          <scan>
+            <horizontal>
+              <samples>918</samples>
+              <resolution>1</resolution>
+              <min_angle>-2.00277</min_angle>
+              <max_angle>1.9984</max_angle>
+            </horizontal>
+            <vertical>
+              <samples>1</samples>
+              <min_angle>0</min_angle>
+              <max_angle>0</max_angle>
+            </vertical>
+          </scan>
+          <range>
+            <min>0.05</min>
+            <max>60</max>
+            <resolution>0.01</resolution>
+          </range>
+        </ray>
+        <plugin name='torso_ros_ray_sensor_controller' filename='libLaserPlugin.so'>
+          <gaussianNoise>0.005</gaussianNoise>
+          <alwaysOn>1</alwaysOn>
+          <updateRate>40</updateRate>
+          <topicName>base_front_laser</topicName>
+          <node_namespace>base</node_namespace>
+          <frameName>base_laser</frameName>
+        </plugin>
+        <pose>0.0356 0 0.075 1.55486 -1.52079 -1.55488</pose>
+      </sensor>
       <velocity_decay>
         <linear>0</linear>
         <angular>0</angular>
@@ -976,8 +1190,8 @@
         </geometry>
         <material>
           <script>
-            <name>amigo_description/aluminum</name>
-            <uri>model://media/materials/scripts/aluminum.material</uri>
+            <name>amigo_description/aluminium</name>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
@@ -992,7 +1206,7 @@
         <material>
           <script>
             <name>amigo_description/white</name>
-            <uri>model://media/materials/scripts/white.material</uri>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
@@ -1314,7 +1528,7 @@
         <material>
           <script>
             <name>amigo_description/white</name>
-            <uri>model://media/materials/scripts/white.material</uri>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
@@ -1533,7 +1747,7 @@
         <material>
           <script>
             <name>amigo_description/white</name>
-            <uri>model://media/materials/scripts/white.material</uri>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
@@ -2643,7 +2857,7 @@
         <material>
           <script>
             <name>amigo_description/white</name>
-            <uri>model://media/materials/scripts/white.material</uri>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
@@ -2862,7 +3076,7 @@
         <material>
           <script>
             <name>amigo_description/white</name>
-            <uri>model://media/materials/scripts/white.material</uri>
+            <uri>__default__</uri>
           </script>
         </material>
       </visual>
