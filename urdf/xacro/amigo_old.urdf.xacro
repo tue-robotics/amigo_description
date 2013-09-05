@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+   
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="amigo"
+       xmlns:sensor="http://playerstage.sourceforge.net/gazebo/xmlschema/#sensor"
+       xmlns:controller="http://playerstage.sourceforge.net/gazebo/xmlschema/#controller"
+       xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface">
+       
+       
+   <author>Rob Janssen</author>
+   <license>BSD</license>
+   <review status="unreviewed" notes=""/>
+
+<!--get link & joint definitions -->
+<include filename="$(find amigo_description)/urdf/xacro/macro_definitions.xacro" />
+
+<!--get custom materials -->
+<include filename="$(find amigo_description)/urdf/xacro/materials.urdf.xacro" />
+
+<!--========BUILD BODY======-->
+<include filename="$(find amigo_description)/urdf/xacro/body/body.urdf.xacro" />
+<!--extra body visuals-->
+<include filename="$(find amigo_description)/urdf/xacro/body_extra_visuals/body_extra.urdf.xacro" />
+
+<!--========BUILD LASERS======-->
+<include filename="$(find amigo_description)/urdf/xacro/laser/laser.urdf.xacro" />
+<include filename="$(find amigo_description)/urdf/xacro/laser/torso_laser.urdf.xacro" />
+
+<!--========BUILD HEAD======-->
+<include filename="$(find amigo_description)/urdf/xacro/head/head.urdf.xacro" />
+
+<!--========BUILD KINECT======-->
+<include filename="$(find amigo_description)/urdf/xacro/kinect/top_kinect.urdf.xacro" />
+<include filename="$(find amigo_description)/urdf/xacro/kinect/base_kinect.urdf.xacro" />
+
+<!--========BUILD ARMS======-->
+<include filename="$(find amigo_description)/urdf/xacro/arms/arm.urdf.xacro" />
+
+<xacro:arm whichside="right" sidesign="+1.0" rollsign="+"/>
+<xacro:arm whichside="left"  sidesign="-1.0" rollsign="-"/>
+
+<!--extra arm visuals-->
+<include filename="$(find amigo_description)/urdf/xacro/arm_extra_visuals/arm_extra.urdf.xacro" />
+
+<xacro:arm_extra whichside="right" sidesign="+1.0" rollsign="+"/>
+<xacro:arm_extra whichside="left"  sidesign="-1.0" rollsign="-"/>
+
+<!-- GAZEBO -->
+<include filename="$(find amigo_description)/urdf/xacro/gazebo_old.urdf.xacro"/>
+
+<include filename="$(find amigo_robot_model)/description/body/body.transmission.xacro" />
+<include filename="$(find amigo_robot_model)/description/arms/arm.transmission.xacro" />
+<include filename="$(find amigo_robot_model)/description/wheels/wheels.transmission.xacro" />
+<include filename="$(find amigo_robot_model)/description/head/head.transmission.xacro" />
+
+</robot>

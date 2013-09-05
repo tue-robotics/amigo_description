@@ -22,3 +22,10 @@ cp $ROBOT_DESCRIPTION_DIR/sdf/amigo.sdf $ROBOT_DESCRIPTION_DIR/sdf/amigo_physicl
 
 #change controllers in physicless file
 sed -i 's/libPositionController/libPositionController_simple/g' $ROBOT_DESCRIPTION_DIR/sdf/amigo_physicless.sdf
+
+
+###
+
+# Generate urdf from xacro
+rosrun xacro xacro.py -o $ROBOT_DESCRIPTION_DIR/urdf/amigo_old.urdf $ROBOT_DESCRIPTION_DIR/urdf/xacro/amigo_old.urdf.xacro
+
