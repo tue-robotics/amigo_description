@@ -998,9 +998,9 @@
           <gaussianNoise>0.005</gaussianNoise>
           <alwaysOn>1</alwaysOn>
           <updateRate>40</updateRate>
-          <topicName>base_front_laser</topicName>
+          <topicName>torso_laser</topicName>
           <node_namespace>base</node_namespace>
-          <frameName>base_laser</frameName>
+          <frameName>torso_laser</frameName>
         </plugin>
         <pose>0.0356 0 0.075 1.55486 -1.52079 -1.55488</pose>
       </sensor>
