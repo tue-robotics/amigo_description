@@ -263,12 +263,26 @@
 		<package>amigo_description</package>
 		<group_summary_file>custom/joint_groups.yaml</group_summary_file>
     </plugin>
+
     <plugin name="base_controller" filename="libAmigoBaseController.so">
 		<package>amigo_controller_configuration_gazebo</package>
 		<parameter_file>/parameters/mod_base_controller.yaml</parameter_file>
 		<node_namespace>base</node_namespace>
         <odomTopic>odom</odomTopic>
     </plugin>
+
+    <plugin name="left_gripper_controller" filename="libAmigoGripperController.so">
+		<side>left</side>
+		<referenceTopic>/amigo/left_gripper/references</referenceTopic>
+		<measurementTopic>/amigo/left_gripper/measurements</measurementTopic>
+    </plugin>
+
+    <plugin name="right_gripper_controller" filename="libAmigoGripperController.so">
+		<side>right</side>
+		<referenceTopic>/amigo/right_gripper/references</referenceTopic>
+		<measurementTopic>/amigo/right_gripper/measurements</measurementTopic>
+    </plugin>
+
 </gazebo>
 
 </robot>

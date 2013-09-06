@@ -2184,8 +2184,8 @@
       <axis>
         <xyz>1 3.66668e-06 -0.0008</xyz>
         <limit>
-          <lower>-1.57</lower>
-          <upper>1.57</upper>
+          <lower>0.2</lower>
+          <upper>1</upper>
           <effort>3</effort>
           <velocity>1</velocity>
         </limit>
@@ -2321,8 +2321,8 @@
       <axis>
         <xyz>1 3.66668e-06 -0.0008</xyz>
         <limit>
-          <lower>-1.57</lower>
-          <upper>1.57</upper>
+          <lower>-0.6</lower>
+          <upper>-0.2</upper>
           <effort>3</effort>
           <velocity>1</velocity>
         </limit>
@@ -2458,8 +2458,8 @@
       <axis>
         <xyz>-1 -3.66668e-06 0.0008</xyz>
         <limit>
-          <lower>-1.57</lower>
-          <upper>1.57</upper>
+          <lower>0.2</lower>
+          <upper>1</upper>
           <effort>3</effort>
           <velocity>1</velocity>
         </limit>
@@ -2595,8 +2595,8 @@
       <axis>
         <xyz>-1 -3.66668e-06 0.0008</xyz>
         <limit>
-          <lower>-1.57</lower>
-          <upper>1.57</upper>
+          <lower>-0.6</lower>
+          <upper>-0.2</upper>
           <effort>3</effort>
           <velocity>1</velocity>
         </limit>
@@ -3513,8 +3513,8 @@
       <axis>
         <xyz>1 3.66668e-06 -0.0008</xyz>
         <limit>
-          <lower>-1.57</lower>
-          <upper>1.57</upper>
+          <lower>0.2</lower>
+          <upper>1</upper>
           <effort>3</effort>
           <velocity>1</velocity>
         </limit>
@@ -3650,8 +3650,8 @@
       <axis>
         <xyz>1 3.66668e-06 -0.0008</xyz>
         <limit>
-          <lower>-1.57</lower>
-          <upper>1.57</upper>
+          <lower>-0.6</lower>
+          <upper>-0.2</upper>
           <effort>3</effort>
           <velocity>1</velocity>
         </limit>
@@ -3787,8 +3787,8 @@
       <axis>
         <xyz>-1 -3.66668e-06 0.0008</xyz>
         <limit>
-          <lower>-1.57</lower>
-          <upper>1.57</upper>
+          <lower>0.2</lower>
+          <upper>1</upper>
           <effort>3</effort>
           <velocity>1</velocity>
         </limit>
@@ -3924,8 +3924,8 @@
       <axis>
         <xyz>-1 -3.66668e-06 0.0008</xyz>
         <limit>
-          <lower>-1.57</lower>
-          <upper>1.57</upper>
+          <lower>-0.6</lower>
+          <upper>-0.2</upper>
           <effort>3</effort>
           <velocity>1</velocity>
         </limit>
@@ -4057,6 +4057,16 @@
       <parameter_file>/parameters/mod_base_controller.yaml</parameter_file>
       <node_namespace>base</node_namespace>
       <odomTopic>odom</odomTopic>
+    </plugin>
+    <plugin name='left_gripper_controller' filename='libAmigoGripperController.so'>
+      <side>left</side>
+      <referenceTopic>/amigo/left_gripper/references</referenceTopic>
+      <measurementTopic>/amigo/left_gripper/measurements</measurementTopic>
+    </plugin>
+    <plugin name='right_gripper_controller' filename='libAmigoGripperController.so'>
+      <side>right</side>
+      <referenceTopic>/amigo/right_gripper/references</referenceTopic>
+      <measurementTopic>/amigo/right_gripper/measurements</measurementTopic>
     </plugin>
   </model>
 </sdf>
