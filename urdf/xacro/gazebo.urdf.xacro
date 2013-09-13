@@ -150,7 +150,7 @@
           <cameraName>base_kinect</cameraName>
           <imageTopicName>rgb/image_color</imageTopicName>
           <cameraInfoTopicName>rgb/camera_info</cameraInfoTopicName>
-          <depthImageTopicName>depth/image</depthImageTopicName>
+          <depthImageTopicName>depth_registered/image</depthImageTopicName>
           <depthImageCameraInfoTopicName>depth/camera_info</depthImageCameraInfoTopicName>
           <pointCloudTopicName>rgb/points</pointCloudTopicName>
           <frameName>base_kinect/openni_depth_optical_frame</frameName>
@@ -249,7 +249,7 @@
           <cameraName>top_kinect</cameraName>
           <imageTopicName>rgb/image_color</imageTopicName>
           <cameraInfoTopicName>rgb/camera_info</cameraInfoTopicName>
-          <depthImageTopicName>depth/image</depthImageTopicName>
+          <depthImageTopicName>depth_registered/image</depthImageTopicName>
           <depthImageCameraInfoTopicName>depth/camera_info</depthImageCameraInfoTopicName>
           <pointCloudTopicName>rgb/points</pointCloudTopicName>
           <frameName>top_kinect/openni_depth_optical_frame</frameName>

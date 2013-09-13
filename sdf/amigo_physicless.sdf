@@ -376,7 +376,7 @@
           <cameraName>base_kinect</cameraName>
           <imageTopicName>rgb/image_color</imageTopicName>
           <cameraInfoTopicName>rgb/camera_info</cameraInfoTopicName>
-          <depthImageTopicName>depth/image</depthImageTopicName>
+          <depthImageTopicName>depth_registered/image</depthImageTopicName>
           <depthImageCameraInfoTopicName>depth/camera_info</depthImageCameraInfoTopicName>
           <pointCloudTopicName>rgb/points</pointCloudTopicName>
           <frameName>base_kinect/openni_depth_optical_frame</frameName>
@@ -1246,7 +1246,7 @@
           <cameraName>top_kinect</cameraName>
           <imageTopicName>rgb/image_color</imageTopicName>
           <cameraInfoTopicName>rgb/camera_info</cameraInfoTopicName>
-          <depthImageTopicName>depth/image</depthImageTopicName>
+          <depthImageTopicName>depth_registered/image</depthImageTopicName>
           <depthImageCameraInfoTopicName>depth/camera_info</depthImageCameraInfoTopicName>
           <pointCloudTopicName>rgb/points</pointCloudTopicName>
           <frameName>top_kinect/openni_depth_optical_frame</frameName>
@@ -1422,7 +1422,7 @@
           <ixy>1.00403e-05</ixy>
           <ixz>0</ixz>
           <iyy>0.465931</iyy>
-          <iyz>8.44837e-08</iyz>
+          <iyz>-8.44837e-08</iyz>
           <izz>0.0333425</izz>
         </inertia>
       </inertial>
@@ -1690,7 +1690,7 @@
           <ixy>-2.55e-06</ixy>
           <ixz>0</ixz>
           <iyy>0.5004</iyy>
-          <iyz>1.8366e-08</iyz>
+          <iyz>-1.8366e-08</iyz>
           <izz>0.00656451</izz>
         </inertia>
       </inertial>
@@ -1803,7 +1803,7 @@
           <ixy>0</ixy>
           <ixz>0</ixz>
           <iyy>0.0352227</iyy>
-          <iyz>-4.1359e-25</iyz>
+          <iyz>4.1359e-25</iyz>
           <izz>0.00300267</izz>
         </inertia>
       </inertial>
@@ -2065,7 +2065,7 @@
         <inertia>
           <ixx>0.0110045</ixx>
           <ixy>0</ixy>
-          <ixz>-1.05879e-22</ixz>
+          <ixz>1.05879e-22</ixz>
           <iyy>0.0110045</iyy>
           <iyz>0</iyz>
           <izz>0.011</izz>
@@ -2202,7 +2202,7 @@
         <inertia>
           <ixx>0.0013745</ixx>
           <ixy>0</ixy>
-          <ixz>-1.05879e-22</ixz>
+          <ixz>1.05879e-22</ixz>
           <iyy>0.0015245</iyy>
           <iyz>0</iyz>
           <izz>0.00152</izz>
@@ -2339,7 +2339,7 @@
         <inertia>
           <ixx>0.0110045</ixx>
           <ixy>0</ixy>
-          <ixz>-1.05879e-22</ixz>
+          <ixz>1.05879e-22</ixz>
           <iyy>0.0110045</iyy>
           <iyz>0</iyz>
           <izz>0.011</izz>
@@ -2476,7 +2476,7 @@
         <inertia>
           <ixx>0.0013745</ixx>
           <ixy>0</ixy>
-          <ixz>-1.05879e-22</ixz>
+          <ixz>1.05879e-22</ixz>
           <iyy>0.0015245</iyy>
           <iyz>0</iyz>
           <izz>0.00152</izz>
@@ -2751,7 +2751,7 @@
           <ixy>1.00403e-05</ixy>
           <ixz>0</ixz>
           <iyy>0.465931</iyy>
-          <iyz>8.44837e-08</iyz>
+          <iyz>-8.44837e-08</iyz>
           <izz>0.0333425</izz>
         </inertia>
       </inertial>
@@ -3019,7 +3019,7 @@
           <ixy>-2.55e-06</ixy>
           <ixz>0</ixz>
           <iyy>0.5004</iyy>
-          <iyz>1.8366e-08</iyz>
+          <iyz>-1.8366e-08</iyz>
           <izz>0.00656451</izz>
         </inertia>
       </inertial>
@@ -3132,7 +3132,7 @@
           <ixy>0</ixy>
           <ixz>0</ixz>
           <iyy>0.0352227</iyy>
-          <iyz>-4.1359e-25</iyz>
+          <iyz>4.1359e-25</iyz>
           <izz>0.00300267</izz>
         </inertia>
       </inertial>
@@ -3394,7 +3394,7 @@
         <inertia>
           <ixx>0.0110045</ixx>
           <ixy>0</ixy>
-          <ixz>-1.05879e-22</ixz>
+          <ixz>1.05879e-22</ixz>
           <iyy>0.0110045</iyy>
           <iyz>0</iyz>
           <izz>0.011</izz>
@@ -3531,7 +3531,7 @@
         <inertia>
           <ixx>0.0013745</ixx>
           <ixy>0</ixy>
-          <ixz>-1.05879e-22</ixz>
+          <ixz>1.05879e-22</ixz>
           <iyy>0.0015245</iyy>
           <iyz>0</iyz>
           <izz>0.00152</izz>
@@ -3668,7 +3668,7 @@
         <inertia>
           <ixx>0.0110045</ixx>
           <ixy>0</ixy>
-          <ixz>-1.05879e-22</ixz>
+          <ixz>1.05879e-22</ixz>
           <iyy>0.0110045</iyy>
           <iyz>0</iyz>
           <izz>0.011</izz>
@@ -3805,7 +3805,7 @@
         <inertia>
           <ixx>0.0013745</ixx>
           <ixy>0</ixy>
-          <ixz>-1.05879e-22</ixz>
+          <ixz>1.05879e-22</ixz>
           <iyy>0.0015245</iyy>
           <iyz>0</iyz>
           <izz>0.00152</izz>
