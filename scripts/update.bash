@@ -16,6 +16,7 @@ sed -i '/Warning/d' $ROBOT_DESCRIPTION_DIR/sdf/amigo.sdf
 
 # Fix media paths
 sed -i 's/model:\/\/amigo_description\/media/model:\/\/media/g' $ROBOT_DESCRIPTION_DIR/sdf/amigo.sdf
+sed -i 's/__default__/model:\/\/media\/materials\/scripts\/tue_mats.material/g' $ROBOT_DESCRIPTION_DIR/sdf/amigo.sdf
 
 #copy model to physicless file
 cp $ROBOT_DESCRIPTION_DIR/sdf/amigo.sdf $ROBOT_DESCRIPTION_DIR/sdf/amigo_physicless.sdf
