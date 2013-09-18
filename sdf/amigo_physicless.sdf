@@ -238,13 +238,13 @@
         <material>
           <script>
             <name>Gazebo/Red</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
         <material>
           <script>
             <name>amigo_description/bottomcovers</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -259,7 +259,7 @@
         <material>
           <script>
             <name>amigo_description/bottomcovers</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -274,7 +274,7 @@
         <material>
           <script>
             <name>amigo_description/bottomcovers</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -288,13 +288,13 @@
         <material>
           <script>
             <name>amigo_description/bottomcovers</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
         <material>
           <script>
             <name>Gazebo/Black</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -309,13 +309,13 @@
         <material>
           <script>
             <name>amigo_description/bottomcovers</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
         <material>
           <script>
             <name>amigo_description/aluminium</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -329,7 +329,7 @@
         <material>
           <script>
             <name>amigo_description/orange</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -344,7 +344,7 @@
         <material>
           <script>
             <name>amigo_description/logo</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -441,14 +441,14 @@
     <link name='torso_slider'>
       <pose>0 0 0.635 -3.58979e-09 -1.57079 3.14159</pose>
       <inertial>
-        <pose>0.131602 0 0.00219751 0 -0 0</pose>
+        <pose>0.131602 2.8803e-19 0.00219751 0 -0 0</pose>
         <mass>16.951</mass>
         <inertia>
           <ixx>0.0979069</ixx>
-          <ixy>0</ixy>
+          <ixy>-1.65897e-20</ixy>
           <ixz>0.00337548</ixz>
           <iyy>0.0933371</iyy>
-          <iyz>1.69407e-21</iyz>
+          <iyz>1.19939e-20</iyz>
           <izz>0.10517</izz>
         </inertia>
       </inertial>
@@ -544,7 +544,7 @@
         </surface>
       </collision>
       <collision name='torso_slider_collision_torso'>
-        <pose>0.18 0 0.06 -1.5708 -5.55112e-17 -1.5708</pose>
+        <pose>0.18 0 0.06 -1.5708 -1.69705e-16 -1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.0004 0.0004 0.0004</scale>
@@ -735,13 +735,13 @@
         <material>
           <script>
             <name>amigo_description/aluminium</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
         <material>
           <script>
             <name>amigo_description/white</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -755,7 +755,7 @@
         <material>
           <script>
             <name>Gazebo/Black</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -770,7 +770,7 @@
         <material>
           <script>
             <name>Gazebo/Black</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -785,12 +785,12 @@
         <material>
           <script>
             <name>Gazebo/Black</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
       <visual name='torso_slider_visual_torso'>
-        <pose>0.18 0 0.06 -1.5708 -5.55112e-17 -1.5708</pose>
+        <pose>0.18 0 0.06 -1.5708 -1.69705e-16 -1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.0004 0.0004 0.0004</scale>
@@ -800,7 +800,7 @@
         <material>
           <script>
             <name>amigo_description/white</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -815,13 +815,13 @@
         <material>
           <script>
             <name>amigo_description/white</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
         <material>
           <script>
             <name>amigo_description/aluminium</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -836,13 +836,13 @@
         <material>
           <script>
             <name>amigo_description/white</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
         <material>
           <script>
             <name>amigo_description/aluminium</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -857,13 +857,13 @@
         <material>
           <script>
             <name>amigo_description/white</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
         <material>
           <script>
             <name>amigo_description/aluminium</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -878,13 +878,13 @@
         <material>
           <script>
             <name>amigo_description/white</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
         <material>
           <script>
             <name>Gazebo/Red</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -898,13 +898,13 @@
         <material>
           <script>
             <name>amigo_description/white</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
         <material>
           <script>
             <name>Gazebo/Black</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -918,25 +918,25 @@
         <material>
           <script>
             <name>amigo_description/orange</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
         <material>
           <script>
             <name>amigo_description/white</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
         <material>
           <script>
             <name>Gazebo/Black</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
         <material>
           <script>
             <name>amigo_description/orange</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -1027,7 +1027,7 @@
       <child>torso_slider</child>
       <parent>base_link</parent>
       <axis>
-        <xyz>-3.67321e-06 2.06795e-25 1</xyz>
+        <xyz>-3.67321e-06 9.34516e-26 1</xyz>
         <limit>
           <lower>0</lower>
           <upper>0.41</upper>
@@ -1040,7 +1040,7 @@
       </axis>
     </joint>
     <link name='neck_pan'>
-      <pose>-8.52184e-07 0 0.867 -0.00159265 -4.58319e-17 -3.58979e-09</pose>
+      <pose>-8.52184e-07 -1.58782e-26 0.867 -0.00159265 -3.34178e-17 -3.58979e-09</pose>
       <inertial>
         <pose>0 0 0.0335 0 -0 0</pose>
         <mass>0.05</mass>
@@ -1081,7 +1081,7 @@
         <material>
           <script>
             <name>Gazebo/Black</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -1096,7 +1096,7 @@
       <child>neck_pan</child>
       <parent>torso_slider</parent>
       <axis>
-        <xyz>5.71725e-12 0.00159265 0.999999</xyz>
+        <xyz>5.71726e-12 0.00159265 0.999999</xyz>
         <limit>
           <lower>-1.5708</lower>
           <upper>1.5708</upper>
@@ -1109,7 +1109,7 @@
       </axis>
     </joint>
     <link name='neck_tilt'>
-      <pose>-8.52183e-07 7.08731e-05 0.9115 -0.00159265 -4.58319e-17 -3.58979e-09</pose>
+      <pose>-8.52183e-07 7.08731e-05 0.9115 -0.00159265 -3.34178e-17 -3.58979e-09</pose>
       <inertial>
         <pose>0.0220548 0.00257534 0.0415753 0 -0 0</pose>
         <mass>0.073</mass>
@@ -1191,7 +1191,7 @@
         <material>
           <script>
             <name>amigo_description/aluminium</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -1206,7 +1206,7 @@
         <material>
           <script>
             <name>amigo_description/white</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -1277,7 +1277,7 @@
       </axis>
     </joint>
     <link name='shoulder_link1_left'>
-      <pose>-6.78753e-07 0.22 0.82 1.57079 1.36511e-18 -3.58979e-09</pose>
+      <pose>-6.78753e-07 0.22 0.82 1.57079 -1.22563e-16 -3.58979e-09</pose>
       <inertial>
         <pose>0 0 0 0 -0 0</pose>
         <mass>0.25</mass>
@@ -1318,7 +1318,7 @@
         <material>
           <script>
             <name>Gazebo/Black</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -1333,7 +1333,7 @@
       <child>shoulder_link1_left</child>
       <parent>torso_slider</parent>
       <axis>
-        <xyz>-1 3.58979e-09 1.36511e-18</xyz>
+        <xyz>-1 3.58979e-09 -1.22563e-16</xyz>
         <limit>
           <lower>-1.57</lower>
           <upper>0</upper>
@@ -1346,7 +1346,7 @@
       </axis>
     </joint>
     <link name='shoulder_link2_left'>
-      <pose>-6.78753e-07 0.22 0.82 -7.34641e-06 1.36511e-18 -3.58979e-09</pose>
+      <pose>-6.78753e-07 0.22 0.82 -7.34641e-06 -1.22563e-16 -3.58979e-09</pose>
       <inertial>
         <pose>0 0 0 0 -0 0</pose>
         <mass>0.15</mass>
@@ -1385,7 +1385,7 @@
         <material>
           <script>
             <name>Gazebo/Black</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -1413,7 +1413,7 @@
       </axis>
     </joint>
     <link name='upper_arm_left'>
-      <pose>-6.78753e-07 0.22 0.82 1.57079 1.36511e-18 -3.58979e-09</pose>
+      <pose>-6.78753e-07 0.22 0.82 1.57079 -1.22563e-16 -3.58979e-09</pose>
       <inertial>
         <pose>-3.3557e-05 -0.200403 0 0 -0 0</pose>
         <mass>2.98</mass>
@@ -1528,7 +1528,7 @@
         <material>
           <script>
             <name>amigo_description/white</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -1543,7 +1543,7 @@
         <material>
           <script>
             <name>Gazebo/Grey</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -1557,7 +1557,7 @@
         <material>
           <script>
             <name>Gazebo/Black</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -1572,7 +1572,7 @@
         <material>
           <script>
             <name>Gazebo/Black</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -1599,7 +1599,7 @@
       <child>upper_arm_left</child>
       <parent>shoulder_link2_left</parent>
       <axis>
-        <xyz>-1.31874e-14 -3.67321e-06 -1</xyz>
+        <xyz>-1.30635e-14 -3.67321e-06 -1</xyz>
         <limit>
           <lower>-1.57</lower>
           <upper>1.57</upper>
@@ -1612,7 +1612,7 @@
       </axis>
     </joint>
     <link name='elbow_link4_left'>
-      <pose>0.00999932 0.219999 0.5 -7.34641e-06 1.36511e-18 -3.58979e-09</pose>
+      <pose>0.00999932 0.219999 0.5 -7.34641e-06 -1.22563e-16 -3.58979e-09</pose>
       <inertial>
         <pose>0 0 0 0 -0 0</pose>
         <mass>0.1</mass>
@@ -1653,7 +1653,7 @@
         <material>
           <script>
             <name>Gazebo/Grey</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -1681,7 +1681,7 @@
       </axis>
     </joint>
     <link name='fore_arm_left'>
-      <pose>0.00999932 0.219999 0.5 1.57079 1.36511e-18 -3.58979e-09</pose>
+      <pose>0.00999932 0.219999 0.5 1.57079 -1.22563e-16 -3.58979e-09</pose>
       <inertial>
         <pose>2.32558e-05 -0.1385 0 0 -0 0</pose>
         <mass>0.86</mass>
@@ -1747,7 +1747,7 @@
         <material>
           <script>
             <name>amigo_description/white</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -1762,7 +1762,7 @@
         <material>
           <script>
             <name>Gazebo/Black</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -1781,7 +1781,7 @@
       <child>fore_arm_left</child>
       <parent>elbow_link4_left</parent>
       <axis>
-        <xyz>-1.31874e-14 -3.67321e-06 -1</xyz>
+        <xyz>-1.30635e-14 -3.67321e-06 -1</xyz>
         <limit>
           <lower>-1.83</lower>
           <upper>1.83</upper>
@@ -1803,7 +1803,7 @@
           <ixy>0</ixy>
           <ixz>0</ixz>
           <iyy>0.0352227</iyy>
-          <iyz>4.1359e-25</iyz>
+          <iyz>9.55216e-26</iyz>
           <izz>0.00300267</izz>
         </inertia>
       </inertial>
@@ -1884,7 +1884,7 @@
         <material>
           <script>
             <name>Gazebo/Black</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -1898,7 +1898,7 @@
         <material>
           <script>
             <name>Gazebo/Grey</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -1913,7 +1913,7 @@
         <material>
           <script>
             <name>Gazebo/Grey</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -2012,7 +2012,7 @@
         <material>
           <script>
             <name>Gazebo/Grey</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -2026,7 +2026,7 @@
         <material>
           <script>
             <name>Gazebo/Blue</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -2065,7 +2065,7 @@
         <inertia>
           <ixx>0.0110045</ixx>
           <ixy>0</ixy>
-          <ixz>1.05879e-22</ixz>
+          <ixz>9.72454e-23</ixz>
           <iyy>0.0110045</iyy>
           <iyz>0</iyz>
           <izz>0.011</izz>
@@ -2144,7 +2144,7 @@
         <material>
           <script>
             <name>Gazebo/Black</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -2159,7 +2159,7 @@
         <material>
           <script>
             <name>Gazebo/White</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -2202,7 +2202,7 @@
         <inertia>
           <ixx>0.0013745</ixx>
           <ixy>0</ixy>
-          <ixz>1.05879e-22</ixz>
+          <ixz>9.72454e-23</ixz>
           <iyy>0.0015245</iyy>
           <iyz>0</iyz>
           <izz>0.00152</izz>
@@ -2281,7 +2281,7 @@
         <material>
           <script>
             <name>Gazebo/Black</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -2296,7 +2296,7 @@
         <material>
           <script>
             <name>Gazebo/White</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -2339,7 +2339,7 @@
         <inertia>
           <ixx>0.0110045</ixx>
           <ixy>0</ixy>
-          <ixz>1.05879e-22</ixz>
+          <ixz>9.72454e-23</ixz>
           <iyy>0.0110045</iyy>
           <iyz>0</iyz>
           <izz>0.011</izz>
@@ -2418,7 +2418,7 @@
         <material>
           <script>
             <name>Gazebo/Black</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -2433,7 +2433,7 @@
         <material>
           <script>
             <name>Gazebo/White</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -2476,7 +2476,7 @@
         <inertia>
           <ixx>0.0013745</ixx>
           <ixy>0</ixy>
-          <ixz>1.05879e-22</ixz>
+          <ixz>9.72454e-23</ixz>
           <iyy>0.0015245</iyy>
           <iyz>0</iyz>
           <izz>0.00152</izz>
@@ -2555,7 +2555,7 @@
         <material>
           <script>
             <name>Gazebo/Black</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -2570,7 +2570,7 @@
         <material>
           <script>
             <name>Gazebo/White</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -2606,7 +2606,7 @@
       </axis>
     </joint>
     <link name='shoulder_link1_right'>
-      <pose>-6.80333e-07 -0.22 0.82 1.57079 1.36511e-18 -3.58979e-09</pose>
+      <pose>-6.80333e-07 -0.22 0.82 1.57079 -1.22563e-16 -3.58979e-09</pose>
       <inertial>
         <pose>0 0 0 0 -0 0</pose>
         <mass>0.25</mass>
@@ -2647,7 +2647,7 @@
         <material>
           <script>
             <name>Gazebo/Black</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -2662,7 +2662,7 @@
       <child>shoulder_link1_right</child>
       <parent>torso_slider</parent>
       <axis>
-        <xyz>1 -3.58979e-09 -1.36511e-18</xyz>
+        <xyz>1 -3.58979e-09 1.22563e-16</xyz>
         <limit>
           <lower>-1.57</lower>
           <upper>0</upper>
@@ -2675,7 +2675,7 @@
       </axis>
     </joint>
     <link name='shoulder_link2_right'>
-      <pose>-6.80333e-07 -0.22 0.82 -7.34641e-06 1.36511e-18 -3.58979e-09</pose>
+      <pose>-6.80333e-07 -0.22 0.82 -7.34641e-06 -1.22563e-16 -3.58979e-09</pose>
       <inertial>
         <pose>0 0 0 0 -0 0</pose>
         <mass>0.15</mass>
@@ -2714,7 +2714,7 @@
         <material>
           <script>
             <name>Gazebo/Black</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -2742,7 +2742,7 @@
       </axis>
     </joint>
     <link name='upper_arm_right'>
-      <pose>-6.80333e-07 -0.22 0.82 1.57079 1.36511e-18 -3.58979e-09</pose>
+      <pose>-6.80333e-07 -0.22 0.82 1.57079 -1.22563e-16 -3.58979e-09</pose>
       <inertial>
         <pose>-3.3557e-05 -0.200403 0 0 -0 0</pose>
         <mass>2.98</mass>
@@ -2857,7 +2857,7 @@
         <material>
           <script>
             <name>amigo_description/white</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -2872,7 +2872,7 @@
         <material>
           <script>
             <name>Gazebo/Grey</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -2886,7 +2886,7 @@
         <material>
           <script>
             <name>Gazebo/Black</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -2901,7 +2901,7 @@
         <material>
           <script>
             <name>Gazebo/Black</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -2928,7 +2928,7 @@
       <child>upper_arm_right</child>
       <parent>shoulder_link2_right</parent>
       <axis>
-        <xyz>1.31874e-14 3.67321e-06 1</xyz>
+        <xyz>1.30635e-14 3.67321e-06 1</xyz>
         <limit>
           <lower>-1.57</lower>
           <upper>1.57</upper>
@@ -2941,7 +2941,7 @@
       </axis>
     </joint>
     <link name='elbow_link4_right'>
-      <pose>0.00999932 -0.220001 0.5 -7.34641e-06 1.36511e-18 -3.58979e-09</pose>
+      <pose>0.00999932 -0.220001 0.5 -7.34641e-06 -1.22563e-16 -3.58979e-09</pose>
       <inertial>
         <pose>0 0 0 0 -0 0</pose>
         <mass>0.1</mass>
@@ -2982,7 +2982,7 @@
         <material>
           <script>
             <name>Gazebo/Grey</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -3010,7 +3010,7 @@
       </axis>
     </joint>
     <link name='fore_arm_right'>
-      <pose>0.00999932 -0.220001 0.5 1.57079 1.36511e-18 -3.58979e-09</pose>
+      <pose>0.00999932 -0.220001 0.5 1.57079 -1.22563e-16 -3.58979e-09</pose>
       <inertial>
         <pose>2.32558e-05 -0.1385 0 0 -0 0</pose>
         <mass>0.86</mass>
@@ -3076,7 +3076,7 @@
         <material>
           <script>
             <name>amigo_description/white</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -3091,7 +3091,7 @@
         <material>
           <script>
             <name>Gazebo/Black</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -3110,7 +3110,7 @@
       <child>fore_arm_right</child>
       <parent>elbow_link4_right</parent>
       <axis>
-        <xyz>1.31874e-14 3.67321e-06 1</xyz>
+        <xyz>1.30635e-14 3.67321e-06 1</xyz>
         <limit>
           <lower>-1.83</lower>
           <upper>1.83</upper>
@@ -3132,7 +3132,7 @@
           <ixy>0</ixy>
           <ixz>0</ixz>
           <iyy>0.0352227</iyy>
-          <iyz>4.1359e-25</iyz>
+          <iyz>9.55216e-26</iyz>
           <izz>0.00300267</izz>
         </inertia>
       </inertial>
@@ -3213,7 +3213,7 @@
         <material>
           <script>
             <name>Gazebo/Black</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -3227,7 +3227,7 @@
         <material>
           <script>
             <name>Gazebo/Grey</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -3242,7 +3242,7 @@
         <material>
           <script>
             <name>Gazebo/Grey</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -3341,7 +3341,7 @@
         <material>
           <script>
             <name>Gazebo/Grey</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -3355,7 +3355,7 @@
         <material>
           <script>
             <name>Gazebo/Blue</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -3394,7 +3394,7 @@
         <inertia>
           <ixx>0.0110045</ixx>
           <ixy>0</ixy>
-          <ixz>1.05879e-22</ixz>
+          <ixz>9.72454e-23</ixz>
           <iyy>0.0110045</iyy>
           <iyz>0</iyz>
           <izz>0.011</izz>
@@ -3473,7 +3473,7 @@
         <material>
           <script>
             <name>Gazebo/Black</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -3488,7 +3488,7 @@
         <material>
           <script>
             <name>Gazebo/White</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -3531,7 +3531,7 @@
         <inertia>
           <ixx>0.0013745</ixx>
           <ixy>0</ixy>
-          <ixz>1.05879e-22</ixz>
+          <ixz>9.72454e-23</ixz>
           <iyy>0.0015245</iyy>
           <iyz>0</iyz>
           <izz>0.00152</izz>
@@ -3610,7 +3610,7 @@
         <material>
           <script>
             <name>Gazebo/Black</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -3625,7 +3625,7 @@
         <material>
           <script>
             <name>Gazebo/White</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -3668,7 +3668,7 @@
         <inertia>
           <ixx>0.0110045</ixx>
           <ixy>0</ixy>
-          <ixz>1.05879e-22</ixz>
+          <ixz>9.72454e-23</ixz>
           <iyy>0.0110045</iyy>
           <iyz>0</iyz>
           <izz>0.011</izz>
@@ -3747,7 +3747,7 @@
         <material>
           <script>
             <name>Gazebo/Black</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -3762,7 +3762,7 @@
         <material>
           <script>
             <name>Gazebo/White</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -3805,7 +3805,7 @@
         <inertia>
           <ixx>0.0013745</ixx>
           <ixy>0</ixy>
-          <ixz>1.05879e-22</ixz>
+          <ixz>9.72454e-23</ixz>
           <iyy>0.0015245</iyy>
           <iyz>0</iyz>
           <izz>0.00152</izz>
@@ -3884,7 +3884,7 @@
         <material>
           <script>
             <name>Gazebo/Black</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
@@ -3899,7 +3899,7 @@
         <material>
           <script>
             <name>Gazebo/White</name>
-            <uri>__default__</uri>
+            <uri>file://media/materials/scripts</uri>
           </script>
         </material>
       </visual>
