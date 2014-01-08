@@ -28,5 +28,5 @@ sed -i 's/libPositionController/libPositionController_simple/g' $ROBOT_DESCRIPTI
 ###
 
 # Generate urdf from xacro
-rosrun xacro xacro.py -o $ROBOT_DESCRIPTION_DIR/urdf/amigo_old.urdf $ROBOT_DESCRIPTION_DIR/urdf/xacro/amigo_old.urdf.xacro
+#rosrun xacro xacro.py -o $ROBOT_DESCRIPTION_DIR/urdf/amigo_old.urdf $ROBOT_DESCRIPTION_DIR/urdf/xacro/amigo_old.urdf.xacro
 
