@@ -4056,7 +4056,7 @@
       <package>amigo_controller_configuration_gazebo</package>
       <parameter_file>/parameters/mod_base_controller.yaml</parameter_file>
       <node_namespace>base</node_namespace>
-      <odomTopic>odom</odomTopic>
+      <odomTopic>/amigo/base/measurements</odomTopic>
     </plugin>
     <plugin name='left_gripper_controller' filename='libAmigoGripperController.so'>
       <side>left</side>
