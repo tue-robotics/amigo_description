@@ -378,7 +378,7 @@
           <cameraInfoTopicName>rgb/camera_info</cameraInfoTopicName>
           <depthImageTopicName>depth_registered/image</depthImageTopicName>
           <depthImageCameraInfoTopicName>depth/camera_info</depthImageCameraInfoTopicName>
-          <pointCloudTopicName>rgb/points</pointCloudTopicName>
+          <pointCloudTopicName>depth_registered/points</pointCloudTopicName>
           <frameName>base_kinect/openni_depth_optical_frame</frameName>
         </plugin>
         <pose>0.3 0 0.315 0 -0.07 0</pose>
@@ -1111,15 +1111,15 @@
     <link name='neck_tilt'>
       <pose>-8.52183e-07 7.08731e-05 0.9115 -0.00159265 -4.58319e-17 -3.58979e-09</pose>
       <inertial>
-        <pose>0.0220548 0.00257534 0.0415753 0 -0 0</pose>
+        <pose>0.0220162 0.0183285 0.0510274 0 -0 0</pose>
         <mass>0.073</mass>
         <inertia>
-          <ixx>0.00333026</ixx>
-          <ixy>-9.0137e-06</ixy>
-          <ixz>-4.57637e-05</ixz>
-          <iyy>0.00340432</iyy>
-          <iyz>-5.34384e-06</iyz>
-          <izz>0.00338032</izz>
+          <ixx>0.00343592</ixx>
+          <ixy>-6.40062e-05</ixy>
+          <ixz>-7.87078e-05</ixz>
+          <iyy>0.00345746</iyy>
+          <iyz>-6.55243e-05</iyz>
+          <izz>0.00343231</izz>
         </inertia>
       </inertial>
       <collision name='neck_tilt_collision'>
@@ -1211,7 +1211,7 @@
         </material>
       </visual>
       <visual name='neck_tilt_visual_top_kinect/openni_camera'>
-        <pose>0.07 0 0.07 0 -0 0</pose>
+        <pose>0.07 0.05 0.1 0 0.01 0.015</pose>
         <geometry>
           <box>
             <size>0 0 0</size>
@@ -1248,7 +1248,7 @@
           <cameraInfoTopicName>rgb/camera_info</cameraInfoTopicName>
           <depthImageTopicName>depth_registered/image</depthImageTopicName>
           <depthImageCameraInfoTopicName>depth/camera_info</depthImageCameraInfoTopicName>
-          <pointCloudTopicName>rgb/points</pointCloudTopicName>
+          <pointCloudTopicName>depth_registered/points</pointCloudTopicName>
           <frameName>top_kinect/openni_depth_optical_frame</frameName>
         </plugin>
         <pose>0.07 0 0.07 0 -0 0</pose>

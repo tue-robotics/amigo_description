@@ -633,7 +633,7 @@
   </joint>
   <!--========BUILD KINECT======-->
   <joint name="top_kinect/base_kinect_joint" type="fixed">
-    <origin rpy="0 0 0" xyz="0.07 0 0.07"/>
+    <origin rpy="0 0.01 0.015" xyz="0.07 0.05 0.10"/>
     <!-- THESE VALUES ARE ROUGH ESTIMATES!! -->
     <parent link="head"/>
     <child link="top_kinect/openni_camera"/>
@@ -2405,7 +2405,7 @@
         <cameraInfoTopicName>rgb/camera_info</cameraInfoTopicName>
         <depthImageTopicName>depth_registered/image</depthImageTopicName>
         <depthImageCameraInfoTopicName>depth/camera_info</depthImageCameraInfoTopicName>
-        <pointCloudTopicName>rgb/points</pointCloudTopicName>
+        <pointCloudTopicName>depth_registered/points</pointCloudTopicName>
         <frameName>base_kinect/openni_depth_optical_frame</frameName>
       </plugin>
       <pose>0.300000 0.000000 0.315000 0.000000 -0.070000 0.000000</pose>
@@ -2500,7 +2500,7 @@
         <cameraInfoTopicName>rgb/camera_info</cameraInfoTopicName>
         <depthImageTopicName>depth_registered/image</depthImageTopicName>
         <depthImageCameraInfoTopicName>depth/camera_info</depthImageCameraInfoTopicName>
-        <pointCloudTopicName>rgb/points</pointCloudTopicName>
+        <pointCloudTopicName>depth_registered/points</pointCloudTopicName>
         <frameName>top_kinect/openni_depth_optical_frame</frameName>
       </plugin>
       <pose>0.070000 0.000000 0.070000 0.000000 0.000000 0.000000</pose>
