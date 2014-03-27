@@ -1,0 +1,15 @@
+<package>
+  <name>amigo_description</name>
+  <version>1.0.0</version>
+  <description>This package contains the description (mechanical, kinematic, visual,
+  etc.) of the AMIGO robot.</description>
+  <maintainer email="s.v.d.dries@tue.nl">Sjoerd van den Dries</maintainer>
+
+  <license>BSD</license>
+
+  <author>Sjoerd van den Dries</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <run_depend>xacro</run_depend>
+</package>
