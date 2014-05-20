@@ -441,15 +441,15 @@
     <link name='torso_slider'>
       <pose>0 0 0.635 -3.58979e-09 -1.57079 3.14159</pose>
       <inertial>
-        <pose>0.131602 0 0.00219751 0 -0 0</pose>
+        <pose>0.131603 0 0.00219751 0 -0 0</pose>
         <mass>16.951</mass>
         <inertia>
           <ixx>0.0979069</ixx>
           <ixy>0</ixy>
-          <ixz>0.00337548</ixz>
-          <iyy>0.0933371</iyy>
+          <ixz>0.00337551</ixz>
+          <iyy>0.0933399</iyy>
           <iyz>1.69407e-21</iyz>
-          <izz>0.10517</izz>
+          <izz>0.105173</izz>
         </inertia>
       </inertial>
       <collision name='torso_slider_collision'>
@@ -1040,7 +1040,7 @@
       </axis>
     </joint>
     <link name='neck_pan'>
-      <pose>-8.52184e-07 0 0.867 -0.00159265 -4.58319e-17 -3.58979e-09</pose>
+      <pose>-8.99935e-07 5.16988e-26 0.88 -0.00159265 -4.58319e-17 -3.58979e-09</pose>
       <inertial>
         <pose>0 0 0.0335 0 -0 0</pose>
         <mass>0.05</mass>
@@ -1109,16 +1109,16 @@
       </axis>
     </joint>
     <link name='neck_tilt'>
-      <pose>-8.52183e-07 7.08731e-05 0.9115 -0.00159265 -4.58319e-17 -3.58979e-09</pose>
+      <pose>-8.99935e-07 7.08731e-05 0.9245 -0.00159265 -4.58319e-17 -3.58979e-09</pose>
       <inertial>
-        <pose>0.0220162 0.0183285 0.0510274 0 -0 0</pose>
+        <pose>0.0220167 0.018328 0.0510789 0 -0 0</pose>
         <mass>0.073</mass>
         <inertia>
-          <ixx>0.00343592</ixx>
-          <ixy>-6.40062e-05</ixy>
-          <ixz>-7.87078e-05</ixz>
-          <iyy>0.00345746</iyy>
-          <iyz>-6.55243e-05</iyz>
+          <ixx>0.00343629</ixx>
+          <ixy>-6.40063e-05</ixy>
+          <ixz>-7.8889e-05</ixz>
+          <iyy>0.00345783</iyy>
+          <iyz>-6.57138e-05</iyz>
           <izz>0.00343231</izz>
         </inertia>
       </inertial>
@@ -1211,7 +1211,7 @@
         </material>
       </visual>
       <visual name='neck_tilt_visual_top_kinect/openni_camera'>
-        <pose>0.07 0.05 0.1 0 0.01 0.015</pose>
+        <pose>0.07 0.05 0.1 0.02 0.01 0.015</pose>
         <geometry>
           <box>
             <size>0 0 0</size>
