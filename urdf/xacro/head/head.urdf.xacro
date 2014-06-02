@@ -21,7 +21,7 @@
   <parent link="torso"/>
   <child link="head_mount"/>
   <axis xyz="0 0 1"/>
-  <origin xyz="0.11 0.0 0.0" rpy="  0.0 0.0 0.0"/>
+  <origin xyz="0.11 0.0 0.0426" rpy="0.0 0.0 0.0"/>
 </joint>
 
 <!-- the link that represents the panning part of the neck, is below neck_tilt -->
@@ -44,7 +44,7 @@
 <!--the head itself-->
  <my_link_texturedmesh name="head" mass="0" texture="white">
    <origin xyz="0 0 0.041" rpy="0 0 0"/>
-   <origin xyz="0.0 0.0 0.141" rpy="0 0 -1.5708"/>
+   <origin xyz="0.0 0.0 0.141" rpy="0 0 -1.5708"/><!-- Updated for visual purpose -->
    <inertia ixx="0"  ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" /> 
    <mesh filename="package://amigo_description/media/meshes/headtextured.dae" scale="0.0004 0.0004 0.0004"/>
   </my_link_texturedmesh>
@@ -57,14 +57,14 @@
  
 <!-- the tilt and pan joints-->
 <xacro:my_joint name="neck_pan_joint" type="revolute" parent="head_mount" child="neck_pan">
-   <origin xyz="0.0 0.0 0.0" rpy="3.14 -1.5708 0.0"/> 
+   <origin xyz="0.0 0.0 0.0" rpy="3.1415 -1.5708 0.0"/> 
    <dynamics damping="0.1" friction="0"/>
    <axis xyz="0 0 1"/>
    <limit effort="13.4" velocity="1.0" lower="-1.5708" upper="1.5708" /> 
 </xacro:my_joint>
 
 <xacro:my_joint name="neck_tilt_joint" type="revolute" parent="neck_pan" child="neck_tilt">
-   <origin xyz="0.0 0.0 0.0445" rpy="0.0 0.0 0.0"/> 
+   <origin xyz="0.0 0.0 0.0445" rpy="0.0 0.015 0.0"/> 
    <dynamics damping="0.1" friction="0.0"/>
    <axis xyz="0 1 0"/>
    <limit effort="13.4" velocity="1.0" lower="-0.5" upper="0.88" /> 

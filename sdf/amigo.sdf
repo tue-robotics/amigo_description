@@ -3,15 +3,15 @@
     <link name='base_link'>
       <pose>0 0 0 0 -0 0</pose>
       <inertial>
-        <pose>0.0081432 9.1072e-06 0.377224 0 -0 0</pose>
+        <pose>0.00849334 9.1072e-06 0.37861 0 -0 0</pose>
         <mass>20.643</mass>
         <inertia>
-          <ixx>2.66375</ixx>
-          <ixy>-5.48691e-05</ixy>
-          <ixz>0.0225499</ixz>
-          <iyy>2.71442</iyy>
-          <iyz>1.16982e-05</iyz>
-          <izz>2.46328</izz>
+          <ixx>2.65743</ixx>
+          <ixy>-5.48033e-05</ixy>
+          <ixz>0.0145212</ixz>
+          <iyy>2.71256</iyy>
+          <iyz>1.19587e-05</iyz>
+          <izz>2.46774</izz>
         </inertia>
       </inertial>
       <collision name='base_link_collision'>
@@ -98,7 +98,7 @@
         </surface>
       </collision>
       <collision name='base_link_collision_base_laser'>
-        <pose>0.305 0 0.175 0 -0 0</pose>
+        <pose>0.318901 -7.49972e-05 0.23 0 -0 0.015</pose>
         <geometry>
           <box>
             <size>0.05 0.065 0.12</size>
@@ -163,7 +163,7 @@
         </surface>
       </collision>
       <collision name='base_link_collision_lasertop'>
-        <pose>0.305 0 0.24 0 -0 0</pose>
+        <pose>0.318901 -7.49972e-05 0.295 0 -0 0.015</pose>
         <geometry>
           <box>
             <size>0.05 0.065 0.01</size>
@@ -195,7 +195,7 @@
         </surface>
       </collision>
       <collision name='base_link_collision_logo'>
-        <pose>0.335 0 0.1 0 -0 3.1415</pose>
+        <pose>0.348897 0.000374986 0.155 0 -0 -3.12669</pose>
         <geometry>
           <mesh>
             <scale>0.0016 0.0016 0.0016</scale>
@@ -279,7 +279,7 @@
         </material>
       </visual>
       <visual name='base_link_visual_base_laser'>
-        <pose>0.305 0 0.175 0 -0 0</pose>
+        <pose>0.318901 -7.49972e-05 0.23 0 -0 0.015</pose>
         <geometry>
           <box>
             <size>0.05 0.065 0.12</size>
@@ -320,7 +320,7 @@
         </material>
       </visual>
       <visual name='base_link_visual_lasertop'>
-        <pose>0.305 0 0.24 0 -0 0</pose>
+        <pose>0.318901 -7.49972e-05 0.295 0 -0 0.015</pose>
         <geometry>
           <box>
             <size>0.05 0.065 0.01</size>
@@ -334,7 +334,7 @@
         </material>
       </visual>
       <visual name='base_link_visual_logo'>
-        <pose>0.335 0 0.1 0 -0 3.1415</pose>
+        <pose>0.348897 0.000374986 0.155 0 -0 -3.12669</pose>
         <geometry>
           <mesh>
             <scale>0.0016 0.0016 0.0016</scale>
@@ -441,13 +441,13 @@
     <link name='torso_slider'>
       <pose>0 0 0.635 -3.58979e-09 -1.57079 3.14159</pose>
       <inertial>
-        <pose>0.131603 0 0.00219751 0 -0 0</pose>
+        <pose>0.131603 0 0.00220002 0 -0 0</pose>
         <mass>16.951</mass>
         <inertia>
-          <ixx>0.0979069</ixx>
+          <ixx>0.0979085</ixx>
           <ixy>0</ixy>
-          <ixz>0.00337551</ixz>
-          <iyy>0.0933399</iyy>
+          <ixz>0.00337068</ixz>
+          <iyy>0.0933415</iyy>
           <iyz>1.69407e-21</iyz>
           <izz>0.105173</izz>
         </inertia>
@@ -1040,7 +1040,7 @@
       </axis>
     </joint>
     <link name='neck_pan'>
-      <pose>-8.99935e-07 5.16988e-26 0.88 -0.00159265 -4.58319e-17 -3.58979e-09</pose>
+      <pose>0.0425991 -1.52925e-10 0.88 -9.26536e-05 1.18826e-16 -3.58979e-09</pose>
       <inertial>
         <pose>0 0 0.0335 0 -0 0</pose>
         <mass>0.05</mass>
@@ -1096,7 +1096,7 @@
       <child>neck_pan</child>
       <parent>torso_slider</parent>
       <axis>
-        <xyz>5.71725e-12 0.00159265 0.999999</xyz>
+        <xyz>3.32726e-13 9.26536e-05 1</xyz>
         <limit>
           <lower>-1.5708</lower>
           <upper>1.5708</upper>
@@ -1109,17 +1109,17 @@
       </axis>
     </joint>
     <link name='neck_tilt'>
-      <pose>-8.99935e-07 7.08731e-05 0.9245 -0.00159265 -4.58319e-17 -3.58979e-09</pose>
+      <pose>0.0425991 4.12293e-06 0.9245 -9.2664e-05 0.015 -1.3935e-06</pose>
       <inertial>
-        <pose>0.0220167 0.018328 0.0510789 0 -0 0</pose>
+        <pose>0.0109889 0.00154061 0.0510274 0 -0 0</pose>
         <mass>0.073</mass>
         <inertia>
-          <ixx>0.00343629</ixx>
-          <ixy>-6.40063e-05</ixy>
-          <ixz>-7.8889e-05</ixz>
-          <iyy>0.00345783</iyy>
-          <iyz>-6.57138e-05</iyz>
-          <izz>0.00343231</izz>
+          <ixx>0.00338239</ixx>
+          <ixy>-2.64965e-06</ixy>
+          <ixz>-3.92852e-05</ixz>
+          <iyy>0.0033997</iyy>
+          <iyz>-5.5077e-06</iyz>
+          <izz>0.00332102</izz>
         </inertia>
       </inertial>
       <collision name='neck_tilt_collision'>
@@ -1211,7 +1211,7 @@
         </material>
       </visual>
       <visual name='neck_tilt_visual_top_kinect/openni_camera'>
-        <pose>0.07 0.05 0.1 0.02 0.01 0.015</pose>
+        <pose>0.035 0 0.1 0 -0 0.025</pose>
         <geometry>
           <box>
             <size>0 0 0</size>
@@ -1264,7 +1264,7 @@
       <child>neck_tilt</child>
       <parent>neck_pan</parent>
       <axis>
-        <xyz>3.58979e-09 0.999999 -0.00159265</xyz>
+        <xyz>3.58979e-09 1 -9.26536e-05</xyz>
         <limit>
           <lower>-0.5</lower>
           <upper>0.88</upper>
