@@ -3,15 +3,15 @@
     <link name='base_link'>
       <pose>0 0 0 0 -0 0</pose>
       <inertial>
-        <pose>0.00849334 9.1072e-06 0.37861 0 -0 0</pose>
-        <mass>20.643</mass>
+        <pose>0.0016583 8.88763e-06 0.376474 0 -0 0</pose>
+        <mass>21.153</mass>
         <inertia>
-          <ixx>2.65743</ixx>
-          <ixy>-5.48033e-05</ixy>
-          <ixz>0.0145212</ixz>
-          <iyy>2.71256</iyy>
-          <iyz>1.19587e-05</iyz>
-          <izz>2.46774</izz>
+          <ixx>2.66154</ixx>
+          <ixy>-5.60882e-05</ixy>
+          <ixz>0.00201868</ixz>
+          <iyy>2.75667</iyy>
+          <iyz>1.1557e-05</iyz>
+          <izz>2.50794</izz>
         </inertia>
       </inertial>
       <collision name='base_link_collision'>
@@ -22,6 +22,70 @@
             <radius>0</radius>
           </cylinder>
         </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='base_link_collision_back_laser'>
+        <pose>-0.270002 -0.000157937 0.225 0 -0 3.11</pose>
+        <geometry>
+          <box>
+            <size>0.05 0.065 0.12</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='base_link_collision_back_lasertop'>
+        <pose>-0.270002 -0.000157937 0.29 0 -0 3.11</pose>
+        <geometry>
+          <box>
+            <size>0.05 0.065 0.01</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
         <surface>
           <contact>
             <ode/>
@@ -248,6 +312,46 @@
           </script>
         </material>
       </visual>
+      <visual name='base_link_visual_back_laser'>
+        <pose>-0.270002 -0.000157937 0.225 0 -0 3.11</pose>
+        <geometry>
+          <box>
+            <size>0.05 0.065 0.12</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Black</name>
+            <uri>model://media/materials/scripts/tue_mats.material</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='base_link_visual_back_lasertop'>
+        <pose>-0.270002 -0.000157937 0.29 0 -0 3.11</pose>
+        <geometry>
+          <box>
+            <size>0.05 0.065 0.01</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Black</name>
+            <uri>model://media/materials/scripts/tue_mats.material</uri>
+          </script>
+        </material>
+        <material>
+          <script>
+            <name>amigo_description/orange</name>
+            <uri>model://media/materials/scripts/tue_mats.material</uri>
+          </script>
+        </material>
+        <material>
+          <script>
+            <name>amigo_description/orange</name>
+            <uri>model://media/materials/scripts/tue_mats.material</uri>
+          </script>
+        </material>
+      </visual>
       <visual name='base_link_visual_base'>
         <pose>0 0 0.285 0 0 -1.5708</pose>
         <geometry>
@@ -415,6 +519,14 @@
         </plugin>
         <pose>0.31 0 0.24 0 -0 0</pose>
       </sensor>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
       <velocity_decay>
         <linear>0</linear>
         <angular>0</angular>

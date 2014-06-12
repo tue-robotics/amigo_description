@@ -521,13 +521,78 @@
     <parent link="torso_laser"/>
     <child link="torso_lasertop"/>
   </joint>
+  <author>Max Baeten</author>
+  <license>BSD</license>
+  <review notes="" status="unreviewed"/>
+  <link name="back_laser">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <mass value="0.5"/>
+      <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="-0.005 0.0 -0.065"/>
+      <geometry>
+        <box size="0.05 0.065 0.12"/>
+      </geometry>
+      <material name="Black">
+     </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="-0.005 0.0 -0.065"/>
+      <geometry>
+        <box size="0.05 0.065 0.12"/>
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="back_laser">
+    <material>Gazebo/Black</material>
+    <turnGravityOff>false</turnGravityOff>
+  </gazebo>
+  <joint name="back_laser_joint" type="fixed">
+    <parent link="base"/>
+    <child link="back_laser"/>
+    <origin rpy="0 0 3.11" xyz="-0.275 0.0 0.235"/>
+    <axis xyz="0 1 0"/>
+    <dynamics damping="0.1" friction="0"/>
+    <limit effort="13.4" lower="-0.7809" upper="1.5708" velocity="1.0"/>
+  </joint>
+  <link name="back_lasertop">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <mass value="0.01"/>
+      <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="-0.005 0.0 0.0"/>
+      <geometry>
+        <box size="0.05 0.065 0.01"/>
+      </geometry>
+      <material name="amigo_description/orange">
+     </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="-0.005 0.0 0.0"/>
+      <geometry>
+        <box size="0.05 0.065 0.01"/>
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="back_lasertop">
+    <material>amigo_description/orange</material>
+    <turnGravityOff>false</turnGravityOff>
+  </gazebo>
+  <joint name="back_lasertop_joint" type="fixed">
+    <parent link="back_laser"/>
+    <child link="back_lasertop"/>
+  </joint>
   <!--========BUILD HEAD======-->
   <author>Kris van Tienhoven</author>
   <license>BSD</license>
   <review notes="" status="unreviewed"/>
   <link name="head_mount">
     <inertial>
-      <origin rpy="0 0 0.0" xyz="0.0 0.0 0.0"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
       <mass value="0.001"/>
       <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/>
     </inertial>
@@ -536,7 +601,6 @@
     <parent link="torso"/>
     <child link="head_mount"/>
     <axis xyz="0 0 1"/>
-    <!--<origin xyz="0.11 0.0 0.0426" rpy="  -0.07 0.0 0.0"/>-->
     <origin rpy="0.0 0.0 0.0" xyz="0.11 0.0 0.0426"/>
   </joint>
   <link name="neck_pan">
@@ -634,10 +698,6 @@
   </joint>
   <!--========BUILD KINECT======-->
   <joint name="top_kinect/base_kinect_joint" type="fixed">
-    <!--<origin xyz="0.07 0.05 0.10" rpy="0.02 0.01 0.015" />-->
-    <!-- THESE VALUES ARE ROUGH ESTIMATES!! -->
-    <!--<origin xyz="0.035 0.0 0.10" rpy="0.0 0.0 0.05" />-->
-    <!-- THESE VALUES ARE ROUGH ESTIMATES!! -->
     <origin rpy="0.0 0.0 0.025" xyz="0.035 0.0 0.10"/>
     <!-- THESE VALUES ARE ROUGH ESTIMATES!! -->
     <origin rpy="0.0 0.0 0.025" xyz="0.035 0.0 0.10"/>
@@ -667,7 +727,6 @@
     </collision>-->
   </link>
   <joint name="top_kinect/kinect_depth_joint" type="fixed">
-    <!--<origin xyz="0 0.018 0" rpy="0 0 0" />-->
     <origin rpy="0 0 0" xyz="0 0.0125 0"/>
     <parent link="top_kinect/openni_camera"/>
     <child link="top_kinect/openni_depth_frame"/>
@@ -692,7 +751,6 @@
     </inertial>
   </link>
   <joint name="top_kinect/kinect_rgb_joint" type="fixed">
-    <!--<origin xyz="0 -0.005 0" rpy="0 0 0" />-->
     <origin rpy="0 0 0" xyz="0 -0.0125 0"/>
     <parent link="top_kinect/openni_camera"/>
     <child link="top_kinect/openni_rgb_frame"/>
