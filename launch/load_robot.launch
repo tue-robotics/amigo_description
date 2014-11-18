@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+
+    <!-- load robot -->
+    <param name="/amigo/robot_description" textfile="$(find amigo_description)/urdf/amigo.urdf" />
+		
+ </launch>
+  
