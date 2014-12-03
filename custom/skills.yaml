@@ -4,11 +4,17 @@ torso:
         reset: [0.35]
         lower_limit: [0.08]
         upper_limit: [0.41]
-    
+
 arm:
     joint_names: ['shoulder_yaw_joint', 'shoulder_pitch_joint', 'shoulder_roll_joint', 'elbow_pitch_joint', 'elbow_roll_joint', 'wrist_pitch_joint', 'wrist_yaw_joint']
     default_configurations:
         reset: [-0.1,-0.2,0.2,0.8,0.0,0.0,0.0]
+    default_trajectories:
+        prepare_grasp:
+            - [-0.1, -0.6, 0.1, 1.2, 0.0, 0.1, 0.0]
+            - [-0.1, -0.8, 0.1, 1.6, 0.0, 0.2, 0.0]
+            - [-0.1, -1.0, 0.1, 2.0, 0.0, 0.3, 0.0]
+            - [-0.1, -0.5, 0.1, 2.0, 0.0, 0.3, 0.0]
     offset:
         left:  {x: 0.05, y: -0.03, z: 0.05, roll: 0.0, pitch: 0.0, yaw: 0.0}
         right: {x: 0.05, y: 0.03,  z: 0.03, roll: 0.0, pitch: 0.0, yaw: 0.0}
