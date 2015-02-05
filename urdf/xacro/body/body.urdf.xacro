@@ -61,7 +61,7 @@
   <parent link="torso_slider"/>
   <child link="torso"/>
   <axis xyz="1 0 0"/>
-  <origin xyz="0.135 0.0 0.0" rpy="0 0 0"/>
+  <origin xyz="0.1 0.0 0.0" rpy="0 0 0"/>
 </joint>
 
 </robot>
