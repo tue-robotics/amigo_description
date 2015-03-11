@@ -165,7 +165,7 @@
     <origin rpy="3.14159265 -1.5708 0" xyz="0.0 0.0 0.58"/>
     <dynamics damping="3" friction="0.0"/>
     <!--*-->
-    <limit effort="1000" lower="0.075" upper="0.41" velocity="10.0"/>
+    <limit effort="1000" lower="0.09" upper="0.4" velocity="10.0"/>
     <!--*-->
   </joint>
   <joint name="base_link_joint" type="fixed">
@@ -482,7 +482,7 @@
   <joint name="torso_dummy_joint" type="fixed">
     <parent link="torso"/>
     <child link="torso_dummy"/>
-    <origin rpy="0.0 -1.57 0.0" xyz="-0.0994 0.0 0.075"/>
+    <origin rpy="0.0 -1.57 0.0" xyz="-0.0994 0.0 0.09"/>
     <axis xyz="0 1 0"/>
     <dynamics damping="0.1" friction="0"/>
     <limit effort="13.4" lower="-0.7809" upper="1.5708" velocity="1.0"/>
