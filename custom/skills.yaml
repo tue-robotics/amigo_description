@@ -5,6 +5,7 @@ skills:
             reset: [0.35]
             lower_limit: [0.08]
             upper_limit: [0.41]
+        default_tolerance: [0.005]
 
     arm:
         joint_names: ['shoulder_yaw_joint', 'shoulder_pitch_joint', 'shoulder_roll_joint', 'elbow_pitch_joint', 'elbow_roll_joint', 'wrist_pitch_joint', 'wrist_yaw_joint']
