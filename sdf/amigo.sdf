@@ -1450,7 +1450,7 @@
           <lower>-1.57</lower>
           <upper>0</upper>
           <effort>13.4</effort>
-          <velocity>1</velocity>
+          <velocity>0.4</velocity>
         </limit>
         <dynamics>
           <damping>4</damping>
@@ -1517,7 +1517,7 @@
           <lower>-1.57</lower>
           <upper>1.57</upper>
           <effort>13.4</effort>
-          <velocity>1</velocity>
+          <velocity>0.4</velocity>
         </limit>
         <dynamics>
           <damping>4</damping>
@@ -1716,7 +1716,7 @@
           <lower>-1.57</lower>
           <upper>1.57</upper>
           <effort>9.8</effort>
-          <velocity>1</velocity>
+          <velocity>0.6</velocity>
         </limit>
         <dynamics>
           <damping>3.8</damping>
@@ -1785,7 +1785,7 @@
           <lower>0</lower>
           <upper>2.23</upper>
           <effort>4.5</effort>
-          <velocity>1</velocity>
+          <velocity>0.8</velocity>
         </limit>
         <dynamics>
           <damping>3</damping>
@@ -1898,7 +1898,7 @@
           <lower>-1.83</lower>
           <upper>1.83</upper>
           <effort>4.5</effort>
-          <velocity>1</velocity>
+          <velocity>0.8</velocity>
         </limit>
         <dynamics>
           <damping>3.5</damping>
@@ -2779,7 +2779,7 @@
           <lower>-1.57</lower>
           <upper>0</upper>
           <effort>13.4</effort>
-          <velocity>1</velocity>
+          <velocity>0.4</velocity>
         </limit>
         <dynamics>
           <damping>4</damping>
@@ -2846,7 +2846,7 @@
           <lower>-1.57</lower>
           <upper>1.57</upper>
           <effort>13.4</effort>
-          <velocity>1</velocity>
+          <velocity>0.4</velocity>
         </limit>
         <dynamics>
           <damping>4</damping>
@@ -3045,7 +3045,7 @@
           <lower>-1.57</lower>
           <upper>1.57</upper>
           <effort>9.8</effort>
-          <velocity>1</velocity>
+          <velocity>0.6</velocity>
         </limit>
         <dynamics>
           <damping>3.8</damping>
@@ -3114,7 +3114,7 @@
           <lower>0</lower>
           <upper>2.23</upper>
           <effort>4.5</effort>
-          <velocity>1</velocity>
+          <velocity>0.8</velocity>
         </limit>
         <dynamics>
           <damping>3</damping>
@@ -3227,7 +3227,7 @@
           <lower>-1.83</lower>
           <upper>1.83</upper>
           <effort>4.5</effort>
-          <velocity>1</velocity>
+          <velocity>0.8</velocity>
         </limit>
         <dynamics>
           <damping>3.5</damping>
