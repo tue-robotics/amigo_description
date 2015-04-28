@@ -33,12 +33,8 @@
 </xacro:my_link_texturedmesh>
 
 <!--the root of the tf-tree, because it serves only this function it has no visuals-->
-<xacro:my_link name="base_link" mass="0" color="Red">
-   <cylinder radius="0.0" length="0.00" />
-   <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
-   <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
-   <inertia ixx="0"  ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" /> 
-</xacro:my_link>
+<link name="base_link">
+</link>
 
 <!-- joints start here -->
 <joint name="torso_joint" type="prismatic">

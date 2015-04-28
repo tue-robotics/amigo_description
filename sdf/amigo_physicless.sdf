@@ -14,31 +14,6 @@
           <izz>2.50794</izz>
         </inertia>
       </inertial>
-      <collision name='base_link_collision'>
-        <pose>0 0 0 0 -0 0</pose>
-        <geometry>
-          <cylinder>
-            <length>0</length>
-            <radius>0</radius>
-          </cylinder>
-        </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-      </collision>
       <collision name='base_link_collision_back_laser'>
         <pose>-0.270002 -0.000157937 0.225 0 -0 3.11</pose>
         <geometry>
@@ -46,14 +21,6 @@
             <size>0.05 0.065 0.12</size>
           </box>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
         <surface>
           <contact>
             <ode/>
@@ -78,14 +45,6 @@
             <size>0.05 0.065 0.01</size>
           </box>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
         <surface>
           <contact>
             <ode/>
@@ -127,14 +86,6 @@
             <ode/>
           </friction>
         </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
       <collision name='base_link_collision_base_kinect/openni_camera'>
         <pose>0.3 0 0.315 0 -0.07 0</pose>
@@ -152,14 +103,6 @@
             <ode/>
           </friction>
         </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
       <collision name='base_link_collision_base_laser'>
         <pose>0.318901 -7.49972e-05 0.23 0 -0 0.015</pose>
@@ -168,14 +111,6 @@
             <size>0.05 0.065 0.12</size>
           </box>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
         <surface>
           <contact>
             <ode/>
@@ -217,14 +152,6 @@
             <ode/>
           </friction>
         </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
       <collision name='base_link_collision_lasertop'>
         <pose>0.318901 -7.49972e-05 0.295 0 -0 0.015</pose>
@@ -233,14 +160,6 @@
             <size>0.05 0.065 0.01</size>
           </box>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
         <surface>
           <contact>
             <ode/>
@@ -282,36 +201,7 @@
             <ode/>
           </friction>
         </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
-      <visual name='base_link_visual'>
-        <pose>0 0 0 0 -0 0</pose>
-        <geometry>
-          <cylinder>
-            <length>0</length>
-            <radius>0</radius>
-          </cylinder>
-        </geometry>
-        <material>
-          <script>
-            <name>Gazebo/Red</name>
-            <uri>model://media/materials/scripts/tue_mats.material</uri>
-          </script>
-        </material>
-        <material>
-          <script>
-            <name>amigo_description/bottomcovers</name>
-            <uri>model://media/materials/scripts/tue_mats.material</uri>
-          </script>
-        </material>
-      </visual>
       <visual name='base_link_visual_back_laser'>
         <pose>-0.270002 -0.000157937 0.225 0 -0 3.11</pose>
         <geometry>
@@ -452,10 +342,6 @@
           </script>
         </material>
       </visual>
-      <velocity_decay>
-        <linear>0</linear>
-        <angular>0</angular>
-      </velocity_decay>
       <velocity_decay>
         <linear>0</linear>
         <angular>0</angular>
