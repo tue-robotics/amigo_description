@@ -186,49 +186,49 @@ note: not visible, purely kinematic-->
    <origin xyz="0 0 0" rpy="-1.5708 -1.5708 0"/>
    <dynamics damping="4.0" friction="4.87"/>
    <axis xyz="${rollsign}1 0 0"/>
-   <limit effort="13.4" velocity="0.4" lower="-1.57" upper="0.0" /> 
+   <limit effort="0.2" velocity="0.4" lower="-1.57" upper="0.0" /> 
 </xacro:my_joint>
 
 <xacro:my_joint name="shoulder_pitch_joint_${whichside}" type="revolute" parent="shoulder_link1_${whichside}" child="shoulder_link2_${whichside}">
    <origin xyz="0.0 0.0 0.0" rpy="-1.5708  0 0"/>
    <dynamics damping="4.0" friction="6.06"/>
    <axis xyz="0 -1 0"/>
-   <limit effort="13.4" velocity="0.4" lower="-1.57" upper="1.57" />
+   <limit effort="0.2" velocity="0.4" lower="-1.57" upper="1.57" />
 </xacro:my_joint>
 
 <xacro:my_joint name="shoulder_roll_joint_${whichside}" type="revolute" parent="shoulder_link2_${whichside}" child="upper_arm_${whichside}">
    <origin xyz="0.0 0.0 0.0" rpy="1.5708 0 0.0"/>
    <dynamics damping="3.8" friction="2.216"/>
    <axis xyz="0 ${sidesign} 0"/>
-   <limit effort="9.8" velocity="0.6" lower="-1.57" upper="1.57"/>
+   <limit effort="0.3" velocity="0.6" lower="-1.57" upper="1.57"/>
 </xacro:my_joint>
 
 <xacro:my_joint name="elbow_pitch_joint_${whichside}" type="revolute" parent="upper_arm_${whichside}" child="elbow_link4_${whichside}">
    <origin xyz="0.01 -0.32 0.0" rpy="-1.5708 0 0"/> 
    <dynamics damping="3" friction="1.18"/>
    <axis xyz="0 -1 0"/>
-   <limit effort="4.5" velocity="0.8" lower="0.0" upper="2.23" />
+   <limit effort="0.5" velocity="0.8" lower="0.0" upper="2.23" />
 </xacro:my_joint>
 
 <xacro:my_joint name="elbow_roll_joint_${whichside}" type="revolute" parent="elbow_link4_${whichside}" child="fore_arm_${whichside}">
    <origin xyz="0.0 0.0 0.0" rpy="1.5708 0 0"/>
    <dynamics damping="3.5" friction="1.35"/>
    <axis xyz="0 ${sidesign} 0"/>
-   <limit effort="4.5" velocity="0.8" lower="-1.83" upper="1.83"/>
+   <limit effort="0.5" velocity="0.8" lower="-1.83" upper="1.83"/>
 </xacro:my_joint>
 
 <xacro:my_joint name="wrist_pitch_joint_${whichside}" type="revolute" parent="fore_arm_${whichside}" child="wrist_link6_${whichside}">
    <origin xyz="0.01 -0.28 0.0" rpy="-1.5708 0 -1.5708"/>
    <dynamics damping="0.35" friction="0.63"/>
    <axis xyz="0 -1 0"/>
-   <limit effort="1" velocity="1.0" lower="-0.95" upper="0.95"/>
+   <limit effort="0.5" velocity="1.0" lower="-0.95" upper="0.95"/>
 </xacro:my_joint>
 
 <xacro:my_joint name="wrist_yaw_joint_${whichside}" type="revolute" parent="wrist_link6_${whichside}" child="hand_${whichside}">
    <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
    <dynamics damping="0.3" friction="0.68"/>
    <axis xyz="0 0 ${sidesign}1"/>
-   <limit effort="1" velocity="1.0" lower="-0.61" upper="0.61"/>
+   <limit effort="0.5" velocity="1.0" lower="-0.61" upper="0.61"/>
 </xacro:my_joint>
 
 <xacro:my_joint name="finger1_joint_${whichside}" type="revolute" parent="hand_${whichside}" child="finger1_${whichside}">
