@@ -551,7 +551,7 @@
       <self_collide>0</self_collide>
     </link>
     <link name='torso_slider'>
-      <pose>0 0 0.635 -3.58979e-09 -1.57079 3.14159</pose>
+      <pose>0 0 0.635 -3.58979e-09 -1.57079 -3.14159</pose>
       <inertial>
         <pose>0.0968094 0 0.00220002 0 -0 0</pose>
         <mass>16.951</mass>
@@ -1139,7 +1139,7 @@
       <child>torso_slider</child>
       <parent>base_link</parent>
       <axis>
-        <xyz>-3.67321e-06 2.06795e-25 1</xyz>
+        <xyz>-3.67321e-06 -3.10193e-25 1</xyz>
         <limit>
           <lower>0.09</lower>
           <upper>0.41</upper>
