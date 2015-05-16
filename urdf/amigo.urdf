@@ -142,8 +142,7 @@
     <origin rpy="3.14159265 -1.5708 0" xyz="0.0 0.0 0.58"/>
     <dynamics damping="3" friction="0.0"/>
     <!--*-->
-    <limit effort="1000" lower="0.09" upper="0.41" velocity="10.0"/>
-    <!--*-->
+    <limit effort="0.1" lower="0.075" upper="0.4" velocity="0.07"/>
   </joint>
   <joint name="base_link_joint" type="fixed">
     <parent link="base_link"/>
@@ -1285,7 +1284,7 @@
     <origin rpy="-1.5708 -1.5708 0" xyz="0 0 0"/>
     <axis xyz="+1 0 0"/>
     <dynamics damping="4.0" friction="4.87"/>
-    <limit effort="13.4" lower="-1.57" upper="0.0" velocity="0.4"/>
+    <limit effort="0.2" lower="-1.57" upper="0.0" velocity="0.4"/>
   </joint>
   <joint name="shoulder_pitch_joint_right" type="revolute">
     <parent link="shoulder_link1_right"/>
@@ -1293,7 +1292,7 @@
     <origin rpy="-1.5708  0 0" xyz="0.0 0.0 0.0"/>
     <axis xyz="0 -1 0"/>
     <dynamics damping="4.0" friction="6.06"/>
-    <limit effort="13.4" lower="-1.57" upper="1.57" velocity="0.4"/>
+    <limit effort="0.2" lower="-1.57" upper="1.57" velocity="0.4"/>
   </joint>
   <joint name="shoulder_roll_joint_right" type="revolute">
     <parent link="shoulder_link2_right"/>
@@ -1301,7 +1300,7 @@
     <origin rpy="1.5708 0 0.0" xyz="0.0 0.0 0.0"/>
     <axis xyz="0 1.0 0"/>
     <dynamics damping="3.8" friction="2.216"/>
-    <limit effort="9.8" lower="-1.57" upper="1.57" velocity="0.6"/>
+    <limit effort="0.3" lower="-1.57" upper="1.57" velocity="0.6"/>
   </joint>
   <joint name="elbow_pitch_joint_right" type="revolute">
     <parent link="upper_arm_right"/>
@@ -1309,7 +1308,7 @@
     <origin rpy="-1.5708 0 0" xyz="0.01 -0.32 0.0"/>
     <axis xyz="0 -1 0"/>
     <dynamics damping="3" friction="1.18"/>
-    <limit effort="4.5" lower="0.0" upper="2.23" velocity="0.8"/>
+    <limit effort="0.5" lower="0.0" upper="2.23" velocity="0.8"/>
   </joint>
   <joint name="elbow_roll_joint_right" type="revolute">
     <parent link="elbow_link4_right"/>
@@ -1317,7 +1316,7 @@
     <origin rpy="1.5708 0 0" xyz="0.0 0.0 0.0"/>
     <axis xyz="0 1.0 0"/>
     <dynamics damping="3.5" friction="1.35"/>
-    <limit effort="4.5" lower="-1.83" upper="1.83" velocity="0.8"/>
+    <limit effort="0.5" lower="-1.83" upper="1.83" velocity="0.8"/>
   </joint>
   <joint name="wrist_pitch_joint_right" type="revolute">
     <parent link="fore_arm_right"/>
@@ -1325,7 +1324,7 @@
     <origin rpy="-1.5708 0 -1.5708" xyz="0.01 -0.28 0.0"/>
     <axis xyz="0 -1 0"/>
     <dynamics damping="0.35" friction="0.63"/>
-    <limit effort="1" lower="-0.95" upper="0.95" velocity="1.0"/>
+    <limit effort="0.5" lower="-0.95" upper="0.95" velocity="1.0"/>
   </joint>
   <joint name="wrist_yaw_joint_right" type="revolute">
     <parent link="wrist_link6_right"/>
@@ -1333,7 +1332,7 @@
     <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
     <axis xyz="0 0 1.01"/>
     <dynamics damping="0.3" friction="0.68"/>
-    <limit effort="1" lower="-0.61" upper="0.61" velocity="1.0"/>
+    <limit effort="0.5" lower="-0.61" upper="0.61" velocity="1.0"/>
   </joint>
   <joint name="finger1_joint_right" type="revolute">
     <parent link="hand_right"/>
@@ -1842,7 +1841,7 @@
     <origin rpy="-1.5708 -1.5708 0" xyz="0 0 0"/>
     <axis xyz="-1 0 0"/>
     <dynamics damping="4.0" friction="4.87"/>
-    <limit effort="13.4" lower="-1.57" upper="0.0" velocity="0.4"/>
+    <limit effort="0.2" lower="-1.57" upper="0.0" velocity="0.4"/>
   </joint>
   <joint name="shoulder_pitch_joint_left" type="revolute">
     <parent link="shoulder_link1_left"/>
@@ -1850,7 +1849,7 @@
     <origin rpy="-1.5708  0 0" xyz="0.0 0.0 0.0"/>
     <axis xyz="0 -1 0"/>
     <dynamics damping="4.0" friction="6.06"/>
-    <limit effort="13.4" lower="-1.57" upper="1.57" velocity="0.4"/>
+    <limit effort="0.2" lower="-1.57" upper="1.57" velocity="0.4"/>
   </joint>
   <joint name="shoulder_roll_joint_left" type="revolute">
     <parent link="shoulder_link2_left"/>
@@ -1858,7 +1857,7 @@
     <origin rpy="1.5708 0 0.0" xyz="0.0 0.0 0.0"/>
     <axis xyz="0 -1.0 0"/>
     <dynamics damping="3.8" friction="2.216"/>
-    <limit effort="9.8" lower="-1.57" upper="1.57" velocity="0.6"/>
+    <limit effort="0.3" lower="-1.57" upper="1.57" velocity="0.6"/>
   </joint>
   <joint name="elbow_pitch_joint_left" type="revolute">
     <parent link="upper_arm_left"/>
@@ -1866,7 +1865,7 @@
     <origin rpy="-1.5708 0 0" xyz="0.01 -0.32 0.0"/>
     <axis xyz="0 -1 0"/>
     <dynamics damping="3" friction="1.18"/>
-    <limit effort="4.5" lower="0.0" upper="2.23" velocity="0.8"/>
+    <limit effort="0.5" lower="0.0" upper="2.23" velocity="0.8"/>
   </joint>
   <joint name="elbow_roll_joint_left" type="revolute">
     <parent link="elbow_link4_left"/>
@@ -1874,7 +1873,7 @@
     <origin rpy="1.5708 0 0" xyz="0.0 0.0 0.0"/>
     <axis xyz="0 -1.0 0"/>
     <dynamics damping="3.5" friction="1.35"/>
-    <limit effort="4.5" lower="-1.83" upper="1.83" velocity="0.8"/>
+    <limit effort="0.5" lower="-1.83" upper="1.83" velocity="0.8"/>
   </joint>
   <joint name="wrist_pitch_joint_left" type="revolute">
     <parent link="fore_arm_left"/>
@@ -1882,7 +1881,7 @@
     <origin rpy="-1.5708 0 -1.5708" xyz="0.01 -0.28 0.0"/>
     <axis xyz="0 -1 0"/>
     <dynamics damping="0.35" friction="0.63"/>
-    <limit effort="1" lower="-0.95" upper="0.95" velocity="1.0"/>
+    <limit effort="0.5" lower="-0.95" upper="0.95" velocity="1.0"/>
   </joint>
   <joint name="wrist_yaw_joint_left" type="revolute">
     <parent link="wrist_link6_left"/>
@@ -1890,7 +1889,7 @@
     <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
     <axis xyz="0 0 -1.01"/>
     <dynamics damping="0.3" friction="0.68"/>
-    <limit effort="1" lower="-0.61" upper="0.61" velocity="1.0"/>
+    <limit effort="0.5" lower="-0.61" upper="0.61" velocity="1.0"/>
   </joint>
   <joint name="finger1_joint_left" type="revolute">
     <parent link="hand_left"/>
