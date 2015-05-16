@@ -47,7 +47,7 @@
   <axis xyz="1 0 0"/>
   <origin xyz="0.0 0.0 0.58" rpy="3.14159265 -1.5708 0"/>
   <dynamics damping="3" friction="0.0"/> <!--*-->
-  <limit effort="1000" velocity="10.0" lower="0.09" upper="0.41" /> <!--*-->
+  <limit effort="0.1" velocity="0.07" lower="0.075" upper="0.4" /> 
 </joint>
 
 <joint name="base_link_joint" type="fixed">
