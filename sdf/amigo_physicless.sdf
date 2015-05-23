@@ -1,6 +1,6 @@
 <sdf version='1.4'>
   <model name='amigo'>
-    <link name='base_link'>
+    <link name='amigo/base_link'>
       <pose>0 0 0 0 -0 0</pose>
       <inertial>
         <pose>0.0016583 8.88763e-06 0.376474 0 -0 0</pose>
@@ -14,7 +14,7 @@
           <izz>2.50794</izz>
         </inertia>
       </inertial>
-      <collision name='base_link_collision'>
+      <collision name='amigo/base_link_collision'>
         <pose>0 0 0 0 -0 0</pose>
         <geometry>
           <cylinder>
@@ -22,88 +22,24 @@
             <radius>0</radius>
           </cylinder>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
-      <collision name='base_link_collision_back_laser'>
+      <collision name='amigo/base_link_collision_amigo/back_laser'>
         <pose>-0.270002 -0.000157937 0.225 0 -0 3.11</pose>
         <geometry>
           <box>
             <size>0.05 0.065 0.12</size>
           </box>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
-      <collision name='base_link_collision_back_lasertop'>
+      <collision name='amigo/base_link_collision_amigo/back_lasertop'>
         <pose>-0.270002 -0.000157937 0.29 0 -0 3.11</pose>
         <geometry>
           <box>
             <size>0.05 0.065 0.01</size>
           </box>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
-      <collision name='base_link_collision_base'>
+      <collision name='amigo/base_link_collision_amigo/base'>
         <pose>0 0 0.285 0 0 -1.5708</pose>
         <geometry>
           <mesh>
@@ -111,32 +47,8 @@
             <uri>model://media/meshes/bottomcovers.dae</uri>
           </mesh>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
-      <collision name='base_link_collision_base_kinect/openni_camera'>
+      <collision name='amigo/base_link_collision_amigo/base_kinect/openni_camera'>
         <pose>0.3 0 0.315 0 -0.07 0</pose>
         <geometry>
           <mesh>
@@ -144,56 +56,16 @@
             <uri>model://media/meshes/kinect/kinect_without_base.dae</uri>
           </mesh>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
-      <collision name='base_link_collision_base_laser'>
+      <collision name='amigo/base_link_collision_amigo/base_laser'>
         <pose>0.318901 -7.49972e-05 0.23 0 -0 0.015</pose>
         <geometry>
           <box>
             <size>0.05 0.065 0.12</size>
           </box>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
-      <collision name='base_link_collision_base_plate'>
+      <collision name='amigo/base_link_collision_amigo/base_plate'>
         <pose>0 0 0.05 0 -0 0</pose>
         <geometry>
           <cylinder>
@@ -201,64 +73,16 @@
             <radius>0.333</radius>
           </cylinder>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
-      <collision name='base_link_collision_lasertop'>
+      <collision name='amigo/base_link_collision_amigo/lasertop'>
         <pose>0.318901 -7.49972e-05 0.295 0 -0 0.015</pose>
         <geometry>
           <box>
             <size>0.05 0.065 0.01</size>
           </box>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
-      <collision name='base_link_collision_logo'>
+      <collision name='amigo/base_link_collision_amigo/logo'>
         <pose>0.348897 0.000374986 0.155 0 -0 -3.12669</pose>
         <geometry>
           <mesh>
@@ -266,32 +90,8 @@
             <uri>model://media/meshes/logo.dae</uri>
           </mesh>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
-      <visual name='base_link_visual'>
+      <visual name='amigo/base_link_visual'>
         <pose>0 0 0 0 -0 0</pose>
         <geometry>
           <cylinder>
@@ -301,32 +101,20 @@
         </geometry>
         <material>
           <script>
-            <name>Gazebo/Red</name>
-            <uri>model://media/materials/scripts/tue_mats.material</uri>
-          </script>
-        </material>
-        <material>
-          <script>
             <name>amigo_description/bottomcovers</name>
             <uri>model://media/materials/scripts/tue_mats.material</uri>
           </script>
         </material>
       </visual>
-      <visual name='base_link_visual_back_laser'>
+      <visual name='amigo/base_link_visual_amigo/back_laser'>
         <pose>-0.270002 -0.000157937 0.225 0 -0 3.11</pose>
         <geometry>
           <box>
             <size>0.05 0.065 0.12</size>
           </box>
         </geometry>
-        <material>
-          <script>
-            <name>Gazebo/Black</name>
-            <uri>model://media/materials/scripts/tue_mats.material</uri>
-          </script>
-        </material>
       </visual>
-      <visual name='base_link_visual_back_lasertop'>
+      <visual name='amigo/base_link_visual_amigo/back_lasertop'>
         <pose>-0.270002 -0.000157937 0.29 0 -0 3.11</pose>
         <geometry>
           <box>
@@ -335,12 +123,6 @@
         </geometry>
         <material>
           <script>
-            <name>Gazebo/Black</name>
-            <uri>model://media/materials/scripts/tue_mats.material</uri>
-          </script>
-        </material>
-        <material>
-          <script>
             <name>amigo_description/orange</name>
             <uri>model://media/materials/scripts/tue_mats.material</uri>
           </script>
@@ -352,7 +134,7 @@
           </script>
         </material>
       </visual>
-      <visual name='base_link_visual_base'>
+      <visual name='amigo/base_link_visual_amigo/base'>
         <pose>0 0 0.285 0 0 -1.5708</pose>
         <geometry>
           <mesh>
@@ -367,7 +149,7 @@
           </script>
         </material>
       </visual>
-      <visual name='base_link_visual_base_kinect/openni_camera'>
+      <visual name='amigo/base_link_visual_amigo/base_kinect/openni_camera'>
         <pose>0.3 0 0.315 0 -0.07 0</pose>
         <geometry>
           <mesh>
@@ -382,7 +164,7 @@
           </script>
         </material>
       </visual>
-      <visual name='base_link_visual_base_laser'>
+      <visual name='amigo/base_link_visual_amigo/base_laser'>
         <pose>0.318901 -7.49972e-05 0.23 0 -0 0.015</pose>
         <geometry>
           <box>
@@ -395,14 +177,8 @@
             <uri>model://media/materials/scripts/tue_mats.material</uri>
           </script>
         </material>
-        <material>
-          <script>
-            <name>Gazebo/Black</name>
-            <uri>model://media/materials/scripts/tue_mats.material</uri>
-          </script>
-        </material>
       </visual>
-      <visual name='base_link_visual_base_plate'>
+      <visual name='amigo/base_link_visual_amigo/base_plate'>
         <pose>0 0 0.05 0 -0 0</pose>
         <geometry>
           <cylinder>
@@ -423,7 +199,7 @@
           </script>
         </material>
       </visual>
-      <visual name='base_link_visual_lasertop'>
+      <visual name='amigo/base_link_visual_amigo/lasertop'>
         <pose>0.318901 -7.49972e-05 0.295 0 -0 0.015</pose>
         <geometry>
           <box>
@@ -437,7 +213,7 @@
           </script>
         </material>
       </visual>
-      <visual name='base_link_visual_logo'>
+      <visual name='amigo/base_link_visual_amigo/logo'>
         <pose>0.348897 0.000374986 0.155 0 -0 -3.12669</pose>
         <geometry>
           <mesh>
@@ -456,101 +232,8 @@
         <linear>0</linear>
         <angular>0</angular>
       </velocity_decay>
-      <velocity_decay>
-        <linear>0</linear>
-        <angular>0</angular>
-      </velocity_decay>
-      <sensor name='base_kinect_openni_camera' type='depth'>
-        <update_rate>20</update_rate>
-        <camera name='base_kinect'>
-          <horizontal_fov>1.0472</horizontal_fov>
-          <image>
-            <width>640</width>
-            <height>480</height>
-            <format>R8G8B8</format>
-          </image>
-          <clip>
-            <near>0.05</near>
-            <far>3</far>
-          </clip>
-        </camera>
-        <plugin name='base_kinect_camera_controller' filename='libKinectPlugin.so'>
-          <alwaysOn>1</alwaysOn>
-          <updateRate>20</updateRate>
-          <cameraName>base_kinect</cameraName>
-          <imageTopicName>rgb/image_color</imageTopicName>
-          <cameraInfoTopicName>rgb/camera_info</cameraInfoTopicName>
-          <depthImageTopicName>depth_registered/image</depthImageTopicName>
-          <depthImageCameraInfoTopicName>depth/camera_info</depthImageCameraInfoTopicName>
-          <pointCloudTopicName>depth_registered/points</pointCloudTopicName>
-          <frameName>base_kinect/openni_depth_optical_frame</frameName>
-        </plugin>
-        <pose>0.3 0 0.315 0 -0.07 0</pose>
-      </sensor>
-      <sensor name='base_ray_sensor' type='ray'>
-        <update_rate>100</update_rate>
-        <ray>
-          <scan>
-            <horizontal>
-              <samples>918</samples>
-              <resolution>1</resolution>
-              <min_angle>-2.00277</min_angle>
-              <max_angle>1.9984</max_angle>
-            </horizontal>
-            <vertical>
-              <samples>1</samples>
-              <min_angle>0</min_angle>
-              <max_angle>0</max_angle>
-            </vertical>
-          </scan>
-          <range>
-            <min>0.05</min>
-            <max>60</max>
-            <resolution>0.01</resolution>
-          </range>
-        </ray>
-        <plugin name='base_ros_ray_sensor_controller' filename='libLaserPlugin.so'>
-          <gaussianNoise>0.005</gaussianNoise>
-          <alwaysOn>1</alwaysOn>
-          <updateRate>40</updateRate>
-          <topicName>base_front_laser</topicName>
-          <node_namespace>base</node_namespace>
-          <frameName>base_laser</frameName>
-        </plugin>
-        <pose>0.31 0 0.24 0 -0 0</pose>
-      </sensor>
-      <velocity_decay>
-        <linear>0</linear>
-        <angular>0</angular>
-      </velocity_decay>
-      <velocity_decay>
-        <linear>0</linear>
-        <angular>0</angular>
-      </velocity_decay>
-      <velocity_decay>
-        <linear>0</linear>
-        <angular>0</angular>
-      </velocity_decay>
-      <velocity_decay>
-        <linear>0</linear>
-        <angular>0</angular>
-      </velocity_decay>
-      <velocity_decay>
-        <linear>0</linear>
-        <angular>0</angular>
-      </velocity_decay>
-      <velocity_decay>
-        <linear>0</linear>
-        <angular>0</angular>
-      </velocity_decay>
-      <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0</linear>
-        <angular>0</angular>
-      </velocity_decay>
-      <self_collide>0</self_collide>
     </link>
-    <link name='torso_slider'>
+    <link name='amigo/torso_slider'>
       <pose>0 0 0.635 -3.58979e-09 -1.57079 3.14159</pose>
       <inertial>
         <pose>0.0968094 0 0.00220002 0 -0 0</pose>
@@ -564,7 +247,7 @@
           <izz>0.104374</izz>
         </inertia>
       </inertial>
-      <collision name='torso_slider_collision'>
+      <collision name='amigo/torso_slider_collision'>
         <pose>0.05 0 0 0 -0 1.5708</pose>
         <geometry>
           <mesh>
@@ -572,40 +255,16 @@
             <uri>model://media/meshes/torsoslidertextured.dae</uri>
           </mesh>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
-      <collision name='torso_slider_collision_clavicles'>
+      <collision name='amigo/torso_slider_collision_amigo/clavicles'>
         <pose>0.15 0 0 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.1 0.436 0.11</size>
           </box>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
-      <collision name='torso_slider_collision_shoulder_mount_left'>
+      <collision name='amigo/torso_slider_collision_amigo/shoulder_mount_left'>
         <pose>0.15 -0.22 0 0 -0 0</pose>
         <geometry>
           <cylinder>
@@ -613,24 +272,8 @@
             <radius>0.05</radius>
           </cylinder>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
-      <collision name='torso_slider_collision_shoulder_mount_right'>
+      <collision name='amigo/torso_slider_collision_amigo/shoulder_mount_right'>
         <pose>0.15 0.22 0 0 -0 0</pose>
         <geometry>
           <cylinder>
@@ -638,24 +281,8 @@
             <radius>0.05</radius>
           </cylinder>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
-      <collision name='torso_slider_collision_torso'>
+      <collision name='amigo/torso_slider_collision_amigo/torso'>
         <pose>0.145 0 0.06 -1.5708 -5.55112e-17 -1.5708</pose>
         <geometry>
           <mesh>
@@ -663,24 +290,8 @@
             <uri>model://media/meshes/torsocovers.dae</uri>
           </mesh>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
-      <collision name='torso_slider_collision_torso_assist_slider_back'>
+      <collision name='amigo/torso_slider_collision_amigo/torso_assist_slider_back'>
         <pose>-0.6 0 -0.1 1.5708 -3.67321e-06 1.5708</pose>
         <geometry>
           <mesh>
@@ -688,24 +299,8 @@
             <uri>model://media/meshes/torsoassistslidertextured.dae</uri>
           </mesh>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
-      <collision name='torso_slider_collision_torso_assist_slider_left'>
+      <collision name='amigo/torso_slider_collision_amigo/torso_assist_slider_left'>
         <pose>-0.6 -0.1 0 3.14159 1.57079 3.14159</pose>
         <geometry>
           <mesh>
@@ -713,24 +308,8 @@
             <uri>model://media/meshes/torsoassistslidertextured.dae</uri>
           </mesh>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
-      <collision name='torso_slider_collision_torso_assist_slider_right'>
+      <collision name='amigo/torso_slider_collision_amigo/torso_assist_slider_right'>
         <pose>-0.6 0.1 0 3.14159 1.57079 3.14159</pose>
         <geometry>
           <mesh>
@@ -738,24 +317,8 @@
             <uri>model://media/meshes/torsoassistslidertextured.dae</uri>
           </mesh>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
-      <collision name='torso_slider_collision_torso_dummy'>
+      <collision name='amigo/torso_slider_collision_amigo/torso_dummy'>
         <pose>0.0006 0 0.075 0 -1.57 0</pose>
         <geometry>
           <cylinder>
@@ -763,80 +326,24 @@
             <radius>0</radius>
           </cylinder>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
-      <collision name='torso_slider_collision_torso_laser'>
+      <collision name='amigo/torso_slider_collision_amigo/torso_laser'>
         <pose>0.065596 0.000249896 0.0699545 1.55486 -1.52079 -1.55488</pose>
         <geometry>
           <box>
             <size>0.05 0.065 0.12</size>
           </box>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
-      <collision name='torso_slider_collision_torso_lasertop'>
+      <collision name='amigo/torso_slider_collision_amigo/torso_lasertop'>
         <pose>0.000596023 0.000249896 0.0700063 1.55486 -1.52079 -1.55488</pose>
         <geometry>
           <box>
             <size>0.05 0.065 0.01</size>
           </box>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
-      <visual name='torso_slider_visual'>
+      <visual name='amigo/torso_slider_visual'>
         <pose>0.05 0 0 0 -0 1.5708</pose>
         <geometry>
           <mesh>
@@ -846,32 +353,26 @@
         </geometry>
         <material>
           <script>
-            <name>amigo_description/aluminium</name>
+            <name>amigo_description/white</name>
             <uri>model://media/materials/scripts/tue_mats.material</uri>
           </script>
         </material>
         <material>
           <script>
-            <name>amigo_description/white</name>
+            <name>amigo_description/aluminium</name>
             <uri>model://media/materials/scripts/tue_mats.material</uri>
           </script>
         </material>
       </visual>
-      <visual name='torso_slider_visual_clavicles'>
+      <visual name='amigo/torso_slider_visual_amigo/clavicles'>
         <pose>0.15 0 0 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.1 0.436 0.11</size>
           </box>
         </geometry>
-        <material>
-          <script>
-            <name>Gazebo/Black</name>
-            <uri>model://media/materials/scripts/tue_mats.material</uri>
-          </script>
-        </material>
       </visual>
-      <visual name='torso_slider_visual_shoulder_mount_left'>
+      <visual name='amigo/torso_slider_visual_amigo/shoulder_mount_left'>
         <pose>0.15 -0.22 0 0 -0 0</pose>
         <geometry>
           <cylinder>
@@ -879,14 +380,8 @@
             <radius>0.05</radius>
           </cylinder>
         </geometry>
-        <material>
-          <script>
-            <name>Gazebo/Black</name>
-            <uri>model://media/materials/scripts/tue_mats.material</uri>
-          </script>
-        </material>
       </visual>
-      <visual name='torso_slider_visual_shoulder_mount_right'>
+      <visual name='amigo/torso_slider_visual_amigo/shoulder_mount_right'>
         <pose>0.15 0.22 0 0 -0 0</pose>
         <geometry>
           <cylinder>
@@ -894,14 +389,8 @@
             <radius>0.05</radius>
           </cylinder>
         </geometry>
-        <material>
-          <script>
-            <name>Gazebo/Black</name>
-            <uri>model://media/materials/scripts/tue_mats.material</uri>
-          </script>
-        </material>
       </visual>
-      <visual name='torso_slider_visual_torso'>
+      <visual name='amigo/torso_slider_visual_amigo/torso'>
         <pose>0.145 0 0.06 -1.5708 -5.55112e-17 -1.5708</pose>
         <geometry>
           <mesh>
@@ -916,7 +405,7 @@
           </script>
         </material>
       </visual>
-      <visual name='torso_slider_visual_torso_assist_slider_back'>
+      <visual name='amigo/torso_slider_visual_amigo/torso_assist_slider_back'>
         <pose>-0.6 0 -0.1 1.5708 -3.67321e-06 1.5708</pose>
         <geometry>
           <mesh>
@@ -937,7 +426,7 @@
           </script>
         </material>
       </visual>
-      <visual name='torso_slider_visual_torso_assist_slider_left'>
+      <visual name='amigo/torso_slider_visual_amigo/torso_assist_slider_left'>
         <pose>-0.6 -0.1 0 3.14159 1.57079 3.14159</pose>
         <geometry>
           <mesh>
@@ -958,7 +447,7 @@
           </script>
         </material>
       </visual>
-      <visual name='torso_slider_visual_torso_assist_slider_right'>
+      <visual name='amigo/torso_slider_visual_amigo/torso_assist_slider_right'>
         <pose>-0.6 0.1 0 3.14159 1.57079 3.14159</pose>
         <geometry>
           <mesh>
@@ -979,7 +468,7 @@
           </script>
         </material>
       </visual>
-      <visual name='torso_slider_visual_torso_dummy'>
+      <visual name='amigo/torso_slider_visual_amigo/torso_dummy'>
         <pose>0.0006 0 0.075 0 -1.57 0</pose>
         <geometry>
           <cylinder>
@@ -993,14 +482,8 @@
             <uri>model://media/materials/scripts/tue_mats.material</uri>
           </script>
         </material>
-        <material>
-          <script>
-            <name>Gazebo/Red</name>
-            <uri>model://media/materials/scripts/tue_mats.material</uri>
-          </script>
-        </material>
       </visual>
-      <visual name='torso_slider_visual_torso_laser'>
+      <visual name='amigo/torso_slider_visual_amigo/torso_laser'>
         <pose>0.065596 0.000249896 0.0699545 1.55486 -1.52079 -1.55488</pose>
         <geometry>
           <box>
@@ -1013,14 +496,8 @@
             <uri>model://media/materials/scripts/tue_mats.material</uri>
           </script>
         </material>
-        <material>
-          <script>
-            <name>Gazebo/Black</name>
-            <uri>model://media/materials/scripts/tue_mats.material</uri>
-          </script>
-        </material>
       </visual>
-      <visual name='torso_slider_visual_torso_lasertop'>
+      <visual name='amigo/torso_slider_visual_amigo/torso_lasertop'>
         <pose>0.000596023 0.000249896 0.0700063 1.55486 -1.52079 -1.55488</pose>
         <geometry>
           <box>
@@ -1041,12 +518,6 @@
         </material>
         <material>
           <script>
-            <name>Gazebo/Black</name>
-            <uri>model://media/materials/scripts/tue_mats.material</uri>
-          </script>
-        </material>
-        <material>
-          <script>
             <name>amigo_description/orange</name>
             <uri>model://media/materials/scripts/tue_mats.material</uri>
           </script>
@@ -1056,88 +527,10 @@
         <linear>0</linear>
         <angular>0</angular>
       </velocity_decay>
-      <velocity_decay>
-        <linear>0</linear>
-        <angular>0</angular>
-      </velocity_decay>
-      <velocity_decay>
-        <linear>0</linear>
-        <angular>0</angular>
-      </velocity_decay>
-      <velocity_decay>
-        <linear>0</linear>
-        <angular>0</angular>
-      </velocity_decay>
-      <velocity_decay>
-        <linear>0</linear>
-        <angular>0</angular>
-      </velocity_decay>
-      <velocity_decay>
-        <linear>0</linear>
-        <angular>0</angular>
-      </velocity_decay>
-      <velocity_decay>
-        <linear>0</linear>
-        <angular>0</angular>
-      </velocity_decay>
-      <velocity_decay>
-        <linear>0</linear>
-        <angular>0</angular>
-      </velocity_decay>
-      <sensor name='torso_ray_sensor' type='ray'>
-        <update_rate>100</update_rate>
-        <ray>
-          <scan>
-            <horizontal>
-              <samples>918</samples>
-              <resolution>1</resolution>
-              <min_angle>-2.00277</min_angle>
-              <max_angle>1.9984</max_angle>
-            </horizontal>
-            <vertical>
-              <samples>1</samples>
-              <min_angle>0</min_angle>
-              <max_angle>0</max_angle>
-            </vertical>
-          </scan>
-          <range>
-            <min>0.05</min>
-            <max>60</max>
-            <resolution>0.01</resolution>
-          </range>
-        </ray>
-        <plugin name='torso_ros_ray_sensor_controller' filename='libLaserPlugin.so'>
-          <gaussianNoise>0.005</gaussianNoise>
-          <alwaysOn>1</alwaysOn>
-          <updateRate>40</updateRate>
-          <topicName>torso_laser</topicName>
-          <node_namespace>base</node_namespace>
-          <frameName>torso_laser</frameName>
-        </plugin>
-        <pose>0.0006 0 0.075 1.55486 -1.52079 -1.55488</pose>
-      </sensor>
-      <velocity_decay>
-        <linear>0</linear>
-        <angular>0</angular>
-      </velocity_decay>
-      <velocity_decay>
-        <linear>0</linear>
-        <angular>0</angular>
-      </velocity_decay>
-      <velocity_decay>
-        <linear>0</linear>
-        <angular>0</angular>
-      </velocity_decay>
-      <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0</linear>
-        <angular>0</angular>
-      </velocity_decay>
-      <self_collide>0</self_collide>
     </link>
     <joint name='torso_joint' type='prismatic'>
-      <child>torso_slider</child>
-      <parent>base_link</parent>
+      <child>amigo/torso_slider</child>
+      <parent>amigo/base_link</parent>
       <axis>
         <xyz>-3.67321e-06 2.06795e-25 1</xyz>
         <limit>
@@ -1151,7 +544,7 @@
         </dynamics>
       </axis>
     </joint>
-    <link name='neck_pan'>
+    <link name='amigo/neck_pan'>
       <pose>0.0425992 -1.52925e-10 0.845 -9.26536e-05 1.18826e-16 -3.58979e-09</pose>
       <inertial>
         <pose>0 0 0.0335 0 -0 0</pose>
@@ -1165,7 +558,7 @@
           <izz>0.0001</izz>
         </inertia>
       </inertial>
-      <collision name='neck_pan_collision'>
+      <collision name='amigo/neck_pan_collision'>
         <pose>0 0 0.0335 0 -0 0</pose>
         <geometry>
           <cylinder>
@@ -1173,16 +566,8 @@
             <radius>0.015</radius>
           </cylinder>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
-      <visual name='neck_pan_visual'>
+      <visual name='amigo/neck_pan_visual'>
         <pose>0 0 0.0335 0 -0 0</pose>
         <geometry>
           <cylinder>
@@ -1190,23 +575,15 @@
             <radius>0.015</radius>
           </cylinder>
         </geometry>
-        <material>
-          <script>
-            <name>Gazebo/Black</name>
-            <uri>model://media/materials/scripts/tue_mats.material</uri>
-          </script>
-        </material>
       </visual>
-      <gravity>1</gravity>
       <velocity_decay>
         <linear>0</linear>
         <angular>0</angular>
       </velocity_decay>
-      <self_collide>0</self_collide>
     </link>
     <joint name='neck_pan_joint' type='revolute'>
-      <child>neck_pan</child>
-      <parent>torso_slider</parent>
+      <child>amigo/neck_pan</child>
+      <parent>amigo/torso_slider</parent>
       <axis>
         <xyz>3.32726e-13 9.26536e-05 1</xyz>
         <limit>
@@ -1220,7 +597,7 @@
         </dynamics>
       </axis>
     </joint>
-    <link name='neck_tilt'>
+    <link name='amigo/neck_tilt'>
       <pose>0.0425992 4.12293e-06 0.8895 -9.2664e-05 0.015 -1.3935e-06</pose>
       <inertial>
         <pose>0.0109889 0.00154061 0.0510274 0 -0 0</pose>
@@ -1234,7 +611,7 @@
           <izz>0.00332102</izz>
         </inertia>
       </inertial>
-      <collision name='neck_tilt_collision'>
+      <collision name='amigo/neck_tilt_collision'>
         <pose>0 -0 0.015 0 -0 0</pose>
         <geometry>
           <mesh>
@@ -1242,24 +619,8 @@
             <uri>model://media/meshes/necktilttextured.dae</uri>
           </mesh>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
-      <collision name='neck_tilt_collision_head'>
+      <collision name='amigo/neck_tilt_collision_amigo/head'>
         <pose>0 0 0.141 0 0 -1.5708</pose>
         <geometry>
           <mesh>
@@ -1267,32 +628,8 @@
             <uri>model://media/meshes/headtextured.dae</uri>
           </mesh>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
-      <visual name='neck_tilt_visual'>
+      <visual name='amigo/neck_tilt_visual'>
         <pose>0 -0 0.015 0 -0 0</pose>
         <geometry>
           <mesh>
@@ -1307,7 +644,7 @@
           </script>
         </material>
       </visual>
-      <visual name='neck_tilt_visual_head'>
+      <visual name='amigo/neck_tilt_visual_amigo/head'>
         <pose>0 0 0.141 0 0 -1.5708</pose>
         <geometry>
           <mesh>
@@ -1322,7 +659,7 @@
           </script>
         </material>
       </visual>
-      <visual name='neck_tilt_visual_top_kinect/openni_camera'>
+      <visual name='amigo/neck_tilt_visual_amigo/top_kinect/openni_camera'>
         <pose>0.035 0 0.1 0 -0 0.025</pose>
         <geometry>
           <box>
@@ -1334,47 +671,10 @@
         <linear>0</linear>
         <angular>0</angular>
       </velocity_decay>
-      <velocity_decay>
-        <linear>0</linear>
-        <angular>0</angular>
-      </velocity_decay>
-      <sensor name='openni_camera' type='depth'>
-        <update_rate>20</update_rate>
-        <camera name='top_kinect'>
-          <horizontal_fov>1.0472</horizontal_fov>
-          <image>
-            <width>640</width>
-            <height>480</height>
-            <format>R8G8B8</format>
-          </image>
-          <clip>
-            <near>0.05</near>
-            <far>3</far>
-          </clip>
-        </camera>
-        <plugin name='kinect_camera_controller' filename='libKinectPlugin.so'>
-          <alwaysOn>1</alwaysOn>
-          <updateRate>20</updateRate>
-          <cameraName>top_kinect</cameraName>
-          <imageTopicName>rgb/image_color</imageTopicName>
-          <cameraInfoTopicName>rgb/camera_info</cameraInfoTopicName>
-          <depthImageTopicName>depth_registered/image</depthImageTopicName>
-          <depthImageCameraInfoTopicName>depth/camera_info</depthImageCameraInfoTopicName>
-          <pointCloudTopicName>depth_registered/points</pointCloudTopicName>
-          <frameName>top_kinect/openni_depth_optical_frame</frameName>
-        </plugin>
-        <pose>0.07 0 0.07 0 -0 0</pose>
-      </sensor>
-      <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0</linear>
-        <angular>0</angular>
-      </velocity_decay>
-      <self_collide>0</self_collide>
     </link>
     <joint name='neck_tilt_joint' type='revolute'>
-      <child>neck_tilt</child>
-      <parent>neck_pan</parent>
+      <child>amigo/neck_tilt</child>
+      <parent>amigo/neck_pan</parent>
       <axis>
         <xyz>3.58979e-09 1 -9.26536e-05</xyz>
         <limit>
@@ -1388,7 +688,7 @@
         </dynamics>
       </axis>
     </joint>
-    <link name='shoulder_link1_left'>
+    <link name='amigo/shoulder_link1_left'>
       <pose>-5.50191e-07 0.22 0.785 1.57079 1.36511e-18 -3.58979e-09</pose>
       <inertial>
         <pose>0 0 0 0 -0 0</pose>
@@ -1402,7 +702,7 @@
           <izz>0.01</izz>
         </inertia>
       </inertial>
-      <collision name='shoulder_link1_left_collision'>
+      <collision name='amigo/shoulder_link1_left_collision'>
         <pose>0 0 -0.0525 0 -0 0</pose>
         <geometry>
           <cylinder>
@@ -1410,16 +710,8 @@
             <radius>0.045</radius>
           </cylinder>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
-      <visual name='shoulder_link1_left_visual'>
+      <visual name='amigo/shoulder_link1_left_visual'>
         <pose>0 0 -0.0525 0 -0 0</pose>
         <geometry>
           <cylinder>
@@ -1427,23 +719,15 @@
             <radius>0.045</radius>
           </cylinder>
         </geometry>
-        <material>
-          <script>
-            <name>Gazebo/Black</name>
-            <uri>model://media/materials/scripts/tue_mats.material</uri>
-          </script>
-        </material>
       </visual>
-      <gravity>1</gravity>
       <velocity_decay>
         <linear>0</linear>
         <angular>0</angular>
       </velocity_decay>
-      <self_collide>0</self_collide>
     </link>
     <joint name='shoulder_yaw_joint_left' type='revolute'>
-      <child>shoulder_link1_left</child>
-      <parent>torso_slider</parent>
+      <child>amigo/shoulder_link1_left</child>
+      <parent>amigo/torso_slider</parent>
       <axis>
         <xyz>-1 3.58979e-09 1.36511e-18</xyz>
         <limit>
@@ -1457,7 +741,7 @@
         </dynamics>
       </axis>
     </joint>
-    <link name='shoulder_link2_left'>
+    <link name='amigo/shoulder_link2_left'>
       <pose>-5.50191e-07 0.22 0.785 -7.34641e-06 1.36511e-18 -3.58979e-09</pose>
       <inertial>
         <pose>0 0 0 0 -0 0</pose>
@@ -1471,46 +755,30 @@
           <izz>0.001</izz>
         </inertia>
       </inertial>
-      <collision name='shoulder_link2_left_collision'>
+      <collision name='amigo/shoulder_link2_left_collision'>
         <pose>0 0.06 -0.05 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.035 0.01 0.1</size>
           </box>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
-      <visual name='shoulder_link2_left_visual'>
+      <visual name='amigo/shoulder_link2_left_visual'>
         <pose>0 0.06 -0.05 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.035 0.01 0.1</size>
           </box>
         </geometry>
-        <material>
-          <script>
-            <name>Gazebo/Black</name>
-            <uri>model://media/materials/scripts/tue_mats.material</uri>
-          </script>
-        </material>
       </visual>
-      <gravity>1</gravity>
       <velocity_decay>
         <linear>0</linear>
         <angular>0</angular>
       </velocity_decay>
-      <self_collide>0</self_collide>
     </link>
     <joint name='shoulder_pitch_joint_left' type='revolute'>
-      <child>shoulder_link2_left</child>
-      <parent>shoulder_link1_left</parent>
+      <child>amigo/shoulder_link2_left</child>
+      <parent>amigo/shoulder_link1_left</parent>
       <axis>
         <xyz>-3.58979e-09 -1 7.34641e-06</xyz>
         <limit>
@@ -1524,7 +792,7 @@
         </dynamics>
       </axis>
     </joint>
-    <link name='upper_arm_left'>
+    <link name='amigo/upper_arm_left'>
       <pose>-5.50191e-07 0.22 0.785 1.57079 1.36511e-18 -3.58979e-09</pose>
       <inertial>
         <pose>-3.3557e-05 -0.200403 0 0 -0 0</pose>
@@ -1538,7 +806,7 @@
           <izz>0.0333425</izz>
         </inertia>
       </inertial>
-      <collision name='upper_arm_left_collision'>
+      <collision name='amigo/upper_arm_left_collision'>
         <pose>-0.00959 -0.19131 -1e-05 0 -0 3.1415</pose>
         <geometry>
           <mesh>
@@ -1546,16 +814,8 @@
             <uri>model://media/meshes/upperarmtextured.dae</uri>
           </mesh>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
-      <collision name='upper_arm_left_collision_elbow_extra_block2_left'>
+      <collision name='amigo/upper_arm_left_collision_amigo/elbow_extra_block2_left'>
         <pose>0 -0.31 0 0 -0 0</pose>
         <geometry>
           <cylinder>
@@ -1563,48 +823,16 @@
             <radius>0.03</radius>
           </cylinder>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
-      <collision name='upper_arm_left_collision_elbow_extra_block_left'>
+      <collision name='amigo/upper_arm_left_collision_amigo/elbow_extra_block_left'>
         <pose>-0.036 -0.29 -7.34641e-08 -1.5708 0 0</pose>
         <geometry>
           <box>
             <size>0.015 0.08 0.06</size>
           </box>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
-      <collision name='upper_arm_left_collision_upper_arm_top_left'>
+      <collision name='amigo/upper_arm_left_collision_amigo/upper_arm_top_left'>
         <pose>-0.01 -0.1 0 1.5708 -0 0</pose>
         <geometry>
           <cylinder>
@@ -1612,24 +840,8 @@
             <radius>0.0561</radius>
           </cylinder>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
-      <visual name='upper_arm_left_visual'>
+      <visual name='amigo/upper_arm_left_visual'>
         <pose>-0.00959 -0.19131 -1e-05 0 -0 3.1415</pose>
         <geometry>
           <mesh>
@@ -1644,7 +856,7 @@
           </script>
         </material>
       </visual>
-      <visual name='upper_arm_left_visual_elbow_extra_block2_left'>
+      <visual name='amigo/upper_arm_left_visual_amigo/elbow_extra_block2_left'>
         <pose>0 -0.31 0 0 -0 0</pose>
         <geometry>
           <cylinder>
@@ -1652,28 +864,16 @@
             <radius>0.03</radius>
           </cylinder>
         </geometry>
-        <material>
-          <script>
-            <name>Gazebo/Grey</name>
-            <uri>model://media/materials/scripts/tue_mats.material</uri>
-          </script>
-        </material>
       </visual>
-      <visual name='upper_arm_left_visual_elbow_extra_block_left'>
+      <visual name='amigo/upper_arm_left_visual_amigo/elbow_extra_block_left'>
         <pose>-0.036 -0.29 -7.34641e-08 -1.5708 0 0</pose>
         <geometry>
           <box>
             <size>0.015 0.08 0.06</size>
           </box>
         </geometry>
-        <material>
-          <script>
-            <name>Gazebo/Black</name>
-            <uri>model://media/materials/scripts/tue_mats.material</uri>
-          </script>
-        </material>
       </visual>
-      <visual name='upper_arm_left_visual_upper_arm_top_left'>
+      <visual name='amigo/upper_arm_left_visual_amigo/upper_arm_top_left'>
         <pose>-0.01 -0.1 0 1.5708 -0 0</pose>
         <geometry>
           <cylinder>
@@ -1681,35 +881,15 @@
             <radius>0.0561</radius>
           </cylinder>
         </geometry>
-        <material>
-          <script>
-            <name>Gazebo/Black</name>
-            <uri>model://media/materials/scripts/tue_mats.material</uri>
-          </script>
-        </material>
       </visual>
       <velocity_decay>
         <linear>0</linear>
         <angular>0</angular>
       </velocity_decay>
-      <velocity_decay>
-        <linear>0</linear>
-        <angular>0</angular>
-      </velocity_decay>
-      <velocity_decay>
-        <linear>0</linear>
-        <angular>0</angular>
-      </velocity_decay>
-      <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0</linear>
-        <angular>0</angular>
-      </velocity_decay>
-      <self_collide>0</self_collide>
     </link>
     <joint name='shoulder_roll_joint_left' type='revolute'>
-      <child>upper_arm_left</child>
-      <parent>shoulder_link2_left</parent>
+      <child>amigo/upper_arm_left</child>
+      <parent>amigo/shoulder_link2_left</parent>
       <axis>
         <xyz>-1.31874e-14 -3.67321e-06 -1</xyz>
         <limit>
@@ -1723,7 +903,7 @@
         </dynamics>
       </axis>
     </joint>
-    <link name='elbow_link4_left'>
+    <link name='amigo/elbow_link4_left'>
       <pose>0.00999945 0.219999 0.465 -7.34641e-06 1.36511e-18 -3.58979e-09</pose>
       <inertial>
         <pose>0 0 0 0 -0 0</pose>
@@ -1737,7 +917,7 @@
           <izz>0.001</izz>
         </inertia>
       </inertial>
-      <collision name='elbow_link4_left_collision'>
+      <collision name='amigo/elbow_link4_left_collision'>
         <pose>0 0 0 0 -0 0</pose>
         <geometry>
           <cylinder>
@@ -1745,16 +925,8 @@
             <radius>0</radius>
           </cylinder>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
-      <visual name='elbow_link4_left_visual'>
+      <visual name='amigo/elbow_link4_left_visual'>
         <pose>0 0 0 0 -0 0</pose>
         <geometry>
           <cylinder>
@@ -1762,23 +934,15 @@
             <radius>0</radius>
           </cylinder>
         </geometry>
-        <material>
-          <script>
-            <name>Gazebo/Grey</name>
-            <uri>model://media/materials/scripts/tue_mats.material</uri>
-          </script>
-        </material>
       </visual>
-      <gravity>1</gravity>
       <velocity_decay>
         <linear>0</linear>
         <angular>0</angular>
       </velocity_decay>
-      <self_collide>0</self_collide>
     </link>
     <joint name='elbow_pitch_joint_left' type='revolute'>
-      <child>elbow_link4_left</child>
-      <parent>upper_arm_left</parent>
+      <child>amigo/elbow_link4_left</child>
+      <parent>amigo/upper_arm_left</parent>
       <axis>
         <xyz>-3.58979e-09 -1 7.34641e-06</xyz>
         <limit>
@@ -1792,7 +956,7 @@
         </dynamics>
       </axis>
     </joint>
-    <link name='fore_arm_left'>
+    <link name='amigo/fore_arm_left'>
       <pose>0.00999945 0.219999 0.465 1.57079 1.36511e-18 -3.58979e-09</pose>
       <inertial>
         <pose>2.32558e-05 -0.1385 0 0 -0 0</pose>
@@ -1806,7 +970,7 @@
           <izz>0.00656451</izz>
         </inertia>
       </inertial>
-      <collision name='fore_arm_left_collision'>
+      <collision name='amigo/fore_arm_left_collision'>
         <pose>0.00425 -0.14868 0.00547 3.14159 -1.57079 3.14159</pose>
         <geometry>
           <mesh>
@@ -1814,16 +978,8 @@
             <uri>model://media/meshes/forearmtextured.dae</uri>
           </mesh>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
-      <collision name='fore_arm_left_collision_fore_arm_top_left'>
+      <collision name='amigo/fore_arm_left_collision_amigo/fore_arm_top_left'>
         <pose>0.002 -0.021 -3.67321e-08 1.5708 -0 0</pose>
         <geometry>
           <cylinder>
@@ -1831,24 +987,8 @@
             <radius>0.037</radius>
           </cylinder>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
-      <visual name='fore_arm_left_visual'>
+      <visual name='amigo/fore_arm_left_visual'>
         <pose>0.00425 -0.14868 0.00547 3.14159 -1.57079 3.14159</pose>
         <geometry>
           <mesh>
@@ -1863,7 +1003,7 @@
           </script>
         </material>
       </visual>
-      <visual name='fore_arm_left_visual_fore_arm_top_left'>
+      <visual name='amigo/fore_arm_left_visual_amigo/fore_arm_top_left'>
         <pose>0.002 -0.021 -3.67321e-08 1.5708 -0 0</pose>
         <geometry>
           <cylinder>
@@ -1871,27 +1011,15 @@
             <radius>0.037</radius>
           </cylinder>
         </geometry>
-        <material>
-          <script>
-            <name>Gazebo/Black</name>
-            <uri>model://media/materials/scripts/tue_mats.material</uri>
-          </script>
-        </material>
       </visual>
       <velocity_decay>
         <linear>0</linear>
         <angular>0</angular>
       </velocity_decay>
-      <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0</linear>
-        <angular>0</angular>
-      </velocity_decay>
-      <self_collide>0</self_collide>
     </link>
     <joint name='elbow_roll_joint_left' type='revolute'>
-      <child>fore_arm_left</child>
-      <parent>elbow_link4_left</parent>
+      <child>amigo/fore_arm_left</child>
+      <parent>amigo/elbow_link4_left</parent>
       <axis>
         <xyz>-1.31874e-14 -3.67321e-06 -1</xyz>
         <limit>
@@ -1905,7 +1033,7 @@
         </dynamics>
       </axis>
     </joint>
-    <link name='wrist_link6_left'>
+    <link name='amigo/wrist_link6_left'>
       <pose>0.0199994 0.219998 0.185 -2.3562 1.57079 -2.35619</pose>
       <inertial>
         <pose>-0.00666667 0 0 0 -0 0</pose>
@@ -1919,7 +1047,7 @@
           <izz>0.00300267</izz>
         </inertia>
       </inertial>
-      <collision name='wrist_link6_left_collision'>
+      <collision name='amigo/wrist_link6_left_collision'>
         <pose>0 0 0 1.5708 -0 0</pose>
         <geometry>
           <cylinder>
@@ -1927,40 +1055,16 @@
             <radius>0</radius>
           </cylinder>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
-      <collision name='wrist_link6_left_collision_wrist_to_hand_block_left'>
+      <collision name='amigo/wrist_link6_left_collision_amigo/wrist_to_hand_block_left'>
         <pose>0 0 0 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.03 0.02 0.038</size>
           </box>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
-      <collision name='wrist_link6_left_collision_wrist_visual_left'>
+      <collision name='amigo/wrist_link6_left_collision_amigo/wrist_visual_left'>
         <pose>-0.02 0 0 1.5708 -0 0</pose>
         <geometry>
           <cylinder>
@@ -1968,24 +1072,8 @@
             <radius>0.018</radius>
           </cylinder>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
-      <visual name='wrist_link6_left_visual'>
+      <visual name='amigo/wrist_link6_left_visual'>
         <pose>0 0 0 1.5708 -0 0</pose>
         <geometry>
           <cylinder>
@@ -1993,28 +1081,16 @@
             <radius>0</radius>
           </cylinder>
         </geometry>
-        <material>
-          <script>
-            <name>Gazebo/Black</name>
-            <uri>model://media/materials/scripts/tue_mats.material</uri>
-          </script>
-        </material>
       </visual>
-      <visual name='wrist_link6_left_visual_wrist_to_hand_block_left'>
+      <visual name='amigo/wrist_link6_left_visual_amigo/wrist_to_hand_block_left'>
         <pose>0 0 0 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.03 0.02 0.038</size>
           </box>
         </geometry>
-        <material>
-          <script>
-            <name>Gazebo/Grey</name>
-            <uri>model://media/materials/scripts/tue_mats.material</uri>
-          </script>
-        </material>
       </visual>
-      <visual name='wrist_link6_left_visual_wrist_visual_left'>
+      <visual name='amigo/wrist_link6_left_visual_amigo/wrist_visual_left'>
         <pose>-0.02 0 0 1.5708 -0 0</pose>
         <geometry>
           <cylinder>
@@ -2022,31 +1098,15 @@
             <radius>0.018</radius>
           </cylinder>
         </geometry>
-        <material>
-          <script>
-            <name>Gazebo/Grey</name>
-            <uri>model://media/materials/scripts/tue_mats.material</uri>
-          </script>
-        </material>
       </visual>
       <velocity_decay>
         <linear>0</linear>
         <angular>0</angular>
       </velocity_decay>
-      <velocity_decay>
-        <linear>0</linear>
-        <angular>0</angular>
-      </velocity_decay>
-      <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0</linear>
-        <angular>0</angular>
-      </velocity_decay>
-      <self_collide>0</self_collide>
     </link>
     <joint name='wrist_pitch_joint_left' type='revolute'>
-      <child>wrist_link6_left</child>
-      <parent>fore_arm_left</parent>
+      <child>amigo/wrist_link6_left</child>
+      <parent>amigo/fore_arm_left</parent>
       <axis>
         <xyz>3.66962e-06 -1 3.67319e-06</xyz>
         <limit>
@@ -2060,7 +1120,7 @@
         </dynamics>
       </axis>
     </joint>
-    <link name='hand_left'>
+    <link name='amigo/hand_left'>
       <pose>0.0199994 0.219998 0.185 -2.3562 1.57079 -2.35619</pose>
       <inertial>
         <pose>0.047619 0 0 0 -0 0</pose>
@@ -2074,88 +1134,46 @@
           <izz>0.0623006</izz>
         </inertia>
       </inertial>
-      <collision name='hand_left_collision'>
+      <collision name='amigo/hand_left_collision'>
         <pose>0.048 0 0 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.08 0.085 0.038</size>
           </box>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
-      <collision name='hand_left_collision_grippoint_left'>
+      <collision name='amigo/hand_left_collision_amigo/grippoint_left'>
         <pose>0.04 0 0 0 -0 0</pose>
         <geometry>
           <box>
             <size>0 0 0</size>
           </box>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
-      <visual name='hand_left_visual'>
+      <visual name='amigo/hand_left_visual'>
         <pose>0.048 0 0 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.08 0.085 0.038</size>
           </box>
         </geometry>
-        <material>
-          <script>
-            <name>Gazebo/Grey</name>
-            <uri>model://media/materials/scripts/tue_mats.material</uri>
-          </script>
-        </material>
       </visual>
-      <visual name='hand_left_visual_grippoint_left'>
+      <visual name='amigo/hand_left_visual_amigo/grippoint_left'>
         <pose>0.04 0 0 0 -0 0</pose>
         <geometry>
           <box>
             <size>0 0 0</size>
           </box>
         </geometry>
-        <material>
-          <script>
-            <name>Gazebo/Blue</name>
-            <uri>model://media/materials/scripts/tue_mats.material</uri>
-          </script>
-        </material>
       </visual>
       <velocity_decay>
         <linear>0</linear>
         <angular>0</angular>
       </velocity_decay>
-      <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0</linear>
-        <angular>0</angular>
-      </velocity_decay>
-      <self_collide>0</self_collide>
     </link>
     <joint name='wrist_yaw_joint_left' type='revolute'>
-      <child>hand_left</child>
-      <parent>wrist_link6_left</parent>
+      <child>amigo/hand_left</child>
+      <parent>amigo/wrist_link6_left</parent>
       <axis>
         <xyz>-1.01 -3.7063e-06 3.70995e-06</xyz>
         <limit>
@@ -2169,7 +1187,7 @@
         </dynamics>
       </axis>
     </joint>
-    <link name='finger1_left'>
+    <link name='amigo/finger1_left'>
       <pose>0.0199991 0.239998 0.11 -3.67319e-06 0.0008 3.66668e-06</pose>
       <inertial>
         <pose>0 0 -0.045 0 -0 0</pose>
@@ -2183,34 +1201,15 @@
           <izz>0.011</izz>
         </inertia>
       </inertial>
-      <collision name='finger1_left_collision'>
+      <collision name='amigo/finger1_left_collision'>
         <pose>0 0 -0.03 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.018 0.018 0.06</size>
           </box>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode>
-              <mu>100</mu>
-              <mu2>100</mu2>
-            </ode>
-          </friction>
-        </surface>
       </collision>
-      <collision name='finger1_left_collision_finger1_phalanx_left'>
+      <collision name='amigo/finger1_left_collision_amigo/finger1_phalanx_left'>
         <pose>0 0 -0.06 0 1.57 0</pose>
         <geometry>
           <cylinder>
@@ -2218,49 +1217,16 @@
             <radius>0.009</radius>
           </cylinder>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode>
-              <mu>100</mu>
-              <mu2>100</mu2>
-            </ode>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
-      <visual name='finger1_left_visual'>
+      <visual name='amigo/finger1_left_visual'>
         <pose>0 0 -0.03 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.018 0.018 0.06</size>
           </box>
         </geometry>
-        <material>
-          <script>
-            <name>Gazebo/Black</name>
-            <uri>model://media/materials/scripts/tue_mats.material</uri>
-          </script>
-        </material>
       </visual>
-      <visual name='finger1_left_visual_finger1_phalanx_left'>
+      <visual name='amigo/finger1_left_visual_amigo/finger1_phalanx_left'>
         <pose>0 0 -0.06 0 1.57 0</pose>
         <geometry>
           <cylinder>
@@ -2268,31 +1234,15 @@
             <radius>0.009</radius>
           </cylinder>
         </geometry>
-        <material>
-          <script>
-            <name>Gazebo/White</name>
-            <uri>model://media/materials/scripts/tue_mats.material</uri>
-          </script>
-        </material>
       </visual>
       <velocity_decay>
         <linear>0</linear>
         <angular>0</angular>
       </velocity_decay>
-      <velocity_decay>
-        <linear>0</linear>
-        <angular>0</angular>
-      </velocity_decay>
-      <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0</linear>
-        <angular>0</angular>
-      </velocity_decay>
-      <self_collide>0</self_collide>
     </link>
     <joint name='finger1_joint_left' type='revolute'>
-      <child>finger1_left</child>
-      <parent>hand_left</parent>
+      <child>amigo/finger1_left</child>
+      <parent>amigo/hand_left</parent>
       <axis>
         <xyz>1 3.66668e-06 -0.0008</xyz>
         <limit>
@@ -2306,7 +1256,7 @@
         </dynamics>
       </axis>
     </joint>
-    <link name='finger1_tip_left'>
+    <link name='amigo/finger1_tip_left'>
       <pose>0.0199511 0.239997 0.0499999 -3.67319e-06 0.0008 3.66668e-06</pose>
       <inertial>
         <pose>0 0 -0.045 0 -0 0</pose>
@@ -2320,34 +1270,15 @@
           <izz>0.00152</izz>
         </inertia>
       </inertial>
-      <collision name='finger1_tip_left_collision'>
+      <collision name='amigo/finger1_tip_left_collision'>
         <pose>0 0 -0.03 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.018 0.018 0.06</size>
           </box>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode>
-              <mu>100</mu>
-              <mu2>100</mu2>
-            </ode>
-          </friction>
-        </surface>
       </collision>
-      <collision name='finger1_tip_left_collision_finger1_tip_phalanx_left'>
+      <collision name='amigo/finger1_tip_left_collision_amigo/finger1_tip_phalanx_left'>
         <pose>0 0 -0.06 0 1.57 0</pose>
         <geometry>
           <cylinder>
@@ -2355,49 +1286,16 @@
             <radius>0.009</radius>
           </cylinder>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode>
-              <mu>100</mu>
-              <mu2>100</mu2>
-            </ode>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
-      <visual name='finger1_tip_left_visual'>
+      <visual name='amigo/finger1_tip_left_visual'>
         <pose>0 0 -0.03 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.018 0.018 0.06</size>
           </box>
         </geometry>
-        <material>
-          <script>
-            <name>Gazebo/Black</name>
-            <uri>model://media/materials/scripts/tue_mats.material</uri>
-          </script>
-        </material>
       </visual>
-      <visual name='finger1_tip_left_visual_finger1_tip_phalanx_left'>
+      <visual name='amigo/finger1_tip_left_visual_amigo/finger1_tip_phalanx_left'>
         <pose>0 0 -0.06 0 1.57 0</pose>
         <geometry>
           <cylinder>
@@ -2405,31 +1303,15 @@
             <radius>0.009</radius>
           </cylinder>
         </geometry>
-        <material>
-          <script>
-            <name>Gazebo/White</name>
-            <uri>model://media/materials/scripts/tue_mats.material</uri>
-          </script>
-        </material>
       </visual>
       <velocity_decay>
         <linear>0</linear>
         <angular>0</angular>
       </velocity_decay>
-      <velocity_decay>
-        <linear>0</linear>
-        <angular>0</angular>
-      </velocity_decay>
-      <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0</linear>
-        <angular>0</angular>
-      </velocity_decay>
-      <self_collide>0</self_collide>
     </link>
     <joint name='finger1_tip_joint_left' type='revolute'>
-      <child>finger1_tip_left</child>
-      <parent>finger1_left</parent>
+      <child>amigo/finger1_tip_left</child>
+      <parent>amigo/finger1_left</parent>
       <axis>
         <xyz>1 3.66668e-06 -0.0008</xyz>
         <limit>
@@ -2443,7 +1325,7 @@
         </dynamics>
       </axis>
     </joint>
-    <link name='finger2_left'>
+    <link name='amigo/finger2_left'>
       <pose>0.0199992 0.199998 0.11 -3.67319e-06 0.0008 3.66668e-06</pose>
       <inertial>
         <pose>0 0 -0.045 0 -0 0</pose>
@@ -2457,34 +1339,15 @@
           <izz>0.011</izz>
         </inertia>
       </inertial>
-      <collision name='finger2_left_collision'>
+      <collision name='amigo/finger2_left_collision'>
         <pose>0 0 -0.03 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.018 0.018 0.06</size>
           </box>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode>
-              <mu>100</mu>
-              <mu2>100</mu2>
-            </ode>
-          </friction>
-        </surface>
       </collision>
-      <collision name='finger2_left_collision_finger2_phalanx_left'>
+      <collision name='amigo/finger2_left_collision_amigo/finger2_phalanx_left'>
         <pose>0 0 -0.06 0 1.57 0</pose>
         <geometry>
           <cylinder>
@@ -2492,49 +1355,16 @@
             <radius>0.009</radius>
           </cylinder>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode>
-              <mu>100</mu>
-              <mu2>100</mu2>
-            </ode>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
-      <visual name='finger2_left_visual'>
+      <visual name='amigo/finger2_left_visual'>
         <pose>0 0 -0.03 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.018 0.018 0.06</size>
           </box>
         </geometry>
-        <material>
-          <script>
-            <name>Gazebo/Black</name>
-            <uri>model://media/materials/scripts/tue_mats.material</uri>
-          </script>
-        </material>
       </visual>
-      <visual name='finger2_left_visual_finger2_phalanx_left'>
+      <visual name='amigo/finger2_left_visual_amigo/finger2_phalanx_left'>
         <pose>0 0 -0.06 0 1.57 0</pose>
         <geometry>
           <cylinder>
@@ -2542,31 +1372,15 @@
             <radius>0.009</radius>
           </cylinder>
         </geometry>
-        <material>
-          <script>
-            <name>Gazebo/White</name>
-            <uri>model://media/materials/scripts/tue_mats.material</uri>
-          </script>
-        </material>
       </visual>
       <velocity_decay>
         <linear>0</linear>
         <angular>0</angular>
       </velocity_decay>
-      <velocity_decay>
-        <linear>0</linear>
-        <angular>0</angular>
-      </velocity_decay>
-      <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0</linear>
-        <angular>0</angular>
-      </velocity_decay>
-      <self_collide>0</self_collide>
     </link>
     <joint name='finger2_joint_left' type='revolute'>
-      <child>finger2_left</child>
-      <parent>hand_left</parent>
+      <child>amigo/finger2_left</child>
+      <parent>amigo/hand_left</parent>
       <axis>
         <xyz>-1 -3.66668e-06 0.0008</xyz>
         <limit>
@@ -2580,7 +1394,7 @@
         </dynamics>
       </axis>
     </joint>
-    <link name='finger2_tip_left'>
+    <link name='amigo/finger2_tip_left'>
       <pose>0.0199512 0.199997 0.0500001 -3.67319e-06 0.0008 3.66668e-06</pose>
       <inertial>
         <pose>0 0 -0.045 0 -0 0</pose>
@@ -2594,34 +1408,15 @@
           <izz>0.00152</izz>
         </inertia>
       </inertial>
-      <collision name='finger2_tip_left_collision'>
+      <collision name='amigo/finger2_tip_left_collision'>
         <pose>0 0 -0.03 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.018 0.018 0.06</size>
           </box>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode>
-              <mu>100</mu>
-              <mu2>100</mu2>
-            </ode>
-          </friction>
-        </surface>
       </collision>
-      <collision name='finger2_tip_left_collision_finger2_tip_phalanx_left'>
+      <collision name='amigo/finger2_tip_left_collision_amigo/finger2_tip_phalanx_left'>
         <pose>0 0 -0.06 0 1.57 0</pose>
         <geometry>
           <cylinder>
@@ -2629,49 +1424,16 @@
             <radius>0.009</radius>
           </cylinder>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode>
-              <mu>100</mu>
-              <mu2>100</mu2>
-            </ode>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
-      <visual name='finger2_tip_left_visual'>
+      <visual name='amigo/finger2_tip_left_visual'>
         <pose>0 0 -0.03 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.018 0.018 0.06</size>
           </box>
         </geometry>
-        <material>
-          <script>
-            <name>Gazebo/Black</name>
-            <uri>model://media/materials/scripts/tue_mats.material</uri>
-          </script>
-        </material>
       </visual>
-      <visual name='finger2_tip_left_visual_finger2_tip_phalanx_left'>
+      <visual name='amigo/finger2_tip_left_visual_amigo/finger2_tip_phalanx_left'>
         <pose>0 0 -0.06 0 1.57 0</pose>
         <geometry>
           <cylinder>
@@ -2679,31 +1441,15 @@
             <radius>0.009</radius>
           </cylinder>
         </geometry>
-        <material>
-          <script>
-            <name>Gazebo/White</name>
-            <uri>model://media/materials/scripts/tue_mats.material</uri>
-          </script>
-        </material>
       </visual>
       <velocity_decay>
         <linear>0</linear>
         <angular>0</angular>
       </velocity_decay>
-      <velocity_decay>
-        <linear>0</linear>
-        <angular>0</angular>
-      </velocity_decay>
-      <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0</linear>
-        <angular>0</angular>
-      </velocity_decay>
-      <self_collide>0</self_collide>
     </link>
     <joint name='finger2_tip_joint_left' type='revolute'>
-      <child>finger2_tip_left</child>
-      <parent>finger2_left</parent>
+      <child>amigo/finger2_tip_left</child>
+      <parent>amigo/finger2_left</parent>
       <axis>
         <xyz>-1 -3.66668e-06 0.0008</xyz>
         <limit>
@@ -2717,7 +1463,7 @@
         </dynamics>
       </axis>
     </joint>
-    <link name='shoulder_link1_right'>
+    <link name='amigo/shoulder_link1_right'>
       <pose>-5.51771e-07 -0.22 0.785 1.57079 1.36511e-18 -3.58979e-09</pose>
       <inertial>
         <pose>0 0 0 0 -0 0</pose>
@@ -2731,7 +1477,7 @@
           <izz>0.01</izz>
         </inertia>
       </inertial>
-      <collision name='shoulder_link1_right_collision'>
+      <collision name='amigo/shoulder_link1_right_collision'>
         <pose>0 0 0.0525 0 -0 0</pose>
         <geometry>
           <cylinder>
@@ -2739,16 +1485,8 @@
             <radius>0.045</radius>
           </cylinder>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
-      <visual name='shoulder_link1_right_visual'>
+      <visual name='amigo/shoulder_link1_right_visual'>
         <pose>0 0 0.0525 0 -0 0</pose>
         <geometry>
           <cylinder>
@@ -2756,23 +1494,15 @@
             <radius>0.045</radius>
           </cylinder>
         </geometry>
-        <material>
-          <script>
-            <name>Gazebo/Black</name>
-            <uri>model://media/materials/scripts/tue_mats.material</uri>
-          </script>
-        </material>
       </visual>
-      <gravity>1</gravity>
       <velocity_decay>
         <linear>0</linear>
         <angular>0</angular>
       </velocity_decay>
-      <self_collide>0</self_collide>
     </link>
     <joint name='shoulder_yaw_joint_right' type='revolute'>
-      <child>shoulder_link1_right</child>
-      <parent>torso_slider</parent>
+      <child>amigo/shoulder_link1_right</child>
+      <parent>amigo/torso_slider</parent>
       <axis>
         <xyz>1 -3.58979e-09 -1.36511e-18</xyz>
         <limit>
@@ -2786,7 +1516,7 @@
         </dynamics>
       </axis>
     </joint>
-    <link name='shoulder_link2_right'>
+    <link name='amigo/shoulder_link2_right'>
       <pose>-5.51771e-07 -0.22 0.785 -7.34641e-06 1.36511e-18 -3.58979e-09</pose>
       <inertial>
         <pose>0 0 0 0 -0 0</pose>
@@ -2800,46 +1530,30 @@
           <izz>0.001</izz>
         </inertia>
       </inertial>
-      <collision name='shoulder_link2_right_collision'>
+      <collision name='amigo/shoulder_link2_right_collision'>
         <pose>0 -0.06 -0.05 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.035 0.01 0.1</size>
           </box>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
-      <visual name='shoulder_link2_right_visual'>
+      <visual name='amigo/shoulder_link2_right_visual'>
         <pose>0 -0.06 -0.05 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.035 0.01 0.1</size>
           </box>
         </geometry>
-        <material>
-          <script>
-            <name>Gazebo/Black</name>
-            <uri>model://media/materials/scripts/tue_mats.material</uri>
-          </script>
-        </material>
       </visual>
-      <gravity>1</gravity>
       <velocity_decay>
         <linear>0</linear>
         <angular>0</angular>
       </velocity_decay>
-      <self_collide>0</self_collide>
     </link>
     <joint name='shoulder_pitch_joint_right' type='revolute'>
-      <child>shoulder_link2_right</child>
-      <parent>shoulder_link1_right</parent>
+      <child>amigo/shoulder_link2_right</child>
+      <parent>amigo/shoulder_link1_right</parent>
       <axis>
         <xyz>-3.58979e-09 -1 7.34641e-06</xyz>
         <limit>
@@ -2853,7 +1567,7 @@
         </dynamics>
       </axis>
     </joint>
-    <link name='upper_arm_right'>
+    <link name='amigo/upper_arm_right'>
       <pose>-5.51771e-07 -0.22 0.785 1.57079 1.36511e-18 -3.58979e-09</pose>
       <inertial>
         <pose>-3.3557e-05 -0.200403 0 0 -0 0</pose>
@@ -2867,7 +1581,7 @@
           <izz>0.0333425</izz>
         </inertia>
       </inertial>
-      <collision name='upper_arm_right_collision'>
+      <collision name='amigo/upper_arm_right_collision'>
         <pose>-0.00959 -0.19131 -1e-05 0 -0 3.1415</pose>
         <geometry>
           <mesh>
@@ -2875,16 +1589,8 @@
             <uri>model://media/meshes/upperarmtextured.dae</uri>
           </mesh>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
-      <collision name='upper_arm_right_collision_elbow_extra_block2_right'>
+      <collision name='amigo/upper_arm_right_collision_amigo/elbow_extra_block2_right'>
         <pose>0 -0.31 0 0 -0 0</pose>
         <geometry>
           <cylinder>
@@ -2892,48 +1598,16 @@
             <radius>0.03</radius>
           </cylinder>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
-      <collision name='upper_arm_right_collision_elbow_extra_block_right'>
+      <collision name='amigo/upper_arm_right_collision_amigo/elbow_extra_block_right'>
         <pose>-0.036 -0.29 -7.34641e-08 -1.5708 0 0</pose>
         <geometry>
           <box>
             <size>0.015 0.08 0.06</size>
           </box>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
-      <collision name='upper_arm_right_collision_upper_arm_top_right'>
+      <collision name='amigo/upper_arm_right_collision_amigo/upper_arm_top_right'>
         <pose>-0.01 -0.1 0 1.5708 -0 0</pose>
         <geometry>
           <cylinder>
@@ -2941,24 +1615,8 @@
             <radius>0.0561</radius>
           </cylinder>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
-      <visual name='upper_arm_right_visual'>
+      <visual name='amigo/upper_arm_right_visual'>
         <pose>-0.00959 -0.19131 -1e-05 0 -0 3.1415</pose>
         <geometry>
           <mesh>
@@ -2973,7 +1631,7 @@
           </script>
         </material>
       </visual>
-      <visual name='upper_arm_right_visual_elbow_extra_block2_right'>
+      <visual name='amigo/upper_arm_right_visual_amigo/elbow_extra_block2_right'>
         <pose>0 -0.31 0 0 -0 0</pose>
         <geometry>
           <cylinder>
@@ -2981,28 +1639,16 @@
             <radius>0.03</radius>
           </cylinder>
         </geometry>
-        <material>
-          <script>
-            <name>Gazebo/Grey</name>
-            <uri>model://media/materials/scripts/tue_mats.material</uri>
-          </script>
-        </material>
       </visual>
-      <visual name='upper_arm_right_visual_elbow_extra_block_right'>
+      <visual name='amigo/upper_arm_right_visual_amigo/elbow_extra_block_right'>
         <pose>-0.036 -0.29 -7.34641e-08 -1.5708 0 0</pose>
         <geometry>
           <box>
             <size>0.015 0.08 0.06</size>
           </box>
         </geometry>
-        <material>
-          <script>
-            <name>Gazebo/Black</name>
-            <uri>model://media/materials/scripts/tue_mats.material</uri>
-          </script>
-        </material>
       </visual>
-      <visual name='upper_arm_right_visual_upper_arm_top_right'>
+      <visual name='amigo/upper_arm_right_visual_amigo/upper_arm_top_right'>
         <pose>-0.01 -0.1 0 1.5708 -0 0</pose>
         <geometry>
           <cylinder>
@@ -3010,35 +1656,15 @@
             <radius>0.0561</radius>
           </cylinder>
         </geometry>
-        <material>
-          <script>
-            <name>Gazebo/Black</name>
-            <uri>model://media/materials/scripts/tue_mats.material</uri>
-          </script>
-        </material>
       </visual>
       <velocity_decay>
         <linear>0</linear>
         <angular>0</angular>
       </velocity_decay>
-      <velocity_decay>
-        <linear>0</linear>
-        <angular>0</angular>
-      </velocity_decay>
-      <velocity_decay>
-        <linear>0</linear>
-        <angular>0</angular>
-      </velocity_decay>
-      <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0</linear>
-        <angular>0</angular>
-      </velocity_decay>
-      <self_collide>0</self_collide>
     </link>
     <joint name='shoulder_roll_joint_right' type='revolute'>
-      <child>upper_arm_right</child>
-      <parent>shoulder_link2_right</parent>
+      <child>amigo/upper_arm_right</child>
+      <parent>amigo/shoulder_link2_right</parent>
       <axis>
         <xyz>1.31874e-14 3.67321e-06 1</xyz>
         <limit>
@@ -3052,7 +1678,7 @@
         </dynamics>
       </axis>
     </joint>
-    <link name='elbow_link4_right'>
+    <link name='amigo/elbow_link4_right'>
       <pose>0.00999945 -0.220001 0.465 -7.34641e-06 1.36511e-18 -3.58979e-09</pose>
       <inertial>
         <pose>0 0 0 0 -0 0</pose>
@@ -3066,7 +1692,7 @@
           <izz>0.001</izz>
         </inertia>
       </inertial>
-      <collision name='elbow_link4_right_collision'>
+      <collision name='amigo/elbow_link4_right_collision'>
         <pose>0 0 0 0 -0 0</pose>
         <geometry>
           <cylinder>
@@ -3074,16 +1700,8 @@
             <radius>0</radius>
           </cylinder>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
-      <visual name='elbow_link4_right_visual'>
+      <visual name='amigo/elbow_link4_right_visual'>
         <pose>0 0 0 0 -0 0</pose>
         <geometry>
           <cylinder>
@@ -3091,23 +1709,15 @@
             <radius>0</radius>
           </cylinder>
         </geometry>
-        <material>
-          <script>
-            <name>Gazebo/Grey</name>
-            <uri>model://media/materials/scripts/tue_mats.material</uri>
-          </script>
-        </material>
       </visual>
-      <gravity>1</gravity>
       <velocity_decay>
         <linear>0</linear>
         <angular>0</angular>
       </velocity_decay>
-      <self_collide>0</self_collide>
     </link>
     <joint name='elbow_pitch_joint_right' type='revolute'>
-      <child>elbow_link4_right</child>
-      <parent>upper_arm_right</parent>
+      <child>amigo/elbow_link4_right</child>
+      <parent>amigo/upper_arm_right</parent>
       <axis>
         <xyz>-3.58979e-09 -1 7.34641e-06</xyz>
         <limit>
@@ -3121,7 +1731,7 @@
         </dynamics>
       </axis>
     </joint>
-    <link name='fore_arm_right'>
+    <link name='amigo/fore_arm_right'>
       <pose>0.00999945 -0.220001 0.465 1.57079 1.36511e-18 -3.58979e-09</pose>
       <inertial>
         <pose>2.32558e-05 -0.1385 0 0 -0 0</pose>
@@ -3135,7 +1745,7 @@
           <izz>0.00656451</izz>
         </inertia>
       </inertial>
-      <collision name='fore_arm_right_collision'>
+      <collision name='amigo/fore_arm_right_collision'>
         <pose>0.00425 -0.14868 0.00547 3.14159 -1.57079 3.14159</pose>
         <geometry>
           <mesh>
@@ -3143,16 +1753,8 @@
             <uri>model://media/meshes/forearmtextured.dae</uri>
           </mesh>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
-      <collision name='fore_arm_right_collision_fore_arm_top_right'>
+      <collision name='amigo/fore_arm_right_collision_amigo/fore_arm_top_right'>
         <pose>0.002 -0.021 -3.67321e-08 1.5708 -0 0</pose>
         <geometry>
           <cylinder>
@@ -3160,24 +1762,8 @@
             <radius>0.037</radius>
           </cylinder>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
-      <visual name='fore_arm_right_visual'>
+      <visual name='amigo/fore_arm_right_visual'>
         <pose>0.00425 -0.14868 0.00547 3.14159 -1.57079 3.14159</pose>
         <geometry>
           <mesh>
@@ -3192,7 +1778,7 @@
           </script>
         </material>
       </visual>
-      <visual name='fore_arm_right_visual_fore_arm_top_right'>
+      <visual name='amigo/fore_arm_right_visual_amigo/fore_arm_top_right'>
         <pose>0.002 -0.021 -3.67321e-08 1.5708 -0 0</pose>
         <geometry>
           <cylinder>
@@ -3200,27 +1786,15 @@
             <radius>0.037</radius>
           </cylinder>
         </geometry>
-        <material>
-          <script>
-            <name>Gazebo/Black</name>
-            <uri>model://media/materials/scripts/tue_mats.material</uri>
-          </script>
-        </material>
       </visual>
       <velocity_decay>
         <linear>0</linear>
         <angular>0</angular>
       </velocity_decay>
-      <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0</linear>
-        <angular>0</angular>
-      </velocity_decay>
-      <self_collide>0</self_collide>
     </link>
     <joint name='elbow_roll_joint_right' type='revolute'>
-      <child>fore_arm_right</child>
-      <parent>elbow_link4_right</parent>
+      <child>amigo/fore_arm_right</child>
+      <parent>amigo/elbow_link4_right</parent>
       <axis>
         <xyz>1.31874e-14 3.67321e-06 1</xyz>
         <limit>
@@ -3234,7 +1808,7 @@
         </dynamics>
       </axis>
     </joint>
-    <link name='wrist_link6_right'>
+    <link name='amigo/wrist_link6_right'>
       <pose>0.0199994 -0.220002 0.185 -2.3562 1.57079 -2.35619</pose>
       <inertial>
         <pose>-0.00666667 0 0 0 -0 0</pose>
@@ -3248,7 +1822,7 @@
           <izz>0.00300267</izz>
         </inertia>
       </inertial>
-      <collision name='wrist_link6_right_collision'>
+      <collision name='amigo/wrist_link6_right_collision'>
         <pose>0 0 0 1.5708 -0 0</pose>
         <geometry>
           <cylinder>
@@ -3256,40 +1830,16 @@
             <radius>0</radius>
           </cylinder>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
-      <collision name='wrist_link6_right_collision_wrist_to_hand_block_right'>
+      <collision name='amigo/wrist_link6_right_collision_amigo/wrist_to_hand_block_right'>
         <pose>0 0 0 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.03 0.02 0.038</size>
           </box>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
-      <collision name='wrist_link6_right_collision_wrist_visual_right'>
+      <collision name='amigo/wrist_link6_right_collision_amigo/wrist_visual_right'>
         <pose>-0.02 0 0 1.5708 -0 0</pose>
         <geometry>
           <cylinder>
@@ -3297,24 +1847,8 @@
             <radius>0.018</radius>
           </cylinder>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
-      <visual name='wrist_link6_right_visual'>
+      <visual name='amigo/wrist_link6_right_visual'>
         <pose>0 0 0 1.5708 -0 0</pose>
         <geometry>
           <cylinder>
@@ -3322,28 +1856,16 @@
             <radius>0</radius>
           </cylinder>
         </geometry>
-        <material>
-          <script>
-            <name>Gazebo/Black</name>
-            <uri>model://media/materials/scripts/tue_mats.material</uri>
-          </script>
-        </material>
       </visual>
-      <visual name='wrist_link6_right_visual_wrist_to_hand_block_right'>
+      <visual name='amigo/wrist_link6_right_visual_amigo/wrist_to_hand_block_right'>
         <pose>0 0 0 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.03 0.02 0.038</size>
           </box>
         </geometry>
-        <material>
-          <script>
-            <name>Gazebo/Grey</name>
-            <uri>model://media/materials/scripts/tue_mats.material</uri>
-          </script>
-        </material>
       </visual>
-      <visual name='wrist_link6_right_visual_wrist_visual_right'>
+      <visual name='amigo/wrist_link6_right_visual_amigo/wrist_visual_right'>
         <pose>-0.02 0 0 1.5708 -0 0</pose>
         <geometry>
           <cylinder>
@@ -3351,31 +1873,15 @@
             <radius>0.018</radius>
           </cylinder>
         </geometry>
-        <material>
-          <script>
-            <name>Gazebo/Grey</name>
-            <uri>model://media/materials/scripts/tue_mats.material</uri>
-          </script>
-        </material>
       </visual>
       <velocity_decay>
         <linear>0</linear>
         <angular>0</angular>
       </velocity_decay>
-      <velocity_decay>
-        <linear>0</linear>
-        <angular>0</angular>
-      </velocity_decay>
-      <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0</linear>
-        <angular>0</angular>
-      </velocity_decay>
-      <self_collide>0</self_collide>
     </link>
     <joint name='wrist_pitch_joint_right' type='revolute'>
-      <child>wrist_link6_right</child>
-      <parent>fore_arm_right</parent>
+      <child>amigo/wrist_link6_right</child>
+      <parent>amigo/fore_arm_right</parent>
       <axis>
         <xyz>3.66962e-06 -1 3.67319e-06</xyz>
         <limit>
@@ -3389,7 +1895,7 @@
         </dynamics>
       </axis>
     </joint>
-    <link name='hand_right'>
+    <link name='amigo/hand_right'>
       <pose>0.0199994 -0.220002 0.185 -2.3562 1.57079 -2.35619</pose>
       <inertial>
         <pose>0.047619 0 0 0 -0 0</pose>
@@ -3403,88 +1909,46 @@
           <izz>0.0623006</izz>
         </inertia>
       </inertial>
-      <collision name='hand_right_collision'>
+      <collision name='amigo/hand_right_collision'>
         <pose>0.048 0 0 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.08 0.085 0.038</size>
           </box>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
-      <collision name='hand_right_collision_grippoint_right'>
+      <collision name='amigo/hand_right_collision_amigo/grippoint_right'>
         <pose>0.04 0 0 0 -0 0</pose>
         <geometry>
           <box>
             <size>0 0 0</size>
           </box>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
-      <visual name='hand_right_visual'>
+      <visual name='amigo/hand_right_visual'>
         <pose>0.048 0 0 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.08 0.085 0.038</size>
           </box>
         </geometry>
-        <material>
-          <script>
-            <name>Gazebo/Grey</name>
-            <uri>model://media/materials/scripts/tue_mats.material</uri>
-          </script>
-        </material>
       </visual>
-      <visual name='hand_right_visual_grippoint_right'>
+      <visual name='amigo/hand_right_visual_amigo/grippoint_right'>
         <pose>0.04 0 0 0 -0 0</pose>
         <geometry>
           <box>
             <size>0 0 0</size>
           </box>
         </geometry>
-        <material>
-          <script>
-            <name>Gazebo/Blue</name>
-            <uri>model://media/materials/scripts/tue_mats.material</uri>
-          </script>
-        </material>
       </visual>
       <velocity_decay>
         <linear>0</linear>
         <angular>0</angular>
       </velocity_decay>
-      <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0</linear>
-        <angular>0</angular>
-      </velocity_decay>
-      <self_collide>0</self_collide>
     </link>
     <joint name='wrist_yaw_joint_right' type='revolute'>
-      <child>hand_right</child>
-      <parent>wrist_link6_right</parent>
+      <child>amigo/hand_right</child>
+      <parent>amigo/wrist_link6_right</parent>
       <axis>
         <xyz>1.01 3.7063e-06 -3.70995e-06</xyz>
         <limit>
@@ -3498,7 +1962,7 @@
         </dynamics>
       </axis>
     </joint>
-    <link name='finger1_right'>
+    <link name='amigo/finger1_right'>
       <pose>0.0199991 -0.200002 0.11 -3.67319e-06 0.0008 3.66668e-06</pose>
       <inertial>
         <pose>0 0 -0.045 0 -0 0</pose>
@@ -3512,34 +1976,15 @@
           <izz>0.011</izz>
         </inertia>
       </inertial>
-      <collision name='finger1_right_collision'>
+      <collision name='amigo/finger1_right_collision'>
         <pose>0 0 -0.03 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.018 0.018 0.06</size>
           </box>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode>
-              <mu>100</mu>
-              <mu2>100</mu2>
-            </ode>
-          </friction>
-        </surface>
       </collision>
-      <collision name='finger1_right_collision_finger1_phalanx_right'>
+      <collision name='amigo/finger1_right_collision_amigo/finger1_phalanx_right'>
         <pose>0 0 -0.06 0 1.57 0</pose>
         <geometry>
           <cylinder>
@@ -3547,49 +1992,16 @@
             <radius>0.009</radius>
           </cylinder>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode>
-              <mu>100</mu>
-              <mu2>100</mu2>
-            </ode>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
-      <visual name='finger1_right_visual'>
+      <visual name='amigo/finger1_right_visual'>
         <pose>0 0 -0.03 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.018 0.018 0.06</size>
           </box>
         </geometry>
-        <material>
-          <script>
-            <name>Gazebo/Black</name>
-            <uri>model://media/materials/scripts/tue_mats.material</uri>
-          </script>
-        </material>
       </visual>
-      <visual name='finger1_right_visual_finger1_phalanx_right'>
+      <visual name='amigo/finger1_right_visual_amigo/finger1_phalanx_right'>
         <pose>0 0 -0.06 0 1.57 0</pose>
         <geometry>
           <cylinder>
@@ -3597,31 +2009,15 @@
             <radius>0.009</radius>
           </cylinder>
         </geometry>
-        <material>
-          <script>
-            <name>Gazebo/White</name>
-            <uri>model://media/materials/scripts/tue_mats.material</uri>
-          </script>
-        </material>
       </visual>
       <velocity_decay>
         <linear>0</linear>
         <angular>0</angular>
       </velocity_decay>
-      <velocity_decay>
-        <linear>0</linear>
-        <angular>0</angular>
-      </velocity_decay>
-      <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0</linear>
-        <angular>0</angular>
-      </velocity_decay>
-      <self_collide>0</self_collide>
     </link>
     <joint name='finger1_joint_right' type='revolute'>
-      <child>finger1_right</child>
-      <parent>hand_right</parent>
+      <child>amigo/finger1_right</child>
+      <parent>amigo/hand_right</parent>
       <axis>
         <xyz>1 3.66668e-06 -0.0008</xyz>
         <limit>
@@ -3635,7 +2031,7 @@
         </dynamics>
       </axis>
     </joint>
-    <link name='finger1_tip_right'>
+    <link name='amigo/finger1_tip_right'>
       <pose>0.0199511 -0.200003 0.0499999 -3.67319e-06 0.0008 3.66668e-06</pose>
       <inertial>
         <pose>0 0 -0.045 0 -0 0</pose>
@@ -3649,34 +2045,15 @@
           <izz>0.00152</izz>
         </inertia>
       </inertial>
-      <collision name='finger1_tip_right_collision'>
+      <collision name='amigo/finger1_tip_right_collision'>
         <pose>0 0 -0.03 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.018 0.018 0.06</size>
           </box>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode>
-              <mu>100</mu>
-              <mu2>100</mu2>
-            </ode>
-          </friction>
-        </surface>
       </collision>
-      <collision name='finger1_tip_right_collision_finger1_tip_phalanx_right'>
+      <collision name='amigo/finger1_tip_right_collision_amigo/finger1_tip_phalanx_right'>
         <pose>0 0 -0.06 0 1.57 0</pose>
         <geometry>
           <cylinder>
@@ -3684,49 +2061,16 @@
             <radius>0.009</radius>
           </cylinder>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode>
-              <mu>100</mu>
-              <mu2>100</mu2>
-            </ode>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
-      <visual name='finger1_tip_right_visual'>
+      <visual name='amigo/finger1_tip_right_visual'>
         <pose>0 0 -0.03 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.018 0.018 0.06</size>
           </box>
         </geometry>
-        <material>
-          <script>
-            <name>Gazebo/Black</name>
-            <uri>model://media/materials/scripts/tue_mats.material</uri>
-          </script>
-        </material>
       </visual>
-      <visual name='finger1_tip_right_visual_finger1_tip_phalanx_right'>
+      <visual name='amigo/finger1_tip_right_visual_amigo/finger1_tip_phalanx_right'>
         <pose>0 0 -0.06 0 1.57 0</pose>
         <geometry>
           <cylinder>
@@ -3734,31 +2078,15 @@
             <radius>0.009</radius>
           </cylinder>
         </geometry>
-        <material>
-          <script>
-            <name>Gazebo/White</name>
-            <uri>model://media/materials/scripts/tue_mats.material</uri>
-          </script>
-        </material>
       </visual>
       <velocity_decay>
         <linear>0</linear>
         <angular>0</angular>
       </velocity_decay>
-      <velocity_decay>
-        <linear>0</linear>
-        <angular>0</angular>
-      </velocity_decay>
-      <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0</linear>
-        <angular>0</angular>
-      </velocity_decay>
-      <self_collide>0</self_collide>
     </link>
     <joint name='finger1_tip_joint_right' type='revolute'>
-      <child>finger1_tip_right</child>
-      <parent>finger1_right</parent>
+      <child>amigo/finger1_tip_right</child>
+      <parent>amigo/finger1_right</parent>
       <axis>
         <xyz>1 3.66668e-06 -0.0008</xyz>
         <limit>
@@ -3772,7 +2100,7 @@
         </dynamics>
       </axis>
     </joint>
-    <link name='finger2_right'>
+    <link name='amigo/finger2_right'>
       <pose>0.0199992 -0.240002 0.11 -3.67319e-06 0.0008 3.66668e-06</pose>
       <inertial>
         <pose>0 0 -0.045 0 -0 0</pose>
@@ -3786,34 +2114,15 @@
           <izz>0.011</izz>
         </inertia>
       </inertial>
-      <collision name='finger2_right_collision'>
+      <collision name='amigo/finger2_right_collision'>
         <pose>0 0 -0.03 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.018 0.018 0.06</size>
           </box>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode>
-              <mu>100</mu>
-              <mu2>100</mu2>
-            </ode>
-          </friction>
-        </surface>
       </collision>
-      <collision name='finger2_right_collision_finger2_phalanx_right'>
+      <collision name='amigo/finger2_right_collision_amigo/finger2_phalanx_right'>
         <pose>0 0 -0.06 0 1.57 0</pose>
         <geometry>
           <cylinder>
@@ -3821,49 +2130,16 @@
             <radius>0.009</radius>
           </cylinder>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode>
-              <mu>100</mu>
-              <mu2>100</mu2>
-            </ode>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
-      <visual name='finger2_right_visual'>
+      <visual name='amigo/finger2_right_visual'>
         <pose>0 0 -0.03 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.018 0.018 0.06</size>
           </box>
         </geometry>
-        <material>
-          <script>
-            <name>Gazebo/Black</name>
-            <uri>model://media/materials/scripts/tue_mats.material</uri>
-          </script>
-        </material>
       </visual>
-      <visual name='finger2_right_visual_finger2_phalanx_right'>
+      <visual name='amigo/finger2_right_visual_amigo/finger2_phalanx_right'>
         <pose>0 0 -0.06 0 1.57 0</pose>
         <geometry>
           <cylinder>
@@ -3871,31 +2147,15 @@
             <radius>0.009</radius>
           </cylinder>
         </geometry>
-        <material>
-          <script>
-            <name>Gazebo/White</name>
-            <uri>model://media/materials/scripts/tue_mats.material</uri>
-          </script>
-        </material>
       </visual>
       <velocity_decay>
         <linear>0</linear>
         <angular>0</angular>
       </velocity_decay>
-      <velocity_decay>
-        <linear>0</linear>
-        <angular>0</angular>
-      </velocity_decay>
-      <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0</linear>
-        <angular>0</angular>
-      </velocity_decay>
-      <self_collide>0</self_collide>
     </link>
     <joint name='finger2_joint_right' type='revolute'>
-      <child>finger2_right</child>
-      <parent>hand_right</parent>
+      <child>amigo/finger2_right</child>
+      <parent>amigo/hand_right</parent>
       <axis>
         <xyz>-1 -3.66668e-06 0.0008</xyz>
         <limit>
@@ -3909,7 +2169,7 @@
         </dynamics>
       </axis>
     </joint>
-    <link name='finger2_tip_right'>
+    <link name='amigo/finger2_tip_right'>
       <pose>0.0199512 -0.240003 0.0500001 -3.67319e-06 0.0008 3.66668e-06</pose>
       <inertial>
         <pose>0 0 -0.045 0 -0 0</pose>
@@ -3923,34 +2183,15 @@
           <izz>0.00152</izz>
         </inertia>
       </inertial>
-      <collision name='finger2_tip_right_collision'>
+      <collision name='amigo/finger2_tip_right_collision'>
         <pose>0 0 -0.03 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.018 0.018 0.06</size>
           </box>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode>
-              <mu>100</mu>
-              <mu2>100</mu2>
-            </ode>
-          </friction>
-        </surface>
       </collision>
-      <collision name='finger2_tip_right_collision_finger2_tip_phalanx_right'>
+      <collision name='amigo/finger2_tip_right_collision_amigo/finger2_tip_phalanx_right'>
         <pose>0 0 -0.06 0 1.57 0</pose>
         <geometry>
           <cylinder>
@@ -3958,49 +2199,16 @@
             <radius>0.009</radius>
           </cylinder>
         </geometry>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode>
-              <mu>100</mu>
-              <mu2>100</mu2>
-            </ode>
-          </friction>
-        </surface>
-        <surface>
-          <contact>
-            <ode/>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
       </collision>
-      <visual name='finger2_tip_right_visual'>
+      <visual name='amigo/finger2_tip_right_visual'>
         <pose>0 0 -0.03 0 -0 0</pose>
         <geometry>
           <box>
             <size>0.018 0.018 0.06</size>
           </box>
         </geometry>
-        <material>
-          <script>
-            <name>Gazebo/Black</name>
-            <uri>model://media/materials/scripts/tue_mats.material</uri>
-          </script>
-        </material>
       </visual>
-      <visual name='finger2_tip_right_visual_finger2_tip_phalanx_right'>
+      <visual name='amigo/finger2_tip_right_visual_amigo/finger2_tip_phalanx_right'>
         <pose>0 0 -0.06 0 1.57 0</pose>
         <geometry>
           <cylinder>
@@ -4008,31 +2216,15 @@
             <radius>0.009</radius>
           </cylinder>
         </geometry>
-        <material>
-          <script>
-            <name>Gazebo/White</name>
-            <uri>model://media/materials/scripts/tue_mats.material</uri>
-          </script>
-        </material>
       </visual>
       <velocity_decay>
         <linear>0</linear>
         <angular>0</angular>
       </velocity_decay>
-      <velocity_decay>
-        <linear>0</linear>
-        <angular>0</angular>
-      </velocity_decay>
-      <gravity>1</gravity>
-      <velocity_decay>
-        <linear>0</linear>
-        <angular>0</angular>
-      </velocity_decay>
-      <self_collide>0</self_collide>
     </link>
     <joint name='finger2_tip_joint_right' type='revolute'>
-      <child>finger2_tip_right</child>
-      <parent>finger2_right</parent>
+      <child>amigo/finger2_tip_right</child>
+      <parent>amigo/finger2_right</parent>
       <axis>
         <xyz>-1 -3.66668e-06 0.0008</xyz>
         <limit>
@@ -4046,7 +2238,7 @@
         </dynamics>
       </axis>
     </joint>
-    <link name='base_fixed_link'>
+    <link name='amigo/base_fixed_link'>
       <pose>0 0 0 0 -0 0</pose>
       <inertial>
         <pose>0 0 0 0 -0 0</pose>
@@ -4079,7 +2271,7 @@
         <xyz>0 0 1</xyz>
       </axis>
     </joint>
-    <link name='base_x_link'>
+    <link name='amigo/base_x_link'>
       <pose>0 0 0 0 -0 0</pose>
       <inertial>
         <pose>0 0 0 0 -0 0</pose>
@@ -4112,7 +2304,7 @@
         </dynamics>
       </axis>
     </joint>
-    <link name='base_y_link'>
+    <link name='amigo/base_y_link'>
       <pose>0 0 0 0 -0 0</pose>
       <inertial>
         <pose>0 0 0 0 -0 0</pose>

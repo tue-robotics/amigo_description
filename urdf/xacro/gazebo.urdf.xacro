@@ -1,8 +1,10 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
+<property name="prefix" value="amigo/"/>
+
 <gazebo>
-    <link name="base_fixed_link">
+    <link name="${prefix}base_fixed_link">
       <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
       <inertial>
         <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
@@ -39,7 +41,7 @@
     </joint>
     
     
-    <link name='base_x_link'>
+    <link name='${prefix}base_x_link'>
       <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
       <inertial>
         <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
@@ -76,7 +78,7 @@
     </joint>
     
     
-    <link name='base_y_link'>
+    <link name='${prefix}base_y_link'>
       <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
       <inertial>
         <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>

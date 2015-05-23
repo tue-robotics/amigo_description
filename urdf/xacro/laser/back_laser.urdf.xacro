@@ -4,6 +4,8 @@
    <author>Max Baeten</author>
    <license>BSD</license>
    <review status="unreviewed" notes=""/>
+   
+   <property name="prefix" value="amigo/"/>
 
 <!--the laser at the back of the base of the robot -->
 <xacro:my_link name="back_laser" mass="0.5" color="Black">
@@ -29,8 +31,8 @@
 </xacro:my_link_textured>
 
 <joint name="back_lasertop_joint" type="fixed">
-    <parent link="back_laser"/>
-    <child link="back_lasertop"/>
+    <parent link="${prefix}back_laser"/>
+    <child link="${prefix}back_lasertop"/>
 </joint>
 
 </robot>

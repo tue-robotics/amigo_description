@@ -7,6 +7,8 @@
 	<author>Rob Janssen, Kris van Tienhoven</author>
    <license>BSD</license>
    <review status="unreviewed" notes=""/>
+   
+    <property name="prefix" value="amigo/"/>
 
 <!--Start of the macro
 @param whichside is "left"  or "right"
@@ -177,8 +179,8 @@ note: not visible, purely kinematic-->
 <!--the joints start here-->
 
   <joint name="shoulder_mount_joint_${whichside}" type="fixed">
-    <parent link="torso"/>
-    <child link="shoulder_mount_${whichside}"/>
+    <parent link="${prefix}torso"/>
+    <child link="${prefix}shoulder_mount_${whichside}"/>
     <origin xyz="0.05 ${sidesign*0.22} 0.0" rpy="0 0 0.0"/>
   </joint>
 
@@ -239,8 +241,8 @@ note: not visible, purely kinematic-->
 </xacro:my_joint>
 
 <joint name="finger1_phalanx_joint_${whichside}" type="fixed">
-    <parent link="finger1_${whichside}"/>
-    <child link="finger1_phalanx_${whichside}"/>
+    <parent link="${prefix}finger1_${whichside}"/>
+    <child link="${prefix}finger1_phalanx_${whichside}"/>
     <origin xyz="0 0 -0.06" rpy="0 1.57 0"/>
 </joint>
 
@@ -252,8 +254,8 @@ note: not visible, purely kinematic-->
 </xacro:my_joint>
 
 <joint name="finger1_tip_phalanx_joint_${whichside}" type="fixed">
-    <parent link="finger1_tip_${whichside}"/>
-    <child link="finger1_tip_phalanx_${whichside}"/>
+    <parent link="${prefix}finger1_tip_${whichside}"/>
+    <child link="${prefix}finger1_tip_phalanx_${whichside}"/>
     <origin xyz="0 0 -0.06" rpy="0 1.57 0"/>
 </joint>
 
@@ -265,8 +267,8 @@ note: not visible, purely kinematic-->
 </xacro:my_joint>
 
 <joint name="finger2_phalanx_joint_${whichside}" type="fixed">
-    <parent link="finger2_${whichside}"/>
-    <child link="finger2_phalanx_${whichside}"/>
+    <parent link="${prefix}finger2_${whichside}"/>
+    <child link="${prefix}finger2_phalanx_${whichside}"/>
     <origin xyz="0 0 -0.06" rpy="0 1.57 0"/>
 </joint>
 
@@ -278,14 +280,14 @@ note: not visible, purely kinematic-->
 </xacro:my_joint>
 
 <joint name="finger2_tip_phalanx_joint_${whichside}" type="fixed">
-    <parent link="finger2_tip_${whichside}"/>
-    <child link="finger2_tip_phalanx_${whichside}"/>
+    <parent link="${prefix}finger2_tip_${whichside}"/>
+    <child link="${prefix}finger2_tip_phalanx_${whichside}"/>
     <origin xyz="0 0 -0.06" rpy="0 1.57 0"/>
 </joint>
 
 <joint name="grippoint_joint_${whichside}" type="fixed">
-  <parent link="hand_${whichside}"/>
-  <child link="grippoint_${whichside}"/>
+  <parent link="${prefix}hand_${whichside}"/>
+  <child link="${prefix}grippoint_${whichside}"/>
   <origin xyz="0.14 0.0 0.0" rpy="0 0 0"/>
 </joint>
 

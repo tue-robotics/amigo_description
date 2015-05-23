@@ -5,14 +5,15 @@
       xmlns:xacro="http://ros.org/wiki/xacro">
 
   <property name="M_PI" value="3.14159"/>
+  <property name="prefix" value="amigo/"/>
     
   <joint name="base_kinect/base_kinect_joint" type="fixed">
     <origin xyz="0.3 0 0.26" rpy="0 -0.07 0" /> <!-- THESE VALUES STILL HAVE TO BE CALIBRATED!! -->
-    <parent link="base" />
-    <child link="base_kinect/openni_camera" />
+    <parent link="${prefix}base" />
+    <child link="${prefix}base_kinect/openni_camera" />
   </joint>
   
-  <link name="base_kinect/openni_camera">
+  <link name="${prefix}base_kinect/openni_camera">
     <inertial>
       <mass value="0.01" />
       <origin xyz="0 0 0" />
@@ -40,11 +41,11 @@
 
   <joint name="base_kinect/kinect_depth_joint" type="fixed">
     <origin xyz="0 0.018 0" rpy="0 0 0" />
-    <parent link="base_kinect/openni_camera" />
-    <child link="base_kinect/openni_depth_frame" />
+    <parent link="${prefix}base_kinect/openni_camera" />
+    <child link="${prefix}base_kinect/openni_depth_frame" />
   </joint>
 
-  <link name="base_kinect/openni_depth_frame">
+  <link name="${prefix}base_kinect/openni_depth_frame">
     <inertial>
       <mass value="0.01" />
       <origin xyz="0 0 0" />
@@ -56,11 +57,11 @@
 
   <joint name="base_kinect/kinect_depth_optical_joint" type="fixed">
     <origin xyz="0 0 0" rpy="${-M_PI/2} 0 ${-M_PI/2}" />
-    <parent link="base_kinect/openni_depth_frame" />
-    <child link="base_kinect/openni_depth_optical_frame" />
+    <parent link="${prefix}base_kinect/openni_depth_frame" />
+    <child link="${prefix}base_kinect/openni_depth_optical_frame" />
   </joint>
 
-  <link name="base_kinect/openni_depth_optical_frame">
+  <link name="${prefix}base_kinect/openni_depth_optical_frame">
     <inertial>
       <mass value="0.001" />
       <origin xyz="0 0 0" />
@@ -73,11 +74,11 @@
 
   <joint name="base_kinect/kinect_rgb_joint" type="fixed">
     <origin xyz="0 -0.005 0" rpy="0 0 0" />
-    <parent link="base_kinect/openni_camera" />
-    <child link="base_kinect/openni_rgb_frame" />
+    <parent link="${prefix}base_kinect/openni_camera" />
+    <child link="${prefix}base_kinect/openni_rgb_frame" />
   </joint>
 
-  <link name="base_kinect/openni_rgb_frame">
+  <link name="${prefix}base_kinect/openni_rgb_frame">
     <inertial>
       <mass value="0.001" />
       <origin xyz="0 0 0" />
@@ -90,11 +91,11 @@
 
   <joint name="base_kinect/kinect_rgb_optical_joint" type="fixed">
     <origin xyz="0 0 0" rpy="${-M_PI/2} 0 ${-M_PI/2}" />
-    <parent link="base_kinect/openni_rgb_frame" />
-    <child link="base_kinect/openni_rgb_optical_frame" />
+    <parent link="${prefix}base_kinect/openni_rgb_frame" />
+    <child link="${prefix}base_kinect/openni_rgb_optical_frame" />
   </joint>
 
-  <link name="base_kinect/openni_rgb_optical_frame">
+  <link name="${prefix}base_kinect/openni_rgb_optical_frame">
     <inertial>
       <mass value="0.001" />
       <origin xyz="0 0 0" />

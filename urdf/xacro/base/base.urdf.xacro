@@ -4,17 +4,19 @@
 
     <author>Rein Appeldoorn</author>
     <review status="unreviewed" notes=""/>
+    
+    <property name="prefix" value="amigo/"/>
 
     <joint name="base_phi_joint" type="continuous">
         <axis xyz="0 0 1"/>
-        <parent link="base_y_link"/>
+        <parent link="${prefix}base_y_link"/>
         <origin rpy="0 0 0" xyz="0 0 0"/>
-        <child link="base_link"/>
+        <child link="${prefix}base_link"/>
         <dynamics damping="100" friction="20" />
 	<limit effort="1000" velocity="1000" lower="-1000" upper="1000" />
     </joint> 
 
-    <link name="base_y_link">
+    <link name="${prefix}base_y_link">
         <inertial>
             <mass value="10"/>
             <origin xyz="0 0 0"/>
@@ -24,14 +26,14 @@
 
     <joint name="base_y_joint" type="prismatic">
         <axis xyz="0 1 0" />
-        <parent link="base_x_link" />
+        <parent link="${prefix}base_x_link" />
         <origin rpy="0 0 0" xyz="0 0 0" />
-        <child link="base_y_link" />
+        <child link="${prefix}base_y_link" />
         <dynamics damping="100" friction="20" />
         <limit effort="1000" velocity="1000" lower="-1000" upper="1000" />
     </joint>
 
-    <link name="base_x_link">
+    <link name="${prefix}base_x_link">
         <inertial>
             <mass value="10"/>
             <origin xyz="0 0 0"/>
@@ -41,14 +43,14 @@
 
     <joint name="base_x_joint" type="prismatic">
         <axis xyz="1 0 0" />
-        <parent link="base_fixed_link" />
+        <parent link="${prefix}base_fixed_link" />
         <origin rpy="0 0 0" xyz="0 0 0" />
-        <child link="base_x_link" />
+        <child link="${prefix}base_x_link" />
         <dynamics damping="100" friction="20" />
 	<limit effort="1000" velocity="1000" lower="-1000" upper="1000" />
     </joint>
 
-    <link name="base_fixed_link">
+    <link name="${prefix}base_fixed_link">
         <inertial>
             <mass value="10"/>
             <origin xyz="0 0 0"/>
@@ -59,7 +61,7 @@
     <joint name="base_fixed_joint" type="fixed">
         <parent link="world" />
         <origin rpy="0 0 0" xyz="0 0 0" />
-        <child link="base_fixed_link" />
+        <child link="${prefix}base_fixed_link" />
     </joint>
 
     <link name="world" />

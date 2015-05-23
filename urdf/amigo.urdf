@@ -61,7 +61,7 @@
   <author>Rob Janssen, Kris van Tienhoven</author>
   <license>BSD</license>
   <review notes="" status="unreviewed"/>
-  <link name="torso">
+  <link name="amigo/torso">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
       <mass value="16"/>
@@ -85,7 +85,7 @@
     <material>amigo_description/white</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
-  <link name="torso_slider">
+  <link name="amigo/torso_slider">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <mass value="0.1"/>
@@ -109,7 +109,7 @@
     <material>amigo_description/aluminium</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
-  <link name="base">
+  <link name="amigo/base">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.0 0.3275"/>
       <mass value="20"/>
@@ -133,7 +133,7 @@
     <material>amigo_description/bottomcovers</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
-  <link name="base_link">
+  <link name="amigo/base_link">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
       <mass value="0"/>
@@ -154,13 +154,9 @@
       </geometry>
     </collision>
   </link>
-  <gazebo reference="base_link">
-    <material>Gazebo/Red</material>
-    <turnGravityOff>false</turnGravityOff>
-  </gazebo>
   <joint name="torso_joint" type="prismatic">
-    <parent link="base"/>
-    <child link="torso_slider"/>
+    <parent link="amigo/base"/>
+    <child link="amigo/torso_slider"/>
     <axis xyz="1 0 0"/>
     <origin rpy="3.14159265 -1.5708 0" xyz="0.0 0.0 0.58"/>
     <dynamics damping="3" friction="0.0"/>
@@ -168,14 +164,14 @@
     <limit effort="0.1" lower="0.09" upper="0.4" velocity="0.07"/>
   </joint>
   <joint name="base_link_joint" type="fixed">
-    <parent link="base_link"/>
-    <child link="base"/>
+    <parent link="amigo/base_link"/>
+    <child link="amigo/base"/>
     <axis xyz="1 0 0"/>
     <origin rpy="0 0 0" xyz="0.0 0.0 0.055"/>
   </joint>
   <joint name="torso_slider_joint" type="fixed">
-    <parent link="torso_slider"/>
-    <child link="torso"/>
+    <parent link="amigo/torso_slider"/>
+    <child link="amigo/torso"/>
     <axis xyz="1 0 0"/>
     <origin rpy="0 0 0" xyz="0.1 0.0 0.0"/>
   </joint>
@@ -183,7 +179,7 @@
   <author>Kris van Tienhoven</author>
   <license>BSD</license>
   <review notes="" status="unreviewed"/>
-  <link name="base_plate">
+  <link name="amigo/base_plate">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
       <mass value="0.1"/>
@@ -209,12 +205,12 @@
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <joint name="base_plate_joint" type="fixed">
-    <parent link="base_link"/>
-    <child link="base_plate"/>
+    <parent link="amigo/base_link"/>
+    <child link="amigo/base_plate"/>
     <axis xyz="1 0 0"/>
     <origin rpy="0 0 0" xyz="0.0 0.0 0.05"/>
   </joint>
-  <link name="torso_assist_slider_right">
+  <link name="amigo/torso_assist_slider_right">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <mass value="0.01"/>
@@ -238,7 +234,7 @@
     <material>amigo_description/aluminium</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
-  <link name="torso_assist_slider_left">
+  <link name="amigo/torso_assist_slider_left">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <mass value="0.01"/>
@@ -262,7 +258,7 @@
     <material>amigo_description/aluminium</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
-  <link name="torso_assist_slider_back">
+  <link name="amigo/torso_assist_slider_back">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <mass value="0.01"/>
@@ -287,21 +283,21 @@
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <joint name="torso_slider_assist_joint_right" type="fixed">
-    <parent link="torso"/>
-    <child link="torso_assist_slider_right"/>
+    <parent link="amigo/torso"/>
+    <child link="amigo/torso_assist_slider_right"/>
     <origin rpy="0 0 0" xyz="-0.3 0.1 0.0"/>
   </joint>
   <joint name="torso_slider_assist_joint_left" type="fixed">
-    <parent link="torso"/>
-    <child link="torso_assist_slider_left"/>
+    <parent link="amigo/torso"/>
+    <child link="amigo/torso_assist_slider_left"/>
     <origin rpy="0 0 0" xyz="-0.3 -0.1 0.0"/>
   </joint>
   <joint name="torso_slider_assist_joint_back" type="fixed">
-    <parent link="torso"/>
-    <child link="torso_assist_slider_back"/>
+    <parent link="amigo/torso"/>
+    <child link="amigo/torso_assist_slider_back"/>
     <origin rpy="1.5708 0 0" xyz="-0.3 0.0 -0.1"/>
   </joint>
-  <link name="clavicles">
+  <link name="amigo/clavicles">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <mass value="0.01"/>
@@ -322,20 +318,16 @@
       </geometry>
     </collision>
   </link>
-  <gazebo reference="clavicles">
-    <material>Gazebo/Black</material>
-    <turnGravityOff>false</turnGravityOff>
-  </gazebo>
   <joint name="clavicle_joint" type="fixed">
-    <parent link="torso"/>
-    <child link="clavicles"/>
+    <parent link="amigo/torso"/>
+    <child link="amigo/clavicles"/>
     <origin rpy="0 0 0" xyz="0.05 0.0 0.0"/>
   </joint>
   <!--========BUILD LASERS======-->
   <author>Kris van Tienhoven</author>
   <license>BSD</license>
   <review notes="" status="unreviewed"/>
-  <link name="base_laser">
+  <link name="amigo/base_laser">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
       <mass value="0.5"/>
@@ -356,19 +348,15 @@
       </geometry>
     </collision>
   </link>
-  <gazebo reference="base_laser">
-    <material>Gazebo/Black</material>
-    <turnGravityOff>false</turnGravityOff>
-  </gazebo>
   <joint name="base_laser_joint" type="fixed">
-    <parent link="base"/>
-    <child link="base_laser"/>
+    <parent link="amigo/base"/>
+    <child link="amigo/base_laser"/>
     <origin rpy="0 0 0.015" xyz="0.3239 0.0 0.24"/>
     <axis xyz="0 1 0"/>
     <dynamics damping="0.1" friction="0"/>
     <limit effort="13.4" lower="-0.7809" upper="1.5708" velocity="1.0"/>
   </joint>
-  <link name="lasertop">
+  <link name="amigo/lasertop">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
       <mass value="0.01"/>
@@ -394,10 +382,10 @@
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <joint name="lasertop_joint" type="fixed">
-    <parent link="base_laser"/>
-    <child link="lasertop"/>
+    <parent link="amigo/base_laser"/>
+    <child link="amigo/lasertop"/>
   </joint>
-  <link name="logo">
+  <link name="amigo/logo">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
       <mass value="0.01"/>
@@ -422,13 +410,13 @@
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <joint name="logo_joint" type="fixed">
-    <parent link="base_laser"/>
-    <child link="logo"/>
+    <parent link="amigo/base_laser"/>
+    <child link="amigo/logo"/>
   </joint>
   <author>Janno Lunenburg</author>
   <license>BSD</license>
   <review notes="" status="unreviewed"/>
-  <link name="torso_dummy">
+  <link name="amigo/torso_dummy">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
       <mass value="0"/>
@@ -449,11 +437,7 @@
       </geometry>
     </collision>
   </link>
-  <gazebo reference="torso_dummy">
-    <material>Gazebo/Red</material>
-    <turnGravityOff>false</turnGravityOff>
-  </gazebo>
-  <link name="torso_laser">
+  <link name="amigo/torso_laser">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
       <mass value="0.5"/>
@@ -474,27 +458,23 @@
       </geometry>
     </collision>
   </link>
-  <gazebo reference="torso_laser">
-    <material>Gazebo/Black</material>
-    <turnGravityOff>false</turnGravityOff>
-  </gazebo>
   <joint name="torso_dummy_joint" type="fixed">
-    <parent link="torso"/>
-    <child link="torso_dummy"/>
+    <parent link="amigo/torso"/>
+    <child link="amigo/torso_dummy"/>
     <origin rpy="0.0 -1.57 0.0" xyz="-0.0994 0.0 0.075"/>
     <axis xyz="0 1 0"/>
     <dynamics damping="0.1" friction="0"/>
     <limit effort="13.4" lower="-0.7809" upper="1.5708" velocity="1.0"/>
   </joint>
   <joint name="torso_laser_joint" type="fixed">
-    <parent link="torso_dummy"/>
-    <child link="torso_laser"/>
+    <parent link="amigo/torso_dummy"/>
+    <child link="amigo/torso_laser"/>
     <origin rpy="0.0 0.0 -0.05" xyz="0.0 0.0 0.0"/>
     <axis xyz="0 1 0"/>
     <dynamics damping="0.1" friction="0"/>
     <limit effort="13.4" lower="-0.7809" upper="1.5708" velocity="1.0"/>
   </joint>
-  <link name="torso_lasertop">
+  <link name="amigo/torso_lasertop">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
       <mass value="0.01"/>
@@ -520,13 +500,13 @@
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <joint name="torso_lasertop_joint" type="fixed">
-    <parent link="torso_laser"/>
-    <child link="torso_lasertop"/>
+    <parent link="amigo/torso_laser"/>
+    <child link="amigo/torso_lasertop"/>
   </joint>
   <author>Max Baeten</author>
   <license>BSD</license>
   <review notes="" status="unreviewed"/>
-  <link name="back_laser">
+  <link name="amigo/back_laser">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
       <mass value="0.5"/>
@@ -547,19 +527,15 @@
       </geometry>
     </collision>
   </link>
-  <gazebo reference="back_laser">
-    <material>Gazebo/Black</material>
-    <turnGravityOff>false</turnGravityOff>
-  </gazebo>
   <joint name="back_laser_joint" type="fixed">
-    <parent link="base"/>
-    <child link="back_laser"/>
+    <parent link="amigo/base"/>
+    <child link="amigo/back_laser"/>
     <origin rpy="0 0 3.11" xyz="-0.275 0.0 0.235"/>
     <axis xyz="0 1 0"/>
     <dynamics damping="0.1" friction="0"/>
     <limit effort="13.4" lower="-0.7809" upper="1.5708" velocity="1.0"/>
   </joint>
-  <link name="back_lasertop">
+  <link name="amigo/back_lasertop">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
       <mass value="0.01"/>
@@ -585,14 +561,14 @@
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <joint name="back_lasertop_joint" type="fixed">
-    <parent link="back_laser"/>
-    <child link="back_lasertop"/>
+    <parent link="amigo/back_laser"/>
+    <child link="amigo/back_lasertop"/>
   </joint>
   <!--========BUILD HEAD======-->
   <author>Kris van Tienhoven</author>
   <license>BSD</license>
   <review notes="" status="unreviewed"/>
-  <link name="head_mount">
+  <link name="amigo/head_mount">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
       <mass value="0.001"/>
@@ -600,12 +576,12 @@
     </inertial>
   </link>
   <joint name="head_mount_joint" type="fixed">
-    <parent link="torso"/>
-    <child link="head_mount"/>
+    <parent link="amigo/torso"/>
+    <child link="amigo/head_mount"/>
     <axis xyz="0 0 1"/>
     <origin rpy="0.0 0.0 0.0" xyz="0.11 0.0 0.0426"/>
   </joint>
-  <link name="neck_pan">
+  <link name="amigo/neck_pan">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.0 0.0335"/>
       <mass value="0.05"/>
@@ -626,11 +602,7 @@
       </geometry>
     </collision>
   </link>
-  <gazebo reference="neck_pan">
-    <material>Gazebo/Black</material>
-    <turnGravityOff>false</turnGravityOff>
-  </gazebo>
-  <link name="neck_tilt">
+  <link name="amigo/neck_tilt">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 -0.0 0.0285"/>
       <mass value="0.05"/>
@@ -654,7 +626,7 @@
     <material>amigo_description/aluminium</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
-  <link name="head">
+  <link name="amigo/head">
     <inertial>
       <origin rpy="0 0 0" xyz="0 0 0.041"/>
       <mass value="0"/>
@@ -679,20 +651,20 @@
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <joint name="head_joint" type="fixed">
-    <parent link="neck_tilt"/>
-    <child link="head"/>
+    <parent link="amigo/neck_tilt"/>
+    <child link="amigo/head"/>
   </joint>
   <joint name="neck_pan_joint" type="revolute">
-    <parent link="head_mount"/>
-    <child link="neck_pan"/>
+    <parent link="amigo/head_mount"/>
+    <child link="amigo/neck_pan"/>
     <origin rpy="3.1415 -1.5708 0.0" xyz="0.0 0.0 0.0"/>
     <axis xyz="0 0 1"/>
     <dynamics damping="0.1" friction="0"/>
     <limit effort="13.4" lower="-1.5708" upper="1.5708" velocity="1.0"/>
   </joint>
   <joint name="neck_tilt_joint" type="revolute">
-    <parent link="neck_pan"/>
-    <child link="neck_tilt"/>
+    <parent link="amigo/neck_pan"/>
+    <child link="amigo/neck_tilt"/>
     <origin rpy="0.0 0.015 0.0" xyz="0.0 0.0 0.0445"/>
     <axis xyz="0 1 0"/>
     <dynamics damping="0.1" friction="0.0"/>
@@ -704,10 +676,10 @@
     <!-- THESE VALUES ARE ROUGH ESTIMATES!! -->
     <origin rpy="0.0 0.0 0.025" xyz="0.035 0.0 0.10"/>
     <!-- THESE VALUES ARE ROUGH ESTIMATES!! -->
-    <parent link="head"/>
-    <child link="top_kinect/openni_camera"/>
+    <parent link="amigo/head"/>
+    <child link="amigo/top_kinect/openni_camera"/>
   </joint>
-  <link name="top_kinect/openni_camera">
+  <link name="amigo/top_kinect/openni_camera">
     <inertial>
       <mass value="0.01"/>
       <origin xyz="0 0 0"/>
@@ -730,10 +702,10 @@
   </link>
   <joint name="top_kinect/kinect_depth_joint" type="fixed">
     <origin rpy="0 0 0" xyz="0 0.0125 0"/>
-    <parent link="top_kinect/openni_camera"/>
-    <child link="top_kinect/openni_depth_frame"/>
+    <parent link="amigo/top_kinect/openni_camera"/>
+    <child link="amigo/top_kinect/openni_depth_frame"/>
   </joint>
-  <link name="top_kinect/openni_depth_frame">
+  <link name="amigo/top_kinect/openni_depth_frame">
     <inertial>
       <mass value="0.01"/>
       <origin xyz="0 0 0"/>
@@ -742,10 +714,10 @@
   </link>
   <joint name="top_kinect/kinect_depth_optical_joint" type="fixed">
     <origin rpy="-1.570795 0 -1.570795" xyz="0 0 0"/>
-    <parent link="top_kinect/openni_depth_frame"/>
-    <child link="top_kinect/openni_depth_optical_frame"/>
+    <parent link="amigo/top_kinect/openni_depth_frame"/>
+    <child link="amigo/top_kinect/openni_depth_optical_frame"/>
   </joint>
-  <link name="top_kinect/openni_depth_optical_frame">
+  <link name="amigo/top_kinect/openni_depth_optical_frame">
     <inertial>
       <mass value="0.001"/>
       <origin xyz="0 0 0"/>
@@ -754,10 +726,10 @@
   </link>
   <joint name="top_kinect/kinect_rgb_joint" type="fixed">
     <origin rpy="0 0 0" xyz="0 -0.0125 0"/>
-    <parent link="top_kinect/openni_camera"/>
-    <child link="top_kinect/openni_rgb_frame"/>
+    <parent link="amigo/top_kinect/openni_camera"/>
+    <child link="amigo/top_kinect/openni_rgb_frame"/>
   </joint>
-  <link name="top_kinect/openni_rgb_frame">
+  <link name="amigo/top_kinect/openni_rgb_frame">
     <inertial>
       <mass value="0.001"/>
       <origin xyz="0 0 0"/>
@@ -766,10 +738,10 @@
   </link>
   <joint name="top_kinect/kinect_rgb_optical_joint" type="fixed">
     <origin rpy="-1.570795 0 -1.570795" xyz="0 0 0"/>
-    <parent link="top_kinect/openni_rgb_frame"/>
-    <child link="top_kinect/openni_rgb_optical_frame"/>
+    <parent link="amigo/top_kinect/openni_rgb_frame"/>
+    <child link="amigo/top_kinect/openni_rgb_optical_frame"/>
   </joint>
-  <link name="top_kinect/openni_rgb_optical_frame">
+  <link name="amigo/top_kinect/openni_rgb_optical_frame">
     <inertial>
       <mass value="0.001"/>
       <origin xyz="0 0 0"/>
@@ -779,10 +751,10 @@
   <joint name="base_kinect/base_kinect_joint" type="fixed">
     <origin rpy="0 -0.07 0" xyz="0.3 0 0.26"/>
     <!-- THESE VALUES STILL HAVE TO BE CALIBRATED!! -->
-    <parent link="base"/>
-    <child link="base_kinect/openni_camera"/>
+    <parent link="amigo/base"/>
+    <child link="amigo/base_kinect/openni_camera"/>
   </joint>
-  <link name="base_kinect/openni_camera">
+  <link name="amigo/base_kinect/openni_camera">
     <inertial>
       <mass value="0.01"/>
       <origin xyz="0 0 0"/>
@@ -807,10 +779,10 @@
   </link>
   <joint name="base_kinect/kinect_depth_joint" type="fixed">
     <origin rpy="0 0 0" xyz="0 0.018 0"/>
-    <parent link="base_kinect/openni_camera"/>
-    <child link="base_kinect/openni_depth_frame"/>
+    <parent link="amigo/base_kinect/openni_camera"/>
+    <child link="amigo/base_kinect/openni_depth_frame"/>
   </joint>
-  <link name="base_kinect/openni_depth_frame">
+  <link name="amigo/base_kinect/openni_depth_frame">
     <inertial>
       <mass value="0.01"/>
       <origin xyz="0 0 0"/>
@@ -819,10 +791,10 @@
   </link>
   <joint name="base_kinect/kinect_depth_optical_joint" type="fixed">
     <origin rpy="-1.570795 0 -1.570795" xyz="0 0 0"/>
-    <parent link="base_kinect/openni_depth_frame"/>
-    <child link="base_kinect/openni_depth_optical_frame"/>
+    <parent link="amigo/base_kinect/openni_depth_frame"/>
+    <child link="amigo/base_kinect/openni_depth_optical_frame"/>
   </joint>
-  <link name="base_kinect/openni_depth_optical_frame">
+  <link name="amigo/base_kinect/openni_depth_optical_frame">
     <inertial>
       <mass value="0.001"/>
       <origin xyz="0 0 0"/>
@@ -831,10 +803,10 @@
   </link>
   <joint name="base_kinect/kinect_rgb_joint" type="fixed">
     <origin rpy="0 0 0" xyz="0 -0.005 0"/>
-    <parent link="base_kinect/openni_camera"/>
-    <child link="base_kinect/openni_rgb_frame"/>
+    <parent link="amigo/base_kinect/openni_camera"/>
+    <child link="amigo/base_kinect/openni_rgb_frame"/>
   </joint>
-  <link name="base_kinect/openni_rgb_frame">
+  <link name="amigo/base_kinect/openni_rgb_frame">
     <inertial>
       <mass value="0.001"/>
       <origin xyz="0 0 0"/>
@@ -843,10 +815,10 @@
   </link>
   <joint name="base_kinect/kinect_rgb_optical_joint" type="fixed">
     <origin rpy="-1.570795 0 -1.570795" xyz="0 0 0"/>
-    <parent link="base_kinect/openni_rgb_frame"/>
-    <child link="base_kinect/openni_rgb_optical_frame"/>
+    <parent link="amigo/base_kinect/openni_rgb_frame"/>
+    <child link="amigo/base_kinect/openni_rgb_optical_frame"/>
   </joint>
-  <link name="base_kinect/openni_rgb_optical_frame">
+  <link name="amigo/base_kinect/openni_rgb_optical_frame">
     <inertial>
       <mass value="0.001"/>
       <origin xyz="0 0 0"/>
@@ -857,7 +829,7 @@
   <author>Rob Janssen, Kris van Tienhoven</author>
   <license>BSD</license>
   <review notes="" status="unreviewed"/>
-  <link name="shoulder_mount_right">
+  <link name="amigo/shoulder_mount_right">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
       <mass value="0.15"/>
@@ -878,11 +850,7 @@
       </geometry>
     </collision>
   </link>
-  <gazebo reference="shoulder_mount_right">
-    <material>Gazebo/Black</material>
-    <turnGravityOff>false</turnGravityOff>
-  </gazebo>
-  <link name="shoulder_link1_right">
+  <link name="amigo/shoulder_link1_right">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
       <mass value="0.25"/>
@@ -903,11 +871,7 @@
       </geometry>
     </collision>
   </link>
-  <gazebo reference="shoulder_link1_right">
-    <material>Gazebo/Black</material>
-    <turnGravityOff>false</turnGravityOff>
-  </gazebo>
-  <link name="shoulder_link2_right">
+  <link name="amigo/shoulder_link2_right">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
       <mass value="0.15"/>
@@ -928,11 +892,7 @@
       </geometry>
     </collision>
   </link>
-  <gazebo reference="shoulder_link2_right">
-    <material>Gazebo/Black</material>
-    <turnGravityOff>false</turnGravityOff>
-  </gazebo>
-  <link name="upper_arm_right">
+  <link name="amigo/upper_arm_right">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 -0.2 0.0"/>
       <mass value="2.95"/>
@@ -956,7 +916,7 @@
     <material>amigo_description/white</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
-  <link name="elbow_link4_right">
+  <link name="amigo/elbow_link4_right">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
       <mass value="0.1"/>
@@ -977,11 +937,7 @@
       </geometry>
     </collision>
   </link>
-  <gazebo reference="elbow_link4_right">
-    <material>Gazebo/Grey</material>
-    <turnGravityOff>false</turnGravityOff>
-  </gazebo>
-  <link name="fore_arm_right">
+  <link name="amigo/fore_arm_right">
     <inertial>
       <origin rpy="0.0 0 0" xyz="0.0 -0.14 0.0"/>
       <mass value="0.85"/>
@@ -1005,7 +961,7 @@
     <material>amigo_description/white</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
-  <link name="wrist_link6_right">
+  <link name="amigo/wrist_link6_right">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
       <mass value="0.01"/>
@@ -1026,11 +982,7 @@
       </geometry>
     </collision>
   </link>
-  <gazebo reference="wrist_link6_right">
-    <material>Gazebo/Black</material>
-    <turnGravityOff>false</turnGravityOff>
-  </gazebo>
-  <link name="hand_right">
+  <link name="amigo/hand_right">
     <inertial>
       <origin rpy="0 0 0" xyz="0.048 0.0 0.0"/>
       <mass value="0.2"/>
@@ -1051,11 +1003,7 @@
       </geometry>
     </collision>
   </link>
-  <gazebo reference="hand_right">
-    <material>Gazebo/Grey</material>
-    <turnGravityOff>false</turnGravityOff>
-  </gazebo>
-  <link name="finger1_right">
+  <link name="amigo/finger1_right">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.0 -0.03"/>
       <mass value="0.01"/>
@@ -1077,14 +1025,10 @@
     </collision>
   </link>
   <gazebo reference="finger1_right">
-    <material>Gazebo/Black</material>
-    <turnGravityOff>false</turnGravityOff>
-  </gazebo>
-  <gazebo reference="finger1_right">
     <mu1 value="100.0"/>
     <mu2 value="100.0"/>
   </gazebo>
-  <link name="finger1_phalanx_right">
+  <link name="amigo/finger1_phalanx_right">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.0 0"/>
       <mass value="0.01"/>
@@ -1105,11 +1049,7 @@
       </geometry>
     </collision>
   </link>
-  <gazebo reference="finger1_phalanx_right">
-    <material>Gazebo/White</material>
-    <turnGravityOff>false</turnGravityOff>
-  </gazebo>
-  <link name="finger1_tip_right">
+  <link name="amigo/finger1_tip_right">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.0 -0.03"/>
       <mass value="0.01"/>
@@ -1131,14 +1071,10 @@
     </collision>
   </link>
   <gazebo reference="finger1_tip_right">
-    <material>Gazebo/Black</material>
-    <turnGravityOff>false</turnGravityOff>
-  </gazebo>
-  <gazebo reference="finger1_tip_right">
     <mu1 value="100.0"/>
     <mu2 value="100.0"/>
   </gazebo>
-  <link name="finger1_tip_phalanx_right">
+  <link name="amigo/finger1_tip_phalanx_right">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.0 0"/>
       <mass value="0.01"/>
@@ -1159,11 +1095,7 @@
       </geometry>
     </collision>
   </link>
-  <gazebo reference="finger1_tip_phalanx_right">
-    <material>Gazebo/White</material>
-    <turnGravityOff>false</turnGravityOff>
-  </gazebo>
-  <link name="finger2_right">
+  <link name="amigo/finger2_right">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.0 -0.03"/>
       <mass value="0.01"/>
@@ -1185,14 +1117,10 @@
     </collision>
   </link>
   <gazebo reference="finger2_right">
-    <material>Gazebo/Black</material>
-    <turnGravityOff>false</turnGravityOff>
-  </gazebo>
-  <gazebo reference="finger2_right">
     <mu1 value="100.0"/>
     <mu2 value="100.0"/>
   </gazebo>
-  <link name="finger2_phalanx_right">
+  <link name="amigo/finger2_phalanx_right">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.0 0"/>
       <mass value="0.01"/>
@@ -1213,11 +1141,7 @@
       </geometry>
     </collision>
   </link>
-  <gazebo reference="finger2_phalanx_right">
-    <material>Gazebo/White</material>
-    <turnGravityOff>false</turnGravityOff>
-  </gazebo>
-  <link name="finger2_tip_right">
+  <link name="amigo/finger2_tip_right">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.0 -0.03"/>
       <mass value="0.01"/>
@@ -1239,14 +1163,10 @@
     </collision>
   </link>
   <gazebo reference="finger2_tip_right">
-    <material>Gazebo/Black</material>
-    <turnGravityOff>false</turnGravityOff>
-  </gazebo>
-  <gazebo reference="finger2_tip_right">
     <mu1 value="100.0"/>
     <mu2 value="100.0"/>
   </gazebo>
-  <link name="finger2_tip_phalanx_right">
+  <link name="amigo/finger2_tip_phalanx_right">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.0 0"/>
       <mass value="0.01"/>
@@ -1267,11 +1187,7 @@
       </geometry>
     </collision>
   </link>
-  <gazebo reference="finger2_tip_phalanx_right">
-    <material>Gazebo/White</material>
-    <turnGravityOff>false</turnGravityOff>
-  </gazebo>
-  <link name="grippoint_right">
+  <link name="amigo/grippoint_right">
     <inertial>
       <origin rpy="0 0 0" xyz="-0.1 0.0 0.0"/>
       <mass value="0.01"/>
@@ -1292,129 +1208,125 @@
       </geometry>
     </collision>
   </link>
-  <gazebo reference="grippoint_right">
-    <material>Gazebo/Blue</material>
-    <turnGravityOff>false</turnGravityOff>
-  </gazebo>
   <joint name="shoulder_mount_joint_right" type="fixed">
-    <parent link="torso"/>
-    <child link="shoulder_mount_right"/>
+    <parent link="amigo/torso"/>
+    <child link="amigo/shoulder_mount_right"/>
     <origin rpy="0 0 0.0" xyz="0.05 0.22 0.0"/>
   </joint>
   <joint name="shoulder_yaw_joint_right" type="revolute">
-    <parent link="shoulder_mount_right"/>
-    <child link="shoulder_link1_right"/>
+    <parent link="amigo/shoulder_mount_right"/>
+    <child link="amigo/shoulder_link1_right"/>
     <origin rpy="-1.5708 -1.5708 0" xyz="0 0 0"/>
     <axis xyz="+1 0 0"/>
     <dynamics damping="4.0" friction="4.87"/>
     <limit effort="0.2" lower="-1.57" upper="0.0" velocity="0.4"/>
   </joint>
   <joint name="shoulder_pitch_joint_right" type="revolute">
-    <parent link="shoulder_link1_right"/>
-    <child link="shoulder_link2_right"/>
+    <parent link="amigo/shoulder_link1_right"/>
+    <child link="amigo/shoulder_link2_right"/>
     <origin rpy="-1.5708  0 0" xyz="0.0 0.0 0.0"/>
     <axis xyz="0 -1 0"/>
     <dynamics damping="4.0" friction="6.06"/>
     <limit effort="0.2" lower="-1.57" upper="1.57" velocity="0.4"/>
   </joint>
   <joint name="shoulder_roll_joint_right" type="revolute">
-    <parent link="shoulder_link2_right"/>
-    <child link="upper_arm_right"/>
+    <parent link="amigo/shoulder_link2_right"/>
+    <child link="amigo/upper_arm_right"/>
     <origin rpy="1.5708 0 0.0" xyz="0.0 0.0 0.0"/>
     <axis xyz="0 1.0 0"/>
     <dynamics damping="3.8" friction="2.216"/>
     <limit effort="0.3" lower="-1.57" upper="1.57" velocity="0.6"/>
   </joint>
   <joint name="elbow_pitch_joint_right" type="revolute">
-    <parent link="upper_arm_right"/>
-    <child link="elbow_link4_right"/>
+    <parent link="amigo/upper_arm_right"/>
+    <child link="amigo/elbow_link4_right"/>
     <origin rpy="-1.5708 0 0" xyz="0.01 -0.32 0.0"/>
     <axis xyz="0 -1 0"/>
     <dynamics damping="3" friction="1.18"/>
     <limit effort="0.5" lower="0.0" upper="2.23" velocity="0.8"/>
   </joint>
   <joint name="elbow_roll_joint_right" type="revolute">
-    <parent link="elbow_link4_right"/>
-    <child link="fore_arm_right"/>
+    <parent link="amigo/elbow_link4_right"/>
+    <child link="amigo/fore_arm_right"/>
     <origin rpy="1.5708 0 0" xyz="0.0 0.0 0.0"/>
     <axis xyz="0 1.0 0"/>
     <dynamics damping="3.5" friction="1.35"/>
     <limit effort="0.5" lower="-1.83" upper="1.83" velocity="0.8"/>
   </joint>
   <joint name="wrist_pitch_joint_right" type="revolute">
-    <parent link="fore_arm_right"/>
-    <child link="wrist_link6_right"/>
+    <parent link="amigo/fore_arm_right"/>
+    <child link="amigo/wrist_link6_right"/>
     <origin rpy="-1.5708 0 -1.5708" xyz="0.01 -0.28 0.0"/>
     <axis xyz="0 -1 0"/>
     <dynamics damping="0.35" friction="0.63"/>
     <limit effort="0.5" lower="-0.95" upper="0.95" velocity="1.0"/>
   </joint>
   <joint name="wrist_yaw_joint_right" type="revolute">
-    <parent link="wrist_link6_right"/>
-    <child link="hand_right"/>
+    <parent link="amigo/wrist_link6_right"/>
+    <child link="amigo/hand_right"/>
     <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
     <axis xyz="0 0 1.01"/>
     <dynamics damping="0.3" friction="0.68"/>
     <limit effort="0.5" lower="-0.61" upper="0.61" velocity="1.0"/>
   </joint>
   <joint name="finger1_joint_right" type="revolute">
-    <parent link="hand_right"/>
-    <child link="finger1_right"/>
+    <parent link="amigo/hand_right"/>
+    <child link="amigo/finger1_right"/>
     <origin rpy="0 -1.57 0" xyz=" 0.075 0.02 0"/>
     <axis xyz="1 0 0"/>
     <dynamics damping="0.5" friction="1.0"/>
     <limit effort="3" lower="0.2" upper="1" velocity="1.0"/>
   </joint>
   <joint name="finger1_phalanx_joint_right" type="fixed">
-    <parent link="finger1_right"/>
-    <child link="finger1_phalanx_right"/>
+    <parent link="amigo/finger1_right"/>
+    <child link="amigo/finger1_phalanx_right"/>
     <origin rpy="0 1.57 0" xyz="0 0 -0.06"/>
   </joint>
   <joint name="finger1_tip_joint_right" type="revolute">
-    <parent link="finger1_right"/>
-    <child link="finger1_tip_right"/>
+    <parent link="amigo/finger1_right"/>
+    <child link="amigo/finger1_tip_right"/>
     <origin rpy="0 0 0" xyz=" 0 0.0 -0.06"/>
     <axis xyz="1 0 0"/>
     <dynamics damping="0.5" friction="1.0"/>
     <limit effort="3" lower="-0.6" upper="-0.2" velocity="1.0"/>
   </joint>
   <joint name="finger1_tip_phalanx_joint_right" type="fixed">
-    <parent link="finger1_tip_right"/>
-    <child link="finger1_tip_phalanx_right"/>
+    <parent link="amigo/finger1_tip_right"/>
+    <child link="amigo/finger1_tip_phalanx_right"/>
     <origin rpy="0 1.57 0" xyz="0 0 -0.06"/>
   </joint>
   <joint name="finger2_joint_right" type="revolute">
-    <parent link="hand_right"/>
-    <child link="finger2_right"/>
+    <parent link="amigo/hand_right"/>
+    <child link="amigo/finger2_right"/>
     <origin rpy="0 -1.57 0" xyz="0.075 -0.02 0"/>
     <axis xyz="-1 0 0"/>
     <dynamics damping="0.5" friction="1.0"/>
     <limit effort="3" lower="0.2" upper="1" velocity="1.0"/>
   </joint>
   <joint name="finger2_phalanx_joint_right" type="fixed">
-    <parent link="finger2_right"/>
-    <child link="finger2_phalanx_right"/>
+    <parent link="amigo/finger2_right"/>
+    <child link="amigo/finger2_phalanx_right"/>
     <origin rpy="0 1.57 0" xyz="0 0 -0.06"/>
   </joint>
   <joint name="finger2_tip_joint_right" type="revolute">
-    <parent link="finger2_right"/>
-    <child link="finger2_tip_right"/>
+    <parent link="amigo/finger2_right"/>
+    <child link="amigo/finger2_tip_right"/>
     <origin rpy="0 0 0" xyz="0 0 -0.06"/>
     <axis xyz="-1 0 0"/>
     <dynamics damping="0.5" friction="1.0"/>
     <limit effort="3" lower="-0.6" upper="-0.2" velocity="1.0"/>
   </joint>
   <joint name="finger2_tip_phalanx_joint_right" type="fixed">
-    <parent link="finger2_tip_right"/>
-    <child link="finger2_tip_phalanx_right"/>
+    <parent link="amigo/finger2_tip_right"/>
+    <child link="amigo/finger2_tip_phalanx_right"/>
     <origin rpy="0 1.57 0" xyz="0 0 -0.06"/>
   </joint>
   <joint name="grippoint_joint_right" type="fixed">
-    <parent link="hand_right"/>
-    <child link="grippoint_right"/>
+    <parent link="amigo/hand_right"/>
+    <child link="amigo/grippoint_right"/>
     <origin rpy="0 0 0" xyz="0.14 0.0 0.0"/>
   </joint>
-  <link name="shoulder_mount_left">
+  <link name="amigo/shoulder_mount_left">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
       <mass value="0.15"/>
@@ -1435,11 +1347,7 @@
       </geometry>
     </collision>
   </link>
-  <gazebo reference="shoulder_mount_left">
-    <material>Gazebo/Black</material>
-    <turnGravityOff>false</turnGravityOff>
-  </gazebo>
-  <link name="shoulder_link1_left">
+  <link name="amigo/shoulder_link1_left">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
       <mass value="0.25"/>
@@ -1460,11 +1368,7 @@
       </geometry>
     </collision>
   </link>
-  <gazebo reference="shoulder_link1_left">
-    <material>Gazebo/Black</material>
-    <turnGravityOff>false</turnGravityOff>
-  </gazebo>
-  <link name="shoulder_link2_left">
+  <link name="amigo/shoulder_link2_left">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
       <mass value="0.15"/>
@@ -1485,11 +1389,7 @@
       </geometry>
     </collision>
   </link>
-  <gazebo reference="shoulder_link2_left">
-    <material>Gazebo/Black</material>
-    <turnGravityOff>false</turnGravityOff>
-  </gazebo>
-  <link name="upper_arm_left">
+  <link name="amigo/upper_arm_left">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 -0.2 0.0"/>
       <mass value="2.95"/>
@@ -1513,7 +1413,7 @@
     <material>amigo_description/white</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
-  <link name="elbow_link4_left">
+  <link name="amigo/elbow_link4_left">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
       <mass value="0.1"/>
@@ -1534,11 +1434,7 @@
       </geometry>
     </collision>
   </link>
-  <gazebo reference="elbow_link4_left">
-    <material>Gazebo/Grey</material>
-    <turnGravityOff>false</turnGravityOff>
-  </gazebo>
-  <link name="fore_arm_left">
+  <link name="amigo/fore_arm_left">
     <inertial>
       <origin rpy="0.0 0 0" xyz="0.0 -0.14 0.0"/>
       <mass value="0.85"/>
@@ -1562,7 +1458,7 @@
     <material>amigo_description/white</material>
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
-  <link name="wrist_link6_left">
+  <link name="amigo/wrist_link6_left">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
       <mass value="0.01"/>
@@ -1583,11 +1479,7 @@
       </geometry>
     </collision>
   </link>
-  <gazebo reference="wrist_link6_left">
-    <material>Gazebo/Black</material>
-    <turnGravityOff>false</turnGravityOff>
-  </gazebo>
-  <link name="hand_left">
+  <link name="amigo/hand_left">
     <inertial>
       <origin rpy="0 0 0" xyz="0.048 0.0 0.0"/>
       <mass value="0.2"/>
@@ -1608,11 +1500,7 @@
       </geometry>
     </collision>
   </link>
-  <gazebo reference="hand_left">
-    <material>Gazebo/Grey</material>
-    <turnGravityOff>false</turnGravityOff>
-  </gazebo>
-  <link name="finger1_left">
+  <link name="amigo/finger1_left">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.0 -0.03"/>
       <mass value="0.01"/>
@@ -1634,14 +1522,10 @@
     </collision>
   </link>
   <gazebo reference="finger1_left">
-    <material>Gazebo/Black</material>
-    <turnGravityOff>false</turnGravityOff>
-  </gazebo>
-  <gazebo reference="finger1_left">
     <mu1 value="100.0"/>
     <mu2 value="100.0"/>
   </gazebo>
-  <link name="finger1_phalanx_left">
+  <link name="amigo/finger1_phalanx_left">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.0 0"/>
       <mass value="0.01"/>
@@ -1662,11 +1546,7 @@
       </geometry>
     </collision>
   </link>
-  <gazebo reference="finger1_phalanx_left">
-    <material>Gazebo/White</material>
-    <turnGravityOff>false</turnGravityOff>
-  </gazebo>
-  <link name="finger1_tip_left">
+  <link name="amigo/finger1_tip_left">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.0 -0.03"/>
       <mass value="0.01"/>
@@ -1688,14 +1568,10 @@
     </collision>
   </link>
   <gazebo reference="finger1_tip_left">
-    <material>Gazebo/Black</material>
-    <turnGravityOff>false</turnGravityOff>
-  </gazebo>
-  <gazebo reference="finger1_tip_left">
     <mu1 value="100.0"/>
     <mu2 value="100.0"/>
   </gazebo>
-  <link name="finger1_tip_phalanx_left">
+  <link name="amigo/finger1_tip_phalanx_left">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.0 0"/>
       <mass value="0.01"/>
@@ -1716,11 +1592,7 @@
       </geometry>
     </collision>
   </link>
-  <gazebo reference="finger1_tip_phalanx_left">
-    <material>Gazebo/White</material>
-    <turnGravityOff>false</turnGravityOff>
-  </gazebo>
-  <link name="finger2_left">
+  <link name="amigo/finger2_left">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.0 -0.03"/>
       <mass value="0.01"/>
@@ -1742,14 +1614,10 @@
     </collision>
   </link>
   <gazebo reference="finger2_left">
-    <material>Gazebo/Black</material>
-    <turnGravityOff>false</turnGravityOff>
-  </gazebo>
-  <gazebo reference="finger2_left">
     <mu1 value="100.0"/>
     <mu2 value="100.0"/>
   </gazebo>
-  <link name="finger2_phalanx_left">
+  <link name="amigo/finger2_phalanx_left">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.0 0"/>
       <mass value="0.01"/>
@@ -1770,11 +1638,7 @@
       </geometry>
     </collision>
   </link>
-  <gazebo reference="finger2_phalanx_left">
-    <material>Gazebo/White</material>
-    <turnGravityOff>false</turnGravityOff>
-  </gazebo>
-  <link name="finger2_tip_left">
+  <link name="amigo/finger2_tip_left">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.0 -0.03"/>
       <mass value="0.01"/>
@@ -1796,14 +1660,10 @@
     </collision>
   </link>
   <gazebo reference="finger2_tip_left">
-    <material>Gazebo/Black</material>
-    <turnGravityOff>false</turnGravityOff>
-  </gazebo>
-  <gazebo reference="finger2_tip_left">
     <mu1 value="100.0"/>
     <mu2 value="100.0"/>
   </gazebo>
-  <link name="finger2_tip_phalanx_left">
+  <link name="amigo/finger2_tip_phalanx_left">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.0 0"/>
       <mass value="0.01"/>
@@ -1824,11 +1684,7 @@
       </geometry>
     </collision>
   </link>
-  <gazebo reference="finger2_tip_phalanx_left">
-    <material>Gazebo/White</material>
-    <turnGravityOff>false</turnGravityOff>
-  </gazebo>
-  <link name="grippoint_left">
+  <link name="amigo/grippoint_left">
     <inertial>
       <origin rpy="0 0 0" xyz="-0.1 0.0 0.0"/>
       <mass value="0.01"/>
@@ -1849,133 +1705,129 @@
       </geometry>
     </collision>
   </link>
-  <gazebo reference="grippoint_left">
-    <material>Gazebo/Blue</material>
-    <turnGravityOff>false</turnGravityOff>
-  </gazebo>
   <joint name="shoulder_mount_joint_left" type="fixed">
-    <parent link="torso"/>
-    <child link="shoulder_mount_left"/>
+    <parent link="amigo/torso"/>
+    <child link="amigo/shoulder_mount_left"/>
     <origin rpy="0 0 0.0" xyz="0.05 -0.22 0.0"/>
   </joint>
   <joint name="shoulder_yaw_joint_left" type="revolute">
-    <parent link="shoulder_mount_left"/>
-    <child link="shoulder_link1_left"/>
+    <parent link="amigo/shoulder_mount_left"/>
+    <child link="amigo/shoulder_link1_left"/>
     <origin rpy="-1.5708 -1.5708 0" xyz="0 0 0"/>
     <axis xyz="-1 0 0"/>
     <dynamics damping="4.0" friction="4.87"/>
     <limit effort="0.2" lower="-1.57" upper="0.0" velocity="0.4"/>
   </joint>
   <joint name="shoulder_pitch_joint_left" type="revolute">
-    <parent link="shoulder_link1_left"/>
-    <child link="shoulder_link2_left"/>
+    <parent link="amigo/shoulder_link1_left"/>
+    <child link="amigo/shoulder_link2_left"/>
     <origin rpy="-1.5708  0 0" xyz="0.0 0.0 0.0"/>
     <axis xyz="0 -1 0"/>
     <dynamics damping="4.0" friction="6.06"/>
     <limit effort="0.2" lower="-1.57" upper="1.57" velocity="0.4"/>
   </joint>
   <joint name="shoulder_roll_joint_left" type="revolute">
-    <parent link="shoulder_link2_left"/>
-    <child link="upper_arm_left"/>
+    <parent link="amigo/shoulder_link2_left"/>
+    <child link="amigo/upper_arm_left"/>
     <origin rpy="1.5708 0 0.0" xyz="0.0 0.0 0.0"/>
     <axis xyz="0 -1.0 0"/>
     <dynamics damping="3.8" friction="2.216"/>
     <limit effort="0.3" lower="-1.57" upper="1.57" velocity="0.6"/>
   </joint>
   <joint name="elbow_pitch_joint_left" type="revolute">
-    <parent link="upper_arm_left"/>
-    <child link="elbow_link4_left"/>
+    <parent link="amigo/upper_arm_left"/>
+    <child link="amigo/elbow_link4_left"/>
     <origin rpy="-1.5708 0 0" xyz="0.01 -0.32 0.0"/>
     <axis xyz="0 -1 0"/>
     <dynamics damping="3" friction="1.18"/>
     <limit effort="0.5" lower="0.0" upper="2.23" velocity="0.8"/>
   </joint>
   <joint name="elbow_roll_joint_left" type="revolute">
-    <parent link="elbow_link4_left"/>
-    <child link="fore_arm_left"/>
+    <parent link="amigo/elbow_link4_left"/>
+    <child link="amigo/fore_arm_left"/>
     <origin rpy="1.5708 0 0" xyz="0.0 0.0 0.0"/>
     <axis xyz="0 -1.0 0"/>
     <dynamics damping="3.5" friction="1.35"/>
     <limit effort="0.5" lower="-1.83" upper="1.83" velocity="0.8"/>
   </joint>
   <joint name="wrist_pitch_joint_left" type="revolute">
-    <parent link="fore_arm_left"/>
-    <child link="wrist_link6_left"/>
+    <parent link="amigo/fore_arm_left"/>
+    <child link="amigo/wrist_link6_left"/>
     <origin rpy="-1.5708 0 -1.5708" xyz="0.01 -0.28 0.0"/>
     <axis xyz="0 -1 0"/>
     <dynamics damping="0.35" friction="0.63"/>
     <limit effort="0.5" lower="-0.95" upper="0.95" velocity="1.0"/>
   </joint>
   <joint name="wrist_yaw_joint_left" type="revolute">
-    <parent link="wrist_link6_left"/>
-    <child link="hand_left"/>
+    <parent link="amigo/wrist_link6_left"/>
+    <child link="amigo/hand_left"/>
     <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
     <axis xyz="0 0 -1.01"/>
     <dynamics damping="0.3" friction="0.68"/>
     <limit effort="0.5" lower="-0.61" upper="0.61" velocity="1.0"/>
   </joint>
   <joint name="finger1_joint_left" type="revolute">
-    <parent link="hand_left"/>
-    <child link="finger1_left"/>
+    <parent link="amigo/hand_left"/>
+    <child link="amigo/finger1_left"/>
     <origin rpy="0 -1.57 0" xyz=" 0.075 0.02 0"/>
     <axis xyz="1 0 0"/>
     <dynamics damping="0.5" friction="1.0"/>
     <limit effort="3" lower="0.2" upper="1" velocity="1.0"/>
   </joint>
   <joint name="finger1_phalanx_joint_left" type="fixed">
-    <parent link="finger1_left"/>
-    <child link="finger1_phalanx_left"/>
+    <parent link="amigo/finger1_left"/>
+    <child link="amigo/finger1_phalanx_left"/>
     <origin rpy="0 1.57 0" xyz="0 0 -0.06"/>
   </joint>
   <joint name="finger1_tip_joint_left" type="revolute">
-    <parent link="finger1_left"/>
-    <child link="finger1_tip_left"/>
+    <parent link="amigo/finger1_left"/>
+    <child link="amigo/finger1_tip_left"/>
     <origin rpy="0 0 0" xyz=" 0 0.0 -0.06"/>
     <axis xyz="1 0 0"/>
     <dynamics damping="0.5" friction="1.0"/>
     <limit effort="3" lower="-0.6" upper="-0.2" velocity="1.0"/>
   </joint>
   <joint name="finger1_tip_phalanx_joint_left" type="fixed">
-    <parent link="finger1_tip_left"/>
-    <child link="finger1_tip_phalanx_left"/>
+    <parent link="amigo/finger1_tip_left"/>
+    <child link="amigo/finger1_tip_phalanx_left"/>
     <origin rpy="0 1.57 0" xyz="0 0 -0.06"/>
   </joint>
   <joint name="finger2_joint_left" type="revolute">
-    <parent link="hand_left"/>
-    <child link="finger2_left"/>
+    <parent link="amigo/hand_left"/>
+    <child link="amigo/finger2_left"/>
     <origin rpy="0 -1.57 0" xyz="0.075 -0.02 0"/>
     <axis xyz="-1 0 0"/>
     <dynamics damping="0.5" friction="1.0"/>
     <limit effort="3" lower="0.2" upper="1" velocity="1.0"/>
   </joint>
   <joint name="finger2_phalanx_joint_left" type="fixed">
-    <parent link="finger2_left"/>
-    <child link="finger2_phalanx_left"/>
+    <parent link="amigo/finger2_left"/>
+    <child link="amigo/finger2_phalanx_left"/>
     <origin rpy="0 1.57 0" xyz="0 0 -0.06"/>
   </joint>
   <joint name="finger2_tip_joint_left" type="revolute">
-    <parent link="finger2_left"/>
-    <child link="finger2_tip_left"/>
+    <parent link="amigo/finger2_left"/>
+    <child link="amigo/finger2_tip_left"/>
     <origin rpy="0 0 0" xyz="0 0 -0.06"/>
     <axis xyz="-1 0 0"/>
     <dynamics damping="0.5" friction="1.0"/>
     <limit effort="3" lower="-0.6" upper="-0.2" velocity="1.0"/>
   </joint>
   <joint name="finger2_tip_phalanx_joint_left" type="fixed">
-    <parent link="finger2_tip_left"/>
-    <child link="finger2_tip_phalanx_left"/>
+    <parent link="amigo/finger2_tip_left"/>
+    <child link="amigo/finger2_tip_phalanx_left"/>
     <origin rpy="0 1.57 0" xyz="0 0 -0.06"/>
   </joint>
   <joint name="grippoint_joint_left" type="fixed">
-    <parent link="hand_left"/>
-    <child link="grippoint_left"/>
+    <parent link="amigo/hand_left"/>
+    <child link="amigo/grippoint_left"/>
     <origin rpy="0 0 0" xyz="0.14 0.0 0.0"/>
   </joint>
   <!--extra arm visuals-->
   <author>Kris van Tienhoven</author>
   <license>BSD</license>
   <review notes="" status="unreviewed"/>
-  <link name="upper_arm_top_right">
+  <link name="amigo/upper_arm_top_right">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
       <mass value="0.01"/>
@@ -1996,11 +1848,7 @@
       </geometry>
     </collision>
   </link>
-  <gazebo reference="upper_arm_top_right">
-    <material>Gazebo/Black</material>
-    <turnGravityOff>false</turnGravityOff>
-  </gazebo>
-  <link name="elbow_extra_block_right">
+  <link name="amigo/elbow_extra_block_right">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
       <mass value="0.01"/>
@@ -2021,11 +1869,7 @@
       </geometry>
     </collision>
   </link>
-  <gazebo reference="elbow_extra_block_right">
-    <material>Gazebo/Black</material>
-    <turnGravityOff>false</turnGravityOff>
-  </gazebo>
-  <link name="elbow_extra_block2_right">
+  <link name="amigo/elbow_extra_block2_right">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
       <mass value="0.01"/>
@@ -2046,11 +1890,7 @@
       </geometry>
     </collision>
   </link>
-  <gazebo reference="elbow_extra_block2_right">
-    <material>Gazebo/Grey</material>
-    <turnGravityOff>false</turnGravityOff>
-  </gazebo>
-  <link name="fore_arm_top_right">
+  <link name="amigo/fore_arm_top_right">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
       <mass value="0.01"/>
@@ -2071,11 +1911,7 @@
       </geometry>
     </collision>
   </link>
-  <gazebo reference="fore_arm_top_right">
-    <material>Gazebo/Black</material>
-    <turnGravityOff>false</turnGravityOff>
-  </gazebo>
-  <link name="wrist_visual_right">
+  <link name="amigo/wrist_visual_right">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
       <mass value="0.01"/>
@@ -2096,11 +1932,7 @@
       </geometry>
     </collision>
   </link>
-  <gazebo reference="wrist_visual_right">
-    <material>Gazebo/Grey</material>
-    <turnGravityOff>false</turnGravityOff>
-  </gazebo>
-  <link name="wrist_to_hand_block_right">
+  <link name="amigo/wrist_to_hand_block_right">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
       <mass value="0.01"/>
@@ -2121,41 +1953,37 @@
       </geometry>
     </collision>
   </link>
-  <gazebo reference="wrist_to_hand_block_right">
-    <material>Gazebo/Grey</material>
-    <turnGravityOff>false</turnGravityOff>
-  </gazebo>
   <joint name="upper_arm_top_joint_right" type="fixed">
-    <parent link="upper_arm_right"/>
-    <child link="upper_arm_top_right"/>
+    <parent link="amigo/upper_arm_right"/>
+    <child link="amigo/upper_arm_top_right"/>
     <origin rpy="1.5708 0 0.0" xyz="-0.01 -0.1 0.0"/>
   </joint>
   <joint name="elbow_extra_block_joint_right" type="fixed">
-    <parent link="upper_arm_right"/>
-    <child link="elbow_extra_block_right"/>
+    <parent link="amigo/upper_arm_right"/>
+    <child link="amigo/elbow_extra_block_right"/>
     <origin rpy="-1.5708 0 0" xyz="0.0 -0.31 0.0"/>
   </joint>
   <joint name="elbow_extra_block2_joint_right" type="fixed">
-    <parent link="upper_arm_right"/>
-    <child link="elbow_extra_block2_right"/>
+    <parent link="amigo/upper_arm_right"/>
+    <child link="amigo/elbow_extra_block2_right"/>
     <origin rpy="-1.5708 0 0" xyz="0.0 -0.31 0.0"/>
   </joint>
   <joint name="fore_arm_top_joint_right" type="fixed">
-    <parent link="fore_arm_right"/>
-    <child link="fore_arm_top_right"/>
+    <parent link="amigo/fore_arm_right"/>
+    <child link="amigo/fore_arm_top_right"/>
     <origin rpy="1.5708 0 0" xyz="0.002 -0.011 0.0"/>
   </joint>
   <joint name="wrist_visual_joint_right" type="fixed">
-    <parent link="wrist_link6_right"/>
-    <child link="wrist_visual_right"/>
+    <parent link="amigo/wrist_link6_right"/>
+    <child link="amigo/wrist_visual_right"/>
     <origin rpy="1.5708 0 0" xyz="-0.02 0.0 0.0"/>
   </joint>
   <joint name="wrist_to_hand_block_joint_right" type="fixed">
-    <parent link="wrist_link6_right"/>
-    <child link="wrist_to_hand_block_right"/>
+    <parent link="amigo/wrist_link6_right"/>
+    <child link="amigo/wrist_to_hand_block_right"/>
     <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
   </joint>
-  <link name="upper_arm_top_left">
+  <link name="amigo/upper_arm_top_left">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
       <mass value="0.01"/>
@@ -2176,11 +2004,7 @@
       </geometry>
     </collision>
   </link>
-  <gazebo reference="upper_arm_top_left">
-    <material>Gazebo/Black</material>
-    <turnGravityOff>false</turnGravityOff>
-  </gazebo>
-  <link name="elbow_extra_block_left">
+  <link name="amigo/elbow_extra_block_left">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
       <mass value="0.01"/>
@@ -2201,11 +2025,7 @@
       </geometry>
     </collision>
   </link>
-  <gazebo reference="elbow_extra_block_left">
-    <material>Gazebo/Black</material>
-    <turnGravityOff>false</turnGravityOff>
-  </gazebo>
-  <link name="elbow_extra_block2_left">
+  <link name="amigo/elbow_extra_block2_left">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
       <mass value="0.01"/>
@@ -2226,11 +2046,7 @@
       </geometry>
     </collision>
   </link>
-  <gazebo reference="elbow_extra_block2_left">
-    <material>Gazebo/Grey</material>
-    <turnGravityOff>false</turnGravityOff>
-  </gazebo>
-  <link name="fore_arm_top_left">
+  <link name="amigo/fore_arm_top_left">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
       <mass value="0.01"/>
@@ -2251,11 +2067,7 @@
       </geometry>
     </collision>
   </link>
-  <gazebo reference="fore_arm_top_left">
-    <material>Gazebo/Black</material>
-    <turnGravityOff>false</turnGravityOff>
-  </gazebo>
-  <link name="wrist_visual_left">
+  <link name="amigo/wrist_visual_left">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
       <mass value="0.01"/>
@@ -2276,11 +2088,7 @@
       </geometry>
     </collision>
   </link>
-  <gazebo reference="wrist_visual_left">
-    <material>Gazebo/Grey</material>
-    <turnGravityOff>false</turnGravityOff>
-  </gazebo>
-  <link name="wrist_to_hand_block_left">
+  <link name="amigo/wrist_to_hand_block_left">
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
       <mass value="0.01"/>
@@ -2301,43 +2109,39 @@
       </geometry>
     </collision>
   </link>
-  <gazebo reference="wrist_to_hand_block_left">
-    <material>Gazebo/Grey</material>
-    <turnGravityOff>false</turnGravityOff>
-  </gazebo>
   <joint name="upper_arm_top_joint_left" type="fixed">
-    <parent link="upper_arm_left"/>
-    <child link="upper_arm_top_left"/>
+    <parent link="amigo/upper_arm_left"/>
+    <child link="amigo/upper_arm_top_left"/>
     <origin rpy="1.5708 0 0.0" xyz="-0.01 -0.1 0.0"/>
   </joint>
   <joint name="elbow_extra_block_joint_left" type="fixed">
-    <parent link="upper_arm_left"/>
-    <child link="elbow_extra_block_left"/>
+    <parent link="amigo/upper_arm_left"/>
+    <child link="amigo/elbow_extra_block_left"/>
     <origin rpy="-1.5708 0 0" xyz="0.0 -0.31 0.0"/>
   </joint>
   <joint name="elbow_extra_block2_joint_left" type="fixed">
-    <parent link="upper_arm_left"/>
-    <child link="elbow_extra_block2_left"/>
+    <parent link="amigo/upper_arm_left"/>
+    <child link="amigo/elbow_extra_block2_left"/>
     <origin rpy="-1.5708 0 0" xyz="0.0 -0.31 0.0"/>
   </joint>
   <joint name="fore_arm_top_joint_left" type="fixed">
-    <parent link="fore_arm_left"/>
-    <child link="fore_arm_top_left"/>
+    <parent link="amigo/fore_arm_left"/>
+    <child link="amigo/fore_arm_top_left"/>
     <origin rpy="1.5708 0 0" xyz="0.002 -0.011 0.0"/>
   </joint>
   <joint name="wrist_visual_joint_left" type="fixed">
-    <parent link="wrist_link6_left"/>
-    <child link="wrist_visual_left"/>
+    <parent link="amigo/wrist_link6_left"/>
+    <child link="amigo/wrist_visual_left"/>
     <origin rpy="1.5708 0 0" xyz="-0.02 0.0 0.0"/>
   </joint>
   <joint name="wrist_to_hand_block_joint_left" type="fixed">
-    <parent link="wrist_link6_left"/>
-    <child link="wrist_to_hand_block_left"/>
+    <parent link="amigo/wrist_link6_left"/>
+    <child link="amigo/wrist_to_hand_block_left"/>
     <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
   </joint>
   <!-- GAZEBO -->
   <gazebo>
-    <link name="base_fixed_link">
+    <link name="amigo/base_fixed_link">
       <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
       <inertial>
         <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
@@ -2370,7 +2174,7 @@
         <xyz>0.000000 0.000000 1.000000</xyz>
       </axis>
     </joint>
-    <link name="base_x_link">
+    <link name="amigo/base_x_link">
       <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
       <inertial>
         <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
@@ -2403,7 +2207,7 @@
         </dynamics>
       </axis>
     </joint>
-    <link name="base_y_link">
+    <link name="amigo/base_y_link">
       <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
       <inertial>
         <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>

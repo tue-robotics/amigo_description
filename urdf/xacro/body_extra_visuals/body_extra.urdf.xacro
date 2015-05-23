@@ -4,6 +4,8 @@
    <author>Kris van Tienhoven</author>
    <license>BSD</license>
    <review status="unreviewed" notes=""/>
+   
+    <property name="prefix" value="amigo/"/>
 
 
 <!--base plate at the bottom of the bottomcovers-->
@@ -15,8 +17,8 @@
 </xacro:my_link_textured>
 
   <joint name="base_plate_joint" type="fixed">
-    <parent link="base_link"/>
-    <child link="base_plate"/>
+    <parent link="${prefix}base_link"/>
+    <child link="${prefix}base_plate"/>
     <axis xyz="1 0 0"/>
     <origin xyz="0.0 0.0 0.05" rpy="0 0 0"/>
   </joint>
@@ -49,22 +51,22 @@
   
 <!--left joint-->
 <joint name="torso_slider_assist_joint_right" type="fixed">
-    <parent link="torso"/>
-    <child link="torso_assist_slider_right"/>
+    <parent link="${prefix}torso"/>
+    <child link="${prefix}torso_assist_slider_right"/>
     <origin xyz="-0.3 0.1 0.0" rpy="0 0 0"/>
 </joint>
 
 <!--right joint-->
 <joint name="torso_slider_assist_joint_left" type="fixed">
-    <parent link="torso"/>
-    <child link="torso_assist_slider_left"/>
+    <parent link="${prefix}torso"/>
+    <child link="${prefix}torso_assist_slider_left"/>
     <origin xyz="-0.3 -0.1 0.0" rpy="0 0 0"/>
 </joint>
 
 <!--back joint-->
 <joint name="torso_slider_assist_joint_back" type="fixed">
-    <parent link="torso"/>
-    <child link="torso_assist_slider_back"/>
+    <parent link="${prefix}torso"/>
+    <child link="${prefix}torso_assist_slider_back"/>
     <origin xyz="-0.3 0.0 -0.1" rpy="1.5708 0 0"/>
 </joint>
 
@@ -79,8 +81,8 @@
 </xacro:my_link>
 
 <joint name="clavicle_joint" type="fixed">
-    <parent link="torso"/>
-    <child link="clavicles"/>
+    <parent link="${prefix}torso"/>
+    <child link="${prefix}clavicles"/>
     <origin xyz="0.05 0.0 0.0" rpy="0 0 0"/>
 </joint>
 

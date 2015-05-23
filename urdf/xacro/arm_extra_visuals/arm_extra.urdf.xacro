@@ -12,6 +12,9 @@
 The reason sidesign is -1 or +1 and not just - or + aswell is because 
 it has to be reversable and xml cannot multiply - or + but can multiply
  -1 and +1-->
+ 
+    <property name="prefix" value="amigo/"/>
+ 
 <xacro:macro name="arm_extra" params="whichside sidesign rollsign">
 
 <!--the black cylinder sealing the upper arm-->
@@ -66,38 +69,38 @@ it has to be reversable and xml cannot multiply - or + but can multiply
 <!--the joints start here-->
 
 <joint name="upper_arm_top_joint_${whichside}" type="fixed">
-  <parent link="upper_arm_${whichside}" />
-  <child link="upper_arm_top_${whichside}"/>
+  <parent link="${prefix}upper_arm_${whichside}" />
+  <child link="${prefix}upper_arm_top_${whichside}"/>
   <origin xyz="-0.01 -0.1 0.0" rpy="1.5708 0 0.0"/>
 </joint>
 
 <joint name="elbow_extra_block_joint_${whichside}" type="fixed">
-  <parent link="upper_arm_${whichside}"/> 
-  <child link="elbow_extra_block_${whichside}"/>
+  <parent link="${prefix}upper_arm_${whichside}"/> 
+  <child link="${prefix}elbow_extra_block_${whichside}"/>
   <origin xyz="0.0 -0.31 0.0" rpy="-1.5708 0 0"/>
 </joint>
 
 <joint name="elbow_extra_block2_joint_${whichside}" type="fixed">
-  <parent link="upper_arm_${whichside}"/> 
-  <child link="elbow_extra_block2_${whichside}"/>
+  <parent link="${prefix}upper_arm_${whichside}"/> 
+  <child link="${prefix}elbow_extra_block2_${whichside}"/>
   <origin xyz="0.0 -0.31 0.0" rpy="-1.5708 0 0"/>
 </joint>
 
 <joint name="fore_arm_top_joint_${whichside}" type="fixed" >
-  <parent link="fore_arm_${whichside}"/> 
-  <child link="fore_arm_top_${whichside}"/>
+  <parent link="${prefix}fore_arm_${whichside}"/> 
+  <child link="${prefix}fore_arm_top_${whichside}"/>
    <origin xyz="0.002 -0.011 0.0" rpy="1.5708 0 0"/>
 </joint>
 
 <joint name="wrist_visual_joint_${whichside}" type="fixed">
-  <parent link="wrist_link6_${whichside}"/>
-  <child link="wrist_visual_${whichside}"/>
+  <parent link="${prefix}wrist_link6_${whichside}"/>
+  <child link="${prefix}wrist_visual_${whichside}"/>
   <origin xyz="-0.02 0.0 0.0" rpy="1.5708 0 0"/>
 </joint>
 
 <joint name="wrist_to_hand_block_joint_${whichside}" type="fixed">
-  <parent link="wrist_link6_${whichside}"/>
-  <child link="wrist_to_hand_block_${whichside}"/>
+  <parent link="${prefix}wrist_link6_${whichside}"/>
+  <child link="${prefix}wrist_to_hand_block_${whichside}"/>
   <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
 </joint>
 
