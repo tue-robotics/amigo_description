@@ -134,7 +134,30 @@
     <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <link name="base_link">
-</link>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <mass value="0"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <cylinder length="0.00" radius="0.0"/>
+      </geometry>
+      <material name="Red">
+     </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <cylinder length="0.00" radius="0.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="base_link">
+    <material>Gazebo/Red</material>
+    <turnGravityOff>false</turnGravityOff>
+  </gazebo>
   <joint name="torso_joint" type="prismatic">
     <parent link="base"/>
     <child link="torso_slider"/>
@@ -142,7 +165,7 @@
     <origin rpy="3.14159265 -1.5708 0" xyz="0.0 0.0 0.58"/>
     <dynamics damping="3" friction="0.0"/>
     <!--*-->
-    <limit effort="0.1" lower="0.075" upper="0.4" velocity="0.07"/>
+    <limit effort="0.1" lower="0.09" upper="0.4" velocity="0.07"/>
   </joint>
   <joint name="base_link_joint" type="fixed">
     <parent link="base_link"/>
