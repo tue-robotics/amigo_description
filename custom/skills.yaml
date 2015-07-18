@@ -5,7 +5,7 @@ skills:
             reset: [0.35]
             lower_limit: [0.08]
             upper_limit: [0.41]
-            navigation: [0. 2]
+            navigation: [0.2]
         default_tolerance: [0.005]
 
     arm:
