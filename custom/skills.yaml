@@ -3,8 +3,8 @@ skills:
         joint_names: ["torso_joint"]
         default_configurations:
             reset: [0.35]
-            lower_limit: [0.08]
-            upper_limit: [0.41]
+            lower_limit: [0.09]
+            upper_limit: [0.409]
             navigation: [0.2]
         default_tolerance: [0.005]
 
