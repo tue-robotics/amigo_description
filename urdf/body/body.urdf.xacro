@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+   <author>Rob Janssen, Kris van Tienhoven</author>
+   <license>BSD</license>
+   <review status="unreviewed" notes=""/>
+
+
+
+    <!--links start here-->
+
+    <!--the torso-->
+    <xacro:my_link_texturedmesh name="torso" mass="16" texture="white">
+       <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+       <origin xyz="0.045 0.0 0.06" rpy="-1.5708 0 -1.5708" />
+       <inertia ixx="0.01"  ixy="0"  ixz="0" iyy="0.01" iyz="0" izz="0.01" />
+       <mesh filename="package://amigo_description/media/meshes/torsocovers.dae" scale="0.0004 0.0004 0.0004"/>
+    </xacro:my_link_texturedmesh>
+
+    <!--the spindle-->
+    <xacro:my_link_texturedmesh name="torso_slider" mass="0.1" texture="aluminium">
+       <origin xyz="0 0 0" rpy="0 0 0"/>
+       <origin xyz="0.05 0 0.0" rpy="0 0 1.5708"/>
+       <inertia ixx="0.01"  ixy="0"  ixz="0" iyy="0.01" iyz="0" izz="0.01" />
+       <mesh filename="package://amigo_description/media/meshes/torsoslidertextured.dae" scale="0.004 0.004 0.004"/>
+    </xacro:my_link_texturedmesh>
+
+    <!--the bottomcover -->
+    <xacro:my_link_texturedmesh name="base" mass="20" texture="bottomcovers">
+       <origin xyz="0.0 0.0 0.3275" rpy="0 0 0"/>
+       <origin xyz="0.0 0.0 0.23" rpy="0 0 -1.5708" />
+       <inertia ixx="2.63"  ixy="0"  ixz="0" iyy="2.63" iyz="0" izz="2.4" /> 
+       <mesh filename="package://amigo_description/media/meshes/bottomcovers.dae" scale="0.0004 0.0004 0.0004"/>
+    </xacro:my_link_texturedmesh>
+
+    <!--the root of the tf-tree, because it serves only this function it has no visuals-->
+    <link name="${prefix}base_link" type="planar">
+       <cylinder radius="0.0" length="0.00" />
+       <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+       <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
+       <inertia ixx="0"  ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" /> 
+    </link>
+
+    <!-- joints start here -->
+    <joint name="torso_joint" type="prismatic">
+      <parent link="${prefix}base"/>
+      <child link="${prefix}torso_slider"/>
+      <axis xyz="1 0 0"/>
+      <origin xyz="0.0 0.0 0.58" rpy="3.14159265 -1.5708 0"/>
+      <dynamics damping="3" friction="0.0"/> <!--*-->
+      <limit effort="0.1" velocity="0.07" lower="0.09" upper="0.4" /> 
+    </joint>
+
+    <joint name="base_link_joint" type="fixed">
+      <parent link="${prefix}base_link"/>
+      <child link="${prefix}base"/>
+      <axis xyz="1 0 0"/>
+      <origin xyz="0.0 0.0 0.055" rpy="0 0 0"/>
+    </joint>
+      
+    <joint name="torso_slider_joint" type="fixed">
+      <parent link="${prefix}torso_slider"/>
+      <child link="${prefix}torso"/>
+      <axis xyz="1 0 0"/>
+      <origin xyz="0.1 0.0 0.0" rpy="0 0 0"/>
+    </joint>
+
+</robot>
