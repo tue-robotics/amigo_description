@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+   
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="amigo">
+       
+    <author>Rob Janssen</author>
+    <license>BSD</license>
+    <review status="unreviewed" notes=""/>
+    
+    <!--get link & joint definitions -->
+    <xacro:include filename="$(find amigo_description)/urdf/macro_definitions.xacro" />
+
+    <!--get custom materials -->
+    <xacro:include filename="$(find amigo_description)/urdf/materials.urdf.xacro" />
+
+    <!--========BUILD BODY======-->
+    <xacro:include filename="$(find amigo_description)/urdf/body/body.urdf.xacro" />
+    <!--extra body visuals-->
+    <xacro:include filename="$(find amigo_description)/urdf/body_extra_visuals/body_extra.urdf.xacro" />
+
+    <!--========BUILD LASERS======-->
+    <xacro:include filename="$(find amigo_description)/urdf/laser/laser.urdf.xacro" />
+    <xacro:include filename="$(find amigo_description)/urdf/laser/torso_laser.urdf.xacro" />
+
+    <!--========BUILD HEAD======-->
+    <xacro:include filename="$(find amigo_description)/urdf/head/head.urdf.xacro" />
+
+    <!--========BUILD KINECT======-->
+    <xacro:include filename="$(find amigo_description)/urdf/kinect/top_kinect.urdf.xacro" />
+
+    <!--========BUILD ARMS======-->
+    <xacro:include filename="$(find amigo_description)/urdf/arms/arm.urdf.xacro" />
+    <xacro:arm whichside="right" sidesign="+1.0" rollsign="+"/>
+    <xacro:arm whichside="left"  sidesign="-1.0" rollsign="-"/>
+    <!--extra arm visuals-->
+    <xacro:include filename="$(find amigo_description)/urdf/arm_extra_visuals/arm_extra.urdf.xacro" />
+    <xacro:arm_extra whichside="right" sidesign="+1.0" rollsign="+"/>
+    <xacro:arm_extra whichside="left"  sidesign="-1.0" rollsign="-"/>
+
+</robot>

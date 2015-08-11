@@ -29,10 +29,6 @@
      </geometry>
     </collision>
   </link>
-<gazebo reference="${name}">
-      <material>Gazebo/${color}</material>
-      <turnGravityOff>false</turnGravityOff>
-    </gazebo>
 </xacro:macro>
 
 <!-- use this type of link if you want the standard shapes with a texture -->
@@ -58,10 +54,6 @@
      </geometry>
     </collision>
   </link>
-<gazebo reference="${name}">
-      <material>amigo_description/${texture}</material>
-      <turnGravityOff>false</turnGravityOff>
-    </gazebo>
 </xacro:macro>
 
 
@@ -83,10 +75,6 @@
     </visual>
   </link>
 
-<gazebo reference="${name}">
-      <material>Gazebo/${color}</material>
-      <turnGravityOff>false</turnGravityOff>
-    </gazebo>
 </xacro:macro>
 
 
@@ -113,10 +101,6 @@
      </geometry>
     </collision>
   </link>
-<gazebo reference="${name}">
-      <material>Gazebo/${color}</material>
-      <turnGravityOff>false</turnGravityOff>
-    </gazebo>
 </xacro:macro>
 
 <!-- use this type of link if you want to load a mesh with a texture -->
@@ -141,10 +125,6 @@
      </geometry>
     </collision>
   </link>
-<gazebo reference="${name}">
-	  <material>amigo_description/${texture}</material>
-      <turnGravityOff>false</turnGravityOff>
-    </gazebo>
 </xacro:macro>
 
 <!-- use this type of link if you want a mesh with texture and a different bouding box (then the box around the mesh itself) -->
@@ -169,10 +149,6 @@
      </geometry>
     </collision>
   </link>
-<gazebo reference="${name}">
-	  <material>amigo_description/${texture}</material>
-      <turnGravityOff>false</turnGravityOff>
-    </gazebo>
 </xacro:macro>
 
 <!-- *************** JOINT Definition *****************-->
