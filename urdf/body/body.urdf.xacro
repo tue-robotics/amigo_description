@@ -32,17 +32,17 @@
     </xacro:my_link_texturedmesh>
 
     <!--the root of the tf-tree, because it serves only this function it has no visuals-->
-    <xacro:my_link name="base_link" mass="0" color="Red">
+    <link name="${prefix}base_link" mass="0" color="Red">
        <cylinder radius="0.0" length="0.00" />
        <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
        <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
        <inertia ixx="0"  ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" /> 
-    </xacro:my_link>
+    </link>
 
     <!-- joints start here -->
     <joint name="torso_joint" type="prismatic">
-      <parent link="base"/>
-      <child link="torso_slider"/>
+      <parent link="${prefix}base"/>
+      <child link="${prefix}torso_slider"/>
       <axis xyz="1 0 0"/>
       <origin xyz="0.0 0.0 0.58" rpy="3.14159265 -1.5708 0"/>
       <dynamics damping="3" friction="0.0"/> <!--*-->
@@ -50,15 +50,15 @@
     </joint>
 
     <joint name="base_link_joint" type="fixed">
-      <parent link="base_link"/>
-      <child link="base"/>
+      <parent link="${prefix}base_link"/>
+      <child link="${prefix}base"/>
       <axis xyz="1 0 0"/>
       <origin xyz="0.0 0.0 0.055" rpy="0 0 0"/>
     </joint>
       
     <joint name="torso_slider_joint" type="fixed">
-      <parent link="torso_slider"/>
-      <child link="torso"/>
+      <parent link="${prefix}torso_slider"/>
+      <child link="${prefix}torso"/>
       <axis xyz="1 0 0"/>
       <origin xyz="0.1 0.0 0.0" rpy="0 0 0"/>
     </joint>
