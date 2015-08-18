@@ -20,4 +20,4 @@ foreach(it ${xacro_files})
 endforeach(it)
 
 # add an abstract target to actually trigger the builds
-add_custom_target(media_files ALL DEPENDS ${robot_files})
+add_custom_target(amigo_media_files ALL DEPENDS ${robot_files})
