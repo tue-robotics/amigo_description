@@ -5,11 +5,12 @@
    <license>BSD</license>
    <review status="unreviewed" notes=""/>
 
+    <xacro:property name="prefix" value="amigo/"/>
 
 <!--head-->
 
 <!-- !!!!!!!!!something without a visual not sure what this is!!!!!!!!!!!! -->
-<link name="head_mount">
+<link name="${prefix}head_mount">
   <inertial>
     <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
     <mass value="0.001"/>
@@ -18,8 +19,8 @@
 </link>
 
 <joint name="head_mount_joint" type="fixed">
-  <parent link="torso"/>
-  <child link="head_mount"/>
+  <parent link="${prefix}torso"/>
+  <child link="${prefix}head_mount"/>
   <axis xyz="0 0 1"/>
   <origin xyz="0.11 0.0 0.0426" rpy="0.0 0.0 0.0"/>
 </joint>
@@ -50,8 +51,8 @@
   </my_link_texturedmesh>
 
   <joint name="head_joint" type="fixed">
-    <parent link="neck_tilt"/>
-    <child link="head"/>
+    <parent link="${prefix}neck_tilt"/>
+    <child link="${prefix}head"/>
   </joint>
   
  

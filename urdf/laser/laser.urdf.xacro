@@ -4,6 +4,8 @@
    <author>Kris van Tienhoven</author>
    <license>BSD</license>
    <review status="unreviewed" notes=""/>
+   
+   <xacro:property name="prefix" value="amigo/"/>
 
 <!--the laser at the base of the robot -->
 <xacro:my_link name="base_laser" mass="0.5" color="Black">
@@ -29,8 +31,8 @@
 </xacro:my_link_textured>
 
 <joint name="lasertop_joint" type="fixed">
-    <parent link="base_laser"/>
-    <child link="lasertop"/>
+    <parent link="${prefix}base_laser"/>
+    <child link="${prefix}lasertop"/>
 </joint>
 
 <!--the tue logo in front of the laser-->
@@ -42,7 +44,7 @@
 </xacro:my_link_texturedmesh>
 
   <joint name="logo_joint" type="fixed">
-    <parent link="base_laser"/>
-    <child link="logo"/>
+    <parent link="${prefix}base_laser"/>
+    <child link="${prefix}logo"/>
   </joint>
 </robot>
