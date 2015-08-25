@@ -5,7 +5,7 @@
    <license>BSD</license>
    <review status="unreviewed" notes=""/>
 
-    <property name="prefix" value="amigo/"/>
+    <xacro:property name="prefix" value="amigo/"/>
 
 <!--head-->
 

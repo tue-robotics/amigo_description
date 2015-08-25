@@ -5,7 +5,7 @@
     <author>Rein Appeldoorn</author>
     <review status="unreviewed" notes=""/>
     
-    <property name="prefix" value="amigo/"/>
+    <xacro:property name="prefix" value="amigo/"/>
 
     <joint name="base_phi_joint" type="continuous">
         <axis xyz="0 0 1"/>

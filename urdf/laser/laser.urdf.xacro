@@ -5,7 +5,7 @@
    <license>BSD</license>
    <review status="unreviewed" notes=""/>
    
-   <property name="prefix" value="amigo/"/>
+   <xacro:property name="prefix" value="amigo/"/>
 
 <!--the laser at the base of the robot -->
 <xacro:my_link name="base_laser" mass="0.5" color="Black">
