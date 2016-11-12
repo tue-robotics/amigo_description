@@ -6,7 +6,9 @@
     <license>BSD</license>
     <review status="unreviewed" notes=""/>
     
-    <!--get link & joint definitions -->
+    <xacro:property name="prefix" value="amigo/" scope="parent | global"/>
+
+        <!--get link & joint definitions -->
     <xacro:include filename="$(find amigo_description)/urdf/macro_definitions.xacro" />
 
     <!--get custom materials -->

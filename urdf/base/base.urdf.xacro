@@ -5,8 +5,6 @@
     <author>Rein Appeldoorn</author>
     <review status="unreviewed" notes=""/>
     
-    <xacro:property name="prefix" value="amigo/"/>
-
     <joint name="base_phi_joint" type="continuous">
         <axis xyz="0 0 1"/>
         <parent link="${prefix}base_y_link"/>

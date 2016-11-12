@@ -5,8 +5,6 @@
    <license>BSD</license>
    <review status="unreviewed" notes=""/>
    
-   <xacro:property name="prefix" value="amigo/"/>
-   
 <xacro:my_link name="torso_dummy" mass="0" color="Red">
    <cylinder radius="0.0" length="0.00" />
    <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>

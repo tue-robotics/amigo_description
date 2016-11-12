@@ -5,8 +5,6 @@
    <license>BSD</license>
    <review status="unreviewed" notes=""/>
 
-    <xacro:property name="prefix" value="amigo/"/>
-
 <!--head-->
 
 <!-- !!!!!!!!!something without a visual not sure what this is!!!!!!!!!!!! -->

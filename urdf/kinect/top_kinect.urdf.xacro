@@ -2,7 +2,6 @@
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
   <xacro:property name="M_PI" value="3.14159"/>
-  <xacro:property name="prefix" value="amigo/"/>
     
   <joint name="top_kinect/base_kinect_joint" type="fixed">
     <origin xyz="0.035 0.0 0.10" rpy="0.0 0.0 0.025" /> <!-- THESE VALUES ARE ROUGH ESTIMATES!! -->
