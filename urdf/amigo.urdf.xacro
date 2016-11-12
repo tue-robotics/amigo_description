@@ -29,8 +29,8 @@
 
     <!--========BUILD ARMS======-->
     <xacro:include filename="$(find amigo_description)/urdf/arms/arm.urdf.xacro" />
-    <xacro:arm whichside="right" sidesign="+1.0" rollsign="+"/>
-    <xacro:arm whichside="left"  sidesign="-1.0" rollsign="-"/>
+    <xacro:arm whichside="right" sidesign="1" rollsign="+"/>
+    <xacro:arm whichside="left"  sidesign="-1" rollsign="-"/>
     <!--extra arm visuals-->
     <xacro:include filename="$(find amigo_description)/urdf/arm_extra_visuals/arm_extra.urdf.xacro" />
     <xacro:arm_extra whichside="right" sidesign="+1.0" rollsign="+"/>
