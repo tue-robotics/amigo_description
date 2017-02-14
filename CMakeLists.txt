@@ -14,7 +14,7 @@ foreach(it ${xacro_files})
     set(output_filename ${CMAKE_MATCH_1})
 
     # create a rule to generate ${output_filename} from {it}
-    xacro_add_xacro_file(${it} ${output_filename})
+    xacro_add_xacro_file(${it} ${output_filename} INORDER)
 
     list(APPEND robot_files ${output_filename})
 endforeach(it)
