@@ -20,7 +20,7 @@
   <parent link="${prefix}torso"/>
   <child link="${prefix}head_mount"/>
   <axis xyz="0 0 1"/>
-  <origin xyz="0.11 0.0 0.0426" rpy="0.07 0.0 0.0"/>
+  <origin xyz="0.11 0.0 0.0426" rpy="0.04 0.0 0.0"/>
 </joint>
 
 <!-- the link that represents the panning part of the neck, is below neck_tilt -->
