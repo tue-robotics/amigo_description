@@ -63,4 +63,17 @@
       <origin xyz="0.1 0.0 0.0" rpy="0 0 0"/>
     </joint>
 
+    <!-- Matrix creator -->
+
+    <link name="${prefix}matrix">
+       <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
+       <inertia ixx="0"  ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" /> 
+    </link>
+
+    <joint name="torso_matrix_joint" type="fixed">
+        <parent link="${prefix}torso"/>
+        <child link="${prefix}matrix"/>
+        <origin xyz="0.14 0.0 -0.065" rpy="0 1.5708 0"/>
+    </joint>
+
 </robot>
