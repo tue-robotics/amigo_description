@@ -23,7 +23,7 @@ skills:
             carrying_box_pose: [0.0, 0.3, 0.0, 1.271, 0.0, 0.1, 0.0]
             carrying_bag_pose: [0.0, -0.1, 0.0, 1.471, 1.57, 0.1, -0.2]
             driving_bag_pose:  [-0.2, -0.2, 0.8, 1.95, 1.5, 0.5, -0.4]
-            drop_bag_pose:     [-0.2, 0.0, 0.0, 0.0, 1.57, 0.1, 0.0]
+            drop_bag_pose:     [-0.2, -0.2, -0.5, 1.0, 1.5, 0.5, 0.4]
         default_trajectories:
             prepare_grasp:
                 - [-0.1, -0.6, 0.1, 1.2, 0.0, 0.1, 0.0]
