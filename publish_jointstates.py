@@ -17,13 +17,13 @@ if __name__ == '__main__':
     # msg.velocity = [0]
     # msg.effort   = [0]
     
-    # # Knee joint (dummy, not depending on spindle)
+    # # Knee joint (dummy, not depending on torso)
     # msg.name.append("knee_joint")
     # msg.position.append(1.61)
     # msg.velocity.append(0)
     # msg.effort.append(0)
     
-    # # hip joint (dummy, not depending on spindle)
+    # # hip joint (dummy, not depending on torso)
     # msg.name.append("hip_joint")
     # msg.position.append(1.8)
     # msg.velocity.append(0)

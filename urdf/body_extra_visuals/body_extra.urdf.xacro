@@ -21,7 +21,7 @@
   </joint>
 
 
-<!--the extra sliders next to and behind the spindle-->
+<!--the extra sliders next to and behind the spindle, this is copied from amigo-->
 <!--right link-->
 <xacro:my_link_texturedmesh name="torso_assist_slider_right" mass="0.01" texture="aluminium">
    <origin xyz="0 0 0" rpy="0 0 0"/>

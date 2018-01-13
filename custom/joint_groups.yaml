@@ -31,7 +31,7 @@ robot_joint_groups:
       joint_names:
           - torso_joint
       parameter_file_package: "amigo_controller_configuration_gazebo"
-      parameter_file_path: "/parameters/spindle_controller.yaml"
+      parameter_file_path: "/parameters/torso_controller.yaml"
     - name: neck
       reference_topic: "/amigo/neck/references"
       measurement_topic: "/amigo/neck/measurements"
