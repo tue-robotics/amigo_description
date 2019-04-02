@@ -59,8 +59,11 @@ skills:
                 - [-0.1, -0.2, 0.2, 0.8, 0.0, 0.0, 0.0]
             point_to_operator:
                 - [0, 1.0, 0.3, 0.8, 0, 0, 0]
-        offset:
-            left:  {x: 0.055, y: 0.0, z: 0.05, roll: 0.0, pitch: -0.2, yaw: 0.0}
-            right: {x: 0.065, y: 0.0,  z: 0.05, roll: 0.0, pitch: -0.2, yaw: 0.0}
+        left:
+            grasp_offset: {x: 0.055, y: 0.0, z: 0.05, roll: 0.0, pitch: -0.2, yaw: 0.0}  # Correction on grasp pose
+            base_offset: {x: 0.5, y: 0.2, z: 0.0, roll: 0.0, pitch: 0.0, yaw: 0.0}  # Robot tries to position itself such that object is at this x-y position w.r.t. base link before grasping or placing
             marker_to_grippoint: {x: -0.03, y: 0.01, z: 0.03, roll: 0.0, pitch: 0.0, yaw: 0.0}
-            grasp_offset: {x: 0.5, y: 0.2, z: 0.0, roll: 0.0, pitch: 0.0, yaw: 0.0}
+        right:
+            grasp_offset: {x: 0.065, y: 0.0,  z: 0.05, roll: 0.0, pitch: -0.2, yaw: 0.0}  # Correction on grasp pose
+            base_offset: {x: 0.5, y: -0.2, z: 0.0, roll: 0.0, pitch: 0.0, yaw: 0.0}  # Robot tries to position itself such that object is at this x-y position w.r.t. base link before grasping or placing
+            marker_to_grippoint: {x: -0.03, y: 0.01, z: 0.03, roll: 0.0, pitch: 0.0, yaw: 0.0}
