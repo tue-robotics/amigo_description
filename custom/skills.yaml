@@ -8,8 +8,14 @@ skills:
             navigation: [0.2]
         default_tolerance: [0.005]
 
-    arm:
-        joint_names: ['shoulder_yaw_joint', 'shoulder_pitch_joint', 'shoulder_roll_joint', 'elbow_pitch_joint', 'elbow_roll_joint', 'wrist_pitch_joint', 'wrist_yaw_joint']
+    arm_left:
+        joint_names: ['shoulder_yaw_joint_left',
+                      'shoulder_pitch_joint_left',
+                      'shoulder_roll_joint_left',
+                      'elbow_pitch_joint_left',
+                      'elbow_roll_joint_left',
+                      'wrist_pitch_joint_left',
+                      'wrist_yaw_joint_left']
         default_configurations:
             reset:             [-0.1, -0.2, 0.2, 0.8, 0.0, 0.0, 0.0]
             handover:          [-0.2, -0.7, 0.2, 2.0, 0.0, 0.5, 0.3]
@@ -59,11 +65,74 @@ skills:
                 - [-0.1, -0.2, 0.2, 0.8, 0.0, 0.0, 0.0]
             point_to_operator:
                 - [0, 1.0, 0.3, 0.8, 0, 0, 0]
-        left:
-            grasp_offset: {x: 0.055, y: 0.0, z: 0.05, roll: 0.0, pitch: -0.2, yaw: 0.0}  # Correction on grasp pose
-            base_offset: {x: 0.5, y: 0.2, z: 0.0, roll: 0.0, pitch: 0.0, yaw: 0.0}  # Robot tries to position itself such that object is at this x-y position w.r.t. base link before grasping or placing
-            marker_to_grippoint: {x: -0.03, y: 0.01, z: 0.03, roll: 0.0, pitch: 0.0, yaw: 0.0}
-        right:
-            grasp_offset: {x: 0.065, y: 0.0,  z: 0.05, roll: 0.0, pitch: -0.2, yaw: 0.0}  # Correction on grasp pose
-            base_offset: {x: 0.5, y: -0.2, z: 0.0, roll: 0.0, pitch: 0.0, yaw: 0.0}  # Robot tries to position itself such that object is at this x-y position w.r.t. base link before grasping or placing
-            marker_to_grippoint: {x: -0.03, y: 0.01, z: 0.03, roll: 0.0, pitch: 0.0, yaw: 0.0}
+        base_offset: {x: 0.5, y: 0.2, z: 0.0, roll: 0.0, pitch: 0.0, yaw: 0.0}
+
+    arm_right:
+        joint_names: [ 'shoulder_yaw_joint_right',
+                       'shoulder_pitch_joint_right',
+                       'shoulder_roll_joint_right',
+                       'elbow_pitch_joint_right',
+                       'elbow_roll_joint_right',
+                       'wrist_pitch_joint_right',
+                       'wrist_yaw_joint_right' ]
+        default_configurations:
+            reset: [ -0.1, -0.2, 0.2, 0.8, 0.0, 0.0, 0.0 ]
+            handover: [ -0.2, -0.7, 0.2, 2.0, 0.0, 0.5, 0.3 ]
+            handover_pose: [ -0.6, 0.2, 0.966, 0.0, 0.0, 0.0, 0.3 ]
+            carrying_pose: [ -0.05, -0.3, 0.3, 1.3, 0.5, 0.4, 0.1 ]
+            handover_to_human: [ -0.2, -0.7, 0.2, 2.0, 0.0, 0.5, 0.3 ]
+            prepare_grasp: [ -0.2, -0.044, 0.69, 1.4, -0.13, 0.38, 0.42 ]
+            retract: [ -0.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
+            sensed_handover: [ -0.1, 0.3, 0.2, 1.2, 0.0, 0.0, 0.0 ]
+            photo: [ -1.4, -0.4, 0.0, 0.7, 0.0, 0.6, 0.0 ]
+            carrying_box_pose: [ 0.0, 0.3, 0.0, 1.271, 0.0, 0.1, 0.0 ]
+            carrying_bag_pose: [ 0.0, -0.1, 0.0, 1.471, 1.57, 0.1, -0.2 ]
+            driving_bag_pose: [ -0.2, -0.2, 0.8, 1.95, 1.5, 0.5, -0.4 ]
+            drop_bag_pose: [ -0.2, -0.2, -0.5, 1.0, 1.5, 0.5, 0.4 ]
+            zero: [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
+        default_trajectories:
+            prepare_grasp:
+                - [ -0.1, -0.6, 0.1, 1.2, 0.0, 0.1, 0.0 ]
+                - [ -0.1, -0.8, 0.1, 1.6, 0.0, 0.2, 0.0 ]
+                - [ -0.1, -1.0, 0.1, 2.0, 0.0, 0.3, 0.0 ]
+                - [ -0.1, -0.5, 0.1, 2.0, 0.0, 0.3, 0.0 ]
+            prepare_place:
+                - [ -0.3, -0.6, 0.5, 1.9, 0, 0.6, 0 ]
+            wave:
+                - [ -1.57, 0.0, -1.57, 1.7, 1.5, 0.0, -0.3 ]
+                - [ -1.57, 0.0, -1.57, 1.4, 1.5, 0.0, 0.3 ]
+                - [ -1.57, 0.0, -1.57, 1.7, 1.5, 0.0, -0.3 ]
+                - [ -1.57, 0.0, -1.57, 1.4, 1.5, 0.0, 0.3 ]
+                - [ -0.1,-0.2,   0.2, 0.8, 0.0, 0.0, 0.0 ]
+            wave_front:
+                - [ -0.1, 1.4, 0.5, 1.6, 0, 0, 0 ]
+                - [ -0.1, 1.4, -0.5, 1.6, 0, 0, 0 ]
+                - [ -0.1, 1.4, 0.5, 1.6, 0, 0, 0 ]
+                - [ -0.1, -0.2, 0.2, 0.8, 0.0, 0.0, 0.0 ]
+            show_gripper:
+                - [ 0, 0, 0, 1.7, 0, 0, 0 ]
+            handshake:
+                - [ -0.2, 0.4, 0.7, 1.4, -1.75, 0.3, 0.0 ]
+                - [ -0.2, 0.4, 0.7, 1.6, -1.75, 0.3, 0.0 ]
+                - [ -0.2, 0.4, 0.7, 1.3, -1.75, 0.3, 0.0 ]
+                - [ -0.2, 0.4, 0.7, 1.4, -1.75, 0.3, 0.0 ]
+            point_to_laser:
+                - [ -1.2, 0.3, 1.0, 2.2, 0, 0.5, 0 ]
+                - [ -0.1, -0.2, 0.2, 0.8, 0.0, 0.0, 0.0 ]
+            point_to_kinect:
+                - [ -0.1, 1.4, 0.5, 1.6, 0, 0, 0 ]
+                - [ -0.1, -0.2, 0.2, 0.8, 0.0, 0.0, 0.0 ]
+            point_to_operator:
+                - [ 0, 1.0, 0.3, 0.8, 0, 0, 0 ]
+        base_offset: {x: 0.5, y: -0.2, z: 0.0, roll: 0.0, pitch: 0.0, yaw: 0.0}
+    gripper: # required for parameters loaded in the arm part. #TODO remove
+        grasp_offset: {x: 0.055, y: 0.0, z: 0.05, roll: 0.0, pitch: -0.2, yaw: 0.0}  # Correction on grasp pose
+        marker_to_grippoint: {x: -0.03, y: 0.01, z: 0.03, roll: 0.0, pitch: 0.0, yaw: 0.0}
+    gripper_left:
+        ac_gripper: 'amigo/arm_left/gripper/action'
+        grasp_offset: { x: 0.055, y: 0.0, z: 0.05, roll: 0.0, pitch: -0.2, yaw: 0.0 }  # Correction on grasp pose
+        marker_to_grippoint: { x: -0.03, y: 0.01, z: 0.03, roll: 0.0, pitch: 0.0, yaw: 0.0 }
+    gripper_right:
+        ac_gripper: 'amigo/arm_right/gripper/action'
+        grasp_offset: { x: 0.065, y: 0.0, z: 0.05, roll: 0.0, pitch: -0.2, yaw: 0.0 }  # Correction on grasp pose
+        marker_to_grippoint: { x: -0.03, y: 0.01, z: 0.03, roll: 0.0, pitch: 0.0, yaw: 0.0 }
